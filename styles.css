@@ -612,13 +612,14 @@ ul { list-style: none; }
 
 .kiosk-image-wrap {
     position: relative;
-    width: 100%;
-    max-width: 420px;
+    width: 420px;
+    height: 560px;
 }
 
 .kiosk-photo {
-    width: 100%;
-    height: auto;
+    width: 420px;
+    height: 560px;
+    object-fit: cover;
     display: block;
     border-radius: var(--radius-lg);
     filter: drop-shadow(0 25px 60px rgba(0, 0, 0, 0.6));
@@ -694,12 +695,14 @@ ul { list-style: none; }
 
 @media (max-width: 1024px) {
     .kiosk-layout { gap: 50px; }
-    .kiosk-image-wrap { max-width: 340px; }
+    .kiosk-image-wrap { width: 340px; height: 453px; }
+    .kiosk-photo { width: 340px; height: 453px; }
 }
 @media (max-width: 768px) {
     .kiosk-layout { grid-template-columns: 1fr; gap: 40px; }
     .kiosk-visual { order: -1; }
-    .kiosk-image-wrap { max-width: 300px; margin: 0 auto; }
+    .kiosk-image-wrap { width: 300px; height: 400px; margin: 0 auto; }
+    .kiosk-photo { width: 300px; height: 400px; }
     .kiosk-section { padding: 80px 0; }
 }
 
