@@ -424,6 +424,192 @@
         </div>
     </section>
 
+    <!-- MOOV Kiosk Section -->
+    <section class="kiosk-section" id="kiosk">
+        <div class="container">
+            <div class="kiosk-layout">
+                <div class="kiosk-visual">
+                    <div class="kiosk-illustration">
+                        <!-- Kiosk standing unit -->
+                        <svg class="kiosk-svg" viewBox="0 0 360 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Floor reflection -->
+                            <ellipse cx="180" cy="628" rx="100" ry="10" fill="#10B981" opacity="0.06"/>
+
+                            <!-- Pedestal stand -->
+                            <rect x="158" y="448" width="44" height="180" rx="4" fill="#111827"/>
+                            <rect x="158" y="448" width="44" height="180" rx="4" stroke="#1E293B" stroke-width="1"/>
+                            <!-- Stand base bracket -->
+                            <path d="M152 448 L208 448 L200 462 L160 462 Z" fill="#1E293B"/>
+
+                            <!-- LED indicators at base of stand -->
+                            <circle cx="172" cy="618" r="3" fill="#10B981">
+                                <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite"/>
+                            </circle>
+                            <circle cx="180" cy="618" r="3" fill="#EF4444" opacity="0.3"/>
+                            <circle cx="188" cy="618" r="3" fill="#F59E0B" opacity="0.3"/>
+
+                            <!-- Tablet enclosure / bezel -->
+                            <rect x="56" y="30" width="248" height="430" rx="14" fill="#111827"/>
+                            <rect x="56" y="30" width="248" height="430" rx="14" stroke="#1E293B" stroke-width="2"/>
+                            <!-- Inner bezel rim -->
+                            <rect x="64" y="38" width="232" height="414" rx="10" fill="#0A0F1E"/>
+
+                            <!-- Screen -->
+                            <rect x="72" y="46" width="216" height="398" rx="6" fill="#030712"/>
+
+                            <!-- ===== SCREEN UI ===== -->
+
+                            <!-- Header bar -->
+                            <rect x="72" y="46" width="216" height="36" rx="6" fill="#111827"/>
+                            <!-- School name -->
+                            <circle cx="88" cy="64" r="6" fill="#1E293B" stroke="#334155" stroke-width="0.5"/>
+                            <text x="100" y="62" fill="white" font-size="8" font-weight="700" font-family="Inter, sans-serif">High School</text>
+                            <circle cx="100" cy="70" r="2.5" fill="#10B981"/>
+                            <text x="106" y="73" fill="#64748B" font-size="6" font-family="Inter, sans-serif">Online</text>
+                            <!-- Period + Time -->
+                            <text x="195" y="60" text-anchor="middle" fill="#10B981" font-size="7" font-weight="600" font-family="Inter, sans-serif">10:20</text>
+                            <text x="195" y="72" text-anchor="middle" fill="#64748B" font-size="6" font-family="Inter, sans-serif">5th period (A)</text>
+                            <!-- + Add button -->
+                            <rect x="230" y="54" width="28" height="16" rx="4" fill="#1E293B" stroke="#334155" stroke-width="0.5"/>
+                            <text x="244" y="65" text-anchor="middle" fill="#94A3B8" font-size="6" font-weight="600" font-family="Inter, sans-serif">+ Add</text>
+                            <!-- Cafeteria button -->
+                            <rect x="261" y="54" width="22" height="16" rx="4" fill="#1E293B" stroke="#334155" stroke-width="0.5"/>
+                            <text x="272" y="65" text-anchor="middle" fill="#94A3B8" font-size="5" font-weight="600" font-family="Inter, sans-serif">Caf</text>
+
+                            <!-- ===== AUTHORIZED STUDENT (big green card) ===== -->
+                            <rect x="82" y="92" width="196" height="170" rx="12" fill="#15803D"/>
+                            <!-- Glow effect on green card -->
+                            <rect x="82" y="92" width="196" height="170" rx="12" fill="url(#greenGlow)" opacity="0.4"/>
+
+                            <!-- Student avatar circle -->
+                            <circle cx="180" cy="142" r="30" fill="#16A34A" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+                            <!-- Silhouette head -->
+                            <circle cx="180" cy="134" r="11" fill="#22C55E"/>
+                            <!-- Silhouette body -->
+                            <path d="M166 156 Q180 168 194 156" stroke="#22C55E" stroke-width="4" fill="none" stroke-linecap="round"/>
+
+                            <!-- Student name -->
+                            <text x="180" y="192" text-anchor="middle" fill="white" font-size="11" font-weight="700" font-family="Inter, sans-serif">Emily Rodriguez (2nd)</text>
+                            <!-- Details line 1 -->
+                            <text x="180" y="206" text-anchor="middle" fill="rgba(255,255,255,0.7)" font-size="7" font-family="Inter, sans-serif">10:03 AM &mdash; Cafeteria</text>
+                            <!-- Details line 2 -->
+                            <text x="180" y="218" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-size="6.5" font-family="Inter, sans-serif">5th period: ALT LUNCH &bull; Get A in Caf A</text>
+
+                            <!-- Checkmark icon on green card -->
+                            <rect x="258" y="100" width="14" height="14" rx="3" fill="rgba(255,255,255,0.2)"/>
+                            <path d="M262 107L264.5 109.5L268 105" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+
+                            <!-- ===== RED UNAUTHORIZED CARD ===== -->
+                            <rect x="82" y="272" width="196" height="52" rx="10" fill="#DC2626"/>
+                            <!-- Student avatar (small) -->
+                            <circle cx="116" cy="298" r="14" fill="#B91C1C" stroke="rgba(255,255,255,0.15)" stroke-width="0.5"/>
+                            <circle cx="116" cy="294" r="5" fill="#EF4444"/>
+                            <path d="M109 304 Q116 310 123 304" stroke="#EF4444" stroke-width="2" fill="none" stroke-linecap="round"/>
+                            <!-- Name + details -->
+                            <text x="138" y="293" fill="white" font-size="9" font-weight="700" font-family="Inter, sans-serif">Bart Simpson</text>
+                            <text x="138" y="304" fill="rgba(255,255,255,0.6)" font-size="6.5" font-family="Inter, sans-serif">10:05 AM &mdash; Cafeteria</text>
+                            <text x="138" y="314" fill="rgba(255,255,255,0.5)" font-size="6" font-family="Inter, sans-serif">5th period: ENG S3 10 in Rm 314</text>
+                            <!-- X icon -->
+                            <rect x="258" y="291" width="14" height="14" rx="3" fill="rgba(255,255,255,0.2)"/>
+                            <path d="M262 295L268 301M268 295L262 301" stroke="white" stroke-width="1.2" stroke-linecap="round"/>
+
+                            <!-- ===== GREEN AUTHORIZED CARD (smaller) ===== -->
+                            <rect x="82" y="334" width="196" height="52" rx="10" fill="#15803D"/>
+                            <!-- Student avatar (small) -->
+                            <circle cx="116" cy="360" r="14" fill="#16A34A" stroke="rgba(255,255,255,0.15)" stroke-width="0.5"/>
+                            <circle cx="116" cy="356" r="5" fill="#22C55E"/>
+                            <path d="M109 366 Q116 372 123 366" stroke="#22C55E" stroke-width="2" fill="none" stroke-linecap="round"/>
+                            <!-- Name + details -->
+                            <text x="138" y="355" fill="white" font-size="9" font-weight="700" font-family="Inter, sans-serif">Milhouse Van Houten</text>
+                            <text x="138" y="366" fill="rgba(255,255,255,0.6)" font-size="6.5" font-family="Inter, sans-serif">10:05 AM &mdash; Cafeteria</text>
+                            <text x="138" y="376" fill="rgba(255,255,255,0.5)" font-size="6" font-family="Inter, sans-serif">5th period: ALT LUNCH &bull; Get 4 in Caf A</text>
+                            <!-- Check icon -->
+                            <rect x="258" y="353" width="14" height="14" rx="3" fill="rgba(255,255,255,0.2)"/>
+                            <path d="M262 360L264.5 362.5L268 358" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+
+                            <!-- Navigation dots at bottom of screen -->
+                            <circle cx="172" cy="426" r="2" fill="#334155"/>
+                            <circle cx="180" cy="426" r="2" fill="#64748B"/>
+                            <circle cx="188" cy="426" r="2" fill="#334155"/>
+
+                            <!-- Home button indicator -->
+                            <rect x="164" cy="436" width="32" height="3" rx="1.5" fill="#334155" y="436"/>
+
+                            <!-- Gradient defs -->
+                            <defs>
+                                <radialGradient id="greenGlow" cx="50%" cy="30%" r="60%">
+                                    <stop offset="0%" stop-color="#22C55E" stop-opacity="0.3"/>
+                                    <stop offset="100%" stop-color="#15803D" stop-opacity="0"/>
+                                </radialGradient>
+                            </defs>
+                        </svg>
+
+                        <!-- Ambient glow behind kiosk -->
+                        <div class="kiosk-glow"></div>
+                    </div>
+                </div>
+                <div class="kiosk-content">
+                    <div class="section-badge badge-emerald">The MOOV Kiosk</div>
+                    <h2 class="section-title">Every entry point<br><span class="gradient-text-emerald">is now a checkpoint</span></h2>
+                    <p class="section-subtitle">The MOOV Kiosk turns cafeteria entrances, gym doors, and common spaces into secure verification points. Students tap their ID card; staff instantly see a photo, name, and green-or-red authorization status.</p>
+                    <ul class="showcase-list">
+                        <li>
+                            <div class="check-icon check-emerald">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M4 8L7 11L12 5" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <span>One tap: verified identity, photo, and authorization status</span>
+                        </li>
+                        <li>
+                            <div class="check-icon check-emerald">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M4 8L7 11L12 5" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <span>Attendance captured automatically &mdash; no manual entry, no wasted class time</span>
+                        </li>
+                        <li>
+                            <div class="check-icon check-emerald">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M4 8L7 11L12 5" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <span>No more unmonitored hallways or wrong-block lunch periods</span>
+                        </li>
+                        <li>
+                            <div class="check-icon check-emerald">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M4 8L7 11L12 5" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <span>Real-time visibility into who is on campus and where</span>
+                        </li>
+                    </ul>
+                    <div class="kiosk-placement-tags">
+                        <div class="placement-tag">
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="3" fill="#10B981"/></svg>
+                            Cafeteria
+                        </div>
+                        <div class="placement-tag">
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="3" fill="#10B981"/></svg>
+                            Gymnasium
+                        </div>
+                        <div class="placement-tag">
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="3" fill="#10B981"/></svg>
+                            Main Entrance
+                        </div>
+                        <div class="placement-tag">
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="3" fill="#10B981"/></svg>
+                            Common Areas
+                        </div>
+                    </div>
+                    <a href="#quote" class="btn btn-emerald">Get a Kiosk Quote</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- For Students Section -->
     <section class="showcase-section showcase-reverse" id="students">
         <div class="container">
