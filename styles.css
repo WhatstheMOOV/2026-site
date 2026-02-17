@@ -143,6 +143,215 @@ ul { list-style: none; }
 .btn-lg { padding: 14px 32px; font-size: 16px; }
 .btn-full { width: 100%; }
 
+/* ===== THEME TOGGLE ===== */
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: var(--radius-md);
+    color: var(--dark-400);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.theme-toggle:hover {
+    background: rgba(99, 102, 241, 0.15);
+    color: var(--white);
+    border-color: rgba(99, 102, 241, 0.3);
+}
+
+/* Show sun in dark mode (to switch to light), hide moon */
+.theme-icon-moon { display: none; }
+.theme-icon-sun { display: block; }
+
+/* In light mode, show moon (to switch to dark), hide sun */
+[data-theme="light"] .theme-icon-moon { display: block; }
+[data-theme="light"] .theme-icon-sun { display: none; }
+
+[data-theme="light"] .theme-toggle {
+    background: rgba(0,0,0,0.06);
+    border-color: rgba(0,0,0,0.12);
+    color: #475569;
+}
+[data-theme="light"] .theme-toggle:hover {
+    background: rgba(99, 102, 241, 0.1);
+    color: #1E293B;
+    border-color: rgba(99, 102, 241, 0.3);
+}
+
+/* ===== LIGHT MODE ===== */
+[data-theme="light"] body {
+    background: #FFFFFF;
+    color: #334155;
+}
+
+[data-theme="light"] .navbar {
+    background: rgba(255, 255, 255, 0.85);
+    border-bottom-color: rgba(0,0,0,0.08);
+}
+[data-theme="light"] .navbar.scrolled {
+    background: rgba(255, 255, 255, 0.95);
+}
+[data-theme="light"] .logo-text { color: #0F172A; }
+
+[data-theme="light"] .nav-link { color: #64748B; }
+[data-theme="light"] .nav-link:hover,
+[data-theme="light"] .nav-link.active { color: #0F172A; }
+
+[data-theme="light"] .hero-gradient {
+    background: linear-gradient(160deg, #F8FAFC 0%, #EEF2FF 30%, #F0F9FF 60%, #FFFFFF 100%);
+}
+[data-theme="light"] .hero-grid {
+    background-image:
+        linear-gradient(rgba(99, 102, 241, 0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(99, 102, 241, 0.06) 1px, transparent 1px);
+}
+[data-theme="light"] .hero-orb-1 { opacity: 0.08; }
+[data-theme="light"] .hero-orb-2 { opacity: 0.05; }
+[data-theme="light"] .hero-orb-3 { opacity: 0.04; }
+
+[data-theme="light"] .hero-title { color: #0F172A; }
+[data-theme="light"] .hero-subtitle { color: #64748B; }
+
+[data-theme="light"] .hero-screenshot-wrap {
+    border-color: rgba(0,0,0,0.1);
+    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.15), 0 0 30px rgba(99,102,241,0.08);
+}
+
+[data-theme="light"] .floating-card {
+    background: #FFFFFF;
+    border-color: rgba(0,0,0,0.08);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+[data-theme="light"] .floating-card strong { color: #0F172A; }
+[data-theme="light"] .floating-card span { color: #64748B; }
+
+[data-theme="light"] .logo-bar {
+    background: #F8FAFC;
+    border-color: rgba(0,0,0,0.06);
+}
+[data-theme="light"] .logo-bar-title { color: #94A3B8; }
+[data-theme="light"] .partner-logo { color: #94A3B8; }
+
+[data-theme="light"] .stats-section {
+    background: #FFFFFF;
+    border-bottom-color: rgba(0,0,0,0.06);
+}
+[data-theme="light"] .stat-label { color: #64748B; }
+[data-theme="light"] .stat-divider { background: #E2E8F0; }
+
+[data-theme="light"] .features-section { background: #FFFFFF; }
+[data-theme="light"] .section-title { color: #0F172A; }
+[data-theme="light"] .section-subtitle { color: #64748B; }
+
+[data-theme="light"] .feature-card {
+    background: #F8FAFC;
+    border-color: rgba(0,0,0,0.08);
+}
+[data-theme="light"] .feature-card:hover {
+    border-color: rgba(99,102,241,0.3);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08), 0 0 20px rgba(99,102,241,0.08);
+}
+[data-theme="light"] .feature-card-large {
+    background: linear-gradient(135deg, rgba(99,102,241,0.05), rgba(59,130,246,0.03));
+    border-color: rgba(99,102,241,0.12);
+}
+[data-theme="light"] .feature-card h3 { color: #0F172A; }
+[data-theme="light"] .feature-card p { color: #64748B; }
+
+[data-theme="light"] .showcase-section { background: #F8FAFC; }
+[data-theme="light"] .showcase-section:nth-of-type(even) { background: #FFFFFF; }
+[data-theme="light"] .showcase-list li { color: #334155; }
+
+[data-theme="light"] .showcase-demo-card {
+    background: #FFFFFF;
+    border-color: rgba(0,0,0,0.08);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+[data-theme="light"] .demo-card-header { border-bottom-color: rgba(0,0,0,0.06); }
+[data-theme="light"] .demo-card-title { color: #334155; }
+[data-theme="light"] .demo-attendance-row { color: #475569; border-bottom-color: rgba(0,0,0,0.04); }
+[data-theme="light"] .demo-time { color: #94A3B8; }
+
+[data-theme="light"] .kiosk-section { background: #FFFFFF; }
+[data-theme="light"] .kiosk-content .section-subtitle { color: #64748B; }
+
+[data-theme="light"] .phone-mockup {
+    background: #FFFFFF;
+    border-color: rgba(0,0,0,0.1);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.12);
+}
+[data-theme="light"] .phone-notch { background: #F1F5F9; }
+[data-theme="light"] .phone-app-name { color: #0F172A; }
+[data-theme="light"] .phone-period { color: #64748B; background: rgba(0,0,0,0.04); }
+[data-theme="light"] .phone-status-card { background: rgba(16,185,129,0.06); border-color: rgba(16,185,129,0.12); }
+[data-theme="light"] .phone-check-circle { background: rgba(16,185,129,0.1); }
+[data-theme="light"] .phone-status-detail { color: #64748B; }
+[data-theme="light"] .phone-menu-item { background: rgba(0,0,0,0.03); border-color: rgba(0,0,0,0.06); color: #475569; }
+[data-theme="light"] .phone-menu-item:hover { background: rgba(99,102,241,0.06); border-color: rgba(99,102,241,0.15); }
+
+[data-theme="light"] .districts-section {
+    background: linear-gradient(135deg, #EEF2FF 0%, #F0F9FF 50%, #F5F3FF 100%);
+}
+[data-theme="light"] .district-card {
+    background: rgba(255,255,255,0.7);
+    border-color: rgba(0,0,0,0.08);
+}
+[data-theme="light"] .district-card:hover {
+    background: #FFFFFF;
+    border-color: rgba(99,102,241,0.3);
+}
+[data-theme="light"] .district-card h3 { color: #0F172A; }
+[data-theme="light"] .district-card p { color: #64748B; }
+
+[data-theme="light"] .how-it-works-section { background: #F8FAFC; }
+[data-theme="light"] .step-card h3 { color: #0F172A; }
+[data-theme="light"] .step-card p { color: #64748B; }
+[data-theme="light"] .step-connector svg line { stroke: #CBD5E1; }
+
+[data-theme="light"] .testimonials-section { background: #FFFFFF; }
+[data-theme="light"] .testimonial-card {
+    background: #F8FAFC;
+    border-color: rgba(0,0,0,0.08);
+}
+[data-theme="light"] .testimonial-card:hover {
+    border-color: rgba(99,102,241,0.2);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
+[data-theme="light"] .testimonial-text { color: #475569; }
+[data-theme="light"] .testimonial-author strong { color: #0F172A; }
+[data-theme="light"] .testimonial-author span { color: #94A3B8; }
+
+[data-theme="light"] .faq-section { background: #F8FAFC; }
+[data-theme="light"] .faq-item {
+    background: #FFFFFF;
+    border-color: rgba(0,0,0,0.08);
+}
+[data-theme="light"] .faq-item.active { border-color: rgba(99,102,241,0.3); }
+[data-theme="light"] .faq-question { color: #0F172A; }
+[data-theme="light"] .faq-chevron { color: #94A3B8; }
+[data-theme="light"] .faq-answer p { color: #64748B; }
+
+[data-theme="light"] .footer {
+    background: #F1F5F9;
+    border-top-color: rgba(0,0,0,0.06);
+}
+[data-theme="light"] .footer-grid { border-bottom-color: rgba(0,0,0,0.08); }
+[data-theme="light"] .footer-desc { color: #64748B; }
+[data-theme="light"] .social-link { background: rgba(0,0,0,0.06); color: #64748B; }
+[data-theme="light"] .social-link:hover { background: rgba(99,102,241,0.15); color: #4F46E5; }
+[data-theme="light"] .footer-links-group h4 { color: #0F172A; }
+[data-theme="light"] .footer-links-group a { color: #64748B; }
+[data-theme="light"] .footer-links-group a:hover { color: #4F46E5; }
+[data-theme="light"] .footer-bottom { color: #94A3B8; }
+[data-theme="light"] .footer-legal a { color: #94A3B8; }
+[data-theme="light"] .footer-legal a:hover { color: #4F46E5; }
+
+[data-theme="light"] .mobile-toggle span { background: #0F172A; }
+
 /* ===== NAVBAR ===== */
 .navbar {
     position: fixed;
