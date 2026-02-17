@@ -20,6 +20,24 @@ mobileToggle.addEventListener('click', () => {
     mobileToggle.classList.toggle('active');
 });
 
+// ===== FAQ Accordion =====
+document.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', () => {
+        const item = button.parentElement;
+        const isActive = item.classList.contains('active');
+
+        // Close all
+        document.querySelectorAll('.faq-item').forEach(i => {
+            i.classList.remove('active');
+        });
+
+        // Open clicked (if it wasn't already open)
+        if (!isActive) {
+            item.classList.add('active');
+        }
+    });
+});
+
 // ===== Scroll Reveal Animations =====
 function createObserver() {
     const observerOptions = {
@@ -37,12 +55,10 @@ function createObserver() {
         });
     }, observerOptions);
 
-    // Select all elements that should animate in
     const animateElements = document.querySelectorAll(
-        '.feature-card, .district-card, .testimonial-card, .pricing-card, ' +
-        '.security-badge-card, .stat-item, .showcase-content, .showcase-visual, ' +
-        '.raina-content, .raina-visual, .security-content, .security-badges, ' +
-        '.section-header'
+        '.feature-card, .district-card, .testimonial-card, ' +
+        '.stat-item, .showcase-content, .showcase-visual, ' +
+        '.section-header, .step-card, .faq-item'
     );
 
     animateElements.forEach(el => {
@@ -57,9 +73,8 @@ function addStaggerDelays() {
         '.features-grid .feature-card',
         '.district-grid .district-card',
         '.testimonials-grid .testimonial-card',
-        '.pricing-grid .pricing-card',
-        '.security-badges .security-badge-card',
-        '.stats-grid .stat-item'
+        '.stats-grid .stat-item',
+        '.faq-list .faq-item'
     ];
 
     groups.forEach(selector => {
@@ -126,26 +141,18 @@ function animateCounters() {
     counters.forEach(counter => observer.observe(counter));
 }
 
-// ===== Typing Effect for Mockup =====
-function initTypingEffect() {
-    const fields = document.querySelectorAll('.input-field');
-    fields.forEach((field, index) => {
-        const text = field.textContent;
-        field.textContent = '';
-        field.style.borderColor = 'var(--purple-300)';
+// ===== Attendance Row Animation =====
+function animateAttendanceRows() {
+    const rows = document.querySelectorAll('.attendance-row');
+    rows.forEach((row, index) => {
+        row.style.opacity = '0';
+        row.style.transform = 'translateX(-10px)';
+        row.style.transition = 'all 0.4s ease';
 
         setTimeout(() => {
-            let charIndex = 0;
-            const typeTimer = setInterval(() => {
-                if (charIndex < text.length) {
-                    field.textContent += text[charIndex];
-                    charIndex++;
-                } else {
-                    clearInterval(typeTimer);
-                    field.style.borderColor = '';
-                }
-            }, 50);
-        }, 1500 + (index * 800));
+            row.style.opacity = '1';
+            row.style.transform = 'translateX(0)';
+        }, 1500 + (index * 400));
     });
 }
 
@@ -164,11 +171,11 @@ function initParallax() {
     });
 }
 
-// ===== Initialize on DOM Load =====
+// ===== Initialize =====
 document.addEventListener('DOMContentLoaded', () => {
     createObserver();
     addStaggerDelays();
     animateCounters();
-    initTypingEffect();
+    animateAttendanceRows();
     initParallax();
 });
