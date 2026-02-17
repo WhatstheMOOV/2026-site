@@ -619,7 +619,7 @@ ul { list-style: none; }
 .kiosk-photo {
     width: 420px;
     height: 560px;
-    object-fit: cover;
+    object-fit: contain;
     display: block;
     border-radius: var(--radius-lg);
     filter: drop-shadow(0 25px 60px rgba(0, 0, 0, 0.6));
