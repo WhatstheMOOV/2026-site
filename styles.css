@@ -578,8 +578,10 @@ ul { list-style: none; }
     border: 1px solid rgba(255,255,255,0.08);
 }
 .hero-screenshot {
-    width: 100%;
-    height: auto;
+    width: 720px;
+    height: 450px;
+    max-width: 100%;
+    object-fit: cover;
     display: block;
     border-radius: var(--radius-lg);
 }
