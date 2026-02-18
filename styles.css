@@ -570,10 +570,6 @@ ul { list-style: none; }
 /* ===== HERO VISUAL ===== */
 .hero-visual { position: relative; }
 
-.hero-screenshots {
-    position: relative;
-}
-
 .hero-screenshot-wrap {
     position: relative;
     border-radius: var(--radius-lg);
@@ -588,17 +584,6 @@ ul { list-style: none; }
     border-radius: var(--radius-lg);
 }
 
-.hero-screenshot-overlay {
-    position: absolute;
-    top: -32px;
-    right: -32px;
-    width: 45%;
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    box-shadow: var(--shadow-2xl), var(--shadow-glow);
-    border: 1px solid rgba(255,255,255,0.08);
-    z-index: 2;
-}
 
 /* Floating Cards */
 .floating-card {
@@ -1439,7 +1424,6 @@ ul { list-style: none; }
     .hero { padding: 110px 0 60px; min-height: auto; }
     .hero-title { font-size: 36px; }
     .hero-subtitle { font-size: 20px; }
-    .hero-screenshot-overlay { top: -16px; right: -16px; }
     .section-title { font-size: 32px; }
     .hero-mockup { display: none; }
 
