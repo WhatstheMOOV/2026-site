@@ -594,10 +594,8 @@ ul { list-style: none; }
     border: 1px solid rgba(255,255,255,0.08);
 }
 .hero-screenshot {
-    width: 720px;
-    height: 450px;
-    max-width: 100%;
-    object-fit: cover;
+    width: 100%;
+    height: auto;
     display: block;
     border-radius: var(--radius-lg);
 }
