@@ -189,17 +189,6 @@ function initThemeToggle() {
     });
 }
 
-// ===== Spline Scroll Rotate =====
-function initSplineScrollRotate() {
-    const splineWrap = document.getElementById('heroSpline');
-    if (!splineWrap) return;
-
-    window.addEventListener('scroll', () => {
-        const rotation = window.scrollY * 0.04;
-        splineWrap.style.transform = `perspective(1200px) rotateY(${rotation}deg) rotateX(${rotation * 0.3}deg)`;
-    }, { passive: true });
-}
-
 // ===== Initialize =====
 document.addEventListener('DOMContentLoaded', () => {
     initThemeToggle();
@@ -208,5 +197,4 @@ document.addEventListener('DOMContentLoaded', () => {
     animateCounters();
     animateAttendanceRows();
     initParallax();
-    initSplineScrollRotate();
 });
