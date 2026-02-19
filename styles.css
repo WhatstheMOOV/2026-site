@@ -674,7 +674,6 @@ ul { list-style: none; }
     gap: 8px;
     font-size: 13px; font-weight: 700;
     color: var(--dark-600);
-    white-space: nowrap;
     flex-shrink: 0;
     width: 120px;
     text-align: center;
