@@ -1220,15 +1220,21 @@ ul { list-style: none; }
 .team-linkedin {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    font-size: 13px;
+    gap: 5px;
+    font-size: 12px;
     font-weight: 600;
     color: #0A66C2;
     text-decoration: none;
-    margin-top: 2px;
-    transition: opacity 0.2s;
+    margin-top: 4px;
+    padding: 4px 12px 4px 8px;
+    border-radius: 20px;
+    background: rgba(10, 102, 194, 0.08);
+    transition: all 0.2s;
 }
-.team-linkedin:hover { opacity: 0.75; }
+.team-linkedin:hover {
+    background: rgba(10, 102, 194, 0.16);
+    transform: translateY(-1px);
+}
 .team-linkedin svg { flex-shrink: 0; }
 
 [data-theme="light"] .about-section { background: #F8FAFC; }
