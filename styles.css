@@ -423,6 +423,7 @@ ul { list-style: none; }
     align-items: center;
     gap: 4px;
 }
+.mobile-menu-cta { display: none; }
 
 .nav-link {
     display: flex;
