@@ -1769,7 +1769,7 @@ ul { list-style: none; }
     .features-deep { grid-template-columns: 1fr; }
     .product-grid { grid-template-columns: 1fr; }
     .product-photo { filter: none; }
-    .floating-pass { width: 80px; right: 0; bottom: 0; filter: none; }
+    .floating-pass { width: 140px; right: 0; bottom: 0; filter: none; }
     #visitor-management .product-image-wrap { min-height: 260px; }
     .district-grid { grid-template-columns: 1fr; }
     .testimonials-grid { grid-template-columns: 1fr; }
