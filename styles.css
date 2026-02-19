@@ -1108,6 +1108,24 @@ ul { list-style: none; }
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+}
+
+.floating-pass {
+    position: absolute;
+    width: 120px;
+    height: auto;
+    right: -10px;
+    bottom: -20px;
+    border-radius: var(--radius-md);
+    filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.35));
+    animation: floatPass 4s ease-in-out infinite;
+    z-index: 2;
+}
+
+@keyframes floatPass {
+    0%, 100% { transform: translateY(0) rotate(-3deg); }
+    50% { transform: translateY(-12px) rotate(2deg); }
 }
 .product-photo {
     width: 100%;
@@ -1727,6 +1745,7 @@ ul { list-style: none; }
     .features-deep { grid-template-columns: 1fr; }
     .product-grid { grid-template-columns: 1fr; }
     .product-photo { filter: none; }
+    .floating-pass { width: 80px; right: 0; bottom: -10px; filter: none; }
     .district-grid { grid-template-columns: 1fr; }
     .testimonials-grid { grid-template-columns: 1fr; }
 
