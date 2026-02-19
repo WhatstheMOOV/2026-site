@@ -1225,7 +1225,8 @@ ul { list-style: none; }
     font-weight: 600;
     color: #0A66C2;
     text-decoration: none;
-    margin-top: 4px;
+    margin-top: 0;
+    margin-bottom: 12px;
     padding: 4px 12px 4px 8px;
     border-radius: 20px;
     background: rgba(10, 102, 194, 0.08);
