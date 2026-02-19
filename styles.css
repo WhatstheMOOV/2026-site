@@ -662,7 +662,7 @@ ul { list-style: none; }
 .logo-track {
     display: flex;
     gap: 48px;
-    animation: scroll 25s linear infinite;
+    animation: scroll 60s linear infinite;
     width: max-content;
 }
 .partner-logo {
@@ -1644,16 +1644,20 @@ ul { list-style: none; }
         border-radius: 10px;
         color: var(--white);
     }
-    .nav-links.active .nav-link:hover,
-    .nav-links.active .nav-link.active {
+    .nav-links.active .nav-link:hover {
         background: rgba(255,255,255,0.08);
+    }
+    .nav-links.active .nav-link.active {
+        background: none;
     }
     [data-theme="light"] .nav-links.active .nav-link {
         color: #1E293B;
     }
-    [data-theme="light"] .nav-links.active .nav-link:hover,
-    [data-theme="light"] .nav-links.active .nav-link.active {
+    [data-theme="light"] .nav-links.active .nav-link:hover {
         background: rgba(0,0,0,0.05);
+    }
+    [data-theme="light"] .nav-links.active .nav-link.active {
+        background: none;
     }
     .nav-links.active .nav-link + .nav-link {
         border-top: 1px solid rgba(255,255,255,0.06);
