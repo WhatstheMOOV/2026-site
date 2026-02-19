@@ -211,6 +211,38 @@ function initVideoPreview() {
     }
 }
 
+// ===== Quote Form Submission =====
+function initQuoteForm() {
+    const form = document.getElementById('quoteForm');
+    if (!form) return;
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const data = new FormData(form);
+        fetch(form.action, {
+            method: 'POST',
+            body: data,
+            headers: { 'Accept': 'application/json' }
+        }).then(response => {
+            if (response.ok) {
+                form.style.display = 'none';
+                document.getElementById('quoteFormSuccess').classList.add('show');
+            }
+        });
+    });
+
+    // Pre-select product when clicking quote buttons
+    document.querySelectorAll('a[data-product]').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const product = btn.getAttribute('data-product');
+            const select = document.getElementById('quoteProduct');
+            if (select && product) {
+                select.value = product;
+            }
+        });
+    });
+}
+
 // ===== Initialize =====
 document.addEventListener('DOMContentLoaded', () => {
     initThemeToggle();
@@ -220,4 +252,5 @@ document.addEventListener('DOMContentLoaded', () => {
     animateAttendanceRows();
     initParallax();
     initVideoPreview();
+    initQuoteForm();
 });
