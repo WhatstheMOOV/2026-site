@@ -347,12 +347,14 @@
         // Mobile menu
         const mobileToggle = document.getElementById('mobileToggle');
         const navLinks = document.getElementById('navLinks');
-        const navActions = document.querySelector('.nav-actions');
+        const ctaLink = document.querySelector('.nav-actions .btn-primary');
+        if (ctaLink) { const mc = ctaLink.cloneNode(true); mc.classList.add('mobile-menu-cta'); navLinks.appendChild(mc); }
         mobileToggle.addEventListener('click', () => {
             navLinks.classList.toggle('active');
-            navActions.classList.toggle('active');
             mobileToggle.classList.toggle('active');
         });
+        navLinks.querySelectorAll('a').forEach(l => l.addEventListener('click', () => { navLinks.classList.remove('active'); mobileToggle.classList.remove('active'); }));
+        document.addEventListener('click', (e) => { if (navLinks.classList.contains('active') && !navLinks.contains(e.target) && !mobileToggle.contains(e.target)) { navLinks.classList.remove('active'); mobileToggle.classList.remove('active'); } });
     </script>
 </body>
 </html>

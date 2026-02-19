@@ -12,21 +12,36 @@ window.addEventListener('scroll', () => {
 // ===== Mobile Menu Toggle =====
 const mobileToggle = document.getElementById('mobileToggle');
 const navLinks = document.getElementById('navLinks');
-const navActions = document.querySelector('.nav-actions');
+
+// Add CTA button to mobile menu
+const ctaLink = document.querySelector('.nav-actions .btn-primary');
+if (ctaLink) {
+    const mobileCta = ctaLink.cloneNode(true);
+    mobileCta.classList.add('mobile-menu-cta');
+    navLinks.appendChild(mobileCta);
+}
 
 mobileToggle.addEventListener('click', () => {
     navLinks.classList.toggle('active');
-    navActions.classList.toggle('active');
     mobileToggle.classList.toggle('active');
 });
 
-// Close mobile menu when a nav link is clicked
-navLinks.querySelectorAll('.nav-link').forEach(link => {
+// Close mobile menu when a link is clicked
+navLinks.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
         navLinks.classList.remove('active');
-        navActions.classList.remove('active');
         mobileToggle.classList.remove('active');
     });
+});
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (navLinks.classList.contains('active') &&
+        !navLinks.contains(e.target) &&
+        !mobileToggle.contains(e.target)) {
+        navLinks.classList.remove('active');
+        mobileToggle.classList.remove('active');
+    }
 });
 
 // ===== FAQ Accordion =====
