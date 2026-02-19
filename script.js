@@ -20,6 +20,15 @@ mobileToggle.addEventListener('click', () => {
     mobileToggle.classList.toggle('active');
 });
 
+// Close mobile menu when a nav link is clicked
+navLinks.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        navActions.classList.remove('active');
+        mobileToggle.classList.remove('active');
+    });
+});
+
 // ===== FAQ Accordion =====
 document.querySelectorAll('.faq-question').forEach(button => {
     button.addEventListener('click', () => {
