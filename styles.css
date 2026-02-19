@@ -1091,17 +1091,17 @@ ul { list-style: none; }
 .video-preview {
     position: relative;
     width: 100%;
-    aspect-ratio: 16 / 9;
-    overflow: hidden;
     cursor: pointer;
     border-radius: var(--radius-lg);
+    overflow: hidden;
 }
 .video-thumbnail {
-    position: absolute;
-    top: 50%;
-    left: 50%;
+    display: block;
     width: 100%;
-    transform: translate(-50%, -50%) scale(1.25);
+    height: auto;
+}
+.video-preview.playing {
+    aspect-ratio: 16 / 9;
 }
 .video-preview.playing .video-thumbnail {
     display: none;

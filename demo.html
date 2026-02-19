@@ -263,7 +263,7 @@
                 <p class="demo-subtitle">See how MOOV can automate attendance and increase safety at your school. Fill out the form below and we'll be in touch.</p>
             </div>
             <div class="demo-form-card">
-                <form id="demoForm">
+                <form id="demoForm" action="https://formspree.io/f/xrealjgp" method="POST">
                     <div class="form-group">
                         <label class="form-label" for="fullName">Full Name</label>
                         <input type="text" id="fullName" name="fullName" class="form-input" placeholder="John Smith" required>
@@ -329,8 +329,18 @@
         // Form submission
         document.getElementById('demoForm').addEventListener('submit', (e) => {
             e.preventDefault();
-            document.getElementById('demoForm').style.display = 'none';
-            document.getElementById('formSuccess').classList.add('show');
+            const form = e.target;
+            const data = new FormData(form);
+            fetch(form.action, {
+                method: 'POST',
+                body: data,
+                headers: { 'Accept': 'application/json' }
+            }).then(response => {
+                if (response.ok) {
+                    form.style.display = 'none';
+                    document.getElementById('formSuccess').classList.add('show');
+                }
+            });
         });
     </script>
 </body>
