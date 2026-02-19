@@ -567,6 +567,12 @@ ul { list-style: none; }
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
+.gradient-text-salmon {
+    background: linear-gradient(135deg, #FA8072, #FF6B6B);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
 .gradient-text-green {
     background: linear-gradient(135deg, var(--green-400), var(--green-600));
     -webkit-background-clip: text;
