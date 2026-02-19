@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - MOOV</title>
+    <link rel="icon" type="image/png" href="../images/moov-logo.png">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        .legal-page {
+            min-height: 100vh;
+            padding: 140px 24px 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        .legal-page-bg {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+        }
+        .legal-page-gradient {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(160deg, var(--dark-950) 0%, #0A0F2E 30%, #0F172A 60%, var(--dark-950) 100%);
+        }
+        [data-theme="light"] .legal-page-gradient {
+            background: linear-gradient(160deg, #F8FAFC 0%, #EEF2FF 30%, #F0F9FF 60%, #FFFFFF 100%);
+        }
+        .legal-container {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .legal-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        .legal-title {
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--white);
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+            margin-bottom: 12px;
+        }
+        [data-theme="light"] .legal-title { color: #0F172A; }
+        .legal-subtitle {
+            font-size: 16px;
+            color: var(--dark-400);
+            line-height: 1.6;
+        }
+        [data-theme="light"] .legal-subtitle { color: #64748B; }
+        .legal-card {
+            background: var(--dark-800);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: var(--radius-lg);
+            padding: 48px;
+        }
+        [data-theme="light"] .legal-card {
+            background: #FFFFFF;
+            border-color: rgba(0,0,0,0.1);
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.1);
+        }
+        .legal-intro {
+            font-size: 16px;
+            line-height: 1.8;
+            color: var(--dark-300);
+            margin-bottom: 32px;
+            padding-bottom: 32px;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+        [data-theme="light"] .legal-intro {
+            color: #475569;
+            border-bottom-color: rgba(0,0,0,0.08);
+        }
+        .legal-card h2 {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--white);
+            margin-top: 36px;
+            margin-bottom: 16px;
+            line-height: 1.3;
+        }
+        .legal-card h2:first-of-type {
+            margin-top: 0;
+        }
+        [data-theme="light"] .legal-card h2 { color: #0F172A; }
+        .legal-card h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--dark-200);
+            margin-top: 24px;
+            margin-bottom: 12px;
+        }
+        [data-theme="light"] .legal-card h3 { color: #334155; }
+        .legal-card p {
+            font-size: 15px;
+            line-height: 1.8;
+            color: var(--dark-300);
+            margin-bottom: 16px;
+        }
+        [data-theme="light"] .legal-card p { color: #475569; }
+        .legal-card ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 16px;
+        }
+        .legal-card ul li {
+            font-size: 15px;
+            line-height: 1.8;
+            color: var(--dark-300);
+            padding-left: 20px;
+            position: relative;
+            margin-bottom: 6px;
+        }
+        .legal-card ul li::before {
+            content: "\2022";
+            position: absolute;
+            left: 0;
+            color: var(--dark-500);
+        }
+        [data-theme="light"] .legal-card ul li { color: #475569; }
+        .legal-card a {
+            color: var(--primary-500);
+            text-decoration: underline;
+        }
+        .legal-effective {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--dark-400);
+            margin-bottom: 24px;
+        }
+        [data-theme="light"] .legal-effective { color: #64748B; }
+        .legal-section-title {
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--primary-500);
+            margin-bottom: 24px;
+        }
+        .caps-text {
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <div class="logo-icon">
+                    <img src="../images/moov-logo.png" alt="MOOV" width="36" height="36">
+                </div>
+                <span class="logo-text">MOOV</span>
+            </a>
+
+            <div class="nav-links" id="navLinks">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/#kiosk" class="nav-link">Features</a>
+                <a href="/#faq" class="nav-link">FAQ</a>
+                <a href="/quotes" class="nav-link">Quote</a>
+                <a href="https://help.joinmoov.com" class="nav-link" target="_blank">Help</a>
+                <a href="/#about" class="nav-link">About</a>
+            </div>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode">
+                    <svg class="theme-icon-sun" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                        <circle cx="9" cy="9" r="4" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M9 1V3M9 15V17M1 9H3M15 9H17M3.34 3.34L4.76 4.76M13.24 13.24L14.66 14.66M14.66 3.34L13.24 4.76M4.76 13.24L3.34 14.66" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                    <svg class="theme-icon-moon" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                        <path d="M15.36 10.36A7 7 0 1 1 7.64 2.64 5.5 5.5 0 0 0 15.36 10.36Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <a href="/demo" class="btn btn-primary">Get a Demo</a>
+            </div>
+
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <section class="legal-page">
+        <div class="legal-page-bg">
+            <div class="legal-page-gradient"></div>
+        </div>
+        <div class="legal-container">
+            <div class="legal-header">
+                <h1 class="legal-title">Privacy Policy</h1>
+                <p class="legal-subtitle">MOOV is wholeheartedly committed to protecting student data.</p>
+            </div>
+            <div class="legal-card">
+                <div class="legal-intro">
+                    MOOV is wholeheartedly committed to protecting student data. We are FERPA, COPPA, and Ed Law 2-D compliant, and will be able to sign additional privacy agreements a school may require.
+                </div>
+
+                <p class="legal-section-title">Data Security and Privacy Plan</p>
+
+                <h2>Privacy Policy</h2>
+                <p class="legal-effective">Effective Date: Nov 6, 2023</p>
+
+                <h2>1. Introduction</h2>
+                <p>What's the MOOV, Inc. (including all past, present, and future parents, subsidiaries, affiliates, related companies, officers, directors, employees, agents, representatives, partners, and licensors) ("MOOV," "Company," "we," "us," or "our") offers cutting-edge technology, communication, group management, and information services via its website, software, platforms, and mobile application (collectively, "Services") pursuant to this Privacy Policy and our Terms of Use.</p>
+                <p>Our Services are used by "Administrators," "Users," and "Visitors," defined as follows:</p>
+                <ul>
+                    <li><strong>Administrators:</strong> Groups or organizations that utilize the Services for their own benefit and the benefit of their members.</li>
+                    <li><strong>Users:</strong> Persons authorized by an Administrator to use the Services.</li>
+                    <li><strong>Visitors:</strong> Individuals who view publicly published portions of the Services and are neither Administrators nor Users.</li>
+                </ul>
+                <p>Administrators, Users, and Visitors are collectively referred to as "you" or "your."</p>
+
+                <h2>2. Agreement to Privacy Policy</h2>
+                <p>UNLESS OTHERWISE AGREED TO IN WRITING, BY USING THE SERVICES IN ANY WAY, INCLUDING AS AN ADMINISTRATOR, USER, OR VISITOR, YOU AGREE TO BE BOUND BY THIS PRIVACY POLICY AND OUR TERMS OF USE. IF YOU DO NOT AGREE TO BE BOUND BY THIS PRIVACY POLICY AND OUR TERMS OF USE, THEN YOU MAY NOT USE THE SERVICES AND SHOULD STOP USING THE SERVICES IMMEDIATELY.</p>
+
+                <h2>3. Personal Information We May Collect</h2>
+                <p>We collect certain private or personally identifiable information ("Personal Information") to improve and deliver our Services. This Privacy Policy explains the Personal Information we collect, why we collect it, and how we may use and share that information.</p>
+                <h3>Categories of Personal Information We May Collect:</h3>
+                <ul>
+                    <li>Name</li>
+                    <li>Age and date of birth</li>
+                    <li>Contact information (phone number, street address, email address, etc.)</li>
+                    <li>Identity of associated parent(s) and guardian(s)</li>
+                    <li>Demographic information (race, ethnicity, gender, etc.)</li>
+                    <li>Primary language(s) spoken or used to access the Services</li>
+                    <li>Disability status</li>
+                    <li>School information (school name, grade, school ID, enrollment in classes, activities, clubs, sports, and other extracurricular activities)</li>
+                    <li>Class information (attendance, exchange of assignments and coursework, test scores, grades, etc.)</li>
+                    <li>Dietary requirements</li>
+                    <li>Mode of transportation</li>
+                    <li>Communication preferences</li>
+                    <li>Communications sent or received via the Services, including downloads, uploads, and data shared with third-party providers such as social media channels</li>
+                    <li>Privacy preferences</li>
+                    <li>Hardware (make, model, device ID, etc.), IP address, operating system, and web browser used to access the Services</li>
+                    <li>Usage data regarding all interactions with the Services</li>
+                    <li>Log-in (username and password) and profile information</li>
+                    <li>Current and past location data</li>
+                    <li>Billing, payment, and other account information</li>
+                    <li>Location information (e.g., for bus tracking, fire drills, security, or other situations)</li>
+                    <li>Any other information provided to us by an Administrator or User</li>
+                </ul>
+                <p>Not all items listed above are collected, and sometimes additional relevant or comparable information not listed is collected. The above list is offered as a representation of the types of Personal Information that may be collected.</p>
+
+                <h2>4. How We Collect Personal Information</h2>
+                <p>We collect Personal Information directly from Users or Visitors when they:</p>
+                <ul>
+                    <li>Register, create, or accept Administrator-created accounts</li>
+                    <li>Use the Services</li>
+                    <li>Communicate through the Services</li>
+                    <li>Download or upload any data or material via the Services</li>
+                </ul>
+                <p>We may also collect Personal Information from Users and Administrators directly from Administrators. Administrators are solely responsible for ensuring that they have the required authority and permission to share any Personal Information provided to us.</p>
+                <p>We may also collect Personal Information through the use of technology tracking methods, audits of our Services, and from certain third parties when we review the effectiveness of our Services and the marketing, promotion, and use of our Services.</p>
+
+                <h2>5. How We Protect Personal Information</h2>
+                <p>We aim to protect all Personal Information in our care or custody with at least the degree of care that would be exercised by a prudent person given the sensitivity of the Personal Information. However, it is important to understand that we act solely as a data processor of information provided to us by Users and Administrators. Accordingly, the disclosure of Personal Information to us is the sole responsibility of the User and/or Administrator.</p>
+
+                <h2>6. How We Use and Disclose Personal Information</h2>
+                <p>We use and disclose Personal Information solely for the purpose of providing and improving our Services. We do not sell or otherwise monetize Personal Information by selling or sharing it with third parties.</p>
+                <p>Specifically, we may use and disclose Personal Information as follows:</p>
+                <ul>
+                    <li>To provide the Services</li>
+                    <li>To enhance and improve the Services</li>
+                    <li>To facilitate the publication of communications initiated by Users and Administrators, either directly through the Services or through a third-party channel (social media or other provider)</li>
+                    <li>Security analysis</li>
+                    <li>Legal compliance</li>
+                    <li>General corporate/business purposes</li>
+                </ul>
+                <p>We may use and disclose Personal Information with third parties when necessary to provide the Services or for our business (e.g., to complete any of the foregoing activities, process payments, translate content, or comply with appropriate security standards).</p>
+
+                <h2>7. Advertising, Marketing, Ability to Opt-Out</h2>
+                <p>We may use Personal Information to educate, advertise, and market current and future features of our Services, as well as related products and services we may offer in the future. Any such communications will include information on how to opt-out of receiving such communications.</p>
+                <p>We may also use cookies, beacons, and other similar tracking technologies. These are small text files sent by a website server to your browser when you visit a website and are stored in your browser. Examples of how we use this technology include:</p>
+                <ul>
+                    <li>Recognizing you when you return to the Services</li>
+                    <li>Helping us measure and improve engagement with Users</li>
+                    <li>Promoting Services that we believe may be of interest to you</li>
+                </ul>
+                <p>You may be able to manage the use of cookies for our Services by adjusting your individual browser settings. Please note that if you do not allow certain cookies, the Services may not function properly.</p>
+
+                <h2>8. Contact Us</h2>
+                <p>You can contact us by email at kevin@joinmoov.com for more information.</p>
+
+                <h2>9. California Privacy Notice</h2>
+                <p>This California Privacy Notice describes how we as a business collect, use, disclose, and otherwise process Personal Information of individual residents of the State of California within the scope of the California Consumer Privacy Act of 2018 ("CCPA," as amended by the California Privacy Rights Act of 2020, and its implementing regulations).</p>
+
+                <h2>10. European Union and United Kingdom Privacy Notice</h2>
+                <p>If you are an individual resident of the European Union or the United Kingdom, you have certain rights with respect to your personal information, including under the General Data Protection Regulation ("GDPR") and the GDPR as transposed into the law of the United Kingdom ("UK GDPR").</p>
+
+                <h2>11. Canadian Residents</h2>
+                <p>If you are a Canadian resident, this section applies to you.</p>
+
+                <h2>12. Children's and Student Data Privacy</h2>
+                <p>We do not intentionally request, collect, store, or use Personal Information from or about any child under the age of legal majority for our own use. Instead, we only request, collect, store, and use Personal Information about children as necessary to provide the Services to authorized Administrators and Users, and only as requested by the Administrators.</p>
+
+                <h2>13. Security of Information, Data Transfers, and Retention</h2>
+                <p>We maintain controls and practices that we believe are reasonable to safeguard against the unauthorized access and use of Personal Information. For example, we conduct periodic system evaluations, maintain system and security certifications, review system access, and perform and maintain regular backups.</p>
+
+                <h2>14. Use of Third-Party Services</h2>
+                <p>The Services include the ability to use and interact with third-party services such as Facebook, Twitter, and ticketing/promotional companies. By using any part of the Services that incorporate or are made available by a third party, you will also be subject to that third party's practices and policies.</p>
+
+                <h2>15. Miscellaneous</h2>
+                <p>We may change this Privacy Policy at any time in our sole discretion. Any such changes will be effective immediately upon us posting the updated Policy. If we make updates or changes, we will give notice by updating the effective date for this Policy. In some cases, and in our sole discretion, we may provide additional notice.</p>
+
+                <h2>16. Contact Information</h2>
+                <p>Please feel free to contact us with any questions you may have about this Privacy Policy at:</p>
+                <ul>
+                    <li>Phone: +1 (631) 560-9452</li>
+                    <li>Email: kevin@joinmoov.com</li>
+                    <li>Address: 775 Park Ave, Huntington NY 11743</li>
+                </ul>
+                <p class="legal-effective" style="margin-top: 32px;">Effective as of: Feb 19, 2026</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Theme toggle
+        const toggle = document.getElementById('themeToggle');
+        if (toggle) {
+            const saved = localStorage.getItem('theme');
+            if (saved) document.documentElement.setAttribute('data-theme', saved);
+            toggle.addEventListener('click', () => {
+                const current = document.documentElement.getAttribute('data-theme');
+                const next = current === 'light' ? 'dark' : 'light';
+                document.documentElement.setAttribute('data-theme', next);
+                localStorage.setItem('theme', next);
+            });
+        }
+
+        // Navbar scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 20);
+        });
+
+        // Mobile menu
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navLinks = document.getElementById('navLinks');
+        const navActions = document.querySelector('.nav-actions');
+        mobileToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            navActions.classList.toggle('active');
+            mobileToggle.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

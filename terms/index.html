@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - MOOV</title>
+    <link rel="icon" type="image/png" href="../images/moov-logo.png">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        .legal-page {
+            min-height: 100vh;
+            padding: 140px 24px 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        .legal-page-bg {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+        }
+        .legal-page-gradient {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(160deg, var(--dark-950) 0%, #0A0F2E 30%, #0F172A 60%, var(--dark-950) 100%);
+        }
+        [data-theme="light"] .legal-page-gradient {
+            background: linear-gradient(160deg, #F8FAFC 0%, #EEF2FF 30%, #F0F9FF 60%, #FFFFFF 100%);
+        }
+        .legal-container {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .legal-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        .legal-title {
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--white);
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+            margin-bottom: 12px;
+        }
+        [data-theme="light"] .legal-title { color: #0F172A; }
+        .legal-subtitle {
+            font-size: 16px;
+            color: var(--dark-400);
+            line-height: 1.6;
+        }
+        [data-theme="light"] .legal-subtitle { color: #64748B; }
+        .legal-card {
+            background: var(--dark-800);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: var(--radius-lg);
+            padding: 48px;
+        }
+        [data-theme="light"] .legal-card {
+            background: #FFFFFF;
+            border-color: rgba(0,0,0,0.1);
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.1);
+        }
+        .legal-card h2 {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--white);
+            margin-top: 36px;
+            margin-bottom: 16px;
+            line-height: 1.3;
+        }
+        .legal-card h2:first-child {
+            margin-top: 0;
+        }
+        [data-theme="light"] .legal-card h2 { color: #0F172A; }
+        .legal-card h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--dark-200);
+            margin-top: 24px;
+            margin-bottom: 12px;
+        }
+        [data-theme="light"] .legal-card h3 { color: #334155; }
+        .legal-card p {
+            font-size: 15px;
+            line-height: 1.8;
+            color: var(--dark-300);
+            margin-bottom: 16px;
+        }
+        [data-theme="light"] .legal-card p { color: #475569; }
+        .legal-card ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 16px;
+        }
+        .legal-card ul li {
+            font-size: 15px;
+            line-height: 1.8;
+            color: var(--dark-300);
+            padding-left: 20px;
+            position: relative;
+            margin-bottom: 6px;
+        }
+        .legal-card ul li::before {
+            content: "\2022";
+            position: absolute;
+            left: 0;
+            color: var(--dark-500);
+        }
+        [data-theme="light"] .legal-card ul li { color: #475569; }
+        .legal-card a {
+            color: var(--primary-500);
+            text-decoration: underline;
+        }
+        .legal-effective {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--dark-400);
+            margin-bottom: 24px;
+        }
+        [data-theme="light"] .legal-effective { color: #64748B; }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <div class="logo-icon">
+                    <img src="../images/moov-logo.png" alt="MOOV" width="36" height="36">
+                </div>
+                <span class="logo-text">MOOV</span>
+            </a>
+
+            <div class="nav-links" id="navLinks">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/#kiosk" class="nav-link">Features</a>
+                <a href="/#faq" class="nav-link">FAQ</a>
+                <a href="/quotes" class="nav-link">Quote</a>
+                <a href="https://help.joinmoov.com" class="nav-link" target="_blank">Help</a>
+                <a href="/#about" class="nav-link">About</a>
+            </div>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode">
+                    <svg class="theme-icon-sun" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                        <circle cx="9" cy="9" r="4" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M9 1V3M9 15V17M1 9H3M15 9H17M3.34 3.34L4.76 4.76M13.24 13.24L14.66 14.66M14.66 3.34L13.24 4.76M4.76 13.24L3.34 14.66" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                    <svg class="theme-icon-moon" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                        <path d="M15.36 10.36A7 7 0 1 1 7.64 2.64 5.5 5.5 0 0 0 15.36 10.36Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <a href="/demo" class="btn btn-primary">Get a Demo</a>
+            </div>
+
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <section class="legal-page">
+        <div class="legal-page-bg">
+            <div class="legal-page-gradient"></div>
+        </div>
+        <div class="legal-container">
+            <div class="legal-header">
+                <h1 class="legal-title">Terms of Service</h1>
+                <p class="legal-subtitle">Please read these terms carefully before using our services.</p>
+            </div>
+            <div class="legal-card">
+
+                <h2>1. Introduction</h2>
+                <p>What's the MOOV, Inc. (including all past, present, and future parents, subsidiaries, affiliates, related companies, officers, directors, employees, agents, representatives, partners, and licensors) ("MOOV," "Company," "we," "us," or "our") offers cutting-edge technology, communication, group management, and information services via its website, software, platforms, and mobile application (collectively, "Services") pursuant to the below terms and conditions, including all referenced policies such as our <a href="/privacy">Privacy Policy</a> (collectively, "Terms").</p>
+                <p>Our Services are used by "Administrators," "Users," and "Visitors," defined as follows:</p>
+                <ul>
+                    <li><strong>Administrators:</strong> Groups or organizations that utilize the Services for their own benefit and the benefit of their members.</li>
+                    <li><strong>Users:</strong> Persons authorized by an Administrator to use the Services.</li>
+                    <li><strong>Visitors:</strong> Individuals who view publicly published portions of the Services and are neither Administrators nor Users.</li>
+                </ul>
+                <p>Administrators, Users, and Visitors are collectively referred to as "you" or "your."</p>
+
+                <h2>2. Agreement to Terms</h2>
+                <p>UNLESS OTHERWISE AGREED TO IN WRITING, BY USING THE SERVICES IN ANY WAY, INCLUDING AS AN ADMINISTRATOR, USER, OR VISITOR, YOU AGREE TO BE BOUND BY THESE TERMS. IF YOU DO NOT AGREE TO BE BOUND BY THESE TERMS, THEN YOU MAY NOT USE THE SERVICES AND SHOULD STOP USING THE SERVICES IMMEDIATELY.</p>
+
+                <h2>3. Summary</h2>
+                <p>The Terms contain information about:</p>
+                <ul>
+                    <li>How we collect and handle personal information (more information is available in our <a href="/privacy">Privacy Policy</a> that is adopted and incorporated by reference in full herein).</li>
+                    <li>The rights and responsibilities of Administrators, Users, and Visitors.</li>
+                    <li>Permitted use of the Services.</li>
+                    <li>Limitations of liability.</li>
+                    <li>General legal principles.</li>
+                </ul>
+                <p>Full compliance with the Terms is important for the functionality of the Services and the safety and privacy of Administrators, Users, and Visitors of the Services.</p>
+
+                <h2>4. Background</h2>
+                <p>The Services are made available for use at your sole discretion and at your own risk, except as expressly set forth herein. You are exclusively responsible and liable for your use of the Services and for any consequence of your use of the Services to you and/or any third parties. We do not participate in, are not a party to, and are not liable for your interaction with or use of the Services.</p>
+                <p>We collect, store, and use personal information to offer the Services as more fully described herein and in our Privacy Policy. Although we value your security and privacy, no technology company can guarantee absolute data security. For more information about our security practices, please continue to read below and review our Privacy Policy.</p>
+                <p>We rely on third-party providers for parts of the Services. The parts of the Services that rely on or implement third-party products or services may also be subject to the practices and policies of the applicable third-party provider, which may be different than ours. More information is available below and in our Privacy Policy.</p>
+                <p>By using the Services, you agree that we will not be responsible or liable to you or any third party for any consequence, loss, claim, or damage arising directly or indirectly from or relating to your use of the Services, except as expressly set forth herein.</p>
+
+                <h2>5. Personal Information and Privacy</h2>
+                <p>In order to offer the Services, we collect, store, and process personal information provided by Administrators, Users, and Visitors. For more information on what we collect and how we collect it, please review our <a href="/privacy">Privacy Policy</a>. By using the Services, you are representing that you have read and agree to use the Services pursuant to our Privacy Policy and these Terms.</p>
+                <p>We do not intentionally request, collect, store, or use personal information from or about any user under the age of legal majority for our own purposes. Instead, we prohibit the use of the Services by users under the age of legal majority, including children under the age of thirteen (13), unless and only to the extent the User is invited or added to the Services by an authorized Administrator. When children are invited or added to the Services as Users under an Administrator's account, we provide the Services with respect to the students solely in the educational context authorized by Administrator under a separate agreement with that Administrator, and solely for the benefit of the Administrator and its Users. We only request, collect, store, and use personal information about children as is necessary to provide the Services, and only as directed by the Administrator. If we learn that we have unintentionally collected personal information from or about a child other than as set out below and in our Privacy Policy, we will delete that information as soon as reasonably practicable.</p>
+
+                <h2>6. User Eligibility</h2>
+                <p>To use the Services, you must be a Client, an End User invited or added to the Services by a Client, or a Visitor. By using the Services, you represent that you are one of these types of Users. Any use of or attempt to use the Services in any other capacity is void.</p>
+                <p>When you use the Services, we grant you a limited, personal, revocable, non-transferable, and non-exclusive license to use the Services subject to these Terms. This limited license is only so you may use the Services as allowed under these Terms. You may not use the Services for any Prohibited Use or Content (as defined below). This license is revocable at will and may be terminated by us in our sole discretion without notice to you.</p>
+                <p>Some parts of the Services may require you to register for, or access and use the Services under, an account. In that event, we request and require certain account information to provide the Services. You agree to provide truthful and complete account information. If you choose not to provide certain account information or fail to complete account information requests, parts of the Services may not be available to you or may not function as intended. Information we collect in connection with your account is handled and maintained in accordance with our Privacy Policy.</p>
+                <p>You may manage your account via the Services or by contacting us. User accounts may be created, controlled, and managed by the Administrator that invited or added you to the Services. If a User account was established or authorized by an Administrator, then that Administrator will be able to manage, access, change, edit, disable, or deactivate your account, your account information, or your log-in credentials without our or your involvement or consent. Users that want to manage, access, change, edit, disable, or deactivate their account, account information, or log-in credentials must contact the Administrator that invited or added them to the Services. Users are also subject to the account practices and policies of the applicable Administrator. The Administrator's practices and policies may be materially different than our practices and policies, and we expressly disclaim all liability arising out of or relating to the policies, actions, or inactions of any Administrator.</p>
+                <p>Use of the Services by individuals under the age of legal majority in their jurisdiction of residence is expressly prohibited, unless and only to the extent the individual is a User invited or added to the Services by an Administrator. If you are a User under the age of legal majority in your jurisdiction of residence, a parent or legal guardian must agree to these Terms on your behalf and consent to your use of the Services, and that parent or legal guardian will be exclusively responsible and liable for your use of the Services and for any consequence of your use of the Services. Any attempt by an individual under the age of legal majority in their jurisdiction to use the Services in any capacity without the agreement and consent of a parent or guardian is void. For all Users under the age of legal majority in their jurisdiction of residence, we exclusively rely on the Administrator to obtain the required legal consents from a parent or legal guardian. Please see Section 3 above and our Privacy Policy for more information about the use of the Services by Users under the age of legal majority.</p>
+                <p>If you are using the Services as or on behalf of an individual other than yourself, you represent that you are authorized and have express prior consent to act for and bind that other person to these Terms. If you are using the Services on behalf of an entity, you represent that you are authorized and have express prior consent to act for and bind that entity to these Terms.</p>
+                <p>We reserve the right to determine in our sole discretion whether your access or use of the Services fails to satisfy the terms of this Section 4. Failure to comply with the terms set out in this section will be a breach of these Terms and may result in termination of your use of the Services and liability for damages. You agree that we will not be liable, and you will indemnify, hold harmless, and reimburse us for any consequence, loss, damage, or expense (direct or indirect) (including attorneys' fees and settlement amounts) arising from or relating to your failure to comply with the terms set out in this section.</p>
+
+                <h2>7. User Obligations, Permitted Use of Services</h2>
+                <p>You agree to access and use the Services only in accordance with these Terms and applicable law.</p>
+                <p>You agree not to:</p>
+                <ul>
+                    <li>Provide personal or confidential information on or via the Services that you expect to be treated differently than as described in these Terms and our Privacy Policy.</li>
+                    <li>Use the Services in violation of any laws (including data privacy and intellectual property laws) or to promote illegal or tortious activities.</li>
+                    <li>Use the Services in a manner that is false, fraudulent, or deceptive.</li>
+                    <li>Use the Services to bully, threaten, abuse, harass, attack, defame, or harm others, or to post violent, obscene, vulgar, hateful, pornographic, profane, indecent, discriminatory, or otherwise unlawful or inflammatory content.</li>
+                    <li>Use the Services for consumer marketing or advertising, commercial solicitations, or for junk mailing or spamming.</li>
+                    <li>Use the Services for political or campaign messaging.</li>
+                    <li>Misuse any reporting, flagging, or complaint tool.</li>
+                    <li>Use the Services to breach, circumvent, disable, disrupt, damage, monitor, tamper, or otherwise interfere with the Services or any part of the Services, any User, or any related equipment, system, network, or security or authentication measure, by any method (including phishing, overloading, flooding, spamming, spoofing, scraping, or by posting, uploading, sharing, or otherwise providing content that contains viruses, malware, bots, worms, script exploits, or other malicious code).</li>
+                    <li>Use the Services to determine, copy, modify, translate, create derivative works of, design around, benchmark, or reverse engineer the Services or any part of the Services.</li>
+                    <li>Sublicense, sell, assign, or otherwise transfer the Services or any rights under these Terms to a third party, or otherwise commercially exploit or profit from the Services in any manner, except as expressly permitted by these Terms.</li>
+                    <li>Solicit Users to use other providers or solutions that are competitive with the Services.</li>
+                    <li>Falsely imply affiliation with or sponsorship by us without our prior written consent.</li>
+                    <li>Breach any of the terms or conditions of these Terms or our Privacy Policy (collectively, "Prohibited Use or Content").</li>
+                </ul>
+                <p>You are solely responsible and liable for all activity that occurs on and through the Services under or in connection with your account. THIS SPECIFICALLY INCLUDES ALL CONTENT AND COMMUNICATIONS POSTED, UPLOADED, SHARED, OR OTHERWISE PROVIDED ON OR VIA THE SERVICES UNDER OR IN CONNECTION WITH YOUR ACCOUNT, AND ANY CONSEQUENCE, LOSS, OR DAMAGE (DIRECT OR INDIRECT) CAUSED BY OR RELATED TO THE FOREGOING.</p>
+                <p>You must actively monitor the use of the Services under or in association with your account. You are solely responsible and liable for maintaining and safeguarding the security and accuracy of your account, as well as ensuring that all use of the Services by you or in connection with your account does not violate these Terms. You must promptly notify us of any unauthorized access or use.</p>
+                <p>We generally do not actively monitor the actions of individual Users on or via the Services, but we reserve the right to do so at any time and for any reason. We expressly disclaim all liability for the foregoing. YOUR ACCESS AND USE OF THE SERVICES IS AT YOUR OWN RISK.</p>
+                <p>We are not responsible or liable for the actions or omissions of any User on or via the Services, or any consequence thereof. THIS SPECIFICALLY INCLUDES ALL CONTENT AND COMMUNICATIONS POSTED, UPLOADED, SHARED, OR OTHERWISE PROVIDED ON OR VIA THE SERVICES BY USERS, AND ANY CONSEQUENCE, LOSS, OR DAMAGE (DIRECT OR INDIRECT) CAUSED BY OR RELATED TO THE FOREGOING.</p>
+                <p>We reserve the right to determine in our sole discretion whether your access or use of the Services fails to satisfy the terms of this section. Failure to comply with the terms set out in this section will be a breach of these Terms and may result in termination of your use of the Services and liability for damages. You agree that we will not be liable, and you will indemnify, hold harmless, and reimburse us for any consequence, loss, damage, or expense (direct or indirect) (including attorneys' fees and settlement amounts) arising from or relating to your failure to comply with the terms set out in this section.</p>
+
+                <h2>8. Our Rights</h2>
+                <p>We exclusively own and hold all rights, title, and interest in and to the Services and all intellectual property rights arising from or related to the Services. You do not acquire any such rights by using the Services. The Services are currently (or may be in the future) protected by copyright, trademark, patents, trade secrets, and other laws of both the United States and foreign countries. Other than as expressly provided in these Terms, you do not have any right to use, copy, or imitate our name, trademarks, logos, domain names, distinctive brand features, or other intellectual property or content, in whole or in part, without our prior written permission.</p>
+                <p>By using the Services, you grant us a non-exclusive, limited, revocable license during the term to upload, use, copy, store, transmit, and display all information, content, communications, posts, publications, and other material stored or uploaded by you and under or in association with your account (collectively, "User Content") to the extent reasonably related to providing the Services to you. All rights, title, and interests in and to User Content will remain exclusively with the applicable User; provided that we are hereby permitted to aggregate and use generalized and de-identified User Content for any purpose in our sole discretion in accordance with our Privacy Policy.</p>
+                <p>If you are a User of the Services under an Administrator account, you acknowledge that your rights with respect to User Content will also be subject to the practices and policies of the applicable Administrator Client. The Administrator's practices and policies may be materially different than our practices and policies. We expressly disclaim all liability for any act, omission, or alleged wrongdoing by any Administrator.</p>
+                <p>We reserve the right to terminate, suspend, change, or refuse to provide all or any part of the Services, to restrict or limit use of all or any part of the Services, to suspend or terminate any User, and to change eligibility criteria for Users - all at any time and for any reason in our sole discretion, and without notice or liability to you.</p>
+                <p>Feedback, ideas, and suggestions you provide ("Feedback") about us or the Services are welcome and are entirely voluntary. You grant us an exclusive, unlimited, unrestricted, perpetual, irrevocable, worldwide, royalty-free, transferable license to use all Feedback in our sole discretion, including for modifying the Services and for other commercial uses. This license includes all intellectual property rights in and to all Feedback. By providing Feedback, you agree that our right to use Feedback is without restriction and solely at our discretion.</p>
+
+                <h2>9. Support of the Services</h2>
+                <p>We use commercially reasonable efforts to ensure that the Services are supported and accessible 24 hours a day, 7 days a week, and to minimize the amount of time the Services are unavailable. We are not responsible for Users' internet connections or equipment. You acknowledge and agree that from time to time the Services may be inaccessible or inoperable, either for scheduled maintenance or unscheduled events.</p>
+                <p>We expressly disclaim all liability for any downtime or period of inoperability of the Services.</p>
+
+                <h2>10. Use of Confidential Information</h2>
+                <p>You agree to keep confidential and not disclose to any third party the non-public confidential and/or proprietary information of us or the Services, and to only use such information as required in connection with the Services or as expressly permitted by these Terms. Breach of the foregoing obligation will cause irreparable harm for which monetary damages would be inadequate. If a breach occurs or is threatened, we will be entitled to seek an injunction, a restraining order, or other equitable remedy, in addition to all other available remedies, and will not need to post a bond or other security or provide proof of actual damages.</p>
+                <p>We will seek to protect User information from disclosure in most instances as a general policy. However, we reserve the right at our discretion to access, read, preserve, and disclose User information that we reasonably believe is necessary to (i) satisfy any applicable law, regulation, legal process, or governmental request; (ii) enforce these Terms, including the investigation or prosecution of potential violations or abuse; (iii) detect, prevent, or otherwise address fraud, security, or technical issues; (iv) respond to User support requests; (v) comply with any lawful requests for information from an Administrator; and (vi) protect the rights, property, or safety of our Users. More information may be found in our Privacy Policy.</p>
+
+                <h2>11. Disclaimers; Limitations of Liability</h2>
+                <p>PLEASE READ THIS SECTION CAREFULLY. This section limits the liability of the Company ("Company" includes all past, present, and future parents, subsidiaries, affiliates, related companies, officers, directors, employees, agents, representatives, partners, and licensors). BY USING THE SERVICES, YOU EXPRESSLY AGREE TO BE BOUND BY THIS SECTION. Each subsection below applies to the maximum extent permitted under applicable law. Some jurisdictions do not allow the disclaimer of certain warranties or the limitation of liability in contracts, and, as a result, the contents of these sections may not apply to you.</p>
+
+                <h3>A. Use is at Your Own Risk; The Services are Available "AS-IS"</h3>
+                <p>We have no fiduciary or other special relationship with you. YOUR ACCESS TO AND USE OF THE SERVICES IS AT YOUR OWN RISK. You understand and agree that the Services are provided to you on an "AS IS" and "AS AVAILABLE" basis.</p>
+                <p>To the maximum extent permitted under applicable law, except as expressly set out in these Terms, WE DISCLAIM ALL WARRANTIES, WHETHER EXPRESS OR IMPLIED, OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, TITLE, SECURITY, ACCURACY, AND ANY WARRANTIES IMPLIED BY PERFORMANCE OR USE. WE DO NOT WARRANT THAT THE SERVICES ARE ERROR-FREE. THE SERVICES MAY BE UNAVAILABLE, INTERRUPTED, OR DELAYED FOR VARIOUS REASONS (INCLUDING MAINTENANCE, INTERRUPTIONS INHERENT IN THE AVAILABILITY OF THE INTERNET AND THIRD-PARTY MESSAGING SYSTEMS, OR OTHER REASONS).</p>
+                <p>Except as is expressly set out in these Terms and the Privacy Policy, we make no warranty and disclaim all responsibility and liability for: (i) the completeness, accuracy, availability, timeliness, security, and reliability of the Services; (ii) any harm that results from your access to or use of the Services; (iii) the deletion of, or the failure to store or to transmit, any information and other communications maintained by the Services; (iv) whether the Services meet your requirements or are available on an uninterrupted, secure, or error-free basis; and (v) any third-party claims, consequences, losses, or damages (direct or indirect) arising in any way out of or related to the use of the Services or these Terms. No advice or information, whether oral or written, obtained from us or through the Services, will create any warranty not expressly made in these Terms.</p>
+                <p>IT IS YOUR EXCLUSIVE RESPONSIBILITY TO EVALUATE THE RISK, ACCURACY, COMPLETENESS, DEPENDABILITY, USEFULNESS, AND MARKETABILITY OF THE SERVICES, AND ANY CONTENT OR INFORMATION AVAILABLE THROUGH THE SERVICES OR OBTAINED FROM ANOTHER USER, THIRD PARTY, OR LINKED SITE.</p>
+
+                <h3>B. Third-Party Links and Resources</h3>
+                <p>The Services may contain links to third-party products, websites, and resources. Except as expressly set out in the Services, you agree that we are not responsible or liable for: (i) the availability or accuracy of third-party products, websites, or resources; (ii) the content, products, or services on or available from third-party websites or resources; and (iii) any consequences, losses, or damages (direct or indirect) arising from third-party products, websites, or resources. Inclusion of third-party products, websites, or resources does not imply our endorsement of the websites, resources, or the content, products, or services available from the third parties. You acknowledge sole responsibility for and assume all risk of your use of any third-party product, website, or resource.</p>
+
+                <h3>C. Third-Party Providers and Partners</h3>
+                <p>We utilize third-party providers and partners for parts of the Services. Except as expressly set out in these Terms or the Privacy Policy, you agree that we are not responsible or liable for: (i) the availability, functionality, or accuracy of the parts of the Services provided by third-party providers and partners; (ii) any interruption, delay, suspension, or termination of the Services as a result of third-party providers and partners; and (iii) any consequences, losses, or damages (direct or indirect) arising from or relating to third-party providers and partners. On written request by a User, we will provide within a reasonable time a list of any non-confidential third-party providers and partners we use for the Services at that time.</p>
+                <p>If you register for or log on to the Services by using existing third-party accounts or profiles (for example: login via Google, Facebook, Twitter, etc.) and/or use third-party services accessible via the Services, you agree that you will also be subject to the third-party practices and policies associated with the third-party services that you use. The practices and policies of the applicable third parties may be materially different than our practices and policies, including with respect to data privacy and security. YOUR ACCESS AND USE OF THIRD-PARTY SERVICES IS AT YOUR OWN RISK.</p>
+                <p>Without limiting the generality of the foregoing, YOU AGREE THAT WE ARE NOT RESPONSIBLE FOR ANY CONSEQUENCE, LOSS, OR DAMAGE (DIRECT OR INDIRECT) ARISING FROM OR RELATING TO THE PARTS OF THE SERVICES MANAGED OR MADE AVAILABLE BY OR VIA THIRD-PARTY PROVIDERS AND PARTNERS, AND/OR YOUR USE OF THE SAME.</p>
+
+                <h3>D. Limitation of Liability</h3>
+                <p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, WE WILL NOT BE RESPONSIBLE OR LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS OR REVENUE, USE, GOODWILL, REPUTATION, OR OTHER INTANGIBLE LOSSES, WHETHER INCURRED DIRECTLY OR INDIRECTLY BY YOU.</p>
+                <p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, WE WILL NOT BE RESPONSIBLE OR LIABLE FOR ANY HARM, DAMAGES, OR LOSS ARISING FROM OR RELATING TO (i) YOUR ACCESS TO OR USE OF (OR INABILITY TO ACCESS OR USE) THE SERVICES; (ii) ANY CONDUCT OR CONTENT OF ANY USER OR THIRD PARTY ON OR THROUGH THE SERVICES, INCLUDING WITHOUT LIMITATION, PERSONAL INJURY, PROPERTY DAMAGE, AND DEFAMATORY, OFFENSIVE, TORTIOUS, OR ILLEGAL CONDUCT OF OTHER USERS OR THIRD PARTIES; (iii) ANY INFORMATION OR CONTENT VIEWED OR OBTAINED FROM THE SERVICES; OR (iv) UNAUTHORIZED ACCESS, USE, OR ALTERATION OF THE SERVICES.</p>
+                <p>IN NO EVENT WILL OUR AGGREGATE LIABILITY EXCEED THE GREATER OF ONE THOUSAND U.S. DOLLARS (U.S. $1,000.00) OR THE AMOUNT PAID TO US BY YOU FOR THE SERVICES IN THE PRIOR TWELVE (12) MONTH PERIOD. FOR FREE OR TRIAL USES, OUR TOTAL LIABILITY WILL NOT EXCEED ONE HUNDRED U.S. DOLLARS (U.S. $100.00). THE FOREGOING REMEDY WILL CONSTITUTE OUR SOLE LIABILITY AND OBLIGATION WITH RESPECT TO ANY CLAIM BY YOU.</p>
+                <p>THE LIMITATIONS OF THIS SUBSECTION WILL APPLY TO ALL THEORIES OF LIABILITY, WHETHER BASED ON PERSONAL INJURY, PROPERTY DAMAGE, WARRANTY, CONTRACT, STATUTE, TORT (INCLUDING NEGLIGENCE), OR OTHERWISE, WHETHER OR NOT WE HAVE BEEN INFORMED OF THE POSSIBILITY OF ANY SUCH DAMAGE, AND EVEN IF A REMEDY SET OUT IN THIS AGREEMENT IS FOUND TO HAVE FAILED ITS ESSENTIAL PURPOSE.</p>
+                <p>IF YOU ARE A CALIFORNIA RESIDENT, YOU HEREBY WAIVE YOUR RIGHTS UNDER CALIFORNIA CIVIL CODE 1542, WHICH STATES, "A GENERAL RELEASE DOES NOT EXTEND TO CLAIMS WHICH THE CREDITOR DOES NOT KNOW OR SUSPECT TO EXIST IN HIS OR HER FAVOR AT THE TIME OF EXECUTING THE RELEASE, WHICH IF KNOWN BY HIM OR HER MUST HAVE MATERIALLY AFFECTED HIS OR HER SETTLEMENT WITH THE DEBTOR."</p>
+
+                <h3>E. Monitoring the Services</h3>
+                <p>You are solely responsible for all user information, content, and messages that are communicated or published via the Services. It is possible that some User content may be inappropriate and/or constitute Prohibited Use or Content. You are solely responsible and liable for monitoring the Services to ensure that User content is not inappropriate. If you are a User and discover inappropriate User content, you should promptly notify the Administrator that invited or added you to the Services. If you are an Administrator and discover or are made aware of inappropriate User content on or under your Administrator account, you should remove it promptly. If you are unable to remove it, please contact us and we will use commercially reasonable efforts to assist you. We do not, as a general rule, actively monitor the actions of individual Users on or via the Services, but we reserve the right to do so at any time and for any reason in our sole discretion.</p>
+                <p>We disclaim all responsibility and liability for the availability, completeness, timeliness, reliability, accuracy, and decision-making with respect to monitoring User actions and User content on the Services, and the review or non-review of potentially harmful or inappropriate User content, as well as all harm, claims, consequences, losses, and damages (direct or indirect) arising in any way out of or related to all User content and the review or non-review thereof, and any action or non-action related to any of the foregoing. We will not be liable in any manner or form, or under any theory or cause of action, for inappropriate content or materials posted or communicated via the Services, or any review or lack thereof of such content or materials, or any action or non-action related to any of the foregoing, unless we are the author of the content or materials. No advice or information, whether oral or written, obtained from us or through the Services will create any liability or obligation for us with respect to User content that is not expressly made in these Terms.</p>
+                <p>PLEASE NOTE that if you discover or are made aware of any User content that is or may be connected to the abduction or sexual exploitation of a child, you should contact law enforcement authorities immediately. Please see the National Center for Missing and Exploited Children (NCMEC) (www.missingkids.org/education) for more information and resources related to abduction and child sexual exploitation prevention.</p>
+
+                <h3>F. Alerts</h3>
+                <p>If the Services permitted or provided by the Administrator include an "alerts" feature, you acknowledge and agree that such functionality is intended only as a non-emergency communication tool. You acknowledge and agree that the Services are not intended to be and cannot be used as a substitute for emergency communication methods (for example: contacting law enforcement and/or emergency medical professionals in the event of a threat to person or property; or providing notice of an emergency). Traditional emergency communications should be completed before using the Services in any such event. Administrator and Users, as applicable, are solely responsible and liable for the use of any "alerts" features and the completeness, timeliness, reliability, accuracy, omission, and decision-making with respect to all alerts content, as well as your own reliance thereon.</p>
+                <p>We disclaim all responsibility and liability for the completeness, timeliness, reliability, content, accuracy, omission, and decision-making with respect to all alerts or lack thereof, and all harm, claims, consequences, losses, and damages (direct or indirect) arising in any way out of or related to all alerts or lack thereof. We will not be liable in any manner or form, or under any theory or cause of action, for alerts or lack thereof, or alert content, posted on or communicated via the Services unless we post the content or materials. No advice or information, whether oral or written, obtained from us or through the Services will create any liability or obligation for us with respect to alerts or alert content that is not expressly made and accepted in these Terms.</p>
+
+                <h3>G. Translations</h3>
+                <p>The official text for the Services is English (U.S.). Any discrepancies or differences in translation are not binding and have no legal effect for compliance or enforcement purposes.</p>
+                <p>When using the Services, you may see or receive content that has been translated from English to another language, or vice versa. In those circumstances, the Services have been translated as a courtesy for your convenience only and may have been translated using third-party translation software. Translations are provided to you solely on an "AS IS" and "AS AVAILABLE" basis. No warranty of any kind, either express or implied, is made as to the accuracy, reliability, or correctness of any language translation.</p>
+                <p>We disclaim all liability and warranties, express or implied, related to any translations, including any warranties of accuracy, reliability, and any implied warranties of merchantability, fitness for a particular purpose, and non-infringement.</p>
+
+                <h3>H. Electronic Signatures</h3>
+                <p>The Services may include features that allow Users to electronically sign documents and forms. You agree that (i) the Administrator that invited or added you to the Services and its Users exclusively control and have sole responsibility for all documents, forms, agreements, information, content, communications, and other material submitted to you for electronic signature (collectively, "Esign Content"); and (ii) you exclusively control and have sole responsibility for evaluating the accuracy, completeness, and appropriateness of all Esign Content and for choosing whether to electronically sign any Esign Content.</p>
+                <p>Please note that (i) certain types of forms, documents, agreements, and other materials may be excluded, limited, or otherwise restricted by electronic signature laws and regulations, and/or (ii) certain laws and regulations may impose specific requirements, limitations, and restrictions on specific types of electronic signature content and requests. Administrators and Users, as applicable, are solely responsible and liable for complying with all such laws and regulations. We disclaim all responsibility and liability for all electronic signature content and requests, and all harm, claims, consequences, losses, and damages (direct or indirect) arising in any way out of or related to all electronic signature content and requests. We will not be liable in any manner or form, or under any theory or cause of action, for electronic signature content and requests, posted on or communicated via the Services unless we are the author of the content or request.</p>
+
+                <h3>I. Accessibility Compliance</h3>
+                <p>Administrators are solely responsible for complying with all applicable laws and regulations governing accessibility of the parts of the Services under the control of the Administrator (for example: an Administrator's website and/or mobile applications, communications, etc.), including, but not limited to, the Americans with Disabilities Act ("ADA"), and Web Content Accessibility Guidelines ("WCAG").</p>
+                <p>Administrators are encouraged to establish and implement methods and procedures to ensure compliance with applicable accessibility laws and regulations, and to inform and train each of its employees, contractors, and representatives who use the Services on the methods and procedures.</p>
+                <p>We disclaim all responsibility and liability for compliance with all laws and regulations governing accessibility of the parts of the Services under the control of Administrators, and all harm, claims, consequences, losses, and damages (direct or indirect) arising in any way out of or related to accessibility, or lack thereof, to the parts of the Services under the control of Administrators. We will not be liable in any manner or form, or under any theory or cause of action, for compliance with any laws and regulations governing accessibility of the parts of the Services under the control of Administrators.</p>
+
+                <h2>12. Termination</h2>
+                <p>These Terms apply from the first interaction with the Services until terminated by either party.</p>
+                <p>Users and Visitors can terminate their use of the Services at any time by ceasing use of and interaction with the Services. For those Users who used the Services through an Administrator, the Administrator fully terminates the account.</p>
+                <p>Administrators can terminate their use of the Services in accordance with the terms of the agreement by which the Administrators gained access to the Services.</p>
+                <p>We reserve the right to terminate access to the Services at any time and for any reason in our sole discretion, including but not limited to your violation of the Terms or our Privacy Policy, or if the Services are no longer commercially viable.</p>
+                <p>Upon termination, your license to use the Services will automatically cease, yet you will still remain obligated by these Terms.</p>
+
+                <h2>13. Indemnification</h2>
+                <p>Except as otherwise agreed in writing, by using the Services, you agree to the maximum extent permitted by applicable law to indemnify, hold harmless, and reimburse the Company for all claims and liabilities (actual and threatened), obligations, settlements, losses, expenses, debts, and damages (including costs and attorneys' fees) (collectively, "Claims") that arise from or relate to (i) your breach of any part of these Terms or our Privacy Policy, including any activity and content associated with your account (whether by you or a third party), (ii) information or materials you post, upload, share, or otherwise provide on or through the Services; (iii) your infringement or violation of copyright, patent, trademark, trade secret, or other intellectual property or related rights of any third party; (iv) your use of any third-party services that you access or use via the Services; and/or (v) your negligent or willful misconduct. You agree to promptly notify us of any actual or potential Claim of which you become aware. We reserve the right to assume exclusive control of and direct the defense or settlement of any Claims otherwise subject to indemnification by you. You agree to assist and cooperate with us in the defense of such Claims upon request.</p>
+
+                <h2>14. Miscellaneous</h2>
+
+                <h3>A. Waiver and Severability</h3>
+                <p>Our failure to enforce any right or term of these Terms will not be a waiver of the right or term. If any term is held to be invalid or unenforceable, then that term will be limited or eliminated to the minimum extent necessary, and the remaining parts of these Terms will stay in full force and effect. In such an instance, the parties agree that the intent of the original language should be enforceable against the parties to the maximum extent permitted by law.</p>
+
+                <h3>B. Governing Law; Jurisdiction</h3>
+                <p>These Terms and any dispute related to these Terms will be governed by the laws of the State of New York without regard to conflicts of law principles. Subject to the dispute resolution terms set forth herein, all claims and legal proceedings arising in connection with the Services will be brought exclusively in the federal or state courts located in New York County, New York, and you consent to the exclusive jurisdiction and venue of those courts.</p>
+
+                <h3>C. Dispute Resolution</h3>
+                <p>You agree that you will notify us in writing of any dispute related to the Services. We will thereafter have thirty (30) days from receipt of your written notice to address the dispute before you may initiate any third-party action to resolve the dispute. Notice under this section must be addressed to the address of the Company set forth below.</p>
+                <p>Any dispute arising from or relating to these Terms that is not voluntarily resolved by the parties pursuant to the previous paragraph must be finally settled by arbitration in New York, New York, by JAMS, Inc. ("JAMS") or its successor, under the then applicable JAMS Comprehensive Arbitration Rules &amp; Procedures. Judgment on or enforcement of the arbitration award may be entered in any court having jurisdiction. Any arbitration under this Agreement will take place on an individual basis: CLASS ARBITRATIONS AND CLASS ACTIONS ARE NOT PERMITTED. BY USING THE SERVICES, YOU ACKNOWLEDGE AND AGREE THAT YOU ARE WAIVING THE RIGHT TO TRIAL BY JURY AND TO PARTICIPATE IN A CLASS ACTION. Notwithstanding the previous obligations, each party will have the right to start an action at any time for injunctive or equitable relief in the mandatory jurisdiction and venue established above. If you are a resident of a jurisdiction where binding arbitration and class action waivers are not valid, this section will not apply to you.</p>
+
+                <h3>D. Consent to Electronic Communication</h3>
+                <p>By using the Services, you agree to receive all communications from us or your Administrator in electronic form, including, but not limited to, emails sent to the email address associated with your account, and/or posted notices on the Services. By using the Services, you agree that all agreements, notices, disclosures, and other communications from that are provided electronically will satisfy all legal requirements that communications be in writing. All notices from us will be deemed effective when sent to the email address associated with your account, or when posted publicly on the Services.</p>
+
+                <h3>E. Entire Agreement, Assignment</h3>
+                <p>Unless separately agreed to in writing, these Terms and the Privacy Policy constitute the entire and exclusive agreement between the Company and you about the Services and supersede and replace any prior Terms, Privacy Policy, or other agreement or understanding between us, and relate to all of your current and future use of the Services.</p>
+                <p>The agreement established by these Terms is made for the sole benefit of the Company and each User, Administrator, or Visitor, and their respective successors and permitted assigns. Except as expressly provided in these Terms, no other person or entity is intended to or will have the rights or benefits provided under these Terms, whether as third-party beneficiaries or otherwise. None of the Terms, nor any right, obligation, or remedy under the Terms is assignable, transferable, or sublicensable by you except with our prior written consent. Any attempted assignment, transfer, or sublicense by you without our prior written consent is null and void. We may assign, transfer, or delegate these Terms or any right or obligation or remedy under these Terms in our sole discretion.</p>
+
+                <h3>F. Modification of Terms</h3>
+                <p>These Terms may be modified by us from time to time in our sole discretion. The most current version can be viewed at the following link: <a href="/terms">https://www.joinmoov.com/terms</a>. Any modifications will be effective immediately upon us posting the updated Terms. If we make updates or changes, we will give notice in our sole discretion by updating the posted date for these Terms, by alerting users through the Services, or by sending you an email notification. By continuing to use the Services after changes are effective, you will be bound by the revised Terms. If you do not agree with any updates to these Terms, you may not continue to use the Services. Notwithstanding the foregoing, if we make updates or changes that materially change User rights with respect to personal information, or reduce the level of protection for personal information, we will comply with applicable law. We will provide you with advance notice on the Services and, if required by applicable law, request your consent. For impacted Clients, we will also provide notice to you via the contact information you have provided to us.</p>
+
+                <h3>G. Notices, Contact Information</h3>
+                <p>General Notice: The Services are operated and provided by What's the MOOV, Inc., 775 Park Ave, Huntington NY, 11743</p>
+
+                <p class="legal-effective" style="margin-top: 32px;">EFFECTIVE AS OF: Feb 19, 2026</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Theme toggle
+        const toggle = document.getElementById('themeToggle');
+        if (toggle) {
+            const saved = localStorage.getItem('theme');
+            if (saved) document.documentElement.setAttribute('data-theme', saved);
+            toggle.addEventListener('click', () => {
+                const current = document.documentElement.getAttribute('data-theme');
+                const next = current === 'light' ? 'dark' : 'light';
+                document.documentElement.setAttribute('data-theme', next);
+                localStorage.setItem('theme', next);
+            });
+        }
+
+        // Navbar scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 20);
+        });
+
+        // Mobile menu
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navLinks = document.getElementById('navLinks');
+        const navActions = document.querySelector('.nav-actions');
+        mobileToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            navActions.classList.toggle('active');
+            mobileToggle.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
