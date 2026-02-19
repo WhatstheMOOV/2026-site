@@ -1734,7 +1734,8 @@ ul { list-style: none; }
     [data-theme="light"] .nav-links.active .nav-link + .nav-link {
         border-top-color: rgba(0,0,0,0.06);
     }
-    .nav-actions { display: none !important; }
+    .nav-actions .btn { display: none; }
+    .nav-actions { gap: 12px; }
     .mobile-menu-cta {
         display: flex;
         margin-top: 6px;
