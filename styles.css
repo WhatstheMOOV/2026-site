@@ -1022,26 +1022,93 @@ ul { list-style: none; }
 }
 .product-photo {
     width: 100%;
-    max-width: 480px;
+    max-width: 280px;
     height: auto;
     border-radius: var(--radius-lg);
     object-fit: contain;
-    filter: drop-shadow(0 25px 60px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(0 15px 40px rgba(0, 0, 0, 0.4));
 }
 .product-card-photo {
     width: 100%;
-    height: 180px;
-    object-fit: cover;
+    height: 120px;
+    object-fit: contain;
     border-radius: var(--radius-sm);
-    margin-bottom: 16px;
+    margin-bottom: 12px;
 }
 .feature-card-photo {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
+    height: 140px;
+    object-fit: contain;
     border-radius: var(--radius-md);
-    margin-bottom: 20px;
+    margin-bottom: 16px;
 }
+
+/* ===== HERO CAROUSEL ===== */
+.hero-carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+}
+.hero-carousel-track {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+}
+.hero-carousel-slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transform: scale(1.04);
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: opacity, transform;
+}
+.hero-carousel-slide.active {
+    opacity: 1;
+    transform: scale(1);
+}
+.hero-carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+}
+.hero-carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 16px;
+}
+.hero-carousel-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: all 0.3s ease;
+    position: relative;
+}
+.hero-carousel-dot.active {
+    background: var(--primary-500);
+    width: 24px;
+    border-radius: 4px;
+}
+.hero-carousel-label {
+    text-align: center;
+    margin-top: 12px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--dark-400);
+    letter-spacing: 0.04em;
+    min-height: 20px;
+    transition: opacity 0.3s ease;
+}
+
+[data-theme="light"] .hero-carousel-dot { background: rgba(0, 0, 0, 0.15); }
+[data-theme="light"] .hero-carousel-dot.active { background: var(--primary-500); }
+[data-theme="light"] .hero-carousel-label { color: #94A3B8; }
 
 /* ===== PHONE MOCKUP ===== */
 .student-visual {
