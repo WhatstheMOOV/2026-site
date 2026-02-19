@@ -1102,8 +1102,18 @@ ul { list-style: none; }
     aspect-ratio: 16 / 9;
     border-radius: var(--radius-lg);
     overflow: hidden;
-    background: linear-gradient(135deg, #0A0F2E 0%, #1E1065 50%, #0F172A 100%);
+    background: #0A0F2E;
     cursor: pointer;
+}
+.video-thumbnail {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.video-preview.playing .video-thumbnail {
+    display: none;
 }
 .video-preview-overlay {
     position: absolute;
@@ -1158,7 +1168,7 @@ ul { list-style: none; }
 }
 
 [data-theme="light"] .video-preview {
-    background: linear-gradient(135deg, #EEF2FF 0%, #E0E7FF 50%, #F0F9FF 100%);
+    background: #EEF2FF;
 }
 [data-theme="light"] .video-preview-label { color: rgba(0, 0, 0, 0.5); }
 
