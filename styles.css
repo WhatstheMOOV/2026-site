@@ -1151,17 +1151,12 @@ ul { list-style: none; }
 .video-play-btn svg {
     margin-left: 3px;
 }
-.video-preview-label {
-    font-size: 14px;
-    font-weight: 600;
-    color: rgba(255, 255, 255, 0.7);
-    letter-spacing: 0.04em;
-}
 .video-iframe {
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
     border: none;
-    border-radius: var(--radius-lg);
 }
 .video-preview.playing .video-iframe {
     display: block !important;
@@ -1170,7 +1165,6 @@ ul { list-style: none; }
 [data-theme="light"] .video-preview {
     background: #EEF2FF;
 }
-[data-theme="light"] .video-preview-label { color: rgba(0, 0, 0, 0.5); }
 
 /* ===== ABOUT SECTION (INLINE) ===== */
 .about-section {
