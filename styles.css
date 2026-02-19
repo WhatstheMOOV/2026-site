@@ -905,7 +905,7 @@ ul { list-style: none; }
     object-fit: contain;
     display: block;
     border-radius: var(--radius-lg);
-    filter: drop-shadow(0 25px 60px rgba(0, 0, 0, 0.6)) drop-shadow(0 0 40px rgba(255, 255, 255, 0.15));
+    filter: drop-shadow(0 25px 60px rgba(0, 0, 0, 0.6)) drop-shadow(0 0 40px rgba(255, 255, 255, 0.55));
 }
 
 [data-theme="light"] .kiosk-photo {
@@ -1115,22 +1115,6 @@ ul { list-style: none; }
     position: relative;
 }
 
-.floating-pass {
-    position: absolute;
-    width: 120px;
-    height: auto;
-    right: -10px;
-    bottom: -20px;
-    border-radius: var(--radius-md);
-    filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.35));
-    animation: floatPass 4s ease-in-out infinite;
-    z-index: 2;
-}
-
-@keyframes floatPass {
-    0%, 100% { transform: translateY(0) rotate(-3deg); }
-    50% { transform: translateY(-12px) rotate(2deg); }
-}
 .product-photo {
     width: 100%;
     max-width: 280px;
@@ -1138,6 +1122,42 @@ ul { list-style: none; }
     border-radius: var(--radius-lg);
     object-fit: contain;
     filter: drop-shadow(0 15px 40px rgba(0, 0, 0, 0.4));
+}
+
+/* Visitor Management diagonal layout */
+#visitor-management .product-image-wrap {
+    min-height: 340px;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+#visitor-management .product-photo {
+    position: relative;
+    top: 0;
+    left: 0;
+    animation: floatVM 5s ease-in-out infinite;
+}
+
+.floating-pass {
+    position: absolute;
+    width: 120px;
+    height: auto;
+    right: 0;
+    bottom: 0;
+    border-radius: 0;
+    filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.35));
+    animation: floatPass 4.5s ease-in-out infinite;
+    z-index: 2;
+}
+
+@keyframes floatVM {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(1deg); }
+}
+
+@keyframes floatPass {
+    0%, 100% { transform: translateY(0) rotate(2deg); }
+    50% { transform: translateY(-14px) rotate(-2deg); }
 }
 .product-card-photo {
     width: 100%;
@@ -1749,7 +1769,8 @@ ul { list-style: none; }
     .features-deep { grid-template-columns: 1fr; }
     .product-grid { grid-template-columns: 1fr; }
     .product-photo { filter: none; }
-    .floating-pass { width: 80px; right: 0; bottom: -10px; filter: none; }
+    .floating-pass { width: 80px; right: 0; bottom: 0; filter: none; }
+    #visitor-management .product-image-wrap { min-height: 260px; }
     .district-grid { grid-template-columns: 1fr; }
     .testimonials-grid { grid-template-columns: 1fr; }
 
