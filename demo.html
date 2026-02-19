@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get a Demo - MOOV</title>
+    <link rel="icon" type="image/png" href="images/moov-logo.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        .demo-page {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 140px 24px 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        .demo-page-bg {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+        }
+        .demo-page-gradient {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(160deg, var(--dark-950) 0%, #0A0F2E 30%, #0F172A 60%, var(--dark-950) 100%);
+        }
+        [data-theme="light"] .demo-page-gradient {
+            background: linear-gradient(160deg, #F8FAFC 0%, #EEF2FF 30%, #F0F9FF 60%, #FFFFFF 100%);
+        }
+        .demo-page-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+        }
+        .demo-page-orb-1 {
+            width: 400px; height: 400px;
+            background: var(--primary-500);
+            top: -100px; right: -50px;
+            opacity: 0.1;
+        }
+        .demo-page-orb-2 {
+            width: 300px; height: 300px;
+            background: var(--blue-500);
+            bottom: -80px; left: -80px;
+            opacity: 0.07;
+        }
+        .demo-container {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            max-width: 560px;
+        }
+        .demo-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .demo-header .nav-logo {
+            justify-content: center;
+            margin-bottom: 32px;
+        }
+        .demo-title {
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--white);
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+            margin-bottom: 12px;
+        }
+        [data-theme="light"] .demo-title { color: #0F172A; }
+        .demo-subtitle {
+            font-size: 16px;
+            color: var(--dark-400);
+            line-height: 1.6;
+        }
+        [data-theme="light"] .demo-subtitle { color: #64748B; }
+        .demo-form-card {
+            background: var(--dark-800);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+        }
+        [data-theme="light"] .demo-form-card {
+            background: #FFFFFF;
+            border-color: rgba(0,0,0,0.1);
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.1);
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--dark-200);
+            margin-bottom: 8px;
+        }
+        [data-theme="light"] .form-label { color: #334155; }
+        .form-input,
+        .form-textarea {
+            width: 100%;
+            padding: 12px 16px;
+            background: var(--dark-900);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: var(--radius-md);
+            color: var(--white);
+            font-size: 15px;
+            font-family: var(--font-family);
+            transition: all 0.2s ease;
+            outline: none;
+        }
+        .form-input::placeholder,
+        .form-textarea::placeholder {
+            color: var(--dark-500);
+        }
+        .form-input:focus,
+        .form-textarea:focus {
+            border-color: var(--primary-500);
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+        }
+        [data-theme="light"] .form-input,
+        [data-theme="light"] .form-textarea {
+            background: #F8FAFC;
+            border-color: rgba(0,0,0,0.12);
+            color: #0F172A;
+        }
+        [data-theme="light"] .form-input::placeholder,
+        [data-theme="light"] .form-textarea::placeholder {
+            color: #94A3B8;
+        }
+        [data-theme="light"] .form-input:focus,
+        [data-theme="light"] .form-textarea:focus {
+            border-color: var(--primary-500);
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+        }
+        .form-textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        .form-submit {
+            width: 100%;
+            padding: 14px 32px;
+            margin-top: 8px;
+        }
+        .recaptcha-notice {
+            text-align: center;
+            margin-top: 16px;
+            font-size: 12px;
+            color: var(--dark-500);
+            line-height: 1.5;
+        }
+        .recaptcha-notice a {
+            color: var(--dark-400);
+            text-decoration: underline;
+        }
+        [data-theme="light"] .recaptcha-notice { color: #94A3B8; }
+        [data-theme="light"] .recaptcha-notice a { color: #64748B; }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 24px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--dark-400);
+            transition: color 0.2s;
+        }
+        .back-link:hover { color: var(--primary-500); }
+        [data-theme="light"] .back-link { color: #64748B; }
+        [data-theme="light"] .back-link:hover { color: var(--primary-500); }
+        .form-success {
+            display: none;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        .form-success.show {
+            display: block;
+        }
+        .form-success-icon {
+            width: 64px;
+            height: 64px;
+            background: rgba(34, 197, 94, 0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+        .form-success h3 {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 8px;
+        }
+        [data-theme="light"] .form-success h3 { color: #0F172A; }
+        .form-success p {
+            font-size: 15px;
+            color: var(--dark-400);
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <div class="logo-icon">
+                    <img src="images/moov-logo.png" alt="MOOV" width="36" height="36">
+                </div>
+                <span class="logo-text">MOOV</span>
+            </a>
+
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="index.html#kiosk" class="nav-link">Features</a>
+                <a href="index.html#faq" class="nav-link">FAQ</a>
+                <a href="index.html#training" class="nav-link">Training</a>
+                <a href="index.html#quote" class="nav-link">Quote</a>
+                <a href="index.html#about" class="nav-link">About</a>
+            </div>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode">
+                    <svg class="theme-icon-sun" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                        <circle cx="9" cy="9" r="4" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M9 1V3M9 15V17M1 9H3M15 9H17M3.34 3.34L4.76 4.76M13.24 13.24L14.66 14.66M14.66 3.34L13.24 4.76M4.76 13.24L3.34 14.66" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                    <svg class="theme-icon-moon" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                        <path d="M15.36 10.36A7 7 0 1 1 7.64 2.64 5.5 5.5 0 0 0 15.36 10.36Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <a href="demo.html" class="btn btn-primary">Get a Demo</a>
+            </div>
+
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <section class="demo-page">
+        <div class="demo-page-bg">
+            <div class="demo-page-gradient"></div>
+            <div class="demo-page-orb demo-page-orb-1"></div>
+            <div class="demo-page-orb demo-page-orb-2"></div>
+        </div>
+        <div class="demo-container">
+            <a href="index.html" class="back-link">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M10 12L6 8L10 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Back to Home
+            </a>
+            <div class="demo-header">
+                <h1 class="demo-title">Get a Demo</h1>
+                <p class="demo-subtitle">See how MOOV can automate attendance and increase safety at your school. Fill out the form below and we'll be in touch.</p>
+            </div>
+            <div class="demo-form-card">
+                <form id="demoForm">
+                    <div class="form-group">
+                        <label class="form-label" for="fullName">Full Name</label>
+                        <input type="text" id="fullName" name="fullName" class="form-input" placeholder="John Smith" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="email">Email</label>
+                        <input type="email" id="email" name="email" class="form-input" placeholder="john@school.edu" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" class="form-input" placeholder="(555) 123-4567">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="message">Message</label>
+                        <textarea id="message" name="message" class="form-textarea" placeholder="Tell us about your school and what you're looking for..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg form-submit">Submit</button>
+                    <p class="recaptcha-notice">This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy">Privacy Policy</a> and <a href="https://policies.google.com/terms">Terms of Service</a> apply.</p>
+                </form>
+                <div class="form-success" id="formSuccess">
+                    <div class="form-success-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path d="M8 16L14 22L24 10" stroke="#22C55E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Thank you!</h3>
+                    <p>We've received your request and will be in touch shortly to schedule your demo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Theme toggle
+        const toggle = document.getElementById('themeToggle');
+        if (toggle) {
+            const saved = localStorage.getItem('theme');
+            if (saved) document.documentElement.setAttribute('data-theme', saved);
+            toggle.addEventListener('click', () => {
+                const current = document.documentElement.getAttribute('data-theme');
+                const next = current === 'light' ? 'dark' : 'light';
+                document.documentElement.setAttribute('data-theme', next);
+                localStorage.setItem('theme', next);
+            });
+        }
+
+        // Navbar scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 20);
+        });
+
+        // Mobile menu
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navLinks = document.getElementById('navLinks');
+        const navActions = document.querySelector('.nav-actions');
+        mobileToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            navActions.classList.toggle('active');
+            mobileToggle.classList.toggle('active');
+        });
+
+        // Form submission
+        document.getElementById('demoForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            document.getElementById('demoForm').style.display = 'none';
+            document.getElementById('formSuccess').classList.add('show');
+        });
+    </script>
+</body>
+</html>

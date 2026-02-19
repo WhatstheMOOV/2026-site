@@ -153,9 +153,9 @@
 
 .team-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: 32px;
-    max-width: 1100px;
+    max-width: 100%;
     margin: 0 auto;
 }
 
@@ -232,6 +232,9 @@
     color: var(--dark-400);
     line-height: 1.7;
     text-align: left;
+}
+.team-bio + .team-bio {
+    margin-top: 16px;
 }
 
 [data-theme="light"] .team-bio { color: #64748B; }

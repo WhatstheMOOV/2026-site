@@ -1099,18 +1099,15 @@ ul { list-style: none; }
 .video-preview {
     position: relative;
     width: 100%;
-    aspect-ratio: 16 / 9;
     border-radius: var(--radius-lg);
     overflow: hidden;
     background: #0A0F2E;
     cursor: pointer;
 }
 .video-thumbnail {
-    position: absolute;
-    inset: 0;
+    display: block;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
 }
 .video-preview.playing .video-thumbnail {
     display: none;

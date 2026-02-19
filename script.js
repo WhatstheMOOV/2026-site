@@ -197,10 +197,20 @@ function initVideoPreview() {
     const overlay = preview.querySelector('.video-preview-overlay');
     const iframe = document.getElementById('videoIframe');
 
-    overlay.addEventListener('click', () => {
+    function playVideo() {
         iframe.src = 'https://player.vimeo.com/video/1095601750?autoplay=1&title=0&byline=0&portrait=0';
         preview.classList.add('playing');
-    });
+    }
+
+    overlay.addEventListener('click', playVideo);
+
+    const watchDemoBtn = document.getElementById('watchDemoBtn');
+    if (watchDemoBtn) {
+        watchDemoBtn.addEventListener('click', () => {
+            preview.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            setTimeout(playVideo, 600);
+        });
+    }
 }
 
 // ===== Initialize =====
