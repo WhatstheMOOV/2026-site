@@ -1126,7 +1126,7 @@ ul { list-style: none; }
 
 /* Visitor Management diagonal layout */
 #visitor-management .product-image-wrap {
-    min-height: 340px;
+    min-height: 300px;
     align-items: flex-start;
     justify-content: flex-start;
 }
@@ -1140,10 +1140,10 @@ ul { list-style: none; }
 
 .floating-pass {
     position: absolute;
-    width: 120px;
+    width: 150px;
     height: auto;
-    right: 0;
-    bottom: 0;
+    right: 40px;
+    bottom: 30px;
     border-radius: 0;
     filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.35));
     animation: floatPass 4.5s ease-in-out infinite;
