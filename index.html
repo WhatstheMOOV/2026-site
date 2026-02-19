@@ -26,7 +26,7 @@
                 <a href="#" class="nav-link active">Home</a>
                 <a href="#kiosk" class="nav-link">Features</a>
                 <a href="#faq" class="nav-link">FAQ</a>
-                <a href="#quote-form" class="nav-link">Quote</a>
+                <a href="/quotes" class="nav-link">Quote</a>
                 <a href="https://help.joinmoov.com" class="nav-link" target="_blank">Help</a>
                 <a href="#about" class="nav-link">About</a>
             </div>
@@ -255,7 +255,7 @@
                             Common Areas
                         </div>
                     </div>
-                    <a href="#quote-form" class="btn btn-emerald" data-product="Kiosk">Get a Kiosk Quote</a>
+                    <a href="/quotes" class="btn btn-emerald">Get a Kiosk Quote</a>
                 </div>
             </div>
         </div>
@@ -361,7 +361,7 @@
                             <span>Accountability in bathrooms, offices, libraries, and more</span>
                         </li>
                     </ul>
-                    <a href="#quote-form" class="btn btn-cyan" data-product="Zero-Touch Passes">Get a Quote</a>
+                    <a href="/quotes" class="btn btn-cyan">Get a Quote</a>
                 </div>
             </div>
         </div>
@@ -414,7 +414,7 @@
                             <span>Write a hall pass directly from the device</span>
                         </li>
                     </ul>
-                    <a href="#quote-form" class="btn btn-cyan" data-product="Handheld">Get a Handheld Quote</a>
+                    <a href="/quotes" class="btn btn-cyan">Get a Handheld Quote</a>
                 </div>
             </div>
         </div>
@@ -467,7 +467,7 @@
                             <span>Remembers past pickups and visitor history</span>
                         </li>
                     </ul>
-                    <a href="#quote-form" class="btn btn-red" data-product="Visitor Management">Get a Quote</a>
+                    <a href="/quotes" class="btn btn-red">Get a Quote</a>
                 </div>
             </div>
         </div>
@@ -649,78 +649,15 @@
         </div>
     </section>
 
-    <!-- Get a Quote Form -->
-    <section class="quote-form-section" id="quote-form">
+    <!-- Get a Quote CTA -->
+    <section class="cta-section" id="quote">
         <div class="container">
-            <div class="quote-form-layout">
-                <div class="quote-form-info">
-                    <div class="section-badge">Get a Quote</div>
-                    <h2 class="section-title">Ready to bring MOOV<br><span class="gradient-text">to your school?</span></h2>
-                    <p class="section-subtitle">Join the schools that are already saving time, increasing attendance, and keeping students safer with MOOV. Fill out the form and we'll get back to you with a custom quote.</p>
-                    <ul class="quote-benefits">
-                        <li>
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 10L9 14L15 7" stroke="#6366F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                            <span>Custom pricing for your school or district</span>
-                        </li>
-                        <li>
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 10L9 14L15 7" stroke="#6366F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                            <span>No commitment required</span>
-                        </li>
-                        <li>
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 10L9 14L15 7" stroke="#6366F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                            <span>Response within 24 hours</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="quote-form-card">
-                    <form id="quoteForm" action="https://formspree.io/f/xbdakwgo" method="POST">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label class="form-label" for="quoteName">Full Name</label>
-                                <input type="text" id="quoteName" name="fullName" class="form-input" placeholder="John Smith" required>
-                            </div>
-                            <div class="form-group">
-                                <label class="form-label" for="quoteEmail">Email</label>
-                                <input type="email" id="quoteEmail" name="email" class="form-input" placeholder="john@school.edu" required>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label class="form-label" for="quotePhone">Phone Number</label>
-                                <input type="tel" id="quotePhone" name="phone" class="form-input" placeholder="(555) 123-4567">
-                            </div>
-                            <div class="form-group">
-                                <label class="form-label" for="quoteSchool">School / District</label>
-                                <input type="text" id="quoteSchool" name="school" class="form-input" placeholder="Your school or district name" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label" for="quoteProduct">Product Interest</label>
-                            <select id="quoteProduct" name="product" class="form-input form-select">
-                                <option value="">Select a product...</option>
-                                <option value="Kiosk">MOOV Kiosk</option>
-                                <option value="Magic Reader">Magic Reader (Automated Attendance)</option>
-                                <option value="Handheld">MOOV Handheld</option>
-                                <option value="Zero-Touch Passes">Zero-Touch Passes</option>
-                                <option value="Visitor Management">Visitor Management</option>
-                                <option value="Full Suite">Full Suite (All Products)</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label" for="quoteMessage">Message</label>
-                            <textarea id="quoteMessage" name="message" class="form-textarea" placeholder="Tell us about your school and what you're looking for..."></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-lg form-submit">Get My Quote</button>
-                    </form>
-                    <div class="form-success" id="quoteFormSuccess">
-                        <div class="form-success-icon">
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                                <path d="M8 16L14 22L24 10" stroke="#22C55E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </div>
-                        <h3>Thank you!</h3>
-                        <p>We've received your quote request and will be in touch shortly with custom pricing for your school.</p>
-                    </div>
+            <div class="cta-content">
+                <h2 class="cta-title">Ready to bring MOOV<br>to your school?</h2>
+                <p class="cta-subtitle">Join the schools that are already saving time, increasing attendance, and keeping students safer with MOOV.</p>
+                <div class="cta-actions">
+                    <a href="/quotes" class="btn btn-white btn-lg">Get a Quote</a>
+                    <a href="/demo" class="btn btn-ghost-light btn-lg">Get a Demo</a>
                 </div>
             </div>
         </div>
@@ -850,7 +787,7 @@
                     <ul>
                         <li><a href="https://help.joinmoov.com" target="_blank">Help Center</a></li>
                         <li><a href="#faq">FAQ</a></li>
-                        <li><a href="#quote-form">Get a Quote</a></li>
+                        <li><a href="/quotes">Get a Quote</a></li>
                     </ul>
                 </div>
                 <div class="footer-links-group">

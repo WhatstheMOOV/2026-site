@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get a Demo - MOOV</title>
+    <title>Get a Quote - MOOV</title>
     <link rel="icon" type="image/png" href="../images/moov-logo.png">
     <link rel="stylesheet" href="../styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        .demo-page {
+        .quote-page {
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -19,51 +19,47 @@
             position: relative;
             overflow: hidden;
         }
-        .demo-page-bg {
+        .quote-page-bg {
             position: absolute;
             inset: 0;
             z-index: 0;
         }
-        .demo-page-gradient {
+        .quote-page-gradient {
             position: absolute;
             inset: 0;
             background: linear-gradient(160deg, var(--dark-950) 0%, #0A0F2E 30%, #0F172A 60%, var(--dark-950) 100%);
         }
-        [data-theme="light"] .demo-page-gradient {
+        [data-theme="light"] .quote-page-gradient {
             background: linear-gradient(160deg, #F8FAFC 0%, #EEF2FF 30%, #F0F9FF 60%, #FFFFFF 100%);
         }
-        .demo-page-orb {
+        .quote-page-orb {
             position: absolute;
             border-radius: 50%;
             filter: blur(100px);
         }
-        .demo-page-orb-1 {
+        .quote-page-orb-1 {
             width: 400px; height: 400px;
             background: var(--primary-500);
             top: -100px; right: -50px;
             opacity: 0.1;
         }
-        .demo-page-orb-2 {
+        .quote-page-orb-2 {
             width: 300px; height: 300px;
             background: var(--blue-500);
             bottom: -80px; left: -80px;
             opacity: 0.07;
         }
-        .demo-container {
+        .quote-container {
             position: relative;
             z-index: 1;
             width: 100%;
             max-width: 560px;
         }
-        .demo-header {
+        .quote-header {
             text-align: center;
             margin-bottom: 40px;
         }
-        .demo-header .nav-logo {
-            justify-content: center;
-            margin-bottom: 32px;
-        }
-        .demo-title {
+        .quote-title {
             font-size: 36px;
             font-weight: 800;
             color: var(--white);
@@ -71,20 +67,20 @@
             letter-spacing: -0.02em;
             margin-bottom: 12px;
         }
-        [data-theme="light"] .demo-title { color: #0F172A; }
-        .demo-subtitle {
+        [data-theme="light"] .quote-title { color: #0F172A; }
+        .quote-subtitle {
             font-size: 16px;
             color: var(--dark-400);
             line-height: 1.6;
         }
-        [data-theme="light"] .demo-subtitle { color: #64748B; }
-        .demo-form-card {
+        [data-theme="light"] .quote-subtitle { color: #64748B; }
+        .quote-form-card {
             background: var(--dark-800);
             border: 1px solid rgba(255,255,255,0.08);
             border-radius: var(--radius-lg);
             padding: 40px;
         }
-        [data-theme="light"] .demo-form-card {
+        [data-theme="light"] .quote-form-card {
             background: #FFFFFF;
             border-color: rgba(0,0,0,0.1);
             box-shadow: 0 25px 50px -12px rgba(0,0,0,0.1);
@@ -100,8 +96,20 @@
             margin-bottom: 8px;
         }
         [data-theme="light"] .form-label { color: #334155; }
-        .form-input,
-        .form-textarea {
+        .form-hint {
+            display: block;
+            font-size: 13px;
+            font-weight: 400;
+            color: var(--dark-500);
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+        .form-hint a {
+            color: var(--primary-500);
+            text-decoration: underline;
+        }
+        [data-theme="light"] .form-hint { color: #94A3B8; }
+        .form-input {
             width: 100%;
             padding: 12px 16px;
             background: var(--dark-900);
@@ -113,33 +121,24 @@
             transition: all 0.2s ease;
             outline: none;
         }
-        .form-input::placeholder,
-        .form-textarea::placeholder {
+        .form-input::placeholder {
             color: var(--dark-500);
         }
-        .form-input:focus,
-        .form-textarea:focus {
+        .form-input:focus {
             border-color: var(--primary-500);
             box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
         }
-        [data-theme="light"] .form-input,
-        [data-theme="light"] .form-textarea {
+        [data-theme="light"] .form-input {
             background: #F8FAFC;
             border-color: rgba(0,0,0,0.12);
             color: #0F172A;
         }
-        [data-theme="light"] .form-input::placeholder,
-        [data-theme="light"] .form-textarea::placeholder {
+        [data-theme="light"] .form-input::placeholder {
             color: #94A3B8;
         }
-        [data-theme="light"] .form-input:focus,
-        [data-theme="light"] .form-textarea:focus {
+        [data-theme="light"] .form-input:focus {
             border-color: var(--primary-500);
             box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
-        }
-        .form-textarea {
-            min-height: 120px;
-            resize: vertical;
         }
         .form-submit {
             width: 100%;
@@ -159,19 +158,6 @@
         }
         [data-theme="light"] .recaptcha-notice { color: #94A3B8; }
         [data-theme="light"] .recaptcha-notice a { color: #64748B; }
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            margin-bottom: 24px;
-            font-size: 14px;
-            font-weight: 500;
-            color: var(--dark-400);
-            transition: color 0.2s;
-        }
-        .back-link:hover { color: var(--primary-500); }
-        [data-theme="light"] .back-link { color: #64748B; }
-        [data-theme="light"] .back-link:hover { color: var(--primary-500); }
         .form-success {
             display: none;
             text-align: center;
@@ -219,7 +205,8 @@
                 <a href="/" class="nav-link">Home</a>
                 <a href="/#kiosk" class="nav-link">Features</a>
                 <a href="/#faq" class="nav-link">FAQ</a>
-                <a href="/quotes" class="nav-link">Quote</a>
+                <a href="/quotes" class="nav-link active">Quote</a>
+                <a href="https://help.joinmoov.com" class="nav-link" target="_blank">Help</a>
                 <a href="/#about" class="nav-link">About</a>
             </div>
 
@@ -244,34 +231,60 @@
         </div>
     </nav>
 
-    <section class="demo-page">
-        <div class="demo-page-bg">
-            <div class="demo-page-gradient"></div>
-            <div class="demo-page-orb demo-page-orb-1"></div>
-            <div class="demo-page-orb demo-page-orb-2"></div>
+    <section class="quote-page">
+        <div class="quote-page-bg">
+            <div class="quote-page-gradient"></div>
+            <div class="quote-page-orb quote-page-orb-1"></div>
+            <div class="quote-page-orb quote-page-orb-2"></div>
         </div>
-        <div class="demo-container">
-            <div class="demo-header">
-                <h1 class="demo-title">Get a Demo</h1>
-                <p class="demo-subtitle">See how MOOV can automate attendance and increase safety at your school. Fill out the form below and we'll be in touch.</p>
+        <div class="quote-container">
+            <div class="quote-header">
+                <h1 class="quote-title">Get a Quote</h1>
+                <p class="quote-subtitle">Tell us about your school and we'll put together a custom quote for you.</p>
             </div>
-            <div class="demo-form-card">
-                <form id="demoForm" action="https://formspree.io/f/xrealjgp" method="POST">
+            <div class="quote-form-card">
+                <form id="quoteForm" action="https://formspree.io/f/xbdakwgo" method="POST">
                     <div class="form-group">
-                        <label class="form-label" for="fullName">Full Name</label>
-                        <input type="text" id="fullName" name="fullName" class="form-input" placeholder="John Smith" required>
+                        <label class="form-label" for="fullName">Name</label>
+                        <input type="text" id="fullName" name="fullName" class="form-input" placeholder="Full Name" required>
                     </div>
                     <div class="form-group">
-                        <label class="form-label" for="email">Email</label>
-                        <input type="email" id="email" name="email" class="form-input" placeholder="john@school.edu" required>
+                        <label class="form-label" for="email">School email</label>
+                        <input type="email" id="email" name="email" class="form-input" placeholder="ksmith@school.k12.ny.us" required>
                     </div>
                     <div class="form-group">
-                        <label class="form-label" for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" class="form-input" placeholder="(555) 123-4567">
+                        <label class="form-label" for="students">How many students do you have?</label>
+                        <input type="number" id="students" name="students" class="form-input" placeholder="1500" min="0" required>
                     </div>
                     <div class="form-group">
-                        <label class="form-label" for="message">Message</label>
-                        <textarea id="message" name="message" class="form-textarea" placeholder="Tell us about your school and what you're looking for..."></textarea>
+                        <label class="form-label" for="wifiReaders">How many WiFi Readers do you need?</label>
+                        <span class="form-hint">Usually one per classroom, bathroom, office, library, etc.</span>
+                        <input type="number" id="wifiReaders" name="wifiReaders" class="form-input" placeholder="185" min="0">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="poeReaders">How many PoE Readers do you need?</label>
+                        <span class="form-hint">Hardwired, ethernet variant of the reader.</span>
+                        <input type="number" id="poeReaders" name="poeReaders" class="form-input" placeholder="185" min="0">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="kiosks">How many kiosks do you need?</label>
+                        <span class="form-hint">Usually for security to supervise at entry points, cafeterias, etc. <a href="/#kiosk">See example.</a></span>
+                        <input type="number" id="kiosks" name="kiosks" class="form-input" placeholder="5" min="0">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="handhelds">How many handheld readers do you need?</label>
+                        <span class="form-hint">A mobile device capable of "spot checking" students by tapping their IDs to see where they belong. <a href="/#handheld">See example.</a></span>
+                        <input type="number" id="handhelds" name="handhelds" class="form-input" placeholder="8" min="0">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="rfidCards">How many RFID cards do you need?</label>
+                        <span class="form-hint">Usually one per student, plus a few hundred blanks.</span>
+                        <input type="number" id="rfidCards" name="rfidCards" class="form-input" placeholder="1800" min="0">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="visitorStations">How many Visitor Management stations do you need?</label>
+                        <span class="form-hint">Screen visitors with a check against criminal databases, sex offender registries, etc.</span>
+                        <input type="number" id="visitorStations" name="visitorStations" class="form-input" placeholder="5" min="0">
                     </div>
                     <button type="submit" class="btn btn-primary btn-lg form-submit">Submit</button>
                     <p class="recaptcha-notice">This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy">Privacy Policy</a> and <a href="https://policies.google.com/terms">Terms of Service</a> apply.</p>
@@ -283,7 +296,7 @@
                         </svg>
                     </div>
                     <h3>Thank you!</h3>
-                    <p>We've received your request and will be in touch shortly to schedule your demo.</p>
+                    <p>We've received your quote request and will be in touch shortly with custom pricing for your school.</p>
                 </div>
             </div>
         </div>
@@ -320,7 +333,7 @@
         });
 
         // Form submission
-        document.getElementById('demoForm').addEventListener('submit', (e) => {
+        document.getElementById('quoteForm').addEventListener('submit', (e) => {
             e.preventDefault();
             const form = e.target;
             const data = new FormData(form);
