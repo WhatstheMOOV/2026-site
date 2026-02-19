@@ -638,12 +638,19 @@ ul { list-style: none; }
 }
 .partner-logo {
     display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 8px;
-    font-size: 15px; font-weight: 700;
+    font-size: 13px; font-weight: 700;
     color: var(--dark-600);
     white-space: nowrap;
     flex-shrink: 0;
+}
+.partner-logo-img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    opacity: 0.7;
 }
 .partner-icon {
     flex-shrink: 0;
@@ -1091,14 +1098,17 @@ ul { list-style: none; }
 .video-preview {
     position: relative;
     width: 100%;
+    aspect-ratio: 2.4 / 1;
     cursor: pointer;
     border-radius: var(--radius-lg);
     overflow: hidden;
 }
 .video-thumbnail {
-    display: block;
+    position: absolute;
+    inset: 0;
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
 }
 .video-preview.playing {
     aspect-ratio: 16 / 9;
