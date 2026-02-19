@@ -1217,6 +1217,19 @@ ul { list-style: none; }
     margin: 80px 0 40px;
 }
 .about-team-header .section-badge { display: inline-flex; }
+.team-linkedin {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #0A66C2;
+    text-decoration: none;
+    margin-top: 2px;
+    transition: opacity 0.2s;
+}
+.team-linkedin:hover { opacity: 0.75; }
+.team-linkedin svg { flex-shrink: 0; }
 
 [data-theme="light"] .about-section { background: #F8FAFC; }
 
