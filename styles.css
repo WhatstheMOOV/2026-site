@@ -402,6 +402,11 @@ ul { list-style: none; }
     letter-spacing: 0.02em;
 }
 .logo-icon { display: flex; }
+.logo-icon img {
+    transition: filter 0.3s ease;
+    filter: brightness(0) invert(1);
+}
+[data-theme="light"] .logo-icon img { filter: none; }
 .logo-text { color: var(--white); transition: color 0.3s ease; }
 
 .nav-links {
