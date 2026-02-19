@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MOOV - Automate Attendance, Streamline Hall Passes, Increase Safety</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="about.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -27,7 +28,7 @@
                 <a href="#training" class="nav-link">Training</a>
                 <a href="#quote" class="nav-link">Quote</a>
                 <a href="#" class="nav-link">Help</a>
-                <a href="about.html" class="nav-link">About</a>
+                <a href="#about" class="nav-link">About</a>
             </div>
 
             <div class="nav-actions">
@@ -94,20 +95,16 @@
             </div>
             <div class="hero-visual">
                 <div class="hero-screenshot-wrap">
-                    <div class="hero-carousel" id="heroCarousel">
-                        <div class="hero-carousel-track">
-                            <div class="hero-carousel-slide active" data-label="Safer Entry">
-                                <img src="images/kiosk.png" alt="MOOV Kiosk for safer entry">
-                            </div>
-                            <div class="hero-carousel-slide" data-label="Automated Attendance">
-                                <img src="images/moov-reader.png" alt="MOOV Reader for automated attendance">
-                            </div>
-                            <div class="hero-carousel-slide" data-label="Zero-Touch Passes">
-                                <img src="images/handheld.png" alt="MOOV Handheld for zero-touch passes">
-                            </div>
+                    <div class="video-preview" id="videoPreview">
+                        <div class="video-preview-overlay">
+                            <button class="video-play-btn" aria-label="Play case study video">
+                                <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                                    <path d="M8 5L24 14L8 23V5Z" fill="white"/>
+                                </svg>
+                            </button>
+                            <span class="video-preview-label">Watch Our Case Study</span>
                         </div>
-                        <div class="hero-carousel-dots" id="carouselDots"></div>
-                        <div class="hero-carousel-label" id="carouselLabel">Safer Entry</div>
+                        <iframe class="video-iframe" id="videoIframe" src="" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="display:none;"></iframe>
                     </div>
                 </div>
             </div>
@@ -703,6 +700,82 @@
         </div>
     </section>
 
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">About Us</div>
+                <h2 class="section-title">Built by students,<br><span class="gradient-text">for schools</span></h2>
+                <p class="section-subtitle">We lived the problem. Now we're building the solution that schools across America rely on every day.</p>
+            </div>
+
+            <div class="values-stack">
+                <div class="value-row">
+                    <div class="value-letter-large">M</div>
+                    <div class="value-body">
+                        <h3><span class="value-highlight">M</span>ove with urgency</h3>
+                        <p>We operate like lives depend on it &mdash; because in many ways, they do. When a school has a need, we respond within minutes.</p>
+                    </div>
+                </div>
+                <div class="value-row">
+                    <div class="value-letter-large">O</div>
+                    <div class="value-body">
+                        <h3><span class="value-highlight">O</span>bsess over customers</h3>
+                        <p>We completely obsess over our customers. Every decision is made with this lens. We shock our customers with the quality of our products and the speed of our service.</p>
+                    </div>
+                </div>
+                <div class="value-row">
+                    <div class="value-letter-large">O</div>
+                    <div class="value-body">
+                        <h3><span class="value-highlight">O</span>ur people come first</h3>
+                        <p>We prioritize the success of our employees and partners above all else.</p>
+                    </div>
+                </div>
+                <div class="value-row">
+                    <div class="value-letter-large">V</div>
+                    <div class="value-body">
+                        <h3><span class="value-highlight">V</span>ery long-term thinking</h3>
+                        <p>We measure our work by the hours we save teachers and staff, the security incidents we prevent, and the number of schools that run better with us. We're not building a business to get acquired, we're building 50-year relationships with customers, and insanely great products that the schools of our kids' kids will benefit from.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="values-bonus">
+                <span class="bonus-label">Bonus:</span> Volume negates luck.
+            </div>
+
+            <div class="about-team-header">
+                <div class="section-badge badge-cyan">The Team</div>
+                <h2 class="section-title">Meet the people<br><span class="gradient-text-cyan">behind MOOV</span></h2>
+            </div>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-avatar">
+                        <img src="images/kevin.png" alt="Kevin" class="team-avatar-img">
+                    </div>
+                    <h3>Kevin</h3>
+                    <p class="team-role">CEO</p>
+                    <p class="team-bio">Kevin is a recent(&hellip;ish) public schooler who would walk into his school unaccounted for. With no verification at entry, manual attendance in the classroom, and blocks of wood for hall passes, he knew there had to be a better system for accountability and attendance. After launching MOOV at his former high school, the system has swept across the country, been featured on FOX, and is now helping some of the smallest and largest schools in the U.S. become safer and more streamlined. Kevin is also a walk-on to the Notre Dame Men's Rowing Team and a US Marine.</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">
+                        <img src="images/samera.png" alt="Samera" class="team-avatar-img">
+                    </div>
+                    <h3>Samera</h3>
+                    <p class="team-role">Director of Operations</p>
+                    <p class="team-bio">Samera is a recent(&hellip;ish) public schooler with a history of chronic tardiness. There was no motivation for her to change her behavior, and post-high school, she envisioned how to make the school experience better for students and staff alike.</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">
+                        <img src="images/ashley.png" alt="Ashley" class="team-avatar-img">
+                    </div>
+                    <h3>Ashley</h3>
+                    <p class="team-role">Product Development</p>
+                    <p class="team-bio">Ashley is a recent(&hellip;ish) public schooler turned public educator. As an AP Biology teacher and aspiring administrator at Babylon Junior-Senior High School, Ashley had experienced the problems MOOV solves from an educator's perspective. She has helped develop the product from experiences in her own classroom, directly inspiring features such as hall pass counts, administrative reports and dashboards, and more.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -755,7 +828,7 @@
                 <div class="footer-links-group">
                     <h4>Company</h4>
                     <ul>
-                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#about">About Us</a></li>
                         <li><a href="#">Careers</a></li>
                         <li><a href="#">Press</a></li>
                         <li><a href="#">Contact</a></li>

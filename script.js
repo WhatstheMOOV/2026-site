@@ -189,53 +189,18 @@ function initThemeToggle() {
     });
 }
 
-// ===== Hero Carousel =====
-function initHeroCarousel() {
-    const carousel = document.getElementById('heroCarousel');
-    if (!carousel) return;
+// ===== Video Preview =====
+function initVideoPreview() {
+    const preview = document.getElementById('videoPreview');
+    if (!preview) return;
 
-    const slides = carousel.querySelectorAll('.hero-carousel-slide');
-    const dotsContainer = document.getElementById('carouselDots');
-    const label = document.getElementById('carouselLabel');
-    let current = 0;
-    let interval;
+    const overlay = preview.querySelector('.video-preview-overlay');
+    const iframe = document.getElementById('videoIframe');
 
-    // Build dots
-    slides.forEach((_, i) => {
-        const dot = document.createElement('button');
-        dot.classList.add('hero-carousel-dot');
-        if (i === 0) dot.classList.add('active');
-        dot.setAttribute('aria-label', `Slide ${i + 1}`);
-        dot.addEventListener('click', () => goTo(i));
-        dotsContainer.appendChild(dot);
+    overlay.addEventListener('click', () => {
+        iframe.src = 'https://player.vimeo.com/video/1095601750?autoplay=1&title=0&byline=0&portrait=0';
+        preview.classList.add('playing');
     });
-
-    const dots = dotsContainer.querySelectorAll('.hero-carousel-dot');
-
-    function goTo(index) {
-        slides[current].classList.remove('active');
-        dots[current].classList.remove('active');
-        current = index;
-        slides[current].classList.add('active');
-        dots[current].classList.add('active');
-        label.textContent = slides[current].dataset.label;
-        resetInterval();
-    }
-
-    function next() {
-        goTo((current + 1) % slides.length);
-    }
-
-    function resetInterval() {
-        clearInterval(interval);
-        interval = setInterval(next, 2000);
-    }
-
-    // Pause on hover
-    carousel.addEventListener('mouseenter', () => clearInterval(interval));
-    carousel.addEventListener('mouseleave', () => { interval = setInterval(next, 2000); });
-
-    interval = setInterval(next, 2000);
 }
 
 // ===== Initialize =====
@@ -246,5 +211,5 @@ document.addEventListener('DOMContentLoaded', () => {
     animateCounters();
     animateAttendanceRows();
     initParallax();
-    initHeroCarousel();
+    initVideoPreview();
 });
