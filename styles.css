@@ -248,6 +248,7 @@ ul { list-style: none; }
 }
 [data-theme="light"] .logo-bar-title { color: #94A3B8; }
 [data-theme="light"] .partner-logo { color: #94A3B8; }
+[data-theme="light"] .partner-icon { opacity: 0.5; }
 
 [data-theme="light"] .stats-section {
     background: #FFFFFF;
@@ -405,7 +406,7 @@ ul { list-style: none; }
     letter-spacing: 0.02em;
 }
 .logo-icon { display: flex; }
-.logo-text { color: var(--white); }
+.logo-text { color: var(--white); transition: color 0.3s ease; }
 
 .nav-links {
     display: flex;
@@ -644,10 +645,17 @@ ul { list-style: none; }
     width: max-content;
 }
 .partner-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     font-size: 15px; font-weight: 700;
     color: var(--dark-600);
     white-space: nowrap;
     flex-shrink: 0;
+}
+.partner-icon {
+    flex-shrink: 0;
+    opacity: 0.7;
 }
 @keyframes scroll {
     0% { transform: translateX(0); }
@@ -1093,6 +1101,7 @@ ul { list-style: none; }
     width: 100%;
     overflow: hidden;
     border-radius: var(--radius-lg);
+    padding: 24px 0;
 }
 .hero-carousel-track {
     position: relative;
