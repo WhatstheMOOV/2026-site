@@ -1606,7 +1606,7 @@ ul { list-style: none; }
     .hero-subtitle { font-size: 20px; }
     .section-title { font-size: 32px; }
 
-    .showcase-layout { grid-template-columns: 1fr; gap: 40px; }
+    .showcase-layout { grid-template-columns: 1fr; gap: 48px; }
     .showcase-reverse .showcase-layout { direction: ltr; }
     .showcase-card-stack {
         height: auto;
