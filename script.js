@@ -121,7 +121,9 @@ function animateCounters() {
                 const match = text.match(/(\d+)/);
                 if (match) {
                     const target = parseInt(match[0]);
-                    const suffix = text.replace(match[0], '');
+                    const idx = text.indexOf(match[0]);
+                    const prefix = text.substring(0, idx);
+                    const suffix = text.substring(idx + match[0].length);
                     let current = 0;
                     const increment = target / 40;
                     const timer = setInterval(() => {
@@ -130,7 +132,7 @@ function animateCounters() {
                             current = target;
                             clearInterval(timer);
                         }
-                        el.textContent = Math.floor(current) + suffix;
+                        el.textContent = prefix + Math.floor(current) + suffix;
                     }, 30);
                 }
                 observer.unobserve(el);
