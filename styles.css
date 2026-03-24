@@ -93,6 +93,12 @@ ul { list-style: none; }
     cursor: pointer;
     transition: all 0.2s ease;
     white-space: nowrap;
+    touch-action: manipulation;
+}
+
+.btn:active {
+    transform: scale(0.97);
+    transition: transform 0.05s ease;
 }
 
 .btn-primary {
