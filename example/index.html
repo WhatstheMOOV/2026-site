@@ -23,7 +23,6 @@
             padding: 2rem 1rem;
         }
 
-        /* Loading / error states */
         .state-msg {
             display: flex;
             align-items: center;
@@ -38,14 +37,13 @@
         .id-card {
             position: relative;
             width: 680px;
-            aspect-ratio: 1.586; /* CR80 card ratio */
+            aspect-ratio: 1.586;
             border-radius: 16px;
             overflow: hidden;
             box-shadow: 0 20px 60px rgba(0,0,0,0.25), 0 4px 12px rgba(0,0,0,0.1);
             background: #d4d4d4;
         }
 
-        /* Background image layer */
         .id-card-bg {
             position: absolute;
             inset: 0;
@@ -55,29 +53,44 @@
             z-index: 0;
         }
 
-        /* Content layer */
+        /* Absolute positioning for all card elements */
         .id-card-content {
             position: relative;
             z-index: 1;
             width: 100%;
             height: 100%;
-            display: grid;
-            grid-template-columns: 42% 1fr;
-            grid-template-rows: auto 1fr auto;
-            padding: 0;
         }
 
-        /* School title - top right */
+        /* Student photo — top left */
+        .card-photo {
+            position: absolute;
+            top: 5%;
+            left: 4%;
+            width: 36%;
+            aspect-ratio: 1;
+            border: 5px solid #111;
+            background: #fff;
+            overflow: hidden;
+            z-index: 3;
+        }
+        .card-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* School title — top right */
         .card-school-title {
-            grid-column: 2;
-            grid-row: 1;
-            font-size: 1.5rem;
+            position: absolute;
+            top: 5%;
+            left: 42%;
+            right: 4%;
+            font-size: 1.25rem;
             font-weight: 900;
             text-transform: uppercase;
             letter-spacing: 0.02em;
-            padding: 1.25rem 1.25rem 0.5rem 0;
             text-align: right;
-            line-height: 1.15;
+            line-height: 1.2;
             text-shadow:
                 -2px -2px 0 #fff, 2px -2px 0 #fff,
                 -2px 2px 0 #fff, 2px 2px 0 #fff,
@@ -85,55 +98,43 @@
                 -2px 0 0 #fff, 2px 0 0 #fff;
         }
 
-        /* Student photo - left side */
-        .card-photo-area {
-            grid-column: 1;
-            grid-row: 1 / 3;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            padding: 1rem 0.75rem 0 1.25rem;
-        }
-
-        .card-photo {
-            width: 100%;
-            aspect-ratio: 1;
-            border: 5px solid #111;
-            background: #fff;
-            overflow: hidden;
-        }
-
-        .card-photo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* Year + logo strip - right side middle */
+        /* Year strip — spans from photo right edge to card right edge */
         .card-year-strip {
-            grid-column: 2;
-            grid-row: 2;
+            position: absolute;
+            top: 42%;
+            left: 40%;
+            right: 0;
+            height: 22%;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 0;
-            padding: 0.5rem 1.25rem 0.5rem 0;
+            z-index: 2;
         }
 
-        .year-logo-row {
+        .year-strip-bg {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+        }
+
+        .year-strip-content {
+            position: relative;
+            z-index: 1;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 0;
-            border-radius: 4px;
-            overflow: hidden;
+            width: 100%;
         }
 
         .year-text {
-            font-size: 2.25rem;
+            font-size: 2.75rem;
             font-weight: 900;
             letter-spacing: 0.02em;
-            padding: 0.4rem 0.6rem;
+            padding: 0 0.5rem;
+            flex: 1;
+            text-align: center;
             text-shadow:
                 -1.5px -1.5px 0 #000, 1.5px -1.5px 0 #000,
                 -1.5px 1.5px 0 #000, 1.5px 1.5px 0 #000;
@@ -152,61 +153,56 @@
             flex-shrink: 0;
             z-index: 2;
         }
-
         .card-logo-circle img {
             width: 70%;
             height: 70%;
             object-fit: contain;
         }
 
-        /* Student name - bottom left */
+        /* Student name — bottom left */
         .card-student-name {
-            grid-column: 1;
-            grid-row: 3;
-            font-size: 1.3rem;
+            position: absolute;
+            bottom: 14%;
+            left: 4%;
+            font-size: 1.25rem;
             font-weight: 900;
             text-transform: uppercase;
-            padding: 0.25rem 0.75rem 0 1.25rem;
             letter-spacing: 0.01em;
             white-space: nowrap;
         }
 
-        /* Barcode - bottom right */
+        /* Barcode — bottom right */
         .card-barcode {
-            grid-column: 2;
-            grid-row: 3;
-            display: flex;
-            align-items: flex-end;
-            justify-content: flex-end;
-            padding: 0 1.25rem 0 0;
+            position: absolute;
+            bottom: 12%;
+            right: 4%;
         }
-
         .barcode-svg {
-            width: 140px;
-            height: 48px;
+            width: 130px;
+            height: 44px;
         }
 
-        /* Footer strip */
+        /* Footer strip — very bottom */
         .card-footer {
-            grid-column: 1 / -1;
-            grid-row: 4;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 0.4rem 1.25rem 0.75rem;
-            font-size: 0.65rem;
+            padding: 0.4rem 4%;
+            font-size: 0.6rem;
             color: #333;
         }
-
         .card-footer-left {
             display: flex;
             align-items: center;
-            gap: 0.4rem;
+            gap: 0.35rem;
         }
-
         .card-footer-left img {
-            width: 20px;
-            height: 20px;
+            width: 18px;
+            height: 18px;
         }
 
         /* ===== CTA below card ===== */
@@ -234,16 +230,13 @@
 
         /* Responsive */
         @media (max-width: 720px) {
-            .id-card {
-                width: 100%;
-                max-width: 480px;
-            }
-            .card-school-title { font-size: 1rem; padding: 0.75rem 0.75rem 0.25rem 0; }
-            .year-text { font-size: 1.5rem; }
+            .id-card { width: 100%; max-width: 480px; }
+            .card-school-title { font-size: 0.85rem; }
+            .year-text { font-size: 1.75rem; }
             .card-logo-circle { width: 56px; height: 56px; }
-            .card-student-name { font-size: 0.95rem; }
-            .card-footer { font-size: 0.55rem; padding: 0.3rem 0.75rem 0.5rem; }
-            .barcode-svg { width: 100px; height: 36px; }
+            .card-student-name { font-size: 0.9rem; }
+            .card-footer { font-size: 0.5rem; }
+            .barcode-svg { width: 90px; height: 32px; }
         }
     </style>
 </head>
@@ -253,23 +246,21 @@
 
     <div id="page" style="display:none;">
         <div class="id-card" id="idCard">
-            <!-- Background image -->
             <div class="id-card-bg" id="cardBg"></div>
 
             <div class="id-card-content">
-                <!-- Student photo (left) -->
-                <div class="card-photo-area">
-                    <div class="card-photo">
-                        <img src="/images/kevin.png" alt="Student photo">
-                    </div>
+                <!-- Student photo -->
+                <div class="card-photo">
+                    <img src="/images/kevin.png" alt="Student photo">
                 </div>
 
-                <!-- School title (top right) -->
+                <!-- School title -->
                 <div class="card-school-title" id="cardTitle"></div>
 
-                <!-- Year strip + logo (right middle) -->
+                <!-- Year strip — full width from photo to right edge -->
                 <div class="card-year-strip">
-                    <div class="year-logo-row" id="yearStrip">
+                    <div class="year-strip-bg" id="yearStripBg"></div>
+                    <div class="year-strip-content">
                         <span class="year-text" id="yearLeft">2026</span>
                         <div class="card-logo-circle" id="logoCircle">
                             <img id="cardLogo" src="" alt="">
@@ -278,10 +269,10 @@
                     </div>
                 </div>
 
-                <!-- Student name (bottom left) -->
+                <!-- Student name -->
                 <div class="card-student-name" id="studentName">BART SIMPSON</div>
 
-                <!-- Barcode (bottom right) -->
+                <!-- Barcode -->
                 <div class="card-barcode">
                     <svg class="barcode-svg" viewBox="0 0 140 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect x="2" y="0" width="2" height="38" fill="#111"/>
@@ -334,7 +325,6 @@
             </div>
         </div>
 
-        <!-- CTA -->
         <div class="cta-section">
             <p>See how MOOV works for <span id="ctaName"></span></p>
             <a href="/demo" class="btn-demo" id="btnDemo">Get a Demo</a>
@@ -353,7 +343,6 @@
                 errorEl.style.display = 'flex';
             }
 
-            // Extract slug from URL path: /example/some-slug
             const parts = window.location.pathname.replace(/\/+$/, '').split('/');
             const slug = parts[parts.length - 1];
 
@@ -362,7 +351,6 @@
                 return;
             }
 
-            // Fetch schools.json
             let schools;
             try {
                 const res = await fetch('/data/schools.json');
@@ -380,13 +368,11 @@
                 return;
             }
 
-            // --- Render the card ---
             document.title = `MOOV for ${school.name}`;
 
             const primary = school.colors?.primary || '#111111';
             const secondary = school.colors?.secondary || '#666666';
 
-            // Darken a hex color by a factor (0-1, lower = darker)
             function darkenHex(hex, factor) {
                 hex = hex.replace('#', '');
                 const r = Math.round(parseInt(hex.substring(0, 2), 16) * factor);
@@ -405,19 +391,18 @@
             }
 
             // Student name
-            const nameEl = document.getElementById('studentName');
             if (school.showColors) {
-                nameEl.style.color = primary;
+                document.getElementById('studentName').style.color = primary;
             }
 
-            // Year strip background + text color
-            const yearStrip = document.getElementById('yearStrip');
+            // Year strip
+            const yearStripBg = document.getElementById('yearStripBg');
             if (school.showColors) {
-                yearStrip.style.background = darkPrimary;
+                yearStripBg.style.background = darkPrimary;
                 document.getElementById('yearLeft').style.color = primary;
                 document.getElementById('yearRight').style.color = primary;
             } else {
-                yearStrip.style.background = 'rgba(0,0,0,0.5)';
+                yearStripBg.style.background = 'rgba(0,0,0,0.5)';
                 document.getElementById('yearLeft').style.color = '#fff';
                 document.getElementById('yearRight').style.color = '#fff';
             }
@@ -446,7 +431,6 @@
                 document.getElementById('btnDemo').style.background = primary;
             }
 
-            // Show page
             loadingEl.style.display = 'none';
             pageEl.style.display = 'block';
         })();
