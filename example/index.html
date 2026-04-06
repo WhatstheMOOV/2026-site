@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOOV for Your School</title>
+    <link rel="icon" type="image/png" href="/images/moov-logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f8f9fa;
+            color: #1a1a1a;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Loading / error states */
+        .state-msg {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 60vh;
+            font-size: 1.125rem;
+            color: #666;
+        }
+        .state-msg.error { color: #c0392b; }
+
+        /* Page layout */
+        .page { width: 100%; max-width: 720px; padding: 3rem 1.5rem; }
+
+        /* School header */
+        .school-header {
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+            margin-bottom: 2.5rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid #e5e7eb;
+        }
+        .school-logo {
+            width: 72px;
+            height: 72px;
+            object-fit: contain;
+            border-radius: 8px;
+            flex-shrink: 0;
+        }
+        .school-name {
+            font-size: 1.75rem;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+
+        /* Color swatches */
+        .color-row {
+            display: flex;
+            gap: 0.75rem;
+            margin-bottom: 2.5rem;
+        }
+        .swatch {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            font-size: 0.875rem;
+        }
+        .swatch-dot {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 1px solid rgba(0,0,0,0.1);
+        }
+        .swatch-hex { font-family: monospace; color: #555; }
+
+        /* Data card */
+        .data-card {
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 2.5rem;
+        }
+        .data-card-title {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #888;
+            padding: 1rem 1.25rem 0.5rem;
+        }
+        .data-card pre {
+            padding: 0 1.25rem 1.25rem;
+            font-size: 0.8125rem;
+            line-height: 1.6;
+            overflow-x: auto;
+            color: #333;
+        }
+
+        /* CTA */
+        .cta-section { text-align: center; margin-top: 1rem; }
+        .cta-section p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 1rem;
+        }
+        .btn-demo {
+            display: inline-block;
+            padding: 0.875rem 2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            color: #fff;
+            text-decoration: none;
+            transition: opacity 0.15s;
+        }
+        .btn-demo:hover { opacity: 0.9; }
+
+        /* Branded accent bar at top of page */
+        .accent-bar {
+            width: 100%;
+            height: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="accent-bar" id="accentBar"></div>
+
+    <div class="state-msg" id="loading">Loading&hellip;</div>
+    <div class="state-msg error" id="error" style="display:none;"></div>
+
+    <div class="page" id="page" style="display:none;">
+        <!-- School header -->
+        <div class="school-header">
+            <img class="school-logo" id="schoolLogo" src="" alt="" style="display:none;">
+            <h1 class="school-name" id="schoolName"></h1>
+        </div>
+
+        <!-- Color swatches -->
+        <div class="color-row" id="colorRow" style="display:none;"></div>
+
+        <!-- Raw JSON data -->
+        <div class="data-card">
+            <div class="data-card-title">School Data</div>
+            <pre id="jsonDump"></pre>
+        </div>
+
+        <!-- CTA -->
+        <div class="cta-section">
+            <p>See how MOOV works for <span id="ctaName"></span></p>
+            <a href="/demo" class="btn-demo" id="btnDemo" style="background:#111;">Get a Demo</a>
+        </div>
+    </div>
+
+    <script>
+        (async function () {
+            const loadingEl = document.getElementById('loading');
+            const errorEl = document.getElementById('error');
+            const pageEl = document.getElementById('page');
+
+            function showError(msg) {
+                loadingEl.style.display = 'none';
+                errorEl.textContent = msg;
+                errorEl.style.display = 'flex';
+            }
+
+            // Extract slug from URL path: /example/some-slug
+            const parts = window.location.pathname.replace(/\/+$/, '').split('/');
+            const slug = parts[parts.length - 1];
+
+            if (!slug || slug === 'example') {
+                showError('No school specified.');
+                return;
+            }
+
+            // Fetch schools.json
+            let schools;
+            try {
+                const res = await fetch('/data/schools.json');
+                if (!res.ok) throw new Error('Failed to load schools data.');
+                schools = await res.json();
+            } catch (e) {
+                showError(e.message);
+                return;
+            }
+
+            const school = schools[slug];
+            if (!school) {
+                showError('School not found.');
+                document.title = '404 — School Not Found';
+                return;
+            }
+
+            // Render page
+            document.title = `MOOV for ${school.name}`;
+
+            document.getElementById('schoolName').textContent = school.name;
+            document.getElementById('ctaName').textContent = school.name;
+
+            // Logo
+            if (school.showLogo && school.logo) {
+                const logoEl = document.getElementById('schoolLogo');
+                logoEl.src = school.logo;
+                logoEl.alt = school.name + ' logo';
+                logoEl.style.display = 'block';
+            }
+
+            // Colors
+            const primary = school.colors?.primary || '#111111';
+            const secondary = school.colors?.secondary || '#666666';
+
+            if (school.showColors) {
+                document.getElementById('accentBar').style.background =
+                    `linear-gradient(90deg, ${primary}, ${secondary})`;
+
+                const colorRow = document.getElementById('colorRow');
+                colorRow.style.display = 'flex';
+                colorRow.innerHTML =
+                    `<div class="swatch"><span class="swatch-dot" style="background:${primary}"></span><span class="swatch-hex">${primary}</span></div>` +
+                    `<div class="swatch"><span class="swatch-dot" style="background:${secondary}"></span><span class="swatch-hex">${secondary}</span></div>`;
+
+                document.getElementById('btnDemo').style.background = primary;
+            }
+
+            // JSON dump
+            document.getElementById('jsonDump').textContent =
+                JSON.stringify(school, null, 2);
+
+            // Show page
+            loadingEl.style.display = 'none';
+            pageEl.style.display = 'block';
+        })();
+    </script>
+</body>
+</html>
