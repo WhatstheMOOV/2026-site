@@ -38,6 +38,34 @@
             color: #666 !important;
         }
 
+        /* ===== Typewriter hero ===== */
+        .typewriter-hero {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 0 1rem;
+        }
+        .typewriter-hero h1 {
+            font-size: 2.75rem;
+            font-weight: 800;
+            color: #1a1a1a;
+            line-height: 1.2;
+        }
+        .typewriter-word {
+            display: inline;
+        }
+        .typewriter-cursor {
+            display: inline-block;
+            margin-left: 2px;
+            animation: blink 0.8s step-end infinite;
+        }
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+        @media (max-width: 720px) {
+            .typewriter-hero h1 { font-size: 1.75rem; }
+        }
+
         .state-msg {
             display: flex;
             align-items: center;
@@ -413,6 +441,10 @@
         </div>
     </nav>
 
+    <div class="typewriter-hero" id="typewriterHero" style="display:none;">
+        <h1>Make <span id="typewriterSchool"></span> <span class="typewriter-word" id="typewriterWord"></span><span class="typewriter-cursor">|</span></h1>
+    </div>
+
     <div class="state-msg" id="loading">Loading&hellip;</div>
     <div class="state-msg error" id="error" style="display:none;"></div>
 
@@ -530,6 +562,39 @@
 
             document.title = `MOOV for ${school.name}`;
 
+            // Typewriter hero
+            document.getElementById('typewriterSchool').textContent = school.name;
+            document.getElementById('typewriterHero').style.display = 'block';
+
+            const words = ['safer', 'more efficient', 'accounted for', 'automated'];
+            const typeEl = document.getElementById('typewriterWord');
+            let wordIdx = 0, charIdx = 0, deleting = false;
+
+            function typewriterTick() {
+                const word = words[wordIdx];
+                if (!deleting) {
+                    typeEl.textContent = word.slice(0, charIdx + 1);
+                    charIdx++;
+                    if (charIdx >= word.length) {
+                        setTimeout(() => { deleting = true; typewriterTick(); }, 2000);
+                        return;
+                    }
+                    setTimeout(typewriterTick, 70);
+                } else {
+                    typeEl.textContent = word.slice(0, charIdx);
+                    charIdx--;
+                    if (charIdx < 0) {
+                        deleting = false;
+                        charIdx = 0;
+                        wordIdx = (wordIdx + 1) % words.length;
+                        setTimeout(typewriterTick, 400);
+                        return;
+                    }
+                    setTimeout(typewriterTick, 40);
+                }
+            }
+            typewriterTick();
+
             const primary = school.colors?.primary || '#111111';
             const secondary = school.colors?.secondary || '#666666';
 
@@ -542,6 +607,11 @@
             }
 
             const darkPrimary = darkenHex(primary, 0.35);
+
+            // Typewriter color
+            if (school.showColors) {
+                document.getElementById('typewriterWord').style.color = primary;
+            }
 
             // School title
             const titleEl = document.getElementById('cardTitle');
