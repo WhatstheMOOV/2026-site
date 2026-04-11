@@ -226,6 +226,87 @@
             color: #666;
         }
 
+        /* ===== KIOSK SECTION ===== */
+        .kiosk-section {
+            margin-top: 4rem;
+            text-align: center;
+        }
+        .kiosk-section-header h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #1a1a1a;
+            margin-bottom: 0.5rem;
+        }
+        .kiosk-section-header p {
+            font-size: 1.125rem;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+        .kiosk-wrapper {
+            position: relative;
+            width: 220px;
+            margin: 0 auto;
+        }
+        .kiosk-wrapper img.kiosk-hardware {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        /* Screen overlay — positioned over the blue screen area of the photo */
+        .kiosk-screen {
+            position: absolute;
+            top: 20.5%;
+            left: 14%;
+            width: 72%;
+            height: 57%;
+            background: linear-gradient(180deg, #1a3a8a 0%, #1240b0 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 8% 6% 6%;
+            border-radius: 2px;
+            overflow: hidden;
+        }
+        .kiosk-screen-logo {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 6%;
+        }
+        .kiosk-screen-logo img {
+            width: 22px;
+            height: 22px;
+            filter: brightness(0) invert(1);
+        }
+        .kiosk-screen-logo span {
+            color: #fff;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        .kiosk-screen-tagline {
+            color: #fff;
+            font-size: 0.6rem;
+            font-weight: 600;
+            line-height: 1.4;
+            margin-bottom: 10%;
+        }
+        .kiosk-school-logo {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: contain;
+            margin-bottom: 8%;
+        }
+        .kiosk-school-initials {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: #fff;
+            letter-spacing: 0.15em;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+            line-height: 1.6;
+        }
+
         /* ===== CTA below card ===== */
         .cta-section {
             text-align: center;
@@ -312,6 +393,26 @@
                         <span>Earn rewards at student.joinmoov.com</span>
                     </div>
                     <span>Date Issued: 01/01/2026</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Kiosk section -->
+        <div class="kiosk-section">
+            <div class="kiosk-section-header">
+                <h2>Your kiosk, your branding</h2>
+                <p>Installed at every entry point</p>
+            </div>
+            <div class="kiosk-wrapper">
+                <img class="kiosk-hardware" src="/images/kiosk.png" alt="MOOV Kiosk">
+                <div class="kiosk-screen" id="kioskScreen">
+                    <div class="kiosk-screen-logo">
+                        <img src="/images/moov-logo.png" alt="MOOV">
+                        <span>joinmoov.com</span>
+                    </div>
+                    <div class="kiosk-screen-tagline">Automated attendance.<br>Safer schools.</div>
+                    <img class="kiosk-school-logo" id="kioskSchoolLogo" src="" alt="" style="display:none;">
+                    <div class="kiosk-school-initials" id="kioskInitials"></div>
                 </div>
             </div>
         </div>
@@ -417,6 +518,21 @@
                 document.getElementById('cardBg').style.backgroundImage =
                     `url(${school.backgroundImage})`;
             }
+
+            // Kiosk screen
+            if (school.showColors) {
+                document.getElementById('kioskScreen').style.background =
+                    `linear-gradient(180deg, ${darkPrimary} 0%, ${primary} 100%)`;
+            }
+            if (school.showLogo && school.logo) {
+                const kioskLogo = document.getElementById('kioskSchoolLogo');
+                kioskLogo.src = school.logo;
+                kioskLogo.alt = school.name + ' logo';
+                kioskLogo.style.display = 'block';
+            }
+            // Generate initials from school name (e.g. "Amityville Memorial" -> "A M")
+            const initials = school.name.split(/\s+/).map(w => w[0]).join(' ').toUpperCase();
+            document.getElementById('kioskInitials').textContent = initials;
 
             // CTA
             document.getElementById('ctaName').textContent = school.name;
