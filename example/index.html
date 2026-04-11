@@ -58,8 +58,11 @@
         .hero-subtitle {
             font-size: 20px;
             color: #475569;
-            margin-bottom: 16px;
+            margin-bottom: 20px;
             font-weight: 500;
+        }
+        .hero-cta {
+            margin-bottom: 0;
         }
         .hero-section .page-header {
             margin-top: 80px;
@@ -458,7 +461,6 @@
             </div>
 
             <div class="nav-actions">
-                <a href="/demo" class="btn btn-primary">Get a Demo</a>
             </div>
 
             <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
@@ -479,6 +481,7 @@
                 <h1>Make <span id="typewriterSchool"></span> <span class="typewriter-word" id="typewriterWord"></span><span class="typewriter-cursor">|</span></h1>
             </div>
             <p class="hero-subtitle">All with the tap of an ID</p>
+            <a href="/demo" class="btn-demo hero-cta" id="heroCta">Get a Demo</a>
             <div class="page-header">
                 <h1>Check out your new IDs</h1>
                 <p>And they take attendance 15x / day</p>
@@ -721,6 +724,7 @@
             document.getElementById('ctaName').textContent = school.name;
             if (school.showColors) {
                 document.getElementById('btnDemo').style.background = primary;
+                document.getElementById('heroCta').style.background = primary;
             }
 
             loadingEl.style.display = 'none';
