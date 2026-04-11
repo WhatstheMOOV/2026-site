@@ -26,6 +26,10 @@
 
         .page-header, .kiosk-section, .kiosk-section-header, .cta-section {
             background: none !important;
+            padding: revert;
+        }
+        .cta-section::before, .cta-section::after {
+            display: none !important;
         }
         .page-header h2, .page-header h1, .kiosk-section-header h2 {
             color: #1a1a1a !important;
