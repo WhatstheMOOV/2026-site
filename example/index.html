@@ -641,9 +641,24 @@
 
             const darkPrimary = darkenHex(primary, 0.35);
 
-            // Typewriter color
+            // Typewriter color + hero gradient + navbar
             if (school.showColors) {
                 document.getElementById('typewriterWord').style.color = primary;
+
+                // Tint the hero gradient with the school's primary color
+                function hexToRgba(hex, alpha) {
+                    hex = hex.replace('#','');
+                    const r = parseInt(hex.substring(0,2),16);
+                    const g = parseInt(hex.substring(2,4),16);
+                    const b = parseInt(hex.substring(4,6),16);
+                    return `rgba(${r},${g},${b},${alpha})`;
+                }
+                const heroEl = document.querySelector('.hero-section');
+                heroEl.style.background = `linear-gradient(180deg, ${hexToRgba(primary,0.15)} 0%, ${hexToRgba(primary,0.1)} 30%, ${hexToRgba(primary,0.05)} 60%, #ffffff 100%)`;
+
+                // Tint the navbar
+                const navbar = document.getElementById('navbar');
+                navbar.style.background = primary;
             }
 
             // School title
