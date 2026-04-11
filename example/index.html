@@ -313,9 +313,10 @@
 
             const params = new URLSearchParams(window.location.search);
             const parts = window.location.pathname.replace(/\/+$/, '').split('/');
-            const slug = params.get('school') || parts[parts.length - 1];
+            const pathSlug = parts[parts.length - 1];
+            const slug = params.get('school') || (pathSlug !== 'example' && pathSlug !== 'index.html' ? pathSlug : null);
 
-            if (!slug || slug === 'example') {
+            if (!slug) {
                 showError('No school specified.');
                 return;
             }
