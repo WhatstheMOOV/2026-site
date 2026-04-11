@@ -34,8 +34,9 @@
 
         /* ===== HERO SECTION (gradient bg + typewriter + card) ===== */
         .hero-section {
-            width: 100%;
-            background: linear-gradient(160deg, #fde8d8 0%, #f0c6d4 25%, #c8b8e8 50%, #a8c8f0 75%, #d0e8f0 100%);
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
+            background: linear-gradient(180deg, #fde8d8 0%, #f0c6d4 20%, #c8b8e8 40%, #a8c8f0 60%, #e8eef5 80%, #ffffff 100%);
             padding: 120px 1.5rem 80px;
             display: flex;
             flex-direction: column;
@@ -44,6 +45,7 @@
         }
         .hero-section .typewriter-hero {
             margin-bottom: 1rem;
+            width: 100%;
         }
         .hero-section .typewriter-hero h1 {
             font-size: 52px;
@@ -51,6 +53,7 @@
             color: #0F172A;
             line-height: 1.15;
             letter-spacing: -0.03em;
+            min-height: 1.2em;
         }
         .hero-section .page-header {
             margin-bottom: 2.5rem;
