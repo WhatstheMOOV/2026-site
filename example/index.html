@@ -478,9 +478,9 @@
             <div class="typewriter-hero">
                 <h1>Make <span id="typewriterSchool"></span> <span class="typewriter-word" id="typewriterWord"></span><span class="typewriter-cursor">|</span></h1>
             </div>
-            <p class="hero-subtitle">all with the tap of an ID</p>
+            <p class="hero-subtitle">All with the tap of an ID</p>
             <div class="page-header">
-                <h1>We made your new Magic IDs</h1>
+                <h1>Check out your new IDs</h1>
                 <p>And they take attendance 15x / day</p>
             </div>
             <div class="id-card" id="idCard">
@@ -659,6 +659,9 @@
                 // Tint the navbar
                 const navbar = document.getElementById('navbar');
                 navbar.style.background = primary;
+                navbar.style.boxShadow = 'none';
+                document.querySelectorAll('.nav-link').forEach(l => l.style.color = '#fff');
+                document.querySelector('.logo-text').style.color = '#fff';
             }
 
             // School title
