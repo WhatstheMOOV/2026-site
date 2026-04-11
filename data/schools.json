@@ -1,44 +1,8 @@
 {
-  "amityville-memorial": {
-    "name": "Amityville Memorial",
-    "domain": "amhs.amityvilleschools.org",
-    "colors": {
-      "primary": "#e4172f",
-      "secondary": "#171616"
-    },
-    "logo": "https://media.brand.dev/dde3ef8f-fe02-4ace-93a2-749de3521a65.png",
-    "showLogo": true,
-    "showColors": true
-  },
-  "copiague-schools": {
-    "name": "Copiague Schools",
-    "domain": "www.copiague.k12.ny.us",
-    "colors": {
-      "primary": "#c3b75f",
-      "secondary": "#b7669d"
-    },
-    "logo": "https://media.brand.dev/3f373f80-5cea-4fc8-b341-023351552c80.png",
-    "showLogo": true,
-    "showColors": true
-  },
-  "lindenhurst-schools": {
-    "name": "Lindenhurst Schools",
-    "domain": "www.lindenhurstschools.org",
-    "colors": {
-      "primary": "#047934",
-      "secondary": "#27894b"
-    },
-    "logo": "https://media.brand.dev/c65f8993-4d45-4181-91ac-1537c03174a2.png",
-    "showLogo": true,
-    "showColors": true
-  },
   "east-quogue": {
     "name": "East Quogue Union Free School District",
     "domain": "eastquogue.k12.ny.us",
-    "colors": {
-      "primary": "#485587",
-      "secondary": "#bfc0d3"
-    },
+    "colors": { "primary": "#485587", "secondary": "#bfc0d3" },
     "logo": "https://media.brand.dev/f545c08e-8a0f-4774-ae8e-b2d17a6454b0.png",
     "backgroundImage": "https://imagescdn.homes.com/i2/Cy-XHgaMsqHib4679WU2Gb2laNrjwIfv17w4bcKMzR4/117/east-quogue-elementary-school-east-quogue-ny-2-schoolphoto.jpg?p=1",
     "showLogo": true,
@@ -47,18 +11,16 @@
   "west-islip": {
     "name": "West Islip Union Free School District",
     "domain": "wi.k12.ny.us",
-    "colors": {
-      "primary": "#1f5181",
-      "secondary": "#8ea7bf"
-    },
+    "colors": { "primary": "#1f5181", "secondary": "#8ea7bf" },
     "logo": "https://media.brand.dev/ff2bfddd-0ed7-4d25-a229-c955b135f84e.jpg",
     "backgroundImage": "https://imagescdn.homes.com/i2/7ZgoOtkyfc_oMJw8-3-lQDBPExq27Gx85TfsXGWsnZM/117/west-islip-senior-high-school-west-islip-ny-primaryphoto.jpg?p=1",
     "showLogo": true,
     "showColors": true
   },
-  "southampton": {
-    "name": "Southampton Union Free School District",
+  "southampton-hs": {
+    "name": "Southampton High School",
     "domain": "southamptonschools.org",
+    "url": "https://hs.southamptonschools.org/",
     "colors": { "primary": "#9b1f4a", "secondary": "#748ca4" },
     "logo": "https://media.brand.dev/5e8cbd4d-145d-442e-82db-b7e1346224a3.png",
     "backgroundImage": "https://imagescdn.homes.com/i2/3yU-0V0SImLRyPz6ZeQukiaPOStpcnyUbUh5f1NdyM4/117/southampton-high-school-southampton-ny-schoolphoto.jpg?p=1",
@@ -82,6 +44,26 @@
     "colors": { "primary": "#1f2d54", "secondary": "#e8bc33" },
     "logo": "https://media.brand.dev/10b557ef-7550-4e96-9350-5ce2a12a12ee.png",
     "backgroundImage": "https://imagescdn.homes.com/i2/oxNsRBB0YI5hZCasrMsVM5UUMPyGvKE7TDbdr0jz71o/117/west-babylon-senior-high-school-west-babylon-ny-schoolphoto.jpg?p=1",
+    "showLogo": true,
+    "showColors": true
+  },
+  "east-hampton-hs": {
+    "name": "East Hampton High School",
+    "domain": "easthamptonschools.org",
+    "url": "https://www.easthamptonschools.org/highschool",
+    "colors": { "primary": "#8f1e1e", "secondary": "#854949" },
+    "logo": "https://media.brand.dev/cac46b88-e403-477d-80f1-b057c33b2b2c.png",
+    "backgroundImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/East_Hampton_High_School_New_York_aerial_view.jpg/330px-East_Hampton_High_School_New_York_aerial_view.jpg",
+    "showLogo": true,
+    "showColors": true
+  },
+  "mattituck-hs": {
+    "name": "Mattituck High School",
+    "domain": "mufsd.com",
+    "url": "https://mhs.mufsd.com/",
+    "colors": { "primary": "#1e3f69", "secondary": "#917733" },
+    "logo": "https://media.brand.dev/0366c72a-3ae3-4351-865a-fa53fac25a56.png",
+    "backgroundImage": "https://timesreview-images.s3.amazonaws.com/wp-content/uploads/sites/4/2025/09/Mattituck-HS-copy-3-1024x768.jpg",
     "showLogo": true,
     "showColors": true
   }
