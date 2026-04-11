@@ -41,14 +41,15 @@
         /* ===== Typewriter hero ===== */
         .typewriter-hero {
             text-align: center;
-            margin-bottom: 4rem;
-            padding: 2rem 1rem 3rem;
+            margin-bottom: 0;
+            padding: 3rem 1rem 5rem;
         }
         .typewriter-hero h1 {
-            font-size: 2.75rem;
+            font-size: 48px;
             font-weight: 800;
-            color: #1a1a1a;
-            line-height: 1.2;
+            color: #0F172A;
+            line-height: 1.15;
+            letter-spacing: -0.02em;
         }
         .typewriter-word {
             display: inline;
@@ -63,7 +64,11 @@
             50% { opacity: 0; }
         }
         @media (max-width: 720px) {
-            .typewriter-hero h1 { font-size: 1.75rem; }
+            .typewriter-hero h1 { font-size: 28px; }
+            .page-header h1 { font-size: 28px; }
+            .kiosk-section-header h2 { font-size: 28px; }
+            .kiosk-section { margin-top: 80px; }
+            .cta-section { margin-top: 80px; }
         }
 
         .state-msg {
@@ -256,33 +261,39 @@
         /* ===== Page header above card ===== */
         .page-header {
             text-align: center;
-            margin-bottom: 2.5rem;
+            margin-bottom: 2rem;
         }
         .page-header h1 {
-            font-size: 2.25rem;
+            font-size: 42px;
             font-weight: 800;
-            color: #1a1a1a;
-            margin-bottom: 0.5rem;
+            color: #0F172A;
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+            margin-bottom: 16px;
         }
         .page-header p {
-            font-size: 1.125rem;
-            color: #666;
+            font-size: 18px;
+            color: #64748B;
+            line-height: 1.7;
         }
 
         /* ===== KIOSK SECTION ===== */
         .kiosk-section {
-            margin-top: 5rem;
+            margin-top: 120px;
             text-align: center;
         }
         .kiosk-section-header h2 {
-            font-size: 2rem;
+            font-size: 42px;
             font-weight: 800;
-            color: #1a1a1a;
-            margin-bottom: 0.5rem;
+            color: #0F172A;
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+            margin-bottom: 16px;
         }
         .kiosk-section-header p {
-            font-size: 1.125rem;
-            color: #666;
+            font-size: 18px;
+            color: #64748B;
+            line-height: 1.7;
             margin-bottom: 2rem;
         }
         .kiosk-wrapper {
@@ -374,12 +385,14 @@
         /* ===== CTA below card ===== */
         .cta-section {
             text-align: center;
-            margin-top: 2.5rem;
+            margin-top: 120px;
+            padding-bottom: 80px;
         }
         .cta-section p {
-            font-size: 1rem;
-            color: #555;
-            margin-bottom: 1rem;
+            font-size: 18px;
+            color: #64748B;
+            margin-bottom: 24px;
+            line-height: 1.7;
         }
         .btn-demo {
             display: inline-block;
