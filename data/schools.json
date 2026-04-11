@@ -31,5 +31,29 @@
     "logo": "https://media.brand.dev/c65f8993-4d45-4181-91ac-1537c03174a2.png",
     "showLogo": true,
     "showColors": true
+  },
+  "east-quogue": {
+    "name": "East Quogue Union Free School District",
+    "domain": "eastquogue.k12.ny.us",
+    "colors": {
+      "primary": "#485587",
+      "secondary": "#bfc0d3"
+    },
+    "logo": "https://media.brand.dev/f545c08e-8a0f-4774-ae8e-b2d17a6454b0.png",
+    "backgroundImage": "https://imagescdn.homes.com/i2/Cy-XHgaMsqHib4679WU2Gb2laNrjwIfv17w4bcKMzR4/117/east-quogue-elementary-school-east-quogue-ny-2-schoolphoto.jpg?p=1",
+    "showLogo": true,
+    "showColors": true
+  },
+  "west-islip": {
+    "name": "West Islip Union Free School District",
+    "domain": "wi.k12.ny.us",
+    "colors": {
+      "primary": "#1f5181",
+      "secondary": "#8ea7bf"
+    },
+    "logo": "https://media.brand.dev/941b451e-d0d8-4733-89dd-cd240fcb745e.png",
+    "backgroundImage": "https://imagescdn.homes.com/i2/7ZgoOtkyfc_oMJw8-3-lQDBPExq27Gx85TfsXGWsnZM/117/west-islip-senior-high-school-west-islip-ny-primaryphoto.jpg?p=1",
+    "showLogo": true,
+    "showColors": true
   }
 }
