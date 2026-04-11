@@ -64,5 +64,25 @@
     "backgroundImage": "https://imagescdn.homes.com/i2/3yU-0V0SImLRyPz6ZeQukiaPOStpcnyUbUh5f1NdyM4/117/southampton-high-school-southampton-ny-schoolphoto.jpg?p=1",
     "showLogo": true,
     "showColors": true
+  },
+  "westhampton-beach-hs": {
+    "name": "Westhampton Beach High School",
+    "domain": "whbschools.org",
+    "url": "https://whbschools.org/schools/westhampton_beach_high_school",
+    "colors": { "primary": "#187c55", "secondary": "#84bca3" },
+    "logo": "https://media.brand.dev/24bb15e7-a953-4cee-b11f-a129f5f69af2.png",
+    "backgroundImage": "https://imagescdn.homes.com/i2/yGjxnM_kua7v2Q-ewJHXXdjCiOKlrJFMhWN5htC1QUU/117/westhampton-beach-senior-high-school-westhampton-beach-ny-primaryphoto.jpg?p=1",
+    "showLogo": true,
+    "showColors": true
+  },
+  "west-babylon-hs": {
+    "name": "West Babylon Senior High School",
+    "domain": "wbschools.org",
+    "url": "https://shs.wbschools.org/",
+    "colors": { "primary": "#1f2d54", "secondary": "#e8bc33" },
+    "logo": "https://media.brand.dev/10b557ef-7550-4e96-9350-5ce2a12a12ee.png",
+    "backgroundImage": "https://imagescdn.homes.com/i2/oxNsRBB0YI5hZCasrMsVM5UUMPyGvKE7TDbdr0jz71o/117/west-babylon-senior-high-school-west-babylon-ny-schoolphoto.jpg?p=1",
+    "showLogo": true,
+    "showColors": true
   }
 }
