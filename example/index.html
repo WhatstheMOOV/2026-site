@@ -37,36 +37,42 @@
             width: 100vw;
             margin-left: calc(-50vw + 50%);
             background: linear-gradient(180deg, #fde8d8 0%, #f0c6d4 20%, #c8b8e8 40%, #a8c8f0 60%, #e8eef5 80%, #ffffff 100%);
-            padding: 120px 1.5rem 80px;
+            padding: 140px 1.5rem 100px;
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
         }
         .hero-section .typewriter-hero {
-            margin-bottom: 1rem;
+            margin-bottom: 20px;
             width: 100%;
         }
         .hero-section .typewriter-hero h1 {
-            font-size: 52px;
+            font-size: 64px;
             font-weight: 800;
             color: #0F172A;
-            line-height: 1.15;
+            line-height: 1.1;
             letter-spacing: -0.03em;
             min-height: 1.2em;
         }
+        .hero-subtitle {
+            font-size: 20px;
+            color: #475569;
+            margin-bottom: 16px;
+            font-weight: 500;
+        }
         .hero-section .page-header {
-            margin-bottom: 2.5rem;
+            margin-bottom: 3rem;
         }
         .hero-section .page-header h1 {
-            font-size: 20px;
-            font-weight: 600;
-            color: #334155;
-            margin-bottom: 8px;
+            font-size: 16px;
+            font-weight: 500;
+            color: #64748B;
+            margin-bottom: 4px;
         }
         .hero-section .page-header p {
-            font-size: 16px;
-            color: #64748B;
+            font-size: 14px;
+            color: #94a3b8;
         }
         .typewriter-word {
             display: inline;
@@ -277,8 +283,10 @@
 
         /* ===== KIOSK SECTION ===== */
         .kiosk-section {
-            margin-top: 100px;
+            margin-top: 80px;
+            padding-top: 80px;
             text-align: center;
+            border-top: 1px solid #f0f0f0;
         }
         .kiosk-section-header h2 {
             font-size: 42px;
@@ -407,9 +415,9 @@
 
         /* Responsive */
         @media (max-width: 720px) {
-            .hero-section { padding: 100px 1rem 50px; }
-            .hero-section .typewriter-hero h1 { font-size: 28px; }
-            .hero-section .page-header h1 { font-size: 16px; }
+            .hero-section { padding: 110px 1rem 60px; }
+            .hero-section .typewriter-hero h1 { font-size: 32px; }
+            .hero-subtitle { font-size: 16px; }
             .id-card { width: 100%; }
             .card-photo { border-width: 3px; }
             .card-school-title { font-size: clamp(0.7rem, 3.5vw, 1.85rem); }
@@ -466,6 +474,7 @@
             <div class="typewriter-hero">
                 <h1>Make <span id="typewriterSchool"></span> <span class="typewriter-word" id="typewriterWord"></span><span class="typewriter-cursor">|</span></h1>
             </div>
+            <p class="hero-subtitle">all with the tap of an ID</p>
             <div class="page-header">
                 <h1>We made your new Magic IDs</h1>
                 <p>And they take attendance 15x / day</p>
