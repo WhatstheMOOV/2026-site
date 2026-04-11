@@ -1,4 +1,6 @@
 {
+  "buildCommand": "",
+  "outputDirectory": ".",
   "rewrites": [
     { "source": "/example/:slug", "destination": "/example/index.html" }
   ]
