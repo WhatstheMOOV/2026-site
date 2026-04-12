@@ -281,6 +281,23 @@
             height: 22px;
         }
 
+        .kiosk-abbreviation {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2px;
+            margin-top: 8%;
+            z-index: 1;
+        }
+        .kiosk-abbreviation span {
+            font-size: 1.4rem;
+            font-weight: 900;
+            line-height: 1;
+            -webkit-text-stroke: 1.5px;
+            paint-order: stroke fill;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+
         /* ===== CONTENT SECTIONS (white bg) ===== */
         .content-sections {
             width: 100%;
@@ -549,6 +566,7 @@
                         </div>
                         <div class="kiosk-screen-tagline">Automated attendance.<br>Safer schools.</div>
                         <img class="kiosk-school-logo" id="kioskSchoolLogo" src="" alt="" style="display:none;">
+                        <div class="kiosk-abbreviation" id="kioskAbbreviation" style="display:none;"></div>
                     </div>
                 </div>
             </div>
@@ -722,6 +740,19 @@
                 kioskLogo.alt = school.name + ' logo';
                 kioskLogo.style.display = 'block';
             }
+            // Kiosk abbreviation letters
+            if (school.abbreviation) {
+                const abbrEl = document.getElementById('kioskAbbreviation');
+                abbrEl.style.display = 'flex';
+                school.abbreviation.split('').forEach(letter => {
+                    const span = document.createElement('span');
+                    span.textContent = letter;
+                    span.style.color = school.showColors ? secondary : '#fff';
+                    span.style.webkitTextStrokeColor = school.showColors ? primary : '#fff';
+                    abbrEl.appendChild(span);
+                });
+            }
+
             // CTA
             document.getElementById('ctaName').textContent = school.name;
             if (school.showColors) {
