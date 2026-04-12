@@ -285,17 +285,18 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 2px;
+            gap: 4px;
             margin-top: 8%;
             z-index: 1;
         }
         .kiosk-abbreviation span {
-            font-size: 1.4rem;
+            font-size: 2rem;
             font-weight: 900;
             line-height: 1;
-            -webkit-text-stroke: 1.5px;
+            color: #fff;
+            -webkit-text-stroke: 2px;
             paint-order: stroke fill;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
         }
 
         /* ===== CONTENT SECTIONS (white bg) ===== */
@@ -747,7 +748,7 @@
                 school.abbreviation.split('').forEach(letter => {
                     const span = document.createElement('span');
                     span.textContent = letter;
-                    span.style.color = school.showColors ? secondary : '#fff';
+                    span.style.color = '#fff';
                     span.style.webkitTextStrokeColor = school.showColors ? primary : '#fff';
                     abbrEl.appendChild(span);
                 });
