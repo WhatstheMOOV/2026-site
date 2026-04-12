@@ -464,6 +464,9 @@
             color: #64748B;
             font-style: italic;
         }
+        .tap-sis {
+            margin-top: 2rem;
+        }
         .tap-image {
             width: 100%;
             max-width: 500px;
@@ -552,7 +555,7 @@
             <p class="hero-subtitle">All with the tap of an ID</p>
             <a href="/demo" class="btn-demo hero-cta" id="heroCta">Get a Demo</a>
             <div class="page-header">
-                <h1>Check out your new IDs</h1>
+                <h1>Check out your new student ID cards</h1>
                 <p>Your students tap these everywhere they go; they take attendance and ensure accountability</p>
             </div>
             <div class="id-card" id="idCard">
@@ -625,6 +628,7 @@
             <div class="tap-section">
                 <p class="tap-section-text">A tap displays their photo, scheduled class, and hall pass <span class="tap-highlight">(...if they have one!)</span></p>
                 <img class="tap-image" src="/images/tap-display.png" alt="Student tap display showing photo, class schedule, and hall pass status">
+                <p class="tap-section-text tap-sis" id="tapSis" style="display:none;"></p>
             </div>
 
             <div class="cta-section">
@@ -679,7 +683,7 @@
             // Typewriter hero
             document.getElementById('typewriterSchool').textContent = school.name;
 
-            const words = ['safer', 'more efficient', 'accounted for', 'automated'];
+            const words = ['safer', 'more efficient', 'accountable', 'automated'];
             const typeEl = document.getElementById('typewriterWord');
             let wordIdx = 0, charIdx = 0, deleting = false;
 
@@ -797,6 +801,13 @@
                 kioskLogo.alt = school.name + ' logo';
                 kioskLogo.style.display = 'block';
             }
+            // SIS line
+            if (school.sis) {
+                const sisEl = document.getElementById('tapSis');
+                sisEl.textContent = `And best of all, it takes attendance for your teachers in ${school.sis}`;
+                sisEl.style.display = 'block';
+            }
+
             // Kiosk abbreviation letters
             if (school.abbreviation) {
                 const abbrEl = document.getElementById('kioskAbbreviation');
