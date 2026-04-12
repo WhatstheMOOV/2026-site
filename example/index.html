@@ -727,6 +727,22 @@
                 return `rgb(${r},${g},${b})`;
             }
 
+            function lightenHex(hex, factor) {
+                hex = hex.replace('#', '');
+                const r = Math.min(255, Math.round(parseInt(hex.substring(0, 2), 16) + (255 - parseInt(hex.substring(0, 2), 16)) * factor));
+                const g = Math.min(255, Math.round(parseInt(hex.substring(2, 4), 16) + (255 - parseInt(hex.substring(2, 4), 16)) * factor));
+                const b = Math.min(255, Math.round(parseInt(hex.substring(4, 6), 16) + (255 - parseInt(hex.substring(4, 6), 16)) * factor));
+                return `rgb(${r},${g},${b})`;
+            }
+
+            function luminance(hex) {
+                hex = hex.replace('#', '');
+                const r = parseInt(hex.substring(0, 2), 16) / 255;
+                const g = parseInt(hex.substring(2, 4), 16) / 255;
+                const b = parseInt(hex.substring(4, 6), 16) / 255;
+                return 0.299 * r + 0.587 * g + 0.114 * b;
+            }
+
             const darkPrimary = darkenHex(primary, 0.35);
 
             // Typewriter color + hero gradient + navbar
@@ -768,8 +784,9 @@
             const yearStripBg = document.getElementById('yearStripBg');
             if (school.showColors) {
                 yearStripBg.style.background = darkPrimary;
-                document.getElementById('yearLeft').style.color = primary;
-                document.getElementById('yearRight').style.color = primary;
+                const yearColor = luminance(primary) < 0.25 ? lightenHex(primary, 0.5) : primary;
+                document.getElementById('yearLeft').style.color = yearColor;
+                document.getElementById('yearRight').style.color = yearColor;
             } else {
                 yearStripBg.style.background = 'rgba(0,0,0,0.5)';
                 document.getElementById('yearLeft').style.color = '#fff';
