@@ -1,8 +1,9 @@
 {
   "east-quogue": {
-    "name": "East Quogue Union Free School District",
-    "abbreviation": "EQUFSD",
+    "name": "East Quogue Elementary School",
+    "abbreviation": "EQES",
     "domain": "eastquogue.k12.ny.us",
+    "url": "https://www.eastquogue.k12.ny.us/",
     "colors": {
       "primary": "#485587",
       "secondary": "#bfc0d3"
@@ -13,9 +14,10 @@
     "showColors": true
   },
   "west-islip": {
-    "name": "West Islip Union Free School District",
-    "abbreviation": "WIUFSD",
+    "name": "West Islip High School",
+    "abbreviation": "WIHS",
     "domain": "wi.k12.ny.us",
+    "url": "https://www.wi.k12.ny.us/wihs",
     "colors": {
       "primary": "#1f5181",
       "secondary": "#8ea7bf"
@@ -79,8 +81,7 @@
     "logo": "https://media.brand.dev/cac46b88-e403-477d-80f1-b057c33b2b2c.png",
     "backgroundImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/East_Hampton_High_School_New_York_aerial_view.jpg/330px-East_Hampton_High_School_New_York_aerial_view.jpg",
     "showLogo": true,
-    "showColors": true,
-    "sis": "SchoolTool"
+    "showColors": true
   },
   "mattituck": {
     "name": "Mattituck High School",
@@ -108,8 +109,7 @@
     "logo": "https://media.brand.dev/24d96353-b797-4c58-b878-e8796f94fec7.png",
     "backgroundImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Farmingdale_High_School%2C_South_Farmingdale%2C_NY_July_5%2C_2025_XVI.jpg/330px-Farmingdale_High_School%2C_South_Farmingdale%2C_NY_July_5%2C_2025_XVI.jpg",
     "showLogo": true,
-    "showColors": true,
-    "sis": "Infinite Campus"
+    "showColors": true
   },
   "massapequa": {
     "name": "Massapequa High School",
@@ -122,6 +122,34 @@
     },
     "logo": "https://media.brand.dev/192e90e4-fe6b-4c40-909d-c2179147ff55.png",
     "backgroundImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/MassapequaHighSchool.JPG/330px-MassapequaHighSchool.JPG",
+    "showLogo": true,
+    "showColors": true
+  },
+  "sachem-north": {
+    "name": "Sachem North High School",
+    "abbreviation": "SNHS",
+    "domain": "sachem.edu",
+    "url": "https://shsnorth.sachem.edu/",
+    "colors": {
+      "primary": "#800000",
+      "secondary": "#040404"
+    },
+    "logo": "https://media.brand.dev/7a311a1a-3905-4489-9334-ce7fab8ad122.png",
+    "backgroundImage": "https://imagescdn.homes.com/i2/Z_U2xe6uUIZbnYqFIQSY4AxvUzF5PQSlBT8R3A5o8Fo/117/sachem-high-school-north-lake-ronkonkoma-ny-2-schoolphoto.jpg?p=1",
+    "showLogo": true,
+    "showColors": true
+  },
+  "sachem-east": {
+    "name": "Sachem East High School",
+    "abbreviation": "SEHS",
+    "domain": "sachem.edu",
+    "url": "https://shseast.sachem.edu/",
+    "colors": {
+      "primary": "#800000",
+      "secondary": "#040404"
+    },
+    "logo": "https://media.brand.dev/7a311a1a-3905-4489-9334-ce7fab8ad122.png",
+    "backgroundImage": "https://auroracontractors.com/img/projects/sachem-east-high-school/SEH.E.front2-1024.jpg",
     "showLogo": true,
     "showColors": true
   }
