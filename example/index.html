@@ -444,6 +444,30 @@
             transition: opacity 0.15s;
             background: #111;
         }
+        /* ===== TAP DISPLAY SECTION ===== */
+        .tap-section {
+            margin-top: 80px;
+            text-align: center;
+        }
+        .tap-section-text {
+            font-size: 22px;
+            font-weight: 600;
+            color: #0F172A;
+            line-height: 1.5;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+        .tap-highlight {
+            color: #64748B;
+            font-style: italic;
+        }
+        .tap-image {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+
         .btn-secondary {
             display: inline-block;
             padding: 0.875rem 2rem;
@@ -592,6 +616,12 @@
                         <div class="kiosk-abbreviation" id="kioskAbbreviation" style="display:none;"></div>
                     </div>
                 </div>
+            </div>
+
+            <!-- Tap display section -->
+            <div class="tap-section">
+                <p class="tap-section-text">A tap displays their photo, scheduled class, and hall pass <span class="tap-highlight">(...if they have one!)</span></p>
+                <img class="tap-image" src="/images/tap-display.png" alt="Student tap display showing photo, class schedule, and hall pass status">
             </div>
 
             <div class="cta-section">
