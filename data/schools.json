@@ -17,7 +17,7 @@
     "showLogo": true,
     "showColors": true
   },
-  "southampton-hs": {
+  "southampton": {
     "name": "Southampton High School",
     "domain": "southamptonschools.org",
     "url": "https://hs.southamptonschools.org/",
@@ -27,7 +27,7 @@
     "showLogo": true,
     "showColors": true
   },
-  "westhampton-beach-hs": {
+  "westhampton-beach": {
     "name": "Westhampton Beach High School",
     "domain": "whbschools.org",
     "url": "https://whbschools.org/schools/westhampton_beach_high_school",
@@ -37,7 +37,7 @@
     "showLogo": true,
     "showColors": true
   },
-  "west-babylon-hs": {
+  "west-babylon": {
     "name": "West Babylon Senior High School",
     "domain": "wbschools.org",
     "url": "https://shs.wbschools.org/",
@@ -47,7 +47,7 @@
     "showLogo": true,
     "showColors": true
   },
-  "east-hampton-hs": {
+  "east-hampton": {
     "name": "East Hampton High School",
     "domain": "easthamptonschools.org",
     "url": "https://www.easthamptonschools.org/highschool",
@@ -57,13 +57,33 @@
     "showLogo": true,
     "showColors": true
   },
-  "mattituck-hs": {
+  "mattituck": {
     "name": "Mattituck High School",
     "domain": "mufsd.com",
     "url": "https://mhs.mufsd.com/",
     "colors": { "primary": "#1e3f69", "secondary": "#917733" },
     "logo": "https://media.brand.dev/0366c72a-3ae3-4351-865a-fa53fac25a56.png",
     "backgroundImage": "https://timesreview-images.s3.amazonaws.com/wp-content/uploads/sites/4/2025/09/Mattituck-HS-copy-3-1024x768.jpg",
+    "showLogo": true,
+    "showColors": true
+  },
+  "farmingdale": {
+    "name": "Farmingdale High School",
+    "domain": "farmingdaleschools.org",
+    "url": "https://www.farmingdaleschools.org/schools/farmingdale_high_school",
+    "colors": { "primary": "#1ba84a", "secondary": "#1d211d" },
+    "logo": "https://media.brand.dev/24d96353-b797-4c58-b878-e8796f94fec7.png",
+    "backgroundImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Farmingdale_High_School%2C_South_Farmingdale%2C_NY_July_5%2C_2025_XVI.jpg/330px-Farmingdale_High_School%2C_South_Farmingdale%2C_NY_July_5%2C_2025_XVI.jpg",
+    "showLogo": true,
+    "showColors": true
+  },
+  "massapequa": {
+    "name": "Massapequa High School",
+    "domain": "msd.k12.ny.us",
+    "url": "https://www.msd.k12.ny.us/o/mhs",
+    "colors": { "primary": "#324c7c", "secondary": "#98a6c1" },
+    "logo": "https://media.brand.dev/192e90e4-fe6b-4c40-909d-c2179147ff55.png",
+    "backgroundImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/MassapequaHighSchool.JPG/330px-MassapequaHighSchool.JPG",
     "showLogo": true,
     "showColors": true
   }
