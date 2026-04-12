@@ -173,10 +173,10 @@
         /* Year strip — spans from photo right edge to card right edge */
         .card-year-strip {
             position: absolute;
-            top: 34%;
+            top: 37%;
             left: 40%;
             right: 0;
-            height: 24%;
+            height: 18%;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -213,21 +213,22 @@
         }
 
         .card-logo-circle {
-            width: 90px;
-            height: 90px;
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
             background: #fff;
-            border: 3px solid;
+            border: 4px solid;
             display: flex;
             align-items: center;
             justify-content: center;
             overflow: hidden;
             flex-shrink: 0;
             z-index: 2;
+            margin: 0 0.25rem;
         }
         .card-logo-circle img {
-            width: 70%;
-            height: 70%;
+            width: 75%;
+            height: 75%;
             object-fit: contain;
         }
 
@@ -501,7 +502,7 @@
             .card-photo { border-width: 3px; }
             .card-school-title { font-size: clamp(0.7rem, 3.5vw, 1.85rem); }
             .year-text { font-size: clamp(1.2rem, 6vw, 3.25rem); }
-            .card-logo-circle { width: clamp(36px, 10vw, 90px); height: clamp(36px, 10vw, 90px); }
+            .card-logo-circle { width: clamp(50px, 14vw, 120px); height: clamp(50px, 14vw, 120px); }
             .card-student-name { font-size: clamp(0.9rem, 4.5vw, 3rem); }
             .card-footer { font-size: clamp(0.4rem, 1.5vw, 0.8rem); padding: 0.25rem 4% 0.5rem; }
             .card-footer-left img { width: clamp(12px, 2.5vw, 22px); height: clamp(12px, 2.5vw, 22px); }
