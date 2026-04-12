@@ -64,7 +64,7 @@
     "colors": { "primary": "#1e3f69", "secondary": "#917733" },
     "logo": "https://media.brand.dev/0366c72a-3ae3-4351-865a-fa53fac25a56.png",
     "backgroundImage": "https://timesreview-images.s3.amazonaws.com/wp-content/uploads/sites/4/2025/09/Mattituck-HS-copy-3-1024x768.jpg",
-    "showLogo": true,
+    "showLogo": false,
     "showColors": true
   },
   "farmingdale": {
