@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOOV for Your School</title>
+    <link rel="icon" type="image/png" href="/images/moov-logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #ffffff;
+            color: #1a1a1a;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+        }
+
+        /* Override dark styles from main stylesheet */
+        .page-header, .kiosk-section, .kiosk-section-header, .cta-section {
+            background: none !important;
+            padding: revert;
+        }
+        .cta-section::before, .cta-section::after {
+            display: none !important;
+        }
+
+        /* ===== HERO SECTION (gradient bg + typewriter + card) ===== */
+        .hero-section {
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
+            background: linear-gradient(180deg, #fde8d8 0%, #f0c6d4 20%, #c8b8e8 40%, #a8c8f0 60%, #e8eef5 80%, #ffffff 100%);
+            padding: 140px 1.5rem 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .hero-section .typewriter-hero {
+            margin-bottom: 20px;
+            width: 100%;
+        }
+        .hero-section .typewriter-hero h1 {
+            font-size: 64px;
+            font-weight: 800;
+            color: #0F172A;
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            min-height: 1.2em;
+        }
+        .hero-subtitle {
+            font-size: 20px;
+            color: #475569;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+        .hero-cta {
+            margin-bottom: 0;
+        }
+        .hero-section .page-header {
+            margin-top: 80px;
+            margin-bottom: 3rem;
+        }
+        .hero-section .page-header h1 {
+            font-size: 42px;
+            font-weight: 800;
+            color: #0F172A;
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+            margin-bottom: 16px;
+        }
+        .hero-section .page-header p {
+            font-size: 18px;
+            color: #64748B;
+            line-height: 1.7;
+        }
+        .typewriter-word {
+            display: inline;
+        }
+        .typewriter-cursor {
+            display: inline-block;
+            margin-left: 2px;
+            animation: blink 0.8s step-end infinite;
+        }
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        .state-msg {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 60vh;
+            font-size: 1.125rem;
+            color: #666;
+        }
+        .state-msg.error { color: #c0392b; }
+
+        /* ===== ID CARD ===== */
+        .id-card {
+            position: relative;
+            width: 680px;
+            aspect-ratio: 1.586;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.25), 0 4px 12px rgba(0,0,0,0.1);
+            background: #d4d4d4;
+        }
+
+        .id-card-bg {
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            background-position: center;
+            opacity: 0.35;
+            z-index: 0;
+        }
+
+        /* Absolute positioning for all card elements */
+        .id-card-content {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Student photo — top left */
+        .card-photo {
+            position: absolute;
+            top: 5%;
+            left: 4%;
+            width: 36%;
+            aspect-ratio: 1;
+            border: 5px solid #111;
+            background: #fff;
+            overflow: hidden;
+            z-index: 3;
+        }
+        .card-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        /* School title — top right */
+        .card-school-title {
+            position: absolute;
+            top: 5%;
+            left: 42%;
+            right: 4%;
+            font-size: 1.85rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+            text-align: center;
+            line-height: 1.2;
+            text-shadow:
+                -2px -2px 0 #fff, 2px -2px 0 #fff,
+                -2px 2px 0 #fff, 2px 2px 0 #fff,
+                0 -2px 0 #fff, 0 2px 0 #fff,
+                -2px 0 0 #fff, 2px 0 0 #fff;
+        }
+
+        /* Year strip — spans from photo right edge to card right edge */
+        .card-year-strip {
+            position: absolute;
+            top: 36%;
+            left: 35%;
+            right: -1%;
+            height: 20%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0;
+            z-index: 2;
+        }
+
+        .year-strip-bg {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+        }
+
+        .year-strip-content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0;
+            width: 100%;
+            padding-left: 10%;
+            padding-right: 4%;
+        }
+
+        .year-text {
+            font-size: 2.75rem;
+            font-weight: 900;
+            letter-spacing: 0.02em;
+            padding: 0 0.4rem;
+            flex: 1;
+            text-align: center;
+            text-shadow:
+                -1.5px -1.5px 0 #000, 1.5px -1.5px 0 #000,
+                -1.5px 1.5px 0 #000, 1.5px 1.5px 0 #000;
+        }
+
+        .card-logo-circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: #fff;
+            border: 4px solid;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            flex-shrink: 0;
+            z-index: 2;
+            margin: 0 0.4rem;
+        }
+        .card-logo-circle img {
+            width: 75%;
+            height: 75%;
+            object-fit: contain;
+        }
+
+        /* Student name — bottom left */
+        .card-student-name {
+            position: absolute;
+            bottom: 13%;
+            left: 4%;
+            font-size: 3rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.01em;
+            white-space: nowrap;
+            text-shadow:
+                -2px -2px 0 #fff, 2px -2px 0 #fff,
+                -2px 2px 0 #fff, 2px 2px 0 #fff,
+                0 -2px 0 #fff, 0 2px 0 #fff,
+                -2px 0 0 #fff, 2px 0 0 #fff;
+        }
+
+        /* Barcode — bottom right */
+        .card-barcode {
+            position: absolute;
+            bottom: 17%;
+            right: 4%;
+        }
+        .barcode-img {
+            width: 130px;
+            height: auto;
+        }
+
+        /* Footer strip — very bottom */
+        .card-footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.4rem 4%;
+            font-size: 0.8rem;
+            color: #333;
+        }
+        .card-footer-left {
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+        }
+        .card-footer-left img {
+            width: 22px;
+            height: 22px;
+        }
+
+        .kiosk-abbreviation {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2px;
+            margin-top: 22%;
+            z-index: 1;
+        }
+        .kiosk-abbreviation span {
+            font-family: 'Bungee', cursive;
+            font-size: 3.5rem;
+            font-weight: 400;
+            line-height: 1.05;
+            color: #fff;
+            -webkit-text-stroke: 4px;
+            paint-order: stroke fill;
+            text-shadow: 3px 3px 0 rgba(0,0,0,0.4), -1px -1px 0 rgba(0,0,0,0.2);
+        }
+
+        /* ===== CONTENT SECTIONS (white bg) ===== */
+        .content-sections {
+            width: 100%;
+            max-width: 900px;
+            padding: 0 1.5rem;
+        }
+
+        /* ===== KIOSK SECTION ===== */
+        .kiosk-section {
+            margin-top: 80px;
+            padding-top: 80px;
+            text-align: center;
+            border-top: 1px solid #f0f0f0;
+        }
+        .kiosk-section-header h2 {
+            font-size: 42px;
+            font-weight: 800;
+            color: #0F172A;
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+            margin-bottom: 16px;
+        }
+        .kiosk-section-header p {
+            font-size: 18px;
+            color: #64748B;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+        .kiosk-wrapper {
+            position: relative;
+            width: 220px;
+            margin: 0 auto;
+        }
+        .kiosk-wrapper img.kiosk-hardware {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        /* Screen overlay — positioned over the blue screen area of the photo */
+        .kiosk-screen {
+            position: absolute;
+            top: 21.5%;
+            left: 16%;
+            width: 72%;
+            height: 66.5%;
+            clip-path: polygon(2% 0%, 100% 0%, 91% 100%, 9% 99.5%);
+            background: linear-gradient(180deg, #1a3a8a 0%, #1240b0 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 8% 12% 6%;
+            border-radius: 2px;
+            overflow: hidden;
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.3), inset 0 -40px 60px rgba(0,0,0,0.5);
+            filter: brightness(1.05) contrast(0.95) blur(0.3px);
+        }
+        .kiosk-screen::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.4) 100%);
+            pointer-events: none;
+            z-index: 3;
+        }
+        .kiosk-screen::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.08'/%3E%3C/svg%3E");
+            background-size: 128px 128px;
+            pointer-events: none;
+            mix-blend-mode: overlay;
+            opacity: 0.5;
+        }
+        .kiosk-screen-logo {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 6%;
+        }
+        .kiosk-screen-logo img {
+            width: 22px;
+            height: 22px;
+            filter: brightness(0) invert(1);
+        }
+        .kiosk-screen-logo span {
+            color: #fff;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        .kiosk-screen-tagline {
+            color: #fff;
+            font-size: 0.5rem;
+            font-weight: 600;
+            line-height: 1.4;
+            white-space: nowrap;
+            margin-bottom: 10%;
+        }
+        .kiosk-school-logo {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            margin: 25% auto 0;
+            flex-shrink: 0;
+        }
+        .kiosk-school-initials {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: #fff;
+            letter-spacing: 0.15em;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+            line-height: 1.6;
+        }
+
+        /* ===== CTA below card ===== */
+        .cta-section {
+            text-align: center;
+            margin-top: 100px;
+            padding-bottom: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .cta-section p {
+            font-size: 18px;
+            color: #64748B !important;
+            margin-bottom: 24px;
+            line-height: 1.7;
+        }
+        .btn-demo {
+            display: inline-block;
+            padding: 0.875rem 2rem;
+            min-width: 200px;
+            text-align: center;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            color: #fff;
+            text-decoration: none;
+            transition: opacity 0.15s;
+            background: #111;
+        }
+        /* ===== TAP DISPLAY SECTION ===== */
+        .tap-section {
+            margin-top: 80px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .tap-section-text {
+            font-size: 22px;
+            font-weight: 600;
+            color: #0F172A;
+            line-height: 1.5;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+        .tap-highlight {
+            color: #64748B;
+            font-style: italic;
+        }
+        .tap-sis {
+            margin-top: 5rem;
+            margin-bottom: 0;
+        }
+        .tap-image {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+
+        .btn-secondary {
+            display: inline-block;
+            padding: 0.875rem 2rem;
+            min-width: 200px;
+            text-align: center;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            color: #333;
+            text-decoration: none;
+            background: #e5e7eb;
+            transition: opacity 0.15s;
+            margin-bottom: 12px;
+        }
+        .btn-secondary:hover { opacity: 0.85; }
+        .btn-demo:hover { opacity: 0.9; }
+
+        /* ===== PASSWORD GATE ===== */
+        .pw-gate {
+            position: fixed;
+            inset: 0;
+            background: #fff;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            padding: 2rem;
+        }
+        .pw-gate img {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 0.5rem;
+        }
+        .pw-gate h2 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #0F172A;
+        }
+        .pw-gate p {
+            font-size: 14px;
+            color: #64748B;
+        }
+        .pw-gate input {
+            padding: 0.75rem 1rem;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            font-size: 1rem;
+            width: 280px;
+            text-align: center;
+            outline: none;
+        }
+        .pw-gate input:focus {
+            border-color: #6366F1;
+            box-shadow: 0 0 0 3px rgba(99,102,241,0.15);
+        }
+        .pw-gate button {
+            padding: 0.75rem 2rem;
+            border: none;
+            border-radius: 8px;
+            background: #0F172A;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            width: 280px;
+        }
+        .pw-gate button:hover { opacity: 0.9; }
+        .pw-error {
+            color: #dc2626;
+            font-size: 14px;
+            min-height: 20px;
+        }
+
+        /* Responsive */
+        @media (max-width: 720px) {
+            .hero-section { padding: 110px 1rem 60px; }
+            .hero-section .typewriter-hero h1 { font-size: 32px; }
+            .hero-subtitle { font-size: 16px; }
+            .id-card { width: 100%; }
+            .card-photo { border-width: 3px; }
+            .card-school-title { font-size: clamp(0.7rem, 3.5vw, 1.85rem); }
+            .year-text { font-size: clamp(1.2rem, 6vw, 3.25rem); }
+            .card-logo-circle { width: clamp(50px, 14vw, 120px); height: clamp(50px, 14vw, 120px); }
+            .card-student-name { font-size: clamp(0.9rem, 4.5vw, 3rem); }
+            .card-footer { font-size: clamp(0.4rem, 1.5vw, 0.8rem); padding: 0.25rem 4% 0.5rem; }
+            .card-footer-left img { width: clamp(12px, 2.5vw, 22px); height: clamp(12px, 2.5vw, 22px); }
+            .barcode-img { width: clamp(70px, 22vw, 220px); }
+            .hero-section .page-header h1 { font-size: 28px; }
+            .kiosk-section-header h2 { font-size: 28px; }
+            .kiosk-section { margin-top: 60px; }
+            .cta-section { margin-top: 60px; padding-bottom: 60px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Password gate -->
+    <div class="pw-gate" id="pwGate">
+        <img src="/images/moov-logo.png" alt="MOOV">
+        <h2>Enter password</h2>
+        <p>This page is password protected</p>
+        <input type="password" id="pwInput" placeholder="Password" autofocus>
+        <button id="pwSubmit">Continue</button>
+        <span class="pw-error" id="pwError"></span>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <div class="logo-icon">
+                    <img src="/images/moov-logo.png" alt="MOOV" width="36" height="36">
+                </div>
+                <span class="logo-text">MOOV</span>
+            </a>
+
+            <div class="nav-links" id="navLinks">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/#kiosk" class="nav-link">Features</a>
+                <a href="/#faq" class="nav-link">FAQ</a>
+                <a href="/quotes" class="nav-link">Quote</a>
+                <a href="https://help.joinmoov.com" class="nav-link" target="_blank">Help</a>
+                <a href="/#about" class="nav-link">About</a>
+            </div>
+
+            <div class="nav-actions">
+            </div>
+
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="state-msg" id="loading">Loading&hellip;</div>
+    <div class="state-msg error" id="error" style="display:none;"></div>
+
+    <div id="page" style="display:none;">
+        <!-- Hero section with gradient -->
+        <div class="hero-section">
+            <div class="typewriter-hero">
+                <h1>Make <span id="typewriterSchool"></span> <span class="typewriter-word" id="typewriterWord"></span><span class="typewriter-cursor">|</span></h1>
+            </div>
+            <p class="hero-subtitle">All with the tap of an ID</p>
+            <a href="/demo" class="btn-demo hero-cta" id="heroCta">Get a Demo</a>
+            <div class="page-header">
+                <h1>Check out your new student ID cards</h1>
+                <p>Your students tap these everywhere they go; they take attendance and ensure accountability</p>
+            </div>
+            <div class="id-card" id="idCard">
+            <div class="id-card-bg" id="cardBg"></div>
+
+            <div class="id-card-content">
+                <!-- Student photo -->
+                <div class="card-photo">
+                    <img src="/images/bart.png" alt="Student photo">
+                </div>
+
+                <!-- School title -->
+                <div class="card-school-title" id="cardTitle"></div>
+
+                <!-- Year strip — full width from photo to right edge -->
+                <div class="card-year-strip">
+                    <div class="year-strip-bg" id="yearStripBg"></div>
+                    <div class="year-strip-content">
+                        <span class="year-text" id="yearLeft">2026</span>
+                        <div class="card-logo-circle" id="logoCircle">
+                            <img id="cardLogo" src="" alt="">
+                        </div>
+                        <span class="year-text" id="yearRight">2027</span>
+                    </div>
+                </div>
+
+                <!-- Student name -->
+                <div class="card-student-name" id="studentName">BART SIMPSON</div>
+
+                <!-- Barcode -->
+                <div class="card-barcode">
+                    <img class="barcode-img" src="/images/barcode.png" alt="Barcode">
+                </div>
+
+                <!-- Footer -->
+                <div class="card-footer">
+                    <div class="card-footer-left">
+                        <img src="/images/moov-logo.png" alt="MOOV">
+                        <span>Earn rewards at student.joinmoov.com</span>
+                    </div>
+                    <span>Date Issued: 01/01/2026</span>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- Content sections (white bg) -->
+        <div class="content-sections">
+            <!-- Kiosk section -->
+            <div class="kiosk-section">
+                <div class="kiosk-section-header">
+                    <h2>Account for every student</h2>
+                    <p>Verify student entry and regulate common areas</p>
+                </div>
+                <div class="kiosk-wrapper">
+                    <img class="kiosk-hardware" src="/images/kiosk.png" alt="MOOV Kiosk">
+                    <div class="kiosk-screen" id="kioskScreen">
+                        <div class="kiosk-screen-logo">
+                            <img src="/images/moov-logo.png" alt="MOOV">
+                            <span>joinmoov.com</span>
+                        </div>
+                        <div class="kiosk-screen-tagline">Automated attendance.<br>Safer schools.</div>
+                        <img class="kiosk-school-logo" id="kioskSchoolLogo" src="" alt="" style="display:none;">
+                        <div class="kiosk-abbreviation" id="kioskAbbreviation" style="display:none;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tap display section -->
+            <div class="tap-section">
+                <p class="tap-section-text">A tap displays their photo, scheduled class, and hall pass <span class="tap-highlight">(...if they have one!)</span></p>
+                <img class="tap-image" src="/images/tap-display.png" alt="Student tap display showing photo, class schedule, and hall pass status">
+                <p class="tap-section-text tap-sis" id="tapSis" style="display:none;"></p>
+            </div>
+
+            <div class="cta-section">
+                <p>See how MOOV works for <span id="ctaName"></span></p>
+                <a href="https://joinmoov.com" class="btn-secondary">See More</a>
+                <a href="/demo" class="btn-demo" id="btnDemo">Get a Demo</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (async function () {
+            const loadingEl = document.getElementById('loading');
+            const errorEl = document.getElementById('error');
+            const pageEl = document.getElementById('page');
+
+            function showError(msg) {
+                loadingEl.style.display = 'none';
+                errorEl.textContent = msg;
+                errorEl.style.display = 'flex';
+            }
+
+            const params = new URLSearchParams(window.location.search);
+            const parts = window.location.pathname.replace(/\/+$/, '').split('/');
+            const pathSlug = parts[parts.length - 1];
+            const slug = params.get('school') || (pathSlug !== 'example' && pathSlug !== 'index.html' ? pathSlug : null);
+
+            if (!slug) {
+                showError('No school specified.');
+                return;
+            }
+
+            let schools;
+            try {
+                const res = await fetch('/data/schools.json');
+                if (!res.ok) throw new Error('Failed to load schools data.');
+                schools = await res.json();
+            } catch (e) {
+                showError(e.message);
+                return;
+            }
+
+            const school = schools[slug];
+            if (!school) {
+                showError('School not found.');
+                document.title = '404 \u2014 School Not Found';
+                return;
+            }
+
+            document.title = `MOOV for ${school.name}`;
+
+            // Typewriter hero
+            document.getElementById('typewriterSchool').textContent = school.name;
+
+            const words = ['safer', 'more efficient', 'accountable', 'automated'];
+            const typeEl = document.getElementById('typewriterWord');
+            let wordIdx = 0, charIdx = 0, deleting = false;
+
+            function typewriterTick() {
+                const word = words[wordIdx];
+                if (!deleting) {
+                    typeEl.textContent = word.slice(0, charIdx + 1);
+                    charIdx++;
+                    if (charIdx >= word.length) {
+                        setTimeout(() => { deleting = true; typewriterTick(); }, 2000);
+                        return;
+                    }
+                    setTimeout(typewriterTick, 70);
+                } else {
+                    typeEl.textContent = word.slice(0, charIdx);
+                    charIdx--;
+                    if (charIdx < 0) {
+                        deleting = false;
+                        charIdx = 0;
+                        wordIdx = (wordIdx + 1) % words.length;
+                        setTimeout(typewriterTick, 400);
+                        return;
+                    }
+                    setTimeout(typewriterTick, 40);
+                }
+            }
+            typewriterTick();
+
+            const primary = school.colors?.primary || '#111111';
+            const secondary = school.colors?.secondary || '#666666';
+
+            function darkenHex(hex, factor) {
+                hex = hex.replace('#', '');
+                const r = Math.round(parseInt(hex.substring(0, 2), 16) * factor);
+                const g = Math.round(parseInt(hex.substring(2, 4), 16) * factor);
+                const b = Math.round(parseInt(hex.substring(4, 6), 16) * factor);
+                return `rgb(${r},${g},${b})`;
+            }
+
+            function lightenHex(hex, factor) {
+                hex = hex.replace('#', '');
+                const r = Math.min(255, Math.round(parseInt(hex.substring(0, 2), 16) + (255 - parseInt(hex.substring(0, 2), 16)) * factor));
+                const g = Math.min(255, Math.round(parseInt(hex.substring(2, 4), 16) + (255 - parseInt(hex.substring(2, 4), 16)) * factor));
+                const b = Math.min(255, Math.round(parseInt(hex.substring(4, 6), 16) + (255 - parseInt(hex.substring(4, 6), 16)) * factor));
+                return `rgb(${r},${g},${b})`;
+            }
+
+            function luminance(hex) {
+                hex = hex.replace('#', '');
+                const r = parseInt(hex.substring(0, 2), 16) / 255;
+                const g = parseInt(hex.substring(2, 4), 16) / 255;
+                const b = parseInt(hex.substring(4, 6), 16) / 255;
+                return 0.299 * r + 0.587 * g + 0.114 * b;
+            }
+
+            const darkPrimary = darkenHex(primary, 0.35);
+
+            // Typewriter color + hero gradient + navbar
+            if (school.showColors) {
+                document.getElementById('typewriterWord').style.color = primary;
+
+                // Tint the hero gradient with the school's primary color
+                function hexToRgba(hex, alpha) {
+                    hex = hex.replace('#','');
+                    const r = parseInt(hex.substring(0,2),16);
+                    const g = parseInt(hex.substring(2,4),16);
+                    const b = parseInt(hex.substring(4,6),16);
+                    return `rgba(${r},${g},${b},${alpha})`;
+                }
+                const heroEl = document.querySelector('.hero-section');
+                heroEl.style.background = `linear-gradient(180deg, ${hexToRgba(primary,0.15)} 0%, ${hexToRgba(primary,0.1)} 30%, ${hexToRgba(primary,0.05)} 60%, #ffffff 100%)`;
+
+                // Tint the navbar
+                const navbar = document.getElementById('navbar');
+                navbar.style.background = primary;
+                navbar.style.boxShadow = 'none';
+                document.querySelectorAll('.nav-link').forEach(l => l.style.color = '#fff');
+                document.querySelector('.logo-text').style.color = '#fff';
+            }
+
+            // School title
+            const titleEl = document.getElementById('cardTitle');
+            titleEl.textContent = school.name;
+            if (school.showColors) {
+                titleEl.style.color = primary;
+            }
+
+            // Student name
+            if (school.showColors) {
+                document.getElementById('studentName').style.color = primary;
+            }
+
+            // Year strip
+            const yearStripBg = document.getElementById('yearStripBg');
+            if (school.showColors) {
+                yearStripBg.style.background = darkPrimary;
+                const yearColor = luminance(primary) < 0.25 ? lightenHex(primary, 0.5) : primary;
+                document.getElementById('yearLeft').style.color = yearColor;
+                document.getElementById('yearRight').style.color = yearColor;
+            } else {
+                yearStripBg.style.background = 'rgba(0,0,0,0.5)';
+                document.getElementById('yearLeft').style.color = '#fff';
+                document.getElementById('yearRight').style.color = '#fff';
+            }
+
+            // Logo circle
+            const logoCircle = document.getElementById('logoCircle');
+            if (school.showColors) {
+                logoCircle.style.borderColor = darkPrimary;
+            }
+            if (school.showLogo && school.logo) {
+                document.getElementById('cardLogo').src = school.logo;
+                document.getElementById('cardLogo').alt = school.name + ' logo';
+            } else {
+                logoCircle.style.display = 'none';
+            }
+
+            // Background image
+            if (school.backgroundImage) {
+                document.getElementById('cardBg').style.backgroundImage =
+                    `url(${school.backgroundImage})`;
+            }
+
+            // Kiosk screen
+            if (school.showColors) {
+                document.getElementById('kioskScreen').style.background =
+                    `linear-gradient(180deg, ${darkPrimary} 0%, ${primary} 100%)`;
+            }
+            if (school.showLogo && school.logo) {
+                const kioskLogo = document.getElementById('kioskSchoolLogo');
+                kioskLogo.src = school.logo;
+                kioskLogo.alt = school.name + ' logo';
+                kioskLogo.style.display = 'block';
+            }
+            // SIS line
+            if (school.sis) {
+                const sisEl = document.getElementById('tapSis');
+                sisEl.textContent = `And best of all, it takes attendance for your teachers in ${school.sis}!`;
+                sisEl.style.display = 'block';
+            }
+
+            // Kiosk abbreviation letters
+            if (school.abbreviation) {
+                const abbrEl = document.getElementById('kioskAbbreviation');
+                abbrEl.style.display = 'flex';
+                school.abbreviation.split('').forEach(letter => {
+                    const span = document.createElement('span');
+                    span.textContent = letter;
+                    span.style.color = '#fff';
+                    span.style.webkitTextStrokeColor = school.showColors ? primary : '#fff';
+                    abbrEl.appendChild(span);
+                });
+            }
+
+            // CTA
+            document.getElementById('ctaName').textContent = school.name;
+            if (school.showColors) {
+                document.getElementById('btnDemo').style.background = primary;
+                document.getElementById('heroCta').style.background = primary;
+            }
+
+            loadingEl.style.display = 'none';
+            pageEl.style.display = 'block';
+        })();
+    </script>
+    <script>
+        // Mobile nav toggle
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navLinks = document.getElementById('navLinks');
+        if (mobileToggle) {
+            mobileToggle.addEventListener('click', () => {
+                mobileToggle.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+        }
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+        });
+    </script>
+    <script>
+        // Password gate
+        const CORRECT_HASH = '8e10365f341b5f3a52f7a28203923f2f348a738d5e3252ae2c55d7d40f01ca31';
+        const AUTH_KEY = 'moov_auth';
+
+        async function sha256(str) {
+            const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(str));
+            return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('');
+        }
+
+        (async function checkAuth() {
+            const gate = document.getElementById('pwGate');
+            if (localStorage.getItem(AUTH_KEY) === CORRECT_HASH) {
+                gate.remove();
+                return;
+            }
+            // Hide everything behind the gate
+            document.getElementById('navbar').style.display = 'none';
+            document.getElementById('page').style.display = 'none';
+
+            const input = document.getElementById('pwInput');
+            const btn = document.getElementById('pwSubmit');
+            const err = document.getElementById('pwError');
+
+            async function attempt() {
+                const hash = await sha256(input.value);
+                if (hash === CORRECT_HASH) {
+                    localStorage.setItem(AUTH_KEY, hash);
+                    gate.remove();
+                    document.getElementById('navbar').style.display = '';
+                    // Re-trigger page load by dispatching the existing script
+                    location.reload();
+                } else {
+                    err.textContent = 'Incorrect password';
+                    input.value = '';
+                    input.focus();
+                }
+            }
+
+            btn.addEventListener('click', attempt);
+            input.addEventListener('keydown', e => { if (e.key === 'Enter') attempt(); });
+        })();
+    </script>
+</body>
+</html>
