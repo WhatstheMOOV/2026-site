@@ -495,6 +495,64 @@
         .btn-secondary:hover { opacity: 0.85; }
         .btn-demo:hover { opacity: 0.9; }
 
+        /* ===== PASSWORD GATE ===== */
+        .pw-gate {
+            position: fixed;
+            inset: 0;
+            background: #fff;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            padding: 2rem;
+        }
+        .pw-gate img {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 0.5rem;
+        }
+        .pw-gate h2 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #0F172A;
+        }
+        .pw-gate p {
+            font-size: 14px;
+            color: #64748B;
+        }
+        .pw-gate input {
+            padding: 0.75rem 1rem;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            font-size: 1rem;
+            width: 280px;
+            text-align: center;
+            outline: none;
+        }
+        .pw-gate input:focus {
+            border-color: #6366F1;
+            box-shadow: 0 0 0 3px rgba(99,102,241,0.15);
+        }
+        .pw-gate button {
+            padding: 0.75rem 2rem;
+            border: none;
+            border-radius: 8px;
+            background: #0F172A;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            width: 280px;
+        }
+        .pw-gate button:hover { opacity: 0.9; }
+        .pw-error {
+            color: #dc2626;
+            font-size: 14px;
+            min-height: 20px;
+        }
+
         /* Responsive */
         @media (max-width: 720px) {
             .hero-section { padding: 110px 1rem 60px; }
@@ -517,6 +575,16 @@
     </style>
 </head>
 <body>
+    <!-- Password gate -->
+    <div class="pw-gate" id="pwGate">
+        <img src="/images/moov-logo.png" alt="MOOV">
+        <h2>Enter password</h2>
+        <p>This page is password protected</p>
+        <input type="password" id="pwInput" placeholder="Password" autofocus>
+        <button id="pwSubmit">Continue</button>
+        <span class="pw-error" id="pwError"></span>
+    </div>
+
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
@@ -867,6 +935,49 @@
         window.addEventListener('scroll', () => {
             document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
         });
+    </script>
+    <script>
+        // Password gate
+        const CORRECT_HASH = '8e10365f341b5f3a52f7a28203923f2f348a738d5e3252ae2c55d7d40f01ca31';
+        const AUTH_KEY = 'moov_auth';
+
+        async function sha256(str) {
+            const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(str));
+            return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('');
+        }
+
+        (async function checkAuth() {
+            const gate = document.getElementById('pwGate');
+            if (localStorage.getItem(AUTH_KEY) === CORRECT_HASH) {
+                gate.remove();
+                return;
+            }
+            // Hide everything behind the gate
+            document.getElementById('navbar').style.display = 'none';
+            document.getElementById('page').style.display = 'none';
+
+            const input = document.getElementById('pwInput');
+            const btn = document.getElementById('pwSubmit');
+            const err = document.getElementById('pwError');
+
+            async function attempt() {
+                const hash = await sha256(input.value);
+                if (hash === CORRECT_HASH) {
+                    localStorage.setItem(AUTH_KEY, hash);
+                    gate.remove();
+                    document.getElementById('navbar').style.display = '';
+                    // Re-trigger page load by dispatching the existing script
+                    location.reload();
+                } else {
+                    err.textContent = 'Incorrect password';
+                    input.value = '';
+                    input.focus();
+                }
+            }
+
+            btn.addEventListener('click', attempt);
+            input.addEventListener('keydown', e => { if (e.key === 'Enter') attempt(); });
+        })();
     </script>
 </body>
 </html>
