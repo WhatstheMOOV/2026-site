@@ -851,5 +851,19 @@
     "backgroundImage": "https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_2/v1565975422/wfsdk12nyus/rhomv5mto5ahri80w0wc/building-hs.jpg",
     "showLogo": true,
     "showColors": true
+  },
+  "binghamton": {
+    "name": "Binghamton High School",
+    "abbreviation": "BHS",
+    "domain": "binghamtonschools.org",
+    "url": "https://bhs.binghamtonschools.org/",
+    "colors": {
+      "primary": "#d22931",
+      "secondary": "#254593"
+    },
+    "logo": "https://firebasestorage.googleapis.com/v0/b/whatsthemoov-app.appspot.com/o/do-not-delete%2Flogos%2Fbinghamton.png?alt=media&token=f7150f52-3c80-4bc1-9e66-551b7409a7cd",
+    "backgroundImage": "https://townsquare.media/site/499/files/2019/07/2019.07.17-BHS-K.jpg",
+    "showLogo": true,
+    "showColors": true
   }
 }
