@@ -879,5 +879,19 @@
     "backgroundImage": "https://patch.com/img/cdn20/users/5713/20170928/050905/styles/raw/public/processed_images/pj_high_school_-1506632880-1143.jpg",
     "showLogo": true,
     "showColors": true
+  },
+  "rush-henrietta": {
+    "name": "Rush-Henrietta Senior High School",
+    "abbreviation": "RHSHS",
+    "domain": "rhnet.org",
+    "url": "https://shs.rhnet.org/",
+    "colors": {
+      "primary": "#145d44",
+      "secondary": "#cbaf11"
+    },
+    "logo": "https://firebasestorage.googleapis.com/v0/b/whatsthemoov-app.appspot.com/o/do-not-delete%2Flogos%2Frush-henrietta.png?alt=media&token=f7150f52-3c80-4bc1-9e66-551b7409a7cd",
+    "backgroundImage": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Rushhenriettahigh.jpg",
+    "showLogo": true,
+    "showColors": true
   }
 }
