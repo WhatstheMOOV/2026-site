@@ -865,5 +865,19 @@
     "backgroundImage": "https://imagescdn.homes.com/i2/VJ1pBJgEBMYACflwdFSkiTU604r8ocFBA1e4-GT61es/117/binghamton-high-school-binghamton-ny-primaryphoto.jpg?p=1",
     "showLogo": true,
     "showColors": true
+  },
+  "port-jefferson": {
+    "name": "Earl L. Vandermeulen High School",
+    "abbreviation": "ELVHS",
+    "domain": "portjeffschools.org",
+    "url": "https://www.portjeffschools.org/our_schools/earl_l_vandermeulen_high_school",
+    "colors": {
+      "primary": "#a964a9",
+      "secondary": "#1c2c2c"
+    },
+    "logo": "https://firebasestorage.googleapis.com/v0/b/whatsthemoov-app.appspot.com/o/do-not-delete%2Flogos%2Fport-jefferson.png?alt=media&token=f7150f52-3c80-4bc1-9e66-551b7409a7cd",
+    "backgroundImage": "https://patch.com/img/cdn20/users/5713/20170928/050905/styles/raw/public/processed_images/pj_high_school_-1506632880-1143.jpg",
+    "showLogo": true,
+    "showColors": true
   }
 }
