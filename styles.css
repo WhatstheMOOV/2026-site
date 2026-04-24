@@ -1,3 +1,13 @@
+/* ===== SF Pro Rounded local font mapping ===== */
+@supports (font-family: -apple-system) {
+    @font-face { font-family: 'SF Pro Rounded'; src: local('.SFNSRounded'), local('SFProRounded-Regular'); font-weight: 400; }
+    @font-face { font-family: 'SF Pro Rounded'; src: local('.SFNSRounded-Medium'), local('SFProRounded-Medium'); font-weight: 500; }
+    @font-face { font-family: 'SF Pro Rounded'; src: local('.SFNSRounded-Semibold'), local('SFProRounded-Semibold'); font-weight: 600; }
+    @font-face { font-family: 'SF Pro Rounded'; src: local('.SFNSRounded-Bold'), local('SFProRounded-Bold'); font-weight: 700; }
+    @font-face { font-family: 'SF Pro Rounded'; src: local('.SFNSRounded-Heavy'), local('SFProRounded-Heavy'); font-weight: 800; }
+    @font-face { font-family: 'SF Pro Rounded'; src: local('.SFNSRounded-Black'), local('SFProRounded-Black'); font-weight: 900; }
+}
+
 /* ===== RESET & BASE ===== */
 *, *::before, *::after {
     margin: 0;
