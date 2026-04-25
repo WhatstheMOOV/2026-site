@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Account - MOOV</title>
+    <meta name="description" content="Strengthen school safety with real-time attendance, entry/common area verification, and zero-touch passes. An ID card tap automates and monitors student movement.">
+    <link rel="icon" type="image/png" href="../images/moov-logo.png">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        .legal-page {
+            min-height: 100vh;
+            padding: 140px 24px 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        .legal-page-bg {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+        }
+        .legal-page-gradient {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(160deg, #F8FAFC 0%, #EEF2FF 30%, #F0F9FF 60%, #FFFFFF 100%);
+        }
+        .legal-container {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .legal-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        .legal-title {
+            font-size: 36px;
+            font-weight: 800;
+            color: #0F172A;
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+            margin-bottom: 12px;
+        }
+        .legal-subtitle {
+            font-size: 16px;
+            color: #64748B;
+            line-height: 1.6;
+        }
+        .legal-card {
+            background: #FFFFFF;
+            border: 1px solid rgba(0,0,0,0.1);
+            border-radius: 16px;
+            padding: 48px;
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.1);
+        }
+        .legal-card h2 {
+            font-size: 22px;
+            font-weight: 700;
+            color: #0F172A;
+            margin-top: 36px;
+            margin-bottom: 16px;
+            line-height: 1.3;
+        }
+        .legal-card h2:first-of-type {
+            margin-top: 0;
+        }
+        .legal-card p {
+            font-size: 15px;
+            line-height: 1.8;
+            color: #475569;
+            margin-bottom: 16px;
+        }
+        .legal-card ol {
+            padding-left: 24px;
+            margin-bottom: 16px;
+        }
+        .legal-card ol li {
+            font-size: 15px;
+            line-height: 1.8;
+            color: #475569;
+            margin-bottom: 8px;
+        }
+        .legal-card strong {
+            color: #0F172A;
+        }
+        .legal-card a {
+            color: #4F46E5;
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            .legal-title { font-size: 28px; }
+            .legal-card { padding: 24px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <div class="logo-icon">
+                    <img src="../images/moov-logo.png" alt="MOOV" width="36" height="36">
+                </div>
+                <span class="logo-text">MOOV</span>
+            </a>
+
+            <div class="nav-links" id="navLinks">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/#kiosk" class="nav-link">Features</a>
+                <a href="/#faq" class="nav-link">FAQ</a>
+                <a href="/quotes" class="nav-link">Quote</a>
+                <a href="https://help.joinmoov.com" class="nav-link" target="_blank">Help</a>
+                <a href="/#about" class="nav-link">About</a>
+            </div>
+
+            <div class="nav-actions">
+                <a href="/demo" class="btn btn-primary">Get a Demo</a>
+            </div>
+
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <section class="legal-page">
+        <div class="legal-page-bg">
+            <div class="legal-page-gradient"></div>
+        </div>
+        <div class="legal-container">
+            <div class="legal-header">
+                <h1 class="legal-title">Delete Your Account</h1>
+                <p class="legal-subtitle">How to permanently delete your MOOV account and associated data</p>
+            </div>
+            <div class="legal-card">
+                <h2>How to Delete Your Account</h2>
+                <p>You can delete your MOOV account directly from the app. To do so:</p>
+                <ol>
+                    <li>Open the <strong>MOOV</strong> app on your device</li>
+                    <li>Go to <strong>Settings</strong></li>
+                    <li>Tap <strong>Delete Account</strong></li>
+                    <li>Confirm the deletion when prompted</li>
+                </ol>
+
+                <h2>What Happens When You Delete Your Account</h2>
+                <p>When you delete your account, the following data will be permanently removed:</p>
+                <ol>
+                    <li>Your profile information and credentials</li>
+                    <li>Your activity history and session data</li>
+                    <li>Any personalized settings or preferences</li>
+                </ol>
+                <p>Account deletion is permanent and cannot be undone. If you wish to use MOOV again after deleting your account, you will need to create a new account.</p>
+
+                <h2>Need Help?</h2>
+                <p>If you are unable to access the app or need assistance deleting your account, please contact us at <a href="mailto:support@joinmoov.com">support@joinmoov.com</a> and we will process your request.</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Navbar scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 20);
+        });
+
+        // Mobile menu
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navLinks = document.getElementById('navLinks');
+        const ctaLink = document.querySelector('.nav-actions .btn-primary');
+        if (ctaLink) { const mc = ctaLink.cloneNode(true); mc.classList.add('mobile-menu-cta'); navLinks.appendChild(mc); }
+        mobileToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileToggle.classList.toggle('active');
+        });
+        navLinks.querySelectorAll('a').forEach(l => l.addEventListener('click', () => { navLinks.classList.remove('active'); mobileToggle.classList.remove('active'); }));
+        document.addEventListener('click', (e) => { if (navLinks.classList.contains('active') && !navLinks.contains(e.target) && !mobileToggle.contains(e.target)) { navLinks.classList.remove('active'); mobileToggle.classList.remove('active'); } });
+    </script>
+</body>
+</html>
