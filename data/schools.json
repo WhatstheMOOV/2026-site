@@ -893,5 +893,19 @@
     "backgroundImage": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Rushhenriettahigh.jpg",
     "showLogo": true,
     "showColors": true
+  },
+  "hardeeville": {
+    "name": "Hardeeville Junior & Senior High School",
+    "abbreviation": "HJSHS",
+    "domain": "jcsd.net",
+    "url": "https://rms.jcsd.net/",
+    "colors": {
+      "primary": "#123c93",
+      "secondary": "#fbc511"
+    },
+    "logo": "https://firebasestorage.googleapis.com/v0/b/whatsthemoov-app.appspot.com/o/do-not-delete%2Flogos%2Fhardeeville.png?alt=media&token=f7150f52-3c80-4bc1-9e66-551b7409a7cd",
+    "backgroundImage": "https://www.mmsainc.com/wp-content/uploads/2017/09/83_Hardeeville-School-4.jpg",
+    "showLogo": true,
+    "showColors": true
   }
 }
