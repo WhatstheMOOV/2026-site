@@ -914,8 +914,8 @@
     "domain": "jcsd.net",
     "url": "https://rhs.jcsd.net/",
     "colors": {
-      "primary": "#123c93",
-      "secondary": "#fbc511"
+      "primary": "#000000",
+      "secondary": "#cc0000"
     },
     "logo": "https://firebasestorage.googleapis.com/v0/b/whatsthemoov-app.appspot.com/o/do-not-delete%2Flogos%2Fridgeland.png?alt=media&token=f7150f52-3c80-4bc1-9e66-551b7409a7cd",
     "backgroundImage": "https://3.files.edl.io/33b1/18/08/18/203203-15a64d99-03da-40a2-ae4e-8d1bfa23b3f6.jpg",
