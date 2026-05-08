@@ -913,7 +913,7 @@
     "abbreviation": "RSAE",
     "domain": "jcsd.net",
     "url": "https://rhs.jcsd.net/",
-    "colors": {
+     "colors": {
       "primary": "#000000",
       "secondary": "#cc0000"
     },
@@ -971,20 +971,6 @@
     },
     "logo": "https://firebasestorage.googleapis.com/v0/b/whatsthemoov-app.appspot.com/o/do-not-delete%2Flogos%2Fseaford.png?alt=media&token=f7150f52-3c80-4bc1-9e66-551b7409a7cd",
     "backgroundImage": "https://patch.com/img/cdn/users/34990/2013/04/raw/c8339984ae5aab94b4c0e346051be25f.png",
-    "showLogo": true,
-    "showColors": true
-  },
-  "miller-place": {
-    "name": "Miller Place High School",
-    "abbreviation": "MPHS",
-    "domain": "millerplace.k12.ny.us",
-    "url": "https://mphs.millerplace.k12.ny.us/",
-    "colors": {
-      "primary": "#0e0fd7",
-      "secondary": "#cc0000"
-    },
-    "logo": "https://firebasestorage.googleapis.com/v0/b/whatsthemoov-app.appspot.com/o/do-not-delete%2Flogos%2Fmiller-place.png?alt=media&token=f7150f52-3c80-4bc1-9e66-551b7409a7cd",
-    "backgroundImage": "https://upload.wikimedia.org/wikipedia/commons/1/13/Mphighschool2.jpg",
     "showLogo": true,
     "showColors": true
   },
