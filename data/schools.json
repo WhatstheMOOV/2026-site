@@ -987,5 +987,19 @@
     "backgroundImage": "https://upload.wikimedia.org/wikipedia/commons/5/58/Canton_High_School%2C_Collinsville_CT.jpg",
     "showLogo": true,
     "showColors": true
+  },
+  "port-st-lucie": {
+    "name": "Port St. Lucie High School",
+    "abbreviation": "PSLHS",
+    "domain": "stlucie.k12.fl.us",
+    "url": "https://www.stlucie.k12.fl.us/our-schools/profile/?sch=phs",
+    "colors": {
+      "primary": "#2870c8",
+      "secondary": "#f5b731"
+    },
+    "logo": "https://firebasestorage.googleapis.com/v0/b/whatsthemoov-app.appspot.com/o/do-not-delete%2Flogos%2Fport-st-lucie.png?alt=media&token=f7150f52-3c80-4bc1-9e66-551b7409a7cd",
+    "backgroundImage": "https://imagescdn.homes.com/i2/36WCEZiY6jZdKy5T3kG0g3gUKmoP5OvC0EroW9bsRII/117/port-st-lucie-high-school-port-saint-lucie-fl-3-schoolphoto.jpg?p=1",
+    "showLogo": true,
+    "showColors": true
   }
 }
