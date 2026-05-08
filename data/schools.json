@@ -921,5 +921,85 @@
     "backgroundImage": "https://3.files.edl.io/33b1/18/08/18/203203-15a64d99-03da-40a2-ae4e-8d1bfa23b3f6.jpg",
     "showLogo": true,
     "showColors": true
+  },
+  "homewood-flossmoor": {
+    "name": "Homewood-Flossmoor High School",
+    "abbreviation": "HFHS",
+    "domain": "hfhighschool.org",
+    "colors": {
+      "primary": "#cb1d2d",
+      "secondary": "#ffffff"
+    },
+    "logo": "https://firebasestorage.googleapis.com/v0/b/whatsthemoov-app.appspot.com/o/do-not-delete%2Flogos%2Fhomewood-flossmoor.png?alt=media&token=f7150f52-3c80-4bc1-9e66-551b7409a7cd",
+    "backgroundImage": "https://dla-ltd.com/wp-content/uploads/2025/04/DLA_2021_107_000_N2610_fullsizejpg-1920x1281.jpg",
+    "showLogo": true,
+    "showColors": true
+  },
+  "holy-names": {
+    "name": "Academy of the Holy Names",
+    "abbreviation": "AHN",
+    "domain": "holynamestpa.org",
+    "colors": {
+      "primary": "#3d5474",
+      "secondary": "#193860"
+    },
+    "logo": "https://firebasestorage.googleapis.com/v0/b/whatsthemoov-app.appspot.com/o/do-not-delete%2Flogos%2Fholy-names.png?alt=media&token=f7150f52-3c80-4bc1-9e66-551b7409a7cd",
+    "backgroundImage": "https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_2/v1688585756/holynames/s7i8op898wgpy0xc5ylh/Academy-of-the-Holy-Names-Tampa-FL-Bayshore-32.jpg",
+    "showLogo": true,
+    "showColors": true
+  },
+  "oglala-lakota": {
+    "name": "Oglala Lakota County School District",
+    "abbreviation": "OLCSD",
+    "domain": "olcsd.com",
+    "colors": {
+      "primary": "#9e2922",
+      "secondary": "#2a2e45"
+    },
+    "logo": "https://firebasestorage.googleapis.com/v0/b/whatsthemoov-app.appspot.com/o/do-not-delete%2Flogos%2Foglala-lakota.png?alt=media&token=f7150f52-3c80-4bc1-9e66-551b7409a7cd",
+    "backgroundImage": "https://cmsv2-assets.apptegy.net/uploads/3807/file/168085/4d2f9a02-d44d-4af2-a464-5b4a88655ec9.jpeg",
+    "showLogo": true,
+    "showColors": true
+  },
+  "seaford": {
+    "name": "Seaford School District",
+    "abbreviation": "SSD",
+    "domain": "seaford.k12.ny.us",
+    "colors": {
+      "primary": "#206c36",
+      "secondary": "#70c98b"
+    },
+    "logo": "https://firebasestorage.googleapis.com/v0/b/whatsthemoov-app.appspot.com/o/do-not-delete%2Flogos%2Fseaford.png?alt=media&token=f7150f52-3c80-4bc1-9e66-551b7409a7cd",
+    "backgroundImage": "https://patch.com/img/cdn/users/34990/2013/04/raw/c8339984ae5aab94b4c0e346051be25f.png",
+    "showLogo": true,
+    "showColors": true
+  },
+  "miller-place": {
+    "name": "Miller Place High School",
+    "abbreviation": "MPHS",
+    "domain": "millerplace.k12.ny.us",
+    "url": "https://mphs.millerplace.k12.ny.us/",
+    "colors": {
+      "primary": "#0e0fd7",
+      "secondary": "#cc0000"
+    },
+    "logo": "https://firebasestorage.googleapis.com/v0/b/whatsthemoov-app.appspot.com/o/do-not-delete%2Flogos%2Fmiller-place.png?alt=media&token=f7150f52-3c80-4bc1-9e66-551b7409a7cd",
+    "backgroundImage": "https://upload.wikimedia.org/wikipedia/commons/1/13/Mphighschool2.jpg",
+    "showLogo": true,
+    "showColors": true
+  },
+  "canton": {
+    "name": "Canton High School",
+    "abbreviation": "CHS",
+    "domain": "cantonschools.net",
+    "url": "https://chs.cantonschools.net/",
+    "colors": {
+      "primary": "#2b3c90",
+      "secondary": "#d28e41"
+    },
+    "logo": "https://firebasestorage.googleapis.com/v0/b/whatsthemoov-app.appspot.com/o/do-not-delete%2Flogos%2Fcanton.png?alt=media&token=f7150f52-3c80-4bc1-9e66-551b7409a7cd",
+    "backgroundImage": "https://upload.wikimedia.org/wikipedia/commons/5/58/Canton_High_School%2C_Collinsville_CT.jpg",
+    "showLogo": true,
+    "showColors": true
   }
 }
