@@ -1001,5 +1001,19 @@
     "backgroundImage": "https://imagescdn.homes.com/i2/36WCEZiY6jZdKy5T3kG0g3gUKmoP5OvC0EroW9bsRII/117/port-st-lucie-high-school-port-saint-lucie-fl-3-schoolphoto.jpg?p=1",
     "showLogo": true,
     "showColors": true
+  },
+  "fairbanks-native": {
+    "name": "Fairbanks Native Association Head Start",
+    "abbreviation": "FNAHS",
+    "domain": "fairbanksnative.org",
+    "url": "https://www.fairbanksnative.org/head-start/",
+    "colors": {
+      "primary": "#1a4a43",
+      "secondary": "#364f6f"
+    },
+    "logo": "https://firebasestorage.googleapis.com/v0/b/whatsthemoov-app.appspot.com/o/public%2Flogos%2Ffairbanks-native.png?alt=media&token=f7150f52-3c80-4bc1-9e66-551b7409a7cd",
+    "backgroundImage": "https://rehabs.org/wp-content/uploads/2021/11/fairbanks-native-association-south-cushman-street-fairbanks-ak-front.jpg",
+    "showLogo": true,
+    "showColors": true
   }
 }
