@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testimonials — MOOV</title>
+  <link rel="icon" type="image/png" href="../images/moov-logo.png">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="/testimonials/testimonials.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    /* ===== Direction C — Cinematic spotlight ===== */
+    .cine { position: relative; min-height: 100vh; display: flex; flex-direction: column; overflow: hidden; }
+    .cine-bg { position: absolute; inset: 0; z-index: 0; }
+    .cine-bg .reel-ph { position: absolute; inset: -4%; filter: saturate(1.1); }
+    .cine-bg::after { content: ''; position: absolute; inset: 0; z-index: 2;
+      background:
+        linear-gradient(90deg, rgba(4,7,14,0.94) 0%, rgba(4,7,14,0.7) 45%, rgba(4,7,14,0.4) 100%),
+        linear-gradient(0deg, rgba(4,7,14,0.96) 4%, rgba(4,7,14,0.2) 50%); }
+    .cine-bg .reel-drift { animation-duration: 22s; }
+
+    .cine-inner { position: relative; z-index: 3; flex: 1; display: flex; flex-direction: column; max-width: 1200px; margin: 0 auto; width: 100%; padding: 0 40px; }
+    @media (max-width: 700px){ .cine-inner { padding: 0 22px; } }
+
+    .cine-top { padding-top: 96px; }
+    .cine-eyebrow { display: inline-flex; align-items: center; gap: 8px; padding: 6px 16px; border-radius: 999px; white-space: nowrap;
+      background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.16); font-size: 13px; font-weight: 600; color: #fff; }
+    .cine-eyebrow .badge-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--cine-accent,#6366F1); animation: pulse 2s ease-in-out infinite; }
+
+    .cine-stagewrap { flex: 1; display: flex; align-items: center; }
+    .cine-slide { max-width: 880px; }
+    .cine-topicpill { display: inline-flex; align-items: center; gap: 7px; padding: 5px 14px; border-radius: 999px; font-size: 12px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; margin-bottom: 24px; }
+    .cine-quote {
+      font-size: 60px; font-weight: 800; line-height: 1.06; letter-spacing: -0.03em; color: #fff;
+      text-wrap: balance; margin-bottom: 30px; text-shadow: 0 4px 40px rgba(0,0,0,0.5);
+    }
+    .cine-quote .qm { color: var(--cine-accent,#6366F1); }
+    .cine-author { display: flex; align-items: center; gap: 16px; }
+    .cine-author .t-avatar { width: 56px; height: 56px; font-size: 18px; }
+    .cine-author strong { display: block; font-size: 18px; font-weight: 700; color: #fff; }
+    .cine-author span { font-size: 15px; color: rgba(255,255,255,0.62); }
+
+    .cine-controls { display: flex; align-items: center; gap: 14px; margin-top: 38px; }
+    .cine-cbtn { width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2); color: #fff; cursor: pointer; transition: all .2s; }
+    .cine-cbtn:hover { background: rgba(255,255,255,0.18); transform: translateY(-1px); }
+    .cine-cbtn.play { width: 58px; height: 58px; background: var(--cine-accent,#6366F1); border-color: transparent; box-shadow: 0 10px 30px rgba(99,102,241,0.45); }
+    .cine-count { font-size: 14px; font-weight: 600; color: rgba(255,255,255,0.55); font-variant-numeric: tabular-nums; margin-left: 6px; }
+
+    /* filmstrip */
+    .cine-strip { position: relative; z-index: 3; padding: 26px 0 30px; }
+    .cine-strip-inner { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
+    @media (max-width: 700px){ .cine-strip-inner { padding: 0 22px; } }
+    .cine-progress { height: 3px; background: rgba(255,255,255,0.16); border-radius: 3px; margin-bottom: 20px; overflow: hidden; }
+    .cine-progress i { display: block; height: 100%; width: 0; background: linear-gradient(90deg,#6366F1,#3B82F6,#22D3EE); }
+    .film { display: flex; gap: 14px; overflow-x: auto; padding-bottom: 6px; scrollbar-width: none; }
+    .film::-webkit-scrollbar { display: none; }
+    .film-cell { position: relative; flex: 0 0 200px; aspect-ratio: 16/10; border-radius: 12px; overflow: hidden; cursor: pointer;
+      border: 2px solid transparent; transition: all .25s; opacity: .55; }
+    .film-cell:hover { opacity: .85; }
+    .film-cell.active { opacity: 1; border-color: #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+    .film-cell .fc-grad { position: absolute; inset: 0; z-index: 2; background: linear-gradient(0deg, rgba(4,7,14,0.85), transparent 65%); }
+    .film-cell .fc-cap { position: absolute; left: 10px; right: 10px; bottom: 8px; z-index: 3; }
+    .film-cell .fc-name { font-size: 12px; font-weight: 700; color: #fff; line-height: 1.2; }
+    .film-cell .fc-role { font-size: 10.5px; color: rgba(255,255,255,0.65); }
+    .film-cell .fc-dur { position: absolute; top: 8px; right: 8px; z-index: 3; font-size: 10px; font-weight: 700; padding: 1px 6px; border-radius: 5px; background: rgba(0,0,0,0.6); color: #fff; }
+    .film-cell .fc-type { position: absolute; top: 8px; left: 8px; z-index: 3; font-size: 9px; font-weight: 800; letter-spacing: .05em; padding: 2px 6px; border-radius: 5px; color:#fff; }
+
+    /* stats band */
+    .cine-stats { background: linear-gradient(135deg, #1E1065, var(--primary-600), #0F172A); padding: 56px 0; position: relative; overflow: hidden; }
+    .cine-stats::before { content:''; position:absolute; top:-40%; right:-10%; width:480px; height:480px; background: var(--primary-500); border-radius:50%; filter: blur(130px); opacity:.25; }
+    .cine-stats .container { position: relative; z-index: 1; }
+    .cine-stats-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 24px; }
+    @media (max-width: 760px){ .cine-stats-grid { grid-template-columns: repeat(2,1fr); gap: 32px; } }
+    .cine-stat { text-align: center; }
+    .cine-stat .v { font-size: 52px; font-weight: 900; letter-spacing: -0.03em; color: #fff; line-height: 1; }
+    .cine-stat .l { font-size: 14px; font-weight: 500; color: rgba(255,255,255,0.7); margin-top: 10px; }
+
+    /* quote grid */
+    .cine-quotes { padding: 90px 0 100px; background: var(--dark-950); }
+    .cine-quotes .qh { text-align: center; margin-bottom: 44px; }
+    .cine-quotes .qh h2 { font-size: 38px; font-weight: 800; letter-spacing: -0.02em; color: #fff; }
+    .cine-quotes .qh p { font-size: 17px; color: var(--dark-400); margin-top: 12px; }
+    .cqg { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+    @media (max-width: 880px){ .cqg { grid-template-columns: 1fr; } }
+    .cq { padding: 30px 28px; border-radius: var(--radius-lg); background: var(--dark-800); border: 1px solid rgba(255,255,255,0.06); transition: all .3s; }
+    .cq:hover { transform: translateY(-3px); border-color: var(--cqc,#6366F1); box-shadow: 0 16px 40px rgba(0,0,0,0.4); }
+    .cq .cq-mark { font-family: Georgia, serif; font-size: 50px; line-height: .5; color: var(--cqc,#6366F1); }
+    .cq .cq-hl { font-size: 20px; font-weight: 700; line-height: 1.3; color: #fff; margin: 14px 0 12px; text-wrap: balance; }
+    .cq .cq-body { font-size: 14.5px; line-height: 1.65; color: var(--dark-300); margin-bottom: 20px; }
+
+    @media (max-width: 880px){ .cine-quote { font-size: 38px; } }
+    @media (max-width: 540px){ .cine-quote { font-size: 30px; } .cine-top { padding-top: 84px; } }
+  </style>
+</head>
+<body>
+  <nav class="navbar scrolled" id="navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo"><div class="logo-icon"><img src="../images/moov-logo.png" alt="MOOV" width="36" height="36"></div><span class="logo-text">MOOV</span></a>
+      <div class="nav-links" id="navLinks">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/#kiosk" class="nav-link">Features</a>
+        <a href="/testimonials" class="nav-link active">Why MOOV</a>
+        <a href="/quotes" class="nav-link">Quote</a>
+        <a href="https://help.joinmoov.com" class="nav-link" target="_blank">Help</a>
+      </div>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode">
+          <svg class="theme-icon-sun" width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="4" stroke="currentColor" stroke-width="1.5"/><path d="M9 1V3M9 15V17M1 9H3M15 9H17M3.34 3.34L4.76 4.76M13.24 13.24L14.66 14.66M14.66 3.34L13.24 4.76M4.76 13.24L3.34 14.66" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <svg class="theme-icon-moon" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M15.36 10.36A7 7 0 1 1 7.64 2.64 5.5 5.5 0 0 0 15.36 10.36Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <a href="/demo" class="btn btn-primary">Get a Demo</a>
+      </div>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <!-- Cinematic spotlight -->
+  <section class="cine" id="cine">
+    <div class="cine-bg" id="cineBg"></div>
+    <div class="cine-inner">
+      <div class="cine-top">
+        <span class="cine-eyebrow"><span class="badge-dot"></span> Loved by schools nationwide</span>
+      </div>
+      <div class="cine-stagewrap">
+        <div class="cine-slide" id="slide">
+          <span class="cine-topicpill" id="cTopic"></span>
+          <h2 class="cine-quote" id="cQuote"></h2>
+          <div class="cine-author" id="cAuthor"></div>
+          <div class="cine-controls">
+            <button class="cine-cbtn" id="cPrev" aria-label="Previous"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M11 4L6 9l5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            <button class="cine-cbtn play" id="cPlay" aria-label="Play/pause"></button>
+            <button class="cine-cbtn" id="cNext" aria-label="Next"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M7 4l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            <span class="cine-count" id="cCount"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- filmstrip -->
+    <div class="cine-strip">
+      <div class="cine-strip-inner">
+        <div class="cine-progress"><i id="cBar"></i></div>
+        <div class="film" id="film"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- stats band -->
+  <section class="cine-stats">
+    <div class="container">
+      <div class="cine-stats-grid" id="statsGrid"></div>
+    </div>
+  </section>
+
+  <!-- quote grid -->
+  <section class="cine-quotes">
+    <div class="container">
+      <div class="qh"><h2>In their own words</h2><p>The quieter wins that add up across a building.</p></div>
+      <div class="cqg" id="cqGrid"></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="nav-logo"><div class="logo-icon"><img src="../images/moov-logo.png" alt="MOOV" width="36" height="36"></div><span class="logo-text">MOOV</span></a>
+          <p class="footer-desc">Automate attendance, streamline hall passes, and increase safety — all with a tap.</p>
+          <div class="footer-social"><a href="https://www.linkedin.com/company/joinmoov" class="social-link" aria-label="LinkedIn"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4.5 3C3.67 3 3 3.67 3 4.5C3 5.33 3.67 6 4.5 6C5.33 6 6 5.33 6 4.5C6 3.67 5.33 3 4.5 3ZM3 8H6V17H3V8ZM10.5 8H7.5V17H10.5V12.25C10.5 9.93 13.5 9.74 13.5 12.25V17H16.5V11.16C16.5 7 11.5 7.15 10.5 9.14V8Z" fill="currentColor"/></svg></a></div>
+        </div>
+        <div class="footer-links-group"><h4>Product</h4><ul><li><a href="/#attendance">Attendance</a></li><li><a href="/#ztp">Hall Passes</a></li><li><a href="/#visitor-management">Safety</a></li><li><a href="/#districts">Analytics</a></li></ul></div>
+        <div class="footer-links-group"><h4>Solutions</h4><ul><li><a href="/#attendance">For Teachers</a></li><li><a href="/#districts">For Admins</a></li><li><a href="/#districts">For Districts</a></li></ul></div>
+        <div class="footer-links-group"><h4>Resources</h4><ul><li><a href="https://help.joinmoov.com" target="_blank">Help Center</a></li><li><a href="/quotes">Get a Quote</a></li></ul></div>
+        <div class="footer-links-group"><h4>Company</h4><ul><li><a href="/#about">About Us</a></li><li><a href="/demo">Get a Demo</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 What's the MOOV, Inc. All rights reserved.</p><div class="footer-legal"><a href="/privacy">Privacy Policy</a><a href="/terms">Terms of Service</a></div></div>
+    </div>
+  </footer>
+
+  <script src="/testimonials/testimonials-data.js"></script>
+  <script>
+    (function () {
+      const t = document.getElementById('themeToggle');
+      // Cinematic looks best dark; respect a saved choice but default dark here.
+      document.documentElement.setAttribute('data-theme', localStorage.getItem('theme') || 'dark');
+      t.addEventListener('click', () => {
+        const next = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', next); localStorage.setItem('theme', next);
+      });
+      const mt = document.getElementById('mobileToggle'), nl = document.getElementById('navLinks');
+      const cta = document.querySelector('.nav-actions .btn-primary');
+      if (cta) { const c = cta.cloneNode(true); c.classList.add('mobile-menu-cta'); nl.appendChild(c); }
+      mt.addEventListener('click', () => { nl.classList.toggle('active'); mt.classList.toggle('active'); });
+    })();
+
+    const accent = a => MOOV_ACCENTS[a] || MOOV_ACCENTS.indigo;
+    const byId = id => TESTIMONIALS.find(t => t.id === id);
+    const durToMs = d => { if (!d) return 6500; const [m, s] = d.split(':').map(Number); return (m * 60 + s) * 1000; };
+    const seq = TESTIMONIALS.filter(t => t.type === 'video').map(t => t.id);
+    let pos = 0, playing = true, raf = null, startT = 0, elapsed = 0, durMs = 6500;
+
+    const cine = document.getElementById('cine');
+    const cineBg = document.getElementById('cineBg');
+    const cTopic = document.getElementById('cTopic'), cQuote = document.getElementById('cQuote');
+    const cAuthor = document.getElementById('cAuthor'), cCount = document.getElementById('cCount');
+    const cBar = document.getElementById('cBar'), cPlay = document.getElementById('cPlay');
+    const film = document.getElementById('film');
+
+    function buildFilm() {
+      film.innerHTML = seq.map((id, i) => {
+        const t = byId(id); const a = accent(t.accent);
+        return `<div class="film-cell ${i === pos ? 'active' : ''}" data-i="${i}" style="--reel-accent:${a.solid}">
+            ${moovReelSurface(t, { mini: true })}
+            <span class="fc-type" style="background:${a.solid}">${TOPICS[t.topic].toUpperCase()}</span>
+            <span class="fc-dur">${t.duration || ''}</span>
+            <div class="fc-grad"></div>
+            <div class="fc-cap"><div class="fc-name">${t.name}</div><div class="fc-role">${t.school}</div></div>
+          </div>`;
+      }).join('');
+      film.querySelectorAll('.film-cell').forEach(el => el.addEventListener('click', () => go(+el.getAttribute('data-i'))));
+    }
+
+    function paint() {
+      const t = byId(seq[pos]); const a = accent(t.accent);
+      cine.style.setProperty('--cine-accent', a.solid);
+      // background reel
+      const host = document.createElement('div'); host.style.cssText = '--reel-accent:' + a.solid;
+      host.innerHTML = moovReelSurface(t, { mini: true });
+      cineBg.querySelectorAll('.reel-ph,.reel-mini-poster').forEach(n => n.remove());
+      cineBg.prepend(host.firstElementChild);
+      cTopic.textContent = TOPICS[t.topic];
+      cTopic.style.background = a.soft; cTopic.style.color = '#fff';
+      cQuote.innerHTML = '<span class="qm">“</span>' + t.quote + '<span class="qm">”</span>';
+      cAuthor.innerHTML = `<span class="t-avatar" style="background:${a.grad}">${moovInitials(t.name)}</span><div><strong>${t.name}</strong><span>${t.role} · ${t.school}</span></div>`;
+      cCount.textContent = String(pos + 1).padStart(2, '0') + ' / ' + String(seq.length).padStart(2, '0');
+      film.querySelectorAll('.film-cell').forEach((el, i) => el.classList.toggle('active', i === pos));
+      durMs = durToMs(t.duration); elapsed = 0; startT = performance.now();
+    }
+    function tick(now) {
+      if (!playing) return;
+      const e = elapsed + (now - startT); const p = Math.min(e / durMs, 1);
+      cBar.style.width = (p * 100) + '%';
+      if (p >= 1) { next(); return; }
+      raf = requestAnimationFrame(tick);
+    }
+    function setPlaying(v) {
+      playing = v;
+      cPlay.innerHTML = v
+        ? '<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="5" y="4" width="3.5" height="12" rx="1" fill="#fff"/><rect x="11.5" y="4" width="3.5" height="12" rx="1" fill="#fff"/></svg>'
+        : '<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M6 4l10 6-10 6V4Z" fill="#fff"/></svg>';
+      if (v) { startT = performance.now(); raf = requestAnimationFrame(tick); } else { cancelAnimationFrame(raf); elapsed += performance.now() - startT; }
+    }
+    function go(i) { cancelAnimationFrame(raf); pos = (i + seq.length) % seq.length; paint(); setPlaying(true); }
+    function next() { go(pos + 1); } function prev() { go(pos - 1); }
+
+    document.getElementById('cNext').addEventListener('click', next);
+    document.getElementById('cPrev').addEventListener('click', prev);
+    cPlay.addEventListener('click', () => setPlaying(!playing));
+    addEventListener('keydown', e => {
+      if (e.key === 'ArrowRight') next(); else if (e.key === 'ArrowLeft') prev();
+      else if (e.key === ' ' && e.target === document.body) { e.preventDefault(); setPlaying(!playing); }
+    });
+
+    // stats band
+    document.getElementById('statsGrid').innerHTML = MOOV_STATS.map(s =>
+      `<div class="cine-stat"><div class="v">${s.value}</div><div class="l">${s.label}</div></div>`).join('');
+
+    // quote grid (text testimonials)
+    document.getElementById('cqGrid').innerHTML = TESTIMONIALS.filter(t => t.type === 'quote').map(t => {
+      const a = accent(t.accent);
+      return `<article class="cq" style="--cqc:${a.solid}">
+          <div class="cq-mark">&ldquo;</div>
+          <h3 class="cq-hl">${t.quote}</h3>
+          <p class="cq-body">${t.body}</p>
+          <div class="t-author"><span class="t-avatar" style="background:${a.grad}">${moovInitials(t.name)}</span><div class="t-meta"><strong>${t.name}</strong><span>${t.role} · ${t.school}</span></div></div>
+        </article>`;
+    }).join('');
+
+    buildFilm(); paint(); setPlaying(true);
+  </script>
+</body>
+</html>
