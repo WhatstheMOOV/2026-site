@@ -2,6 +2,7 @@
   "buildCommand": "",
   "outputDirectory": ".",
   "rewrites": [
+    { "source": "/why", "destination": "/testimonials/testimonials-mosaic.html" },
     { "source": "/example/:slug", "destination": "/example/index.html" }
   ]
 }
