@@ -11,6 +11,8 @@
 
 const MOOV_ACCENTS = {
   indigo: { solid: '#6366F1', soft: 'rgba(99,102,241,0.15)', grad: 'linear-gradient(135deg,#6366F1,#3B82F6)' },
+  purple: { solid: '#8B5CF6', soft: 'rgba(139,92,246,0.15)', grad: 'linear-gradient(135deg,#8B5CF6,#6D28D9)' },
+  gold:   { solid: '#F59E0B', soft: 'rgba(245,158,11,0.15)', grad: 'linear-gradient(135deg,#FBBF24,#D97706)' },
   blue:   { solid: '#3B82F6', soft: 'rgba(59,130,246,0.15)', grad: 'linear-gradient(135deg,#3B82F6,#2563EB)' },
   cyan:   { solid: '#06B6D4', soft: 'rgba(6,182,212,0.15)',  grad: 'linear-gradient(135deg,#06B6D4,#3B82F6)' },
   green:  { solid: '#22C55E', soft: 'rgba(34,197,94,0.15)',  grad: 'linear-gradient(135deg,#22C55E,#16A34A)' },
@@ -27,82 +29,82 @@ const TOPICS = {
 /* type: 'video' | 'quote'  — stats are a separate list below */
 const TESTIMONIALS = [
   {
-    id: 't1', type: 'video', accent: 'indigo', topic: 'safety', duration: '0:52', vimeo: '76979871',
-    quote: 'It completely changed how we run dismissal.',
-    body: 'We used to have three staff members directing traffic and guessing who left. Now every exit is a checkpoint and I can see it all from one screen.',
-    name: 'Maria Delgado', role: 'Assistant Principal', school: 'Huntington UFSD',
+    id: 't1', type: 'video', accent: 'gold', topic: 'passes', duration: '1:08', vimeo: '1202450248',
+    quote: 'My frequent fliers is literally my home screen.',
+    body: 'I can see exactly which students are out the most, and I act on it before it becomes a pattern. It is the first thing I check every morning.',
+    name: "Ra'Ven Pritchard", role: 'Assistant Principal', school: 'Comsewogue High School',
   },
   {
     id: 't2', type: 'quote', accent: 'blue', topic: 'attendance', duration: null, vimeo: null,
-    quote: "We're down 87% in tardies since rolling out MOOV.",
-    body: 'We did a nine-week comparison against last year. The hallways are radically different — kids tap in and get to class.',
-    name: 'Dr. James Okafor', role: 'Principal', school: 'Smithtown CSD',
+    quote: 'It has changed our sign-in to school process significantly.',
+    body: 'It cut it at least in half of the time. Students are able to quickly come into school, scan in, get their pass, and move to their first period class.',
+    name: 'Reanna Fulton', role: 'Director of Technology', school: 'Cold Spring Harbor',
   },
   {
-    id: 't3', type: 'video', accent: 'green', topic: 'attendance', duration: '1:08', vimeo: '1095601750',
-    quote: 'Teachers got hours of their week back.',
-    body: 'No more roll call, no more paper. Attendance is just done. That time goes straight back into instruction.',
-    name: 'Karen Whitfield', role: 'Dean of Students', school: 'Provo City SD',
+    id: 't3', type: 'video', accent: 'purple', topic: 'safety', duration: '3:06', vimeo: '1202453159',
+    quote: 'In the event of an emergency, I know which classrooms are being used, and which students are in which classrooms.',
+    body: "Knowing exactly who's in the building, knowing exactly where our students are at any given time.",
+    name: 'Meghan Stern', role: 'Principal', school: 'Islip Middle School',
   },
   {
-    id: 't4', type: 'quote', accent: 'salmon', topic: 'passes', duration: null, vimeo: null,
-    quote: 'Hall passes used to be chaos. Now it\u2019s a tap.',
-    body: 'Wooden blocks, paper slips, sign-out sheets — all gone. A hand raise and a head nod and the student is on their way.',
-    name: 'Anthony Russo', role: 'Security Lead', school: 'Babylon UFSD',
+    id: 't4', type: 'video', accent: 'salmon', topic: 'attendance', duration: null, vimeo: '1202459540',
+    quote: "It's so easy to find someone.",
+    body: "Just type in a name, it's right there. I can log tap-in times.",
+    name: 'Jen Greco', role: 'Attendance Office', school: 'Kings Park High School',
   },
   {
-    id: 't5', type: 'video', accent: 'cyan', topic: 'safety', duration: '0:47', vimeo: '76979871',
-    quote: 'I always know exactly who is in my building.',
-    body: 'In an emergency I can search a name and see their last known location instantly. That peace of mind is everything.',
-    name: 'Lena Park', role: 'Director of Technology', school: 'Mineola UFSD',
+    id: 't5', type: 'video', accent: 'gold', topic: 'safety', duration: null, vimeo: '1202467156',
+    quote: 'We know every single person walking into this building, which is important to a principal.',
+    body: '',
+    name: 'Dr. Mike Mosca', role: 'Principal', school: 'Comsewogue High School',
   },
   {
-    id: 't6', type: 'quote', accent: 'indigo', topic: 'attendance', duration: null, vimeo: null,
-    quote: 'Our coaches finally put down the clipboards.',
-    body: 'Practice, club, and extra-help attendance is automatic now. It syncs straight to our SIS without anyone lifting a finger.',
-    name: 'Marcus Bell', role: 'Athletic Director', school: 'Riverhead CSD',
+    id: 't6', type: 'video', accent: 'indigo', topic: 'attendance', duration: null, vimeo: '1202467107',
+    quote: 'It makes our lives just 10 times easier.',
+    body: '',
+    name: 'Joel Sutherland', role: 'Math Teacher', school: 'Comsewogue High School',
   },
   {
-    id: 't7', type: 'video', accent: 'red', topic: 'safety', duration: '1:21', vimeo: '1095601750',
-    quote: 'Visitor check-in went from minutes to seconds.',
-    body: 'Every visitor is screened against the registries and gets a printed badge. The front office isn\u2019t a bottleneck anymore.',
-    name: 'Priya Nair', role: 'Front Office Lead', school: 'Brentwood UFSD',
+    id: 't7', type: 'video', accent: 'red', topic: 'safety', duration: null, vimeo: '1202467096',
+    quote: 'No matter where you are, no matter what time of the day, an adult will know where you are.',
+    body: '',
+    name: 'Grace, Juliana, & Presley', role: '11th Grade Students', school: 'Kings Park High School',
   },
   {
-    id: 't8', type: 'quote', accent: 'blue', topic: 'attendance', duration: null, vimeo: null,
-    quote: 'Students actually like tapping in.',
-    body: 'It became part of the routine on day one. They treat it like Apple Pay — it just feels normal to them.',
-    name: 'Sofia Marino', role: 'Teacher', school: 'Long Beach CSD',
+    id: 't8', type: 'video', accent: 'blue', topic: 'attendance', duration: '1:13', vimeo: '1202467112',
+    quote: 'It cuts attendance down from a 1-2 minute affair to like 10 seconds maximum.',
+    body: 'It saves a lot of time for me.',
+    name: 'Justin Schwartz', role: 'Science Teacher', school: 'John F. Kennedy Middle School',
   },
   {
-    id: 't9', type: 'video', accent: 'green', topic: 'attendance', duration: '0:58', vimeo: '76979871',
-    quote: 'MOOV paid for itself in saved instructional time.',
-    body: 'When you add up five minutes a period across every classroom, every day — the math makes the decision for you.',
-    name: 'Greg Tanaka', role: 'Superintendent', school: 'Kings Park CSD',
+    id: 't9', type: 'video', accent: 'green', topic: 'attendance', duration: '1:30', vimeo: '1202467051',
+    quote: 'Every single time they tap into class, attendance is at the forefront of their thinking.',
+    body: "And I think that's part of the reason why we've seen some shifts in attendance and being on time to class in a positive direction.",
+    name: 'Charlie Rizzuto', role: 'Assistant Principal', school: 'Islip High School',
   },
   {
-    id: 't10', type: 'quote', accent: 'cyan', topic: 'passes', duration: null, vimeo: null,
-    quote: 'Setup was shockingly fast. We were live in a day.',
-    body: 'I expected a months-long rollout. Readers went up, cards got encoded, and we were tapping students in the same afternoon.',
-    name: 'Dana Cole', role: 'IT Coordinator', school: 'Hauppauge UFSD',
+    id: 't10', type: 'video', accent: 'cyan', topic: 'passes', duration: '1:00', vimeo: '1202467049',
+    quote: "If we're in the hallway, we're able to spot check them when they're walking by to make sure that they were in the hallway for a legitimate reason.",
+    body: '',
+    name: 'Frank Gmelin', role: 'Director of Security', school: 'Comsewogue School District',
   },
   {
-    id: 't11', type: 'video', accent: 'salmon', topic: 'safety', duration: '1:14', vimeo: '1095601750',
-    quote: 'Emergency drills are completely different now.',
-    body: 'We get a live, accurate roster of who is on campus in real time. No more clipboards, no more guessing during a drill.',
-    name: 'Robert Hayes', role: 'Safety Coordinator', school: 'Northport-East Northport UFSD',
+    id: 't11', type: 'video', accent: 'salmon', topic: 'attendance', duration: null, vimeo: '1202467052',
+    quote: "From my technical point of view, it's super easy to use.",
+    body: "It's a very user-friendly platform that doesn't require a lot of training.",
+    name: 'Ernesto Narvaez', role: 'Network & Systems Technician', school: 'Comsewogue High School',
   },
   {
-    id: 't12', type: 'video', accent: 'blue', topic: 'passes', duration: '0:43', vimeo: '76979871',
-    quote: 'The handheld is a game changer for my team.',
-    body: 'My guards can scan an ID anywhere and instantly see if a student belongs in that hallway. It fits right in their pocket.',
-    name: 'Tasha Greene', role: 'Campus Supervisor', school: 'Baldwin UFSD',
+    id: 't12', type: 'video', accent: 'blue', topic: 'attendance', duration: null, vimeo: '1202467050',
+    quote: 'We keep track of all the kids with their extracurriculars for clubs.',
+    body: "And that's really nice because the advisors don't have to just manually take attendance.",
+    name: 'Corey Mammolito', role: 'Assistant Principal', school: 'Kings Park High School',
   },
 ];
 
 /* Stat callouts woven into the wall (Minga-style "87% down in tardies") */
 const MOOV_STATS = [
-  { value: '87%',   label: 'fewer tardies, first semester', accent: 'blue' },
+  { value: '900%',  label: 'quicker attendance', accent: 'blue', by: 'Justin Schwartz', school: 'Comsewogue High School' },
   { value: '5 min', label: 'saved every single period',     accent: 'green' },
   { value: '4M',    label: 'taps per school each year',     accent: 'indigo' },
   { value: '15x',   label: 'taps per student, per day',     accent: 'cyan' },
@@ -120,6 +122,13 @@ function moovReelSurface(t, opts = {}) {
   const a = MOOV_ACCENTS[t.accent] || MOOV_ACCENTS.indigo;
   if (t.vimeo) {
     const poster = `https://vumbnail.com/${t.vimeo}.jpg`;
+    if (opts.enlarged) {
+      // full-screen player: real sound, native controls, no loop (auto-advances on end)
+      return `<iframe class="reel-iframe reel-fullplayer"
+          src="https://player.vimeo.com/video/${t.vimeo}?autoplay=1&loop=0&muted=0&title=0&byline=0&portrait=0&controls=1&playsinline=1"
+          allow="autoplay; fullscreen; picture-in-picture; clipboard-write" allowfullscreen loading="eager"
+          style="position:absolute;inset:0;width:100%;height:100%;border:0;z-index:2;"></iframe>`;
+    }
     if (opts.mini) {
       // lightweight: just the real thumbnail (used in playlists / filmstrips)
       return `<img class="reel-mini-poster" src="${poster}" alt="" loading="lazy"

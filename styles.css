@@ -381,6 +381,7 @@ ul { list-style: none; }
 }
 [data-theme="light"] .footer-grid { border-bottom-color: rgba(0,0,0,0.08); }
 [data-theme="light"] .footer-desc { color: #64748B; }
+[data-theme="light"] .footer-address { color: #64748B; }
 [data-theme="light"] .social-link { background: rgba(0,0,0,0.06); color: #64748B; }
 [data-theme="light"] .social-link:hover { background: rgba(99,102,241,0.15); color: #4F46E5; }
 [data-theme="light"] .footer-links-group h4 { color: #0F172A; }
@@ -1621,6 +1622,13 @@ ul { list-style: none; }
 }
 .footer-brand .nav-logo { margin-bottom: 16px; }
 .footer-desc {
+    font-size: 14px; line-height: 1.6;
+    color: var(--dark-500);
+    margin-bottom: 20px;
+    max-width: 280px;
+}
+.footer-address {
+    font-style: normal;
     font-size: 14px; line-height: 1.6;
     color: var(--dark-500);
     margin-bottom: 20px;

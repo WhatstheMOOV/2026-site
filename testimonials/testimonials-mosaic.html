@@ -15,12 +15,11 @@
     .mosaic-section { padding: 24px 0 100px; background: var(--dark-950); }
     [data-theme="light"] .mosaic-section { background: #FFFFFF; }
 
-    .mosaic { columns: 3; column-gap: 24px; }
-    @media (max-width: 1024px) { .mosaic { columns: 2; } }
-    @media (max-width: 640px)  { .mosaic { columns: 1; } }
+    .mosaic { display: flex; gap: 24px; align-items: flex-start; }
+    .m-col { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; gap: 24px; }
 
     .m-card {
-      break-inside: avoid; margin: 0 0 24px;
+      break-inside: avoid; margin: 0;
       border-radius: var(--radius-lg);
       border: 1px solid rgba(255,255,255,0.07);
       background: var(--dark-800);
@@ -55,9 +54,18 @@
     .m-stat .m-stat-value { font-size: 56px; font-weight: 900; line-height: .95; letter-spacing: -0.03em; }
     .m-stat .m-stat-label { font-size: 15px; font-weight: 600; opacity: .92; margin-top: 10px; max-width: 200px; line-height: 1.4; }
     .m-stat .m-stat-tag { display:inline-flex; align-items:center; gap:6px; font-size:11px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; opacity:.85; margin-bottom:16px; }
+    .m-stat .m-stat-by { font-size: 12.5px; font-weight: 600; opacity: .82; margin-top: 16px; line-height: 1.4; }
 
     .m-watch { display: inline-flex; align-items: center; gap: 7px; margin-top: 16px; font-size: 13px; font-weight: 700; color: var(--reel-c,#6366F1); }
     .m-card.is-hidden { display: none; }
+
+    /* masonry size variants */
+    .m-card.m-compact { padding-top: 24px; padding-bottom: 24px; }
+    .m-card.m-compact .m-headline { margin-bottom: 4px; }
+    .m-card.m-feature { padding: 36px 32px; }
+    .m-card.m-feature .m-headline { font-size: 28px; }
+    .m-card.m-feature .m-body { font-size: 16px; line-height: 1.7; margin-top: 18px; }
+    .m-card.m-feature .m-quote-mark { font-size: 68px; }
 
     /* ===== Lightbox player ===== */
     .lb { position: fixed; inset: 0; z-index: 2000; display: none; align-items: center; justify-content: center; padding: 40px; }
@@ -70,7 +78,7 @@
     .lb-player { position: relative; aspect-ratio: 16/9; border-radius: var(--radius-lg); overflow: hidden; box-shadow: 0 40px 90px rgba(0,0,0,0.6); background:#070b14; }
     .lb-progress { position: absolute; left: 0; right: 0; bottom: 0; height: 4px; background: rgba(255,255,255,0.16); z-index: 6; }
     .lb-progress i { display: block; height: 100%; width: 0; background: linear-gradient(90deg,#6366F1,#3B82F6,#22D3EE); }
-    .lb-overlay-cap { position: absolute; left: 28px; bottom: 26px; right: 28px; z-index: 5; }
+    .lb-overlay-cap { position: absolute; left: 28px; top: 24px; right: 28px; z-index: 5; pointer-events: none; }
     .lb-overlay-cap .lb-hl { font-size: 26px; font-weight: 800; color: #fff; line-height: 1.2; letter-spacing: -0.01em; text-wrap: balance; max-width: 720px; text-shadow: 0 2px 20px rgba(0,0,0,0.5); }
 
     .lb-bottom { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-top: 20px; }
@@ -138,7 +146,7 @@
     <div class="container">
       <span class="tpage-eyebrow"><span class="badge-dot"></span> Loved by schools nationwide</span>
       <h1 class="tpage-title">Don't take our word for it.<br><span class="gradient-text">Take theirs.</span></h1>
-      <p class="tpage-sub">Principals, teachers, and safety teams on what changed after MOOV.</p>
+      <p class="tpage-sub">Administrators, teachers, students and safety teams on what changed after MOOV.</p>
     </div>
   </header>
 
@@ -178,6 +186,7 @@
         <div class="footer-brand">
           <a href="/" class="nav-logo"><div class="logo-icon"><img src="../images/moov-logo.png" alt="MOOV" width="36" height="36"></div><span class="logo-text">MOOV</span></a>
           <p class="footer-desc">Automate attendance, streamline hall passes, and increase safety — all with a tap.</p>
+          <address class="footer-address">15 MetroTech Center Fl 7<br>Brooklyn, NY 11201</address>
           <div class="footer-social"><a href="https://www.linkedin.com/company/joinmoov" class="social-link" aria-label="LinkedIn"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4.5 3C3.67 3 3 3.67 3 4.5C3 5.33 3.67 6 4.5 6C5.33 6 6 5.33 6 4.5C6 3.67 5.33 3 4.5 3ZM3 8H6V17H3V8ZM10.5 8H7.5V17H10.5V12.25C10.5 9.93 13.5 9.74 13.5 12.25V17H16.5V11.16C16.5 7 11.5 7.15 10.5 9.14V8Z" fill="currentColor"/></svg></a></div>
         </div>
         <div class="footer-links-group"><h4>Product</h4><ul><li><a href="/#attendance">Attendance</a></li><li><a href="/#ztp">Hall Passes</a></li><li><a href="/#visitor-management">Safety</a></li><li><a href="/#districts">Analytics</a></li></ul></div>
@@ -189,6 +198,7 @@
     </div>
   </footer>
 
+  <script src="https://player.vimeo.com/api/player.js"></script>
   <script src="/testimonials/testimonials-data.js"></script>
   <script>
     /* ---- theme + nav chrome (mirrors site script.js) ---- */
@@ -212,6 +222,9 @@
     /* ---- build mosaic ---- */
     const accentVar = a => (MOOV_ACCENTS[a] || MOOV_ACCENTS.indigo).solid;
     const STAT_AT = { 3: 0, 8: 1 }; // insert stat cards after these many cards
+    // size assignments that create the masonry stagger
+    const COMPACT = new Set(['t4', 't8', 't6']);  // headline + author only → short bricks
+    const FEATURE = new Set(['t2']);              // big headline + full body → tall brick
     const mosaic = document.getElementById('mosaic');
     let activeFilter = 'all';
 
@@ -235,10 +248,18 @@
             ${author}
           </article>`;
       }
-      return `<article class="m-card tinted" data-topic="${t.topic}" data-id="${t.id}" style="--reel-c:${c}">
+      // quote cards come in three sizes for masonry stagger:
+      //  compact  → headline + author only (short brick)
+      //  feature  → big headline + full body (tall brick)
+      //  default  → headline + body + author (medium brick)
+      const compact = COMPACT.has(t.id);
+      const feature = FEATURE.has(t.id);
+      const cls = 'm-card tinted' + (compact ? ' m-compact' : '') + (feature ? ' m-feature' : '');
+      const body = compact ? '' : `<p class="m-body">${t.body}</p>`;
+      return `<article class="${cls}" data-topic="${t.topic}" data-id="${t.id}" style="--reel-c:${c}">
           <div class="m-quote-mark">&ldquo;</div>
           <h3 class="m-headline">${t.quote}</h3>
-          <p class="m-body">${t.body}</p>
+          ${body}
           ${author}
         </article>`;
     }
@@ -249,20 +270,31 @@
           <span class="m-stat-tag"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 10L5 5l2 2 3-5" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> Outcome</span>
           <div class="m-stat-value">${s.value}</div>
           <div class="m-stat-label">${s.label}</div>
+          ${s.by ? `<div class="m-stat-by">${s.by}${s.school ? ' · ' + s.school : ''}</div>` : ''}
         </article>`;
     }
 
+    function colCount() { return window.innerWidth <= 640 ? 1 : (window.innerWidth <= 1024 ? 2 : 3); }
+    let renderedCols = 0;
+
     function render() {
-      let html = '', shown = 0, statI = 0;
-      TESTIMONIALS.forEach((t, i) => {
-        html += cardHTML(t);
+      // ordered list of card/stat HTML (keeps stat insertion + reading order)
+      const items = []; let shown = 0, statI = 0;
+      TESTIMONIALS.forEach((t) => {
+        items.push(cardHTML(t));
         shown++;
-        if (STAT_AT[shown] !== undefined && MOOV_STATS[statI]) { html += statHTML(MOOV_STATS[statI]); statI++; }
+        if (STAT_AT[shown] !== undefined && MOOV_STATS[statI]) { items.push(statHTML(MOOV_STATS[statI])); statI++; }
       });
-      mosaic.innerHTML = html;
+      // distribute round-robin into N explicit columns so the layout is always N-wide
+      const cols = colCount(); renderedCols = cols;
+      const buckets = Array.from({ length: cols }, () => []);
+      items.forEach((h, i) => buckets[i % cols].push(h));
+      mosaic.innerHTML = buckets.map(arr => `<div class="m-col">${arr.join('')}</div>`).join('');
       mosaic.querySelectorAll('[data-play]').forEach(el => el.addEventListener('click', () => openLB(el.getAttribute('data-play'))));
       applyFilter();
     }
+    // re-distribute only when the breakpoint actually changes
+    addEventListener('resize', () => { if (colCount() !== renderedCols) render(); });
 
     /* ---- filter ---- */
     const filterEl = document.getElementById('filter');
@@ -296,17 +328,23 @@
     const lbDots = document.getElementById('lbDots');
     const lbCounter = document.getElementById('lbCounter');
     const lbPlayBtn = document.getElementById('lbPlay');
-    let seq = [], pos = 0, playing = true, raf = null, startT = 0, elapsed = 0, durMs = 6000;
+    let seq = [], pos = 0, playing = true, raf = null, startT = 0, elapsed = 0, durMs = 6000, player = null;
+
+    const PAUSE_ICON = '<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="5" y="4" width="3.5" height="12" rx="1" fill="#fff"/><rect x="11.5" y="4" width="3.5" height="12" rx="1" fill="#fff"/></svg>';
+    const PLAY_ICON  = '<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M6 4l10 6-10 6V4Z" fill="#fff"/></svg>';
 
     const byId = id => TESTIMONIALS.find(t => t.id === id);
     const durToMs = d => { if (!d) return 6000; const [m, s] = d.split(':').map(Number); return (m * 60 + s) * 1000; };
+    const reflectBtn = () => { lbPlayBtn.innerHTML = playing ? PAUSE_ICON : PLAY_ICON; };
+    function clearPlayer() { if (player) { try { player.destroy(); } catch (e) {} player = null; } }
 
     function paintSlide() {
       const t = byId(seq[pos]); const c = accentVar(t.accent);
-      // reel surface (no caption — caption shown as overlay headline + author below)
+      clearPlayer(); cancelAnimationFrame(raf);
+      // swap in the reel surface — real Vimeo player (sound + controls) when enlarged, else animated placeholder
       const reelHost = document.createElement('div');
       reelHost.style.cssText = 'position:absolute;inset:0;--reel-accent:' + c;
-      reelHost.innerHTML = moovReelSurface(t, { caption: false });
+      reelHost.innerHTML = moovReelSurface(t, { caption: false, enlarged: !!t.vimeo });
       [...lbPlayer.querySelectorAll('.reel-ph,.reel-iframe,.reel-vimeo')].forEach(n => n.remove());
       lbPlayer.prepend(reelHost.firstElementChild);
       lbHl.textContent = '“' + t.quote + '”';
@@ -314,7 +352,17 @@
       lbCounter.textContent = String(pos + 1).padStart(2, '0') + ' / ' + String(seq.length).padStart(2, '0');
       lbDots.innerHTML = seq.map((_, i) => `<b class="${i === pos ? 'on' : ''}" data-i="${i}"></b>`).join('');
       lbDots.querySelectorAll('b').forEach(d => d.addEventListener('click', () => go(+d.getAttribute('data-i'))));
+      lbBar.style.width = '0%';
       durMs = durToMs(t.duration); elapsed = 0; startT = performance.now();
+
+      if (t.vimeo && window.Vimeo) {
+        // real player: sound on, progress + auto-advance driven by the clip itself
+        player = new Vimeo.Player(lbPlayer.querySelector('.reel-fullplayer'));
+        player.on('timeupdate', d => { lbBar.style.width = (d.percent * 100) + '%'; });
+        player.on('ended', () => next());
+        player.on('play', () => { playing = true; reflectBtn(); });
+        player.on('pause', () => { playing = false; reflectBtn(); });
+      }
     }
     function tick(now) {
       if (!playing) return;
@@ -325,10 +373,12 @@
       raf = requestAnimationFrame(tick);
     }
     function setPlaying(v) {
-      playing = v;
-      lbPlayBtn.innerHTML = v
-        ? '<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="5" y="4" width="3.5" height="12" rx="1" fill="#fff"/><rect x="11.5" y="4" width="3.5" height="12" rx="1" fill="#fff"/></svg>'
-        : '<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M6 4l10 6-10 6V4Z" fill="#fff"/></svg>';
+      playing = v; reflectBtn();
+      const t = byId(seq[pos]);
+      if (t && t.vimeo) {
+        if (player) { v ? player.play().catch(() => {}) : player.pause(); }
+        return; // real video owns its own progress + auto-advance
+      }
       if (v) { startT = performance.now(); raf = requestAnimationFrame(tick); }
       else { cancelAnimationFrame(raf); elapsed += performance.now() - startT; }
     }
@@ -342,7 +392,7 @@
       lb.classList.add('open'); document.body.style.overflow = 'hidden';
       paintSlide(); setPlaying(true);
     }
-    function closeLB() { lb.classList.remove('open'); document.body.style.overflow = ''; cancelAnimationFrame(raf); playing = false; }
+    function closeLB() { lb.classList.remove('open'); document.body.style.overflow = ''; cancelAnimationFrame(raf); clearPlayer(); playing = false; }
 
     lb.querySelectorAll('[data-close]').forEach(el => el.addEventListener('click', closeLB));
     document.getElementById('lbNext').addEventListener('click', next);
