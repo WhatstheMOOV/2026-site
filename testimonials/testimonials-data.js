@@ -134,10 +134,8 @@ function moovReelSurface(t, opts = {}) {
       return `<img class="reel-mini-poster" src="${poster}" alt="" loading="lazy"
           style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">`;
     }
-    // full tile: poster shows instantly, muted looping background video plays over it
+    // full tile: muted looping background video plays directly (no static poster behind it)
     return `<div class="reel-vimeo" style="position:absolute;inset:0;overflow:hidden;">
-        <img class="reel-poster" src="${poster}" alt="" loading="lazy"
-          style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;">
         <iframe class="reel-iframe"
           src="https://player.vimeo.com/video/${t.vimeo}?background=1&autoplay=1&loop=1&muted=1&title=0&byline=0&portrait=0"
           allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy"
