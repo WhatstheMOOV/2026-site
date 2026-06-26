@@ -235,7 +235,7 @@
 
     function cardHTML(t) {
       const c = accentVar(t.accent);
-      const author = `<div class="t-author"><span class="t-avatar" style="background:${MOOV_ACCENTS[t.accent].grad}">${moovInitials(t.name)}</span><div class="t-meta"><strong>${t.name}</strong><span>${t.role} · ${t.school}</span></div></div>`;
+      const author = `<div class="t-author">${moovAvatar(t)}<div class="t-meta"><strong>${t.name}</strong><span>${t.role} · ${t.school}</span></div></div>`;
       if (t.type === 'video') {
         return `<article class="m-card" data-topic="${t.topic}" data-id="${t.id}" style="--reel-c:${c}">
             <div class="m-quote-mark">&ldquo;</div>
@@ -348,7 +348,7 @@
       [...lbPlayer.querySelectorAll('.reel-ph,.reel-iframe,.reel-vimeo')].forEach(n => n.remove());
       lbPlayer.prepend(reelHost.firstElementChild);
       lbHl.textContent = '“' + t.quote + '”';
-      lbAuthor.innerHTML = `<span class="t-avatar" style="background:${MOOV_ACCENTS[t.accent].grad}">${moovInitials(t.name)}</span><div><strong>${t.name}</strong><span>${t.role} · ${t.school}</span></div>`;
+      lbAuthor.innerHTML = `${moovAvatar(t)}<div><strong>${t.name}</strong><span>${t.role} · ${t.school}</span></div>`;
       lbCounter.textContent = String(pos + 1).padStart(2, '0') + ' / ' + String(seq.length).padStart(2, '0');
       lbDots.innerHTML = seq.map((_, i) => `<b class="${i === pos ? 'on' : ''}" data-i="${i}"></b>`).join('');
       lbDots.querySelectorAll('b').forEach(d => d.addEventListener('click', () => go(+d.getAttribute('data-i'))));

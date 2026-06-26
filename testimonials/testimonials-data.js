@@ -104,7 +104,7 @@ const TESTIMONIALS = [
     id: 't13', type: 'video', accent: 'cyan', topic: 'passes', duration: null, vimeo: '1204907995',
     quote: "It's helping people spend time out of class more reasonably.",
     body: "I do believe that it's helping people spend time out of class more reasonably, instead of being out for more periods at a time.",
-    name: 'Noralynn', role: 'Student', school: 'Comsewogue High School',
+    name: 'Noralynn and Michael', role: 'Students', school: 'Comsewogue High School',
   },
   {
     id: 't14', type: 'video', accent: 'purple', topic: 'safety', duration: null, vimeo: '1204907329',
@@ -131,6 +131,33 @@ const MOOV_STATS = [
 /* ---------- helpers ---------- */
 function moovInitials(name) {
   return name.split(' ').map(w => w[0]).slice(0, 2).join('').toUpperCase();
+}
+
+/* school → logo file in /images. Matched loosely by keyword.
+   No entry → fall back to gradient initials (e.g. John F. Kennedy MS, no logo yet). */
+const MOOV_SCHOOL_LOGOS = [
+  { match: 'comsewogue',  logo: '/images/logo-comsewogue.png' },
+  { match: 'kennedy',     logo: '/images/logo-comsewogue.png' },  // JFK MS is in the Comsewogue district
+  { match: 'kings park',  logo: '/images/logo-kings-park.png' },
+  { match: 'bayport',     logo: '/images/logo-bayport.png' },
+  { match: 'cold spring', logo: '/images/logo-cold-spring-harbor.png' },
+  { match: 'islip',       logo: '/images/logo-islip.png' },
+];
+function moovSchoolLogo(school) {
+  if (!school) return null;
+  const s = school.toLowerCase();
+  const hit = MOOV_SCHOOL_LOGOS.find(e => s.includes(e.match));
+  return hit ? hit.logo : null;
+}
+
+/* avatar markup: school logo when we have one, else gradient initials */
+function moovAvatar(t, className = 't-avatar') {
+  const logo = moovSchoolLogo(t.school);
+  if (logo) {
+    return `<span class="${className} ${className}--logo"><img src="${logo}" alt="${t.school}" loading="lazy"></span>`;
+  }
+  const a = MOOV_ACCENTS[t.accent] || MOOV_ACCENTS.indigo;
+  return `<span class="${className}" style="background:${a.grad}">${moovInitials(t.name)}</span>`;
 }
 
 /* Animated placeholder "reel" surface — reads as a silent, looping clip.
@@ -195,5 +222,5 @@ function moovReelSurface(t, opts = {}) {
 }
 
 if (typeof window !== 'undefined') {
-  Object.assign(window, { MOOV_ACCENTS, TOPICS, TESTIMONIALS, MOOV_STATS, moovInitials, moovReelSurface });
+  Object.assign(window, { MOOV_ACCENTS, TOPICS, TESTIMONIALS, MOOV_STATS, moovInitials, moovReelSurface, moovSchoolLogo, moovAvatar });
 }
