@@ -123,7 +123,7 @@ const TESTIMONIALS = [
 /* Stat callouts woven into the wall (Minga-style "87% down in tardies") */
 const MOOV_STATS = [
   { value: '900%',  label: 'quicker attendance', accent: 'blue', by: 'Justin Schwartz', school: 'Comsewogue High School' },
-  { value: '5 min', label: 'saved every single period',     accent: 'green' },
+  { value: '100%', label: 'improved ID usage', accent: 'green', by: 'Jen Greco', school: 'Kings Park High School' },
   { value: '4M',    label: 'taps per school each year',     accent: 'indigo' },
   { value: '15x',   label: 'taps per student, per day',     accent: 'cyan' },
 ];
