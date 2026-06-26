@@ -76,24 +76,24 @@ const TESTIMONIALS = [
     body: 'It saves a lot of time for me.',
     name: 'Justin Schwartz', role: 'Science Teacher', school: 'John F. Kennedy Middle School',
   },
-  /* {
-    id: 't9', type: 'video', accent: 'green', topic: 'attendance', duration: '1:30', vimeo: '1202467051',
-    quote: 'Every single time they tap into class, attendance is at the forefront of their thinking.',
+  {
+    id: 't9', type: 'video', accent: 'green', topic: 'attendance', duration: null, vimeo: '1204987693',
+    quote: 'Every single time students tap into class, attendance is at the forefront of their thinking.',
     body: "And I think that's part of the reason why we've seen some shifts in attendance and being on time to class in a positive direction.",
     name: 'Charlie Rizzuto', role: 'Assistant Principal', school: 'Islip High School',
-  }, */
-  /* {
-    id: 't10', type: 'video', accent: 'cyan', topic: 'passes', duration: '1:00', vimeo: '1202467049',
+  },
+  {
+    id: 't10', type: 'video', accent: 'cyan', topic: 'passes', duration: null, vimeo: '1204987691',
     quote: "If we're in the hallway, we're able to spot check them when they're walking by to make sure that they were in the hallway for a legitimate reason.",
     body: '',
     name: 'Frank Gmelin', role: 'Director of Security', school: 'Comsewogue School District',
-  }, */
-  /* {
-    id: 't11', type: 'video', accent: 'salmon', topic: 'attendance', duration: null, vimeo: '1202467052',
-    quote: "From my technical point of view, it's super easy to use.",
+  },
+  {
+    id: 't11', type: 'video', accent: 'salmon', topic: 'attendance', duration: null, vimeo: '1204987692',
+    quote: "For me, from my technical point of view, it's super easy to use.",
     body: "It's a very user-friendly platform that doesn't require a lot of training.",
     name: 'Ernesto Narvaez', role: 'Network & Systems Technician', school: 'Comsewogue High School',
-  }, */
+  },
   {
     id: 't12', type: 'video', accent: 'blue', topic: 'attendance', duration: null, vimeo: '1204908860',
     quote: 'We keep track of all the kids with their extracurriculars for clubs.',
