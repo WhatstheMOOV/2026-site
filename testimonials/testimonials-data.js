@@ -29,76 +29,94 @@ const TOPICS = {
 /* type: 'video' | 'quote'  — stats are a separate list below */
 const TESTIMONIALS = [
   {
-    id: 't1', type: 'video', accent: 'gold', topic: 'passes', duration: '1:08', vimeo: '1202450248',
+    id: 't1', type: 'video', accent: 'gold', topic: 'passes', duration: '1:08', vimeo: '1204907330',
     quote: 'My frequent fliers is literally my home screen.',
     body: 'I can see exactly which students are out the most, and I act on it before it becomes a pattern. It is the first thing I check every morning.',
     name: "Ra'Ven Pritchard", role: 'Assistant Principal', school: 'Comsewogue High School',
   },
-  {
+  /* {
     id: 't2', type: 'quote', accent: 'blue', topic: 'attendance', duration: null, vimeo: null,
     quote: 'It has changed our sign-in to school process significantly.',
     body: 'It cut it at least in half of the time. Students are able to quickly come into school, scan in, get their pass, and move to their first period class.',
     name: 'Reanna Fulton', role: 'Director of Technology', school: 'Cold Spring Harbor',
-  },
-  {
+  }, */
+  /* {
     id: 't3', type: 'video', accent: 'purple', topic: 'safety', duration: '3:06', vimeo: '1202453159',
     quote: 'In the event of an emergency, I know which classrooms are being used, and which students are in which classrooms.',
     body: "Knowing exactly who's in the building, knowing exactly where our students are at any given time.",
     name: 'Meghan Stern', role: 'Principal', school: 'Islip Middle School',
-  },
+  }, */
   {
-    id: 't4', type: 'video', accent: 'salmon', topic: 'attendance', duration: null, vimeo: '1202459540',
+    id: 't4', type: 'video', accent: 'salmon', topic: 'attendance', duration: null, vimeo: '1204907331',
     quote: "It's so easy to find someone.",
     body: "Just type in a name, it's right there. I can log tap-in times.",
     name: 'Jen Greco', role: 'Attendance Office', school: 'Kings Park High School',
   },
-  {
+  /* {
     id: 't5', type: 'video', accent: 'gold', topic: 'safety', duration: null, vimeo: '1202467156',
     quote: 'We know every single person walking into this building, which is important to a principal.',
     body: '',
     name: 'Dr. Mike Mosca', role: 'Principal', school: 'Comsewogue High School',
-  },
+  }, */
   {
-    id: 't6', type: 'video', accent: 'indigo', topic: 'attendance', duration: null, vimeo: '1202467107',
+    id: 't6', type: 'video', accent: 'indigo', topic: 'attendance', duration: null, vimeo: '1204908940',
     quote: 'It makes our lives just 10 times easier.',
     body: '',
     name: 'Joel Sutherland', role: 'Math Teacher', school: 'Comsewogue High School',
   },
-  {
+  /* {
     id: 't7', type: 'video', accent: 'red', topic: 'safety', duration: null, vimeo: '1202467096',
     quote: 'No matter where you are, no matter what time of the day, an adult will know where you are.',
     body: '',
     name: 'Grace, Juliana, & Presley', role: '11th Grade Students', school: 'Kings Park High School',
-  },
+  }, */
   {
-    id: 't8', type: 'video', accent: 'blue', topic: 'attendance', duration: '1:13', vimeo: '1202467112',
+    id: 't8', type: 'video', accent: 'blue', topic: 'attendance', duration: '1:13', vimeo: '1204907328',
     quote: 'It cuts attendance down from a 1-2 minute affair to like 10 seconds maximum.',
     body: 'It saves a lot of time for me.',
     name: 'Justin Schwartz', role: 'Science Teacher', school: 'John F. Kennedy Middle School',
   },
-  {
+  /* {
     id: 't9', type: 'video', accent: 'green', topic: 'attendance', duration: '1:30', vimeo: '1202467051',
     quote: 'Every single time they tap into class, attendance is at the forefront of their thinking.',
     body: "And I think that's part of the reason why we've seen some shifts in attendance and being on time to class in a positive direction.",
     name: 'Charlie Rizzuto', role: 'Assistant Principal', school: 'Islip High School',
-  },
-  {
+  }, */
+  /* {
     id: 't10', type: 'video', accent: 'cyan', topic: 'passes', duration: '1:00', vimeo: '1202467049',
     quote: "If we're in the hallway, we're able to spot check them when they're walking by to make sure that they were in the hallway for a legitimate reason.",
     body: '',
     name: 'Frank Gmelin', role: 'Director of Security', school: 'Comsewogue School District',
-  },
-  {
+  }, */
+  /* {
     id: 't11', type: 'video', accent: 'salmon', topic: 'attendance', duration: null, vimeo: '1202467052',
     quote: "From my technical point of view, it's super easy to use.",
     body: "It's a very user-friendly platform that doesn't require a lot of training.",
     name: 'Ernesto Narvaez', role: 'Network & Systems Technician', school: 'Comsewogue High School',
-  },
+  }, */
   {
-    id: 't12', type: 'video', accent: 'blue', topic: 'attendance', duration: null, vimeo: '1202467050',
+    id: 't12', type: 'video', accent: 'blue', topic: 'attendance', duration: null, vimeo: '1204908860',
     quote: 'We keep track of all the kids with their extracurriculars for clubs.',
     body: "And that's really nice because the advisors don't have to just manually take attendance.",
     name: 'Corey Mammolito', role: 'Assistant Principal', school: 'Kings Park High School',
+  },
+  {
+    id: 't13', type: 'video', accent: 'cyan', topic: 'passes', duration: null, vimeo: '1204907995',
+    quote: "It's helping people spend time out of class more reasonably.",
+    body: "I do believe that it's helping people spend time out of class more reasonably, instead of being out for more periods at a time.",
+    name: 'Noralynn', role: 'Student', school: 'Comsewogue High School',
+  },
+  {
+    id: 't14', type: 'video', accent: 'purple', topic: 'safety', duration: null, vimeo: '1204907329',
+    quote: 'It helps increase the understanding of where a student is supposed to be.',
+    body: "It helps increase the understanding of when a student, where a student's supposed to be, how often that they're there.",
+    name: 'Jamal Walcott', role: 'Principal', school: 'Bayport-Blue Point High School',
+  },
+  {
+    id: 't15', type: 'video', accent: 'green', topic: 'passes', duration: null, vimeo: '1204940361',
+    quote: "It's changed my teaching.",
+    body: "I can see how long my students are out for, and I can start to recognize who's leaving my room more frequently and limiting their time out of class.",
+    name: 'Adam Parente', role: 'Business Teacher', school: 'Comsewogue High School',
   },
 ];
 
