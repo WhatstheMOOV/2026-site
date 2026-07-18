@@ -21,6 +21,15 @@ window.addEventListener('scroll', () => {
         card.addEventListener('click', function () {
             if (window.openVimeoLightbox) window.openVimeoLightbox('1204987693');
         });
+        const tapIframe = document.getElementById('tapCardIframe');
+        const revealVideo = function () { card.classList.add('is-playing'); };
+        if (tapIframe && window.Vimeo && window.Vimeo.Player) {
+            try {
+                new window.Vimeo.Player(tapIframe).on('play', revealVideo);
+            } catch (e) { setTimeout(revealVideo, 1200); }
+        } else {
+            setTimeout(revealVideo, 1200);
+        }
     }
     let faceTimer = null;
     const line = document.getElementById('tapLine');
