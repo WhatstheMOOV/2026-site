@@ -635,7 +635,19 @@ ul { list-style: none; }
     transition: transform 1.4s cubic-bezier(.16,1,.3,1), box-shadow 0.5s ease;
     z-index: 20;
 }
-.tap-card iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; display: block; }
+.tap-card iframe {
+    position: absolute; top: 50%; left: 50%;
+    height: 100%; width: auto; aspect-ratio: 16 / 9; min-width: 100%;
+    transform: translate(-50%, -50%);
+    border: 0; display: block; z-index: 1;
+    pointer-events: none;
+}
+.tap-poster {
+    position: absolute; inset: 0; width: 100%; height: 100%;
+    object-fit: cover; z-index: 2; pointer-events: none;
+    transition: opacity 0.5s ease;
+}
+.tap-card.is-playing .tap-poster { opacity: 0; }
 .tap-face {
     position: absolute; inset: 0; z-index: 3;
     display: flex; align-items: center; justify-content: center;
