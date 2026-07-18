@@ -63,11 +63,11 @@ window.addEventListener('scroll', () => {
         card.style.transform = '';
 
         if (mobile && topEl) {
-            // Center [headline + 1rem gap + video] together as one group on the screen.
+            // Center [headline + gap + video] together as one group on the screen.
             const headlineH = topEl.getBoundingClientRect().height;
-            BIG = clamp((window.innerWidth * 0.88) / 460, 0.5, 1.45);
+            BIG = clamp((window.innerWidth * 0.86) / 460, 0.5, 1.4);
             const cardH = 288 * BIG;
-            const gap = 32; // 1rem base + 1rem extra between headline and video
+            const gap = 56; // breathing room so the last line of the headline doesn't touch the video
             const groupH = headlineH + gap + cardH;
             const groupTop = Math.max(window.innerHeight * 0.1, (window.innerHeight - groupH) / 2);
             topEl.style.transform = 'translateY(' + groupTop + 'px)';
