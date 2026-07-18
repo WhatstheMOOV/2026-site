@@ -160,7 +160,11 @@ window.addEventListener('scroll', () => {
             section.classList.add('no-pin');
             if (opening) { setOpacity(opening, 0); opening.style.display = 'none'; }
             [title, actions, tapText].forEach(function (el) { if (el) { setOpacity(el, 1); el.style.transform = ''; } });
-            settleFloaters();
+            // Float cards only made sense while animating around the pinned scrub;
+            // on mobile they were sized/positioned for the tall scrub zone and
+            // now crash into the hero content — hide them entirely.
+            const floatLayer = document.getElementById('floatLayer');
+            if (floatLayer) floatLayer.style.display = 'none';
             card.style.transition = 'none';
             card.style.transform = 'scale(' + REST + ') rotate(90deg)';
             card.style.borderRadius = '44px';
