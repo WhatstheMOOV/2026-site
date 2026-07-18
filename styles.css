@@ -2485,10 +2485,13 @@ body:has(.top-ribbon) .navbar.scrolled { top: 0; }
         z-index: 1000;
         gap: 2px;
         animation: menuSlideDown 0.25s ease-out;
+        /* Fallback for older browsers; dvh handles iOS Safari's URL bar toggle */
         max-height: calc(100vh - 84px);
+        max-height: calc(100dvh - 84px);
         overflow-y: auto;
         overscroll-behavior: contain;
         -webkit-overflow-scrolling: touch;
+        padding-bottom: 20px;
     }
     [data-theme="light"] .nav-links.active {
         background: rgba(255, 255, 255, 0.99);
