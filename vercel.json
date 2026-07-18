@@ -3,6 +3,7 @@
   "outputDirectory": ".",
   "rewrites": [
     { "source": "/why", "destination": "/testimonials/testimonials-mosaic.html" },
+    { "source": "/resources", "destination": "/resources.html" },
     { "source": "/example/:slug", "destination": "/example/index.html" }
   ]
 }
