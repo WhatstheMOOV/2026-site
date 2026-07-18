@@ -2485,6 +2485,10 @@ body:has(.top-ribbon) .navbar.scrolled { top: 0; }
         z-index: 1000;
         gap: 2px;
         animation: menuSlideDown 0.25s ease-out;
+        max-height: calc(100vh - 84px);
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        -webkit-overflow-scrolling: touch;
     }
     [data-theme="light"] .nav-links.active {
         background: rgba(255, 255, 255, 0.99);
