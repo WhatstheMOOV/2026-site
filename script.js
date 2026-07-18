@@ -153,6 +153,22 @@ window.addEventListener('scroll', () => {
         sticky.classList.remove('intro');
         initHover();
         if (reduce || !card) { noPin(); return; }
+        // Mobile: skip the pinned scrub — it's laggy on low-end phones.
+        // Land directly in the settled "tapped" state: small rotated card
+        // in the tap-slot, blue text, blue card overlay.
+        if (window.innerWidth <= 768) {
+            section.classList.add('no-pin');
+            if (opening) { setOpacity(opening, 0); opening.style.display = 'none'; }
+            [title, actions, tapText].forEach(function (el) { if (el) { setOpacity(el, 1); el.style.transform = ''; } });
+            settleFloaters();
+            card.style.transition = 'none';
+            card.style.transform = 'scale(' + REST + ') rotate(90deg)';
+            card.style.borderRadius = '44px';
+            if (tapFaceLogo) tapFaceLogo.style.transform = 'rotate(-90deg)';
+            if (tapFace) { tapFace.classList.add('tapped'); tapFace.style.opacity = '1'; }
+            if (line) line.classList.add('tapped');
+            return;
+        }
         [title, actions, tapText].forEach(function (el) { if (el) el.style.transition = 'none'; });
         card.style.transition = 'none';
         measure();
