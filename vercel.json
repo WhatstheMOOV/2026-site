@@ -4,6 +4,6 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
-    { "source": "/example/:slug", "destination": "/example/index.html" }
+    { "source": "/example/:slug", "destination": "/example" }
   ]
 }
