@@ -7,6 +7,10 @@
     { "source": "/about", "destination": "/#about", "permanent": true }
   ],
   "rewrites": [
-    { "source": "/example/:slug", "destination": "/example" }
+    { "source": "/example/:slug", "destination": "/example" },
+    {
+      "source": "/print",
+      "destination": "https://firebasestorage.googleapis.com/v0/b/whatsthemoov-app.appspot.com/o/public%2Fmoov-print%2FMOOV-Print-Quick-Start.pdf?alt=media"
+    }
   ]
 }
