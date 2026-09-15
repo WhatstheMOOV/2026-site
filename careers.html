@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Careers — MOOV</title>
+  <meta name="description" content="Come help us reshape the schools that shaped us. See open roles at MOOV in Brooklyn, NY.">
+  <link rel="icon" type="image/png" href="/images/moov-logo.png">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    /* ===== Hero ===== */
+    .careers-hero { position: relative; overflow: hidden; padding: 180px 0 96px; }
+    .careers-hero-bg { position: absolute; inset: 0; background: linear-gradient(160deg, var(--dark-950) 0%, #0A0F2E 30%, #0F172A 60%, var(--dark-950) 100%); }
+    [data-theme="light"] .careers-hero-bg { background: linear-gradient(160deg, #F8FAFC 0%, #EEF2FF 30%, #F0F9FF 60%, #FFFFFF 100%); }
+    .careers-hero .container { position: relative; z-index: 1; }
+    .careers-eyebrow { font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--primary-500); margin-bottom: 18px; }
+    .careers-title {
+      font-size: 64px; font-weight: 800; line-height: 1.05; letter-spacing: -0.03em;
+      color: var(--white); max-width: 860px; text-wrap: balance;
+    }
+    [data-theme="light"] .careers-title { color: #0F172A; }
+    .careers-sub { font-size: 19px; line-height: 1.6; color: var(--dark-300); max-width: 620px; margin-top: 24px; }
+    [data-theme="light"] .careers-sub { color: #475569; }
+
+    /* ===== Open roles ===== */
+    .careers-roles { padding: 72px 0 120px; background: var(--dark-950); }
+    [data-theme="light"] .careers-roles { background: #FFFFFF; }
+    .careers-roles .container { max-width: 880px; }
+    .careers-roles-title { font-size: 32px; font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; color: var(--white); margin-bottom: 28px; }
+    [data-theme="light"] .careers-roles-title { color: #0F172A; }
+
+    .role-list { display: flex; flex-direction: column; gap: 14px; }
+    .role-row {
+      display: flex; align-items: center; justify-content: space-between; gap: 24px;
+      padding: 24px 28px; border-radius: 14px; text-decoration: none;
+      background: var(--dark-800); border: 1px solid rgba(255,255,255,0.08);
+      transition: border-color .18s, box-shadow .18s, transform .18s;
+    }
+    [data-theme="light"] .role-row { background: #FFFFFF; border-color: rgba(15,23,42,0.1); }
+    .role-row:hover { border-color: var(--primary-500); transform: translateY(-1px); box-shadow: 0 8px 24px rgba(99,102,241,0.18); }
+    .role-main { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+    .role-title { font-size: 22px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.25; color: var(--white); }
+    [data-theme="light"] .role-title { color: #0F172A; }
+    .role-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .role-tag { font-size: 13px; line-height: 1.4; padding: 4px 12px; border-radius: 999px; color: var(--dark-200); background: rgba(255,255,255,0.06); }
+    [data-theme="light"] .role-tag { color: #475569; background: #EEF2FF; }
+    .role-tag.pay { color: var(--primary-500); font-weight: 600; }
+    .role-caret { flex: none; color: var(--dark-300); transition: color .18s, transform .18s; }
+    [data-theme="light"] .role-caret { color: #0F172A; }
+    .role-row:hover .role-caret { color: var(--primary-500); transform: translateX(3px); }
+
+    .careers-more { margin-top: 40px; font-size: 15px; color: var(--dark-300); }
+    [data-theme="light"] .careers-more { color: #64748B; }
+    .careers-more a { color: var(--primary-500); text-underline-offset: 3px; }
+
+    @media (max-width: 768px) {
+      .careers-hero { padding: 140px 0 64px; }
+      .careers-title { font-size: 40px; }
+      .careers-sub { font-size: 17px; }
+      .careers-roles { padding: 48px 0 80px; }
+      .careers-roles-title { font-size: 26px; }
+      .role-row { padding: 20px 22px; }
+      .role-title { font-size: 19px; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">
+        <div class="logo-icon"><img src="/images/moov-logo.png" alt="MOOV" width="36" height="36"></div>
+        <span class="logo-text">MOOV</span>
+      </a>
+
+      <div class="nav-links" id="navLinks">
+        <div class="nav-dropdown">
+          <a href="/#kiosk" class="nav-link nav-dropdown-trigger">Product</a>
+          <div class="nav-dropdown-menu">
+            <a href="/#kiosk" class="nav-dropdown-link">Features</a>
+            <a href="/#hardware" class="nav-dropdown-link">Hardware</a>
+          </div>
+        </div>
+        <a href="/why" class="nav-link">Why MOOV</a>
+        <div class="nav-dropdown">
+          <a href="/resources" class="nav-link nav-dropdown-trigger">
+            Resources
+            <svg class="nav-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <div class="nav-dropdown-menu wide">
+            <div class="nav-dd-blog">
+              <a class="nav-dd-blog-head" href="/blog" style="text-decoration:none">Blog</a>
+              <a class="nav-dd-post" href="/blog/what-is-a-digital-hall-pass"><span class="t">What Is a Digital Hall Pass? And How It Cuts Tardies, Vaping, and Lost Class Time</span><span class="c">Hall Passes</span></a>
+              <a class="nav-dd-post" href="/blog/cost-of-teachers-forgetting-attendance"><span class="t">Teachers Forgetting to Take Attendance Can Cost Districts Six Figures a Year</span><span class="c">Attendance</span></a>
+              <a class="nav-dd-post" href="/blog/student-reunification-and-accountability"><span class="t">Student Reunification and Accountability: Knowing Where Every Student Is</span><span class="c">Safety</span></a>
+              <a class="nav-dropdown-link" href="/blog">View all posts &rarr;</a>
+            </div>
+            <div class="nav-dd-sep"></div>
+            <a href="/#faq" class="nav-dropdown-link">FAQ</a>
+            <a href="https://help.joinmoov.com" target="_blank" rel="noopener" class="nav-dropdown-link">Help Center</a>
+          </div>
+        </div>
+        <a href="/quotes" class="nav-link">Quote</a>
+        <a href="/#about" class="nav-link">About</a>
+      </div>
+
+      <div class="nav-actions">
+        <a href="https://www.joinmoov.com/demo" class="btn btn-primary">Get a Demo</a>
+      </div>
+
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <section class="careers-hero">
+    <div class="careers-hero-bg"></div>
+    <div class="container">
+      <p class="careers-eyebrow">Careers</p>
+      <h1 class="careers-title">Come help us reshape the schools that shaped us.</h1>
+      <p class="careers-sub">MOOV is building the student movement OS: automated attendance, hall passes, and safety for some of the country's biggest districts. Saving time and saving lives.</p>
+    </div>
+  </section>
+
+  <section class="careers-roles">
+    <div class="container">
+      <h2 class="careers-roles-title">Open roles</h2>
+      <div class="role-list">
+        <a class="role-row" href="https://www.linkedin.com/jobs/view/4464345884" target="_blank" rel="noopener">
+          <div class="role-main">
+            <h3 class="role-title">Founding Software Engineer</h3>
+            <div class="role-tags"><span class="role-tag pay">$150K–$190K + equity</span><span class="role-tag">Brooklyn, NY</span><span class="role-tag">On-site</span><span class="role-tag">Full-time</span></div>
+          </div>
+          <svg class="role-caret" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M7.5 4.5L13 10l-5.5 5.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a class="role-row" href="https://www.linkedin.com/jobs/view/4462969185" target="_blank" rel="noopener">
+          <div class="role-main">
+            <h3 class="role-title">Founding Head of Operations</h3>
+            <div class="role-tags"><span class="role-tag pay">$135K–$165K + equity</span><span class="role-tag">Brooklyn, NY</span><span class="role-tag">On-site</span><span class="role-tag">Full-time</span></div>
+          </div>
+          <svg class="role-caret" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M7.5 4.5L13 10l-5.5 5.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a class="role-row" href="https://www.linkedin.com/jobs/view/4464398116" target="_blank" rel="noopener">
+          <div class="role-main">
+            <h3 class="role-title">Founding Head of Marketing &amp; Sales</h3>
+            <div class="role-tags"><span class="role-tag pay">$135K–$165K + equity</span><span class="role-tag">Brooklyn, NY</span><span class="role-tag">On-site</span><span class="role-tag">Full-time</span></div>
+          </div>
+          <svg class="role-caret" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M7.5 4.5L13 10l-5.5 5.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <p class="careers-more">Don't see your role? Follow <a href="https://www.linkedin.com/company/joinmoov/jobs" target="_blank" rel="noopener">MOOV on LinkedIn</a> for new openings.</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="nav-logo"><div class="logo-icon"><img src="/images/moov-logo.png" alt="MOOV" width="36" height="36"></div><span class="logo-text">MOOV</span></a>
+          <p class="footer-desc">Automate attendance, streamline hall passes, and increase safety — all with a tap.</p>
+          <address class="footer-address">15 MetroTech Center Fl 7<br>Brooklyn, NY 11201</address>
+          <div class="footer-social"><a href="https://www.linkedin.com/company/joinmoov" class="social-link" aria-label="LinkedIn"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4.5 3C3.67 3 3 3.67 3 4.5C3 5.33 3.67 6 4.5 6C5.33 6 6 5.33 6 4.5C6 3.67 5.33 3 4.5 3ZM3 8H6V17H3V8ZM10.5 8H7.5V17H10.5V12.25C10.5 9.93 13.5 9.74 13.5 12.25V17H16.5V11.16C16.5 7 11.5 7.15 10.5 9.14V8Z" fill="currentColor"/></svg></a></div>
+        </div>
+        <div class="footer-links-group"><h4>Product</h4><ul><li><a href="/#attendance">Attendance</a></li><li><a href="/#ztp">Hall Passes</a></li><li><a href="/#visitor-management">Safety</a></li><li><a href="/#districts">Analytics</a></li></ul></div>
+        <div class="footer-links-group"><h4>Solutions</h4><ul><li><a href="/#attendance">For Teachers</a></li><li><a href="/#districts">For Admins</a></li><li><a href="/#districts">For Districts</a></li></ul></div>
+        <div class="footer-links-group"><h4>Resources</h4><ul><li><a href="https://help.joinmoov.com" target="_blank">Help Center</a></li><li><a href="/quotes">Get a Quote</a></li></ul></div>
+        <div class="footer-links-group"><h4>Company</h4><ul><li><a href="/#about">About Us</a></li><li><a href="/demo">Get a Demo</a></li><li><a href="/careers">Careers</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 What's the MOOV, Inc. All rights reserved.</p><div class="footer-legal"><a href="/privacy">Privacy Policy</a><a href="/terms">Terms of Service</a></div></div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const saved = localStorage.getItem('theme') || 'light';
+      document.documentElement.setAttribute('data-theme', saved);
+      const navbar = document.getElementById('navbar');
+      addEventListener('scroll', () => navbar.classList.toggle('scrolled', scrollY > 20));
+      const mt = document.getElementById('mobileToggle'), nl = document.getElementById('navLinks');
+      const cta = document.querySelector('.nav-actions .btn-primary');
+      if (cta) { const c = cta.cloneNode(true); c.classList.add('mobile-menu-cta'); nl.appendChild(c); }
+      mt.addEventListener('click', () => { nl.classList.toggle('active'); mt.classList.toggle('active'); });
+    })();
+  </script>
+</body>
+</html>
