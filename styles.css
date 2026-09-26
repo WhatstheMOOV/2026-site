@@ -542,7 +542,7 @@ ul { list-style: none; }
 
 /* fallback: no pin on small screens / reduced motion */
 .intro-scroll.no-pin { height: auto; }
-.intro-scroll.no-pin #introSticky { position: static; height: auto; min-height: auto; padding: 130px 0 80px; }
+.intro-scroll.no-pin #introSticky { position: relative; height: auto; min-height: auto; padding: 130px 0 80px; }
 .intro-scroll.no-pin #introSticky .container.hero-center-wrap { min-height: 0; }
 .intro-scroll.no-pin .intro-opening { display: none; }
 
