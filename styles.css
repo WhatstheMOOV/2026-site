@@ -1058,7 +1058,7 @@ body:has(.top-ribbon) .navbar.scrolled { top: 0; }
 .logo-track {
     display: flex;
     gap: 48px;
-    animation: scroll 60s linear infinite;
+    animation: scroll 100s linear infinite;
     width: max-content;
 }
 .partner-logo {
