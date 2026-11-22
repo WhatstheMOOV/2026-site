@@ -1047,5 +1047,1792 @@
     "backgroundImage": "/public/school-bg/fairbanks-native.jpg",
     "showLogo": true,
     "showColors": true
+  },
+  "danbury-high-school": {
+    "name": "Danbury High School",
+    "abbreviation": "DHS",
+    "domain": "danbury.k12.ct.us",
+    "url": "https://danbury.k12.ct.us",
+    "colors": {
+      "primary": "#ff7d20",
+      "secondary": "#58d16e"
+    },
+    "logo": "/public/school-logos/danbury-high-school.png",
+    "backgroundImage": "/public/school-bg/danbury-high-school.jpg",
+    "backgroundImageSource": "https://cmsv2-assets.apptegy.net/uploads/30482/file/5039356/9be7e047-e297-4db8-a25f-697677aaf073.png",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090102000150",
+    "state": "CT",
+    "enrollment": 3612
+  },
+  "greenwich-high-school": {
+    "name": "Greenwich High School",
+    "abbreviation": "GHS",
+    "domain": "greenwichschools.org",
+    "url": "https://greenwichschools.org",
+    "colors": {
+      "primary": "#b23d35",
+      "secondary": "#091740"
+    },
+    "logo": "/public/school-logos/greenwich-high-school.png",
+    "backgroundImage": "/public/school-bg/greenwich-high-school.jpg",
+    "backgroundImageSource": "https://s.hdnux.com/photos/01/42/35/31/25810555/5/1920x0.jpg",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090171000300",
+    "state": "CT",
+    "enrollment": 2620
+  },
+  "new-britain-high-school": {
+    "name": "New Britain High School",
+    "abbreviation": "NBHS",
+    "domain": null,
+    "colors": {
+      "primary": null,
+      "secondary": null
+    },
+    "logo": null,
+    "backgroundImage": "/public/school-bg/new-britain-high-school.jpg",
+    "backgroundImageSource": "https://media.tegna-media.com/assets/WTIC/images/f0c16e8f-4418-4ec2-9e4e-9e1fe22642fb/f0c16e8f-4418-4ec2-9e4e-9e1fe22642fb_1140x641.jpg",
+    "showLogo": false,
+    "showColors": false,
+    "nces": "090267000521",
+    "state": "CT",
+    "enrollment": 2521
+  },
+  "westhill-high-school": {
+    "name": "Westhill High School",
+    "abbreviation": "WHS",
+    "domain": "stamfordpublicschools.org",
+    "url": "https://stamfordpublicschools.org",
+    "colors": {
+      "primary": "#588125",
+      "secondary": "#91c745"
+    },
+    "logo": "/public/school-logos/westhill-high-school.png",
+    "backgroundImage": "/public/school-bg/westhill-high-school.jpg",
+    "backgroundImageSource": "https://www.high-profile.com/wp-content/uploads/2026/08/1000013564-scaled.jpg",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090432000871",
+    "state": "CT",
+    "enrollment": 2224
+  },
+  "trumbull-high-school": {
+    "name": "Trumbull High School",
+    "abbreviation": "THS",
+    "domain": "trumbullps.org",
+    "url": "https://trumbullps.org",
+    "colors": {
+      "primary": "#395578",
+      "secondary": "#c2c5c5"
+    },
+    "logo": "/public/school-logos/trumbull-high-school.png",
+    "backgroundImage": "/public/school-bg/trumbull-high-school.jpg",
+    "backgroundImageSource": "https://www.tgpamerica.com/gallery/img/Trumbull.webp?width=1920&height=1080&mode=crop",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090462000937",
+    "state": "CT",
+    "enrollment": 2152
+  },
+  "stamford-high-school": {
+    "name": "Stamford High School",
+    "abbreviation": "SHS",
+    "domain": "stamfordpublicschools.org",
+    "url": "https://stamfordpublicschools.org",
+    "colors": {
+      "primary": "#588125",
+      "secondary": "#91c745"
+    },
+    "logo": "/public/school-logos/stamford-high-school.png",
+    "backgroundImage": "/public/school-bg/stamford-high-school.jpg",
+    "backgroundImageSource": "https://s.hdnux.com/photos/01/66/02/40/30943292/3/rawImage.jpg",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090432000867",
+    "state": "CT",
+    "enrollment": 2102
+  },
+  "norwich-free-academy": {
+    "name": "Norwich Free Academy",
+    "abbreviation": "NFA",
+    "domain": null,
+    "colors": {
+      "primary": null,
+      "secondary": null
+    },
+    "logo": null,
+    "backgroundImage": "/public/school-bg/norwich-free-academy.jpg",
+    "backgroundImageSource": "https://www.draws.com/wp-content/uploads/2019/05/aerial.jpg",
+    "showLogo": false,
+    "showColors": false,
+    "nces": "090537101221",
+    "state": "CT",
+    "enrollment": 2020
+  },
+  "southington-high-school": {
+    "name": "Southington High School",
+    "abbreviation": "SHS",
+    "domain": null,
+    "colors": {
+      "primary": null,
+      "secondary": null
+    },
+    "logo": null,
+    "backgroundImage": null,
+    "backgroundImageSource": "/public/school-bg/southington-high-school.jpg",
+    "showLogo": false,
+    "showColors": false,
+    "nces": "090423000838",
+    "state": "CT",
+    "enrollment": 1905,
+    "reviewNote": "photo rejected: sign and shrubbery, building not visible"
+  },
+  "west-haven-high-school": {
+    "name": "West Haven High School",
+    "abbreviation": "WHHS",
+    "domain": "whschools.org",
+    "url": "https://whschools.org",
+    "colors": {
+      "primary": "#353782",
+      "secondary": "#5f5659"
+    },
+    "logo": "/public/school-logos/west-haven-high-school.png",
+    "backgroundImage": "/public/school-bg/west-haven-high-school.jpg",
+    "backgroundImageSource": "https://antinozzi.com/wp-content/uploads/2017/12/Final-WHHS-0032_web.jpg",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090495001041",
+    "state": "CT",
+    "enrollment": 1813
+  },
+  "central-high-school": {
+    "name": "Central High School",
+    "abbreviation": "CHS",
+    "domain": "bridgeportedu.net",
+    "url": "https://bridgeportedu.net",
+    "colors": {
+      "primary": "#4971ae",
+      "secondary": "#58423f"
+    },
+    "logo": "/public/school-logos/central-high-school.png",
+    "backgroundImage": "/public/school-bg/central-high-school.jpg",
+    "backgroundImageSource": "https://s.hdnux.com/photos/01/27/74/45/23054661/3/ratio3x2_1920.jpg",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090045000056",
+    "state": "CT",
+    "enrollment": 1803
+  },
+  "east-hartford-high-school": {
+    "name": "East Hartford High School",
+    "abbreviation": "EHHS",
+    "domain": "easthartford.org",
+    "url": "https://easthartford.org",
+    "colors": {
+      "primary": "#d22a2e",
+      "secondary": "#0b1962"
+    },
+    "logo": "/public/school-logos/east-hartford-high-school.png",
+    "backgroundImage": "/public/school-bg/east-hartford-high-school.jpg",
+    "backgroundImageSource": "https://cdn.theatlantic.com/thumbor/JhN3bTMazZt4Es6dxunCnuE6ifw=/35x89:3608x2099/1600x900/media/img/mt/2017/06/ehhs_photo_Oct_2010/original.jpg",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090126000200",
+    "state": "CT",
+    "enrollment": 1776
+  },
+  "wilbur-cross-high-school": {
+    "name": "Wilbur Cross High School",
+    "abbreviation": "WCHS",
+    "domain": "nhps.net",
+    "url": "https://nhps.net",
+    "colors": {
+      "primary": "#0e7c3c",
+      "secondary": "#404da0"
+    },
+    "logo": "/public/school-logos/wilbur-cross-high-school.png",
+    "backgroundImage": "/public/school-bg/wilbur-cross-high-school.jpg",
+    "backgroundImageSource": "https://www.newhavenmagnetschools.com/templates/yootheme/cache/bc/coppolaphotography249-230a0823-bc1e13f8.jpeg",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090279000585",
+    "state": "CT",
+    "enrollment": 1742
+  },
+  "brien-mcmahon-high-school": {
+    "name": "Brien McMahon High School",
+    "abbreviation": "BMHS",
+    "domain": null,
+    "colors": {
+      "primary": null,
+      "secondary": null
+    },
+    "logo": null,
+    "backgroundImage": "/public/school-bg/brien-mcmahon-high-school.jpg",
+    "backgroundImageSource": "https://s.hdnux.com/photos/47/21/14/10294060/6/ratio4x3_1920.jpg",
+    "showLogo": false,
+    "showColors": false,
+    "nces": "090309000638",
+    "state": "CT",
+    "enrollment": 1739
+  },
+  "glastonbury-high-school": {
+    "name": "Glastonbury High School",
+    "abbreviation": "GHS",
+    "domain": "glastonburyus.org",
+    "url": "https://glastonburyus.org",
+    "colors": {
+      "primary": "#0b5cb4",
+      "secondary": "#1d5181"
+    },
+    "logo": "/public/school-logos/glastonbury-high-school.png",
+    "backgroundImage": "/public/school-bg/glastonbury-high-school.jpg",
+    "backgroundImageSource": "https://s.hdnux.com/photos/01/67/76/36/31451031/5/1920x0.jpg",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090162000283",
+    "state": "CT",
+    "enrollment": 1737
+  },
+  "manchester-high-school": {
+    "name": "Manchester High School",
+    "abbreviation": "MHS",
+    "domain": "mpspride.org",
+    "url": "https://mpspride.org",
+    "colors": {
+      "primary": "#863b3b",
+      "secondary": "#16273f"
+    },
+    "logo": "/public/school-logos/manchester-high-school.png",
+    "backgroundImage": "/public/school-bg/manchester-high-school.jpg",
+    "backgroundImageSource": "https://patch.com/img/cdn/users/72890/2013/05/raw/8abad2d171201d3a9169e252274b887f.png",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090231000424",
+    "state": "CT",
+    "enrollment": 1703
+  },
+  "staples-high-school": {
+    "name": "Staples High School",
+    "abbreviation": "SHS",
+    "domain": "westportps.org",
+    "url": "https://westportps.org",
+    "colors": {
+      "primary": "#546473",
+      "secondary": "#b3bcc2"
+    },
+    "logo": "/public/school-logos/staples-high-school.png",
+    "backgroundImage": "/public/school-bg/staples-high-school.jpg",
+    "backgroundImageSource": "https://www.inklingsnews.com/wp-content/uploads/2024/09/Screen-Shot-2024-09-23-at-6.05.38-PM.png",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090504001058",
+    "state": "CT",
+    "enrollment": 1629
+  },
+  "hamden-high-school": {
+    "name": "Hamden High School",
+    "abbreviation": "HHS",
+    "domain": "hamden.org",
+    "url": "https://hamden.org",
+    "colors": {
+      "primary": "#f2a424",
+      "secondary": "#f0ce3e"
+    },
+    "logo": "/public/school-logos/hamden-high-school.png",
+    "backgroundImage": "/public/school-bg/hamden-high-school.jpg",
+    "backgroundImageSource": "https://s.hdnux.com/photos/01/34/64/11/24330866/3/1920x0.jpg",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090186000339",
+    "state": "CT",
+    "enrollment": 1609
+  },
+  "norwalk-high-school": {
+    "name": "Norwalk High School",
+    "abbreviation": "NHS",
+    "domain": null,
+    "colors": {
+      "primary": null,
+      "secondary": null
+    },
+    "logo": null,
+    "backgroundImage": "/public/school-bg/norwalk-high-school.jpg",
+    "backgroundImageSource": "https://s.hdnux.com/photos/01/31/25/46/23419271/5/1920x0.jpg",
+    "showLogo": false,
+    "showColors": false,
+    "nces": "090309000655",
+    "state": "CT",
+    "enrollment": 1494
+  },
+  "crosby-high-school": {
+    "name": "Crosby High School",
+    "abbreviation": "CHS",
+    "domain": "waterbury.k12.ct.us",
+    "url": "https://waterbury.k12.ct.us",
+    "colors": {
+      "primary": "#a51c45",
+      "secondary": "#2b4e7e"
+    },
+    "logo": "/public/school-logos/crosby-high-school.png",
+    "backgroundImage": "/public/school-bg/crosby-high-school.jpg",
+    "backgroundImageSource": "https://media.nbcconnecticut.com/2026/08/crosby-high-school-082526.jpg?quality=85&strip=all&resize=1200%2C675",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090483000971",
+    "state": "CT",
+    "enrollment": 1453
+  },
+  "south-windsor-high-school": {
+    "name": "South Windsor High School",
+    "abbreviation": "SWHS",
+    "domain": "southwindsorschools.org",
+    "url": "https://southwindsorschools.org",
+    "colors": {
+      "primary": "#00527a",
+      "secondary": "#674829"
+    },
+    "logo": "/public/school-logos/south-windsor-high-school.png",
+    "backgroundImage": "/public/school-bg/south-windsor-high-school.jpg",
+    "backgroundImageSource": "https://thebobcatprowl.com/wp-content/uploads/2024/09/IMG_6319.jpg",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090417000826",
+    "state": "CT",
+    "enrollment": 1442
+  },
+  "enfield-high-school": {
+    "name": "Enfield High School",
+    "abbreviation": "EHS",
+    "domain": "enfieldschools.org",
+    "url": "https://enfieldschools.org",
+    "colors": {
+      "primary": "#006600",
+      "secondary": "#eebb58"
+    },
+    "logo": "/public/school-logos/enfield-high-school.png",
+    "backgroundImage": "/public/school-bg/enfield-high-school.jpg",
+    "backgroundImageSource": "https://www.gilbaneco.com/wp-content/uploads/2016/11/6034_Enfield-Consolidated-HS_01-1-1600x600.jpg",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090147000243",
+    "state": "CT",
+    "enrollment": 1426
+  },
+  "ridgefield-high-school": {
+    "name": "Ridgefield High School",
+    "abbreviation": "RHS",
+    "domain": "ridgefield.org:443",
+    "url": "https://ridgefield.org:443",
+    "colors": {
+      "primary": "#bd580f",
+      "secondary": "#a2a2a2"
+    },
+    "logo": "/public/school-logos/ridgefield-high-school.png",
+    "backgroundImage": "/public/school-bg/ridgefield-high-school.jpg",
+    "backgroundImageSource": "https://images.squarespace-cdn.com/content/v1/57448193e32140d1843f228d/1578528478879-RNH6Y9I1RW8DARZ3G0I2/RSD+HS+Exterior+Front+%C2%A9.jpg",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090381000779",
+    "state": "CT",
+    "enrollment": 1411
+  },
+  "john-f-kennedy-high-school": {
+    "name": "John F. Kennedy High School",
+    "abbreviation": "JFKHS",
+    "domain": "waterbury.k12.ct.us",
+    "url": "https://waterbury.k12.ct.us",
+    "colors": {
+      "primary": "#a51c45",
+      "secondary": "#2b4e7e"
+    },
+    "logo": "/public/school-logos/john-f-kennedy-high-school.png",
+    "backgroundImage": "/public/school-bg/john-f-kennedy-high-school.jpg",
+    "backgroundImageSource": "https://static.hudl.com/users/temp/2148282_03c6624b4e0043a28c6fd0408dd76e52.jpeg",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090483000979",
+    "state": "CT",
+    "enrollment": 1391
+  },
+  "darien-high-school": {
+    "name": "Darien High School",
+    "abbreviation": "DHS",
+    "domain": "darienps.org",
+    "url": "https://darienps.org",
+    "colors": {
+      "primary": "#476a93",
+      "secondary": "#043454"
+    },
+    "logo": "/public/school-logos/darien-high-school.png",
+    "backgroundImage": "/public/school-bg/darien-high-school.jpg",
+    "backgroundImageSource": "https://s.hdnux.com/photos/33/14/67/7130577/4/1920x0.jpg",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090105000164",
+    "state": "CT",
+    "enrollment": 1382
+  },
+  "conard-high-school": {
+    "name": "Conard High School",
+    "abbreviation": "CHS",
+    "domain": "whps.org",
+    "url": "https://whps.org",
+    "colors": {
+      "primary": "#b32230",
+      "secondary": "#4482ba"
+    },
+    "logo": "/public/school-logos/conard-high-school.png",
+    "backgroundImage": "/public/school-bg/conard-high-school.jpg",
+    "backgroundImageSource": "https://we-ha.com/wp-content/uploads/2015/07/conard-sign-new-e1438199318361-1024x768.jpg",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090492001013",
+    "state": "CT",
+    "enrollment": 1380
+  },
+  "fairfield-ludlowe-high-school": {
+    "name": "Fairfield Ludlowe High School",
+    "abbreviation": "FLHS",
+    "domain": "fairfieldschools.org",
+    "url": "https://fairfieldschools.org",
+    "colors": {
+      "primary": "#2998d6",
+      "secondary": "#09377d"
+    },
+    "logo": "/public/school-logos/fairfield-ludlowe-high-school.png",
+    "backgroundImage": "/public/school-bg/fairfield-ludlowe-high-school.jpg",
+    "backgroundImageSource": "https://s.hdnux.com/photos/06/26/37/1664967/19/rawImage.jpg",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090153001379",
+    "state": "CT",
+    "enrollment": 1367
+  },
+  "amity-regional-high-school": {
+    "name": "Amity Regional High School",
+    "abbreviation": "ARHS",
+    "domain": "amityregion5.org",
+    "url": "https://amityregion5.org",
+    "colors": {
+      "primary": "#f7b814",
+      "secondary": "#9c740c"
+    },
+    "logo": "/public/school-logos/amity-regional-high-school.png",
+    "backgroundImage": "/public/school-bg/amity-regional-high-school.jpg",
+    "backgroundImageSource": "https://media.tegna-media.com/assets/WTIC/images/8a8274ea-d849-453b-b554-85162226d0a6/8a8274ea-d849-453b-b554-85162226d0a6_1140x641.jpg",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090366000770",
+    "state": "CT",
+    "enrollment": 1347
+  },
+  "hall-high-school": {
+    "name": "Hall High School",
+    "abbreviation": "HHS",
+    "domain": "whps.org",
+    "url": "https://whps.org",
+    "colors": {
+      "primary": "#b32230",
+      "secondary": "#4482ba"
+    },
+    "logo": "/public/school-logos/hall-high-school.png",
+    "backgroundImage": "/public/school-bg/hall-high-school.jpg",
+    "backgroundImageSource": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Hall_High_School%2C_West_Hartford_CT.jpg/1280px-Hall_High_School%2C_West_Hartford_CT.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090492001015",
+    "state": "CT",
+    "enrollment": 1332
+  },
+  "warren-harding-high-school": {
+    "name": "Warren Harding High School",
+    "abbreviation": "WHHS",
+    "domain": "bridgeportedu.net",
+    "url": "https://bridgeportedu.net",
+    "colors": {
+      "primary": "#4971ae",
+      "secondary": "#58423f"
+    },
+    "logo": "/public/school-logos/warren-harding-high-school.png",
+    "backgroundImage": "/public/school-bg/warren-harding-high-school.jpg",
+    "backgroundImageSource": "https://www.stantec.com/content/dam/stantec/images/projects/0016/warren-harding-high-school-207689.jpg",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090045000067",
+    "state": "CT",
+    "enrollment": 1324
+  },
+  "fairfield-warde-high-school": {
+    "name": "Fairfield Warde High School",
+    "abbreviation": "FWHS",
+    "domain": "fairfieldschools.org",
+    "url": "https://fairfieldschools.org",
+    "colors": {
+      "primary": "#2998d6",
+      "secondary": "#09377d"
+    },
+    "logo": "/public/school-logos/fairfield-warde-high-school.png",
+    "backgroundImage": "/public/school-bg/fairfield-warde-high-school.jpg",
+    "backgroundImageSource": "https://resources.finalsite.net/videos/v1693600404/fairfieldschoolsorg/orzxvmqmcy8szhqffbsw/15secondFWHSvideo.jpg",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090153000256",
+    "state": "CT",
+    "enrollment": 1308
+  },
+  "shelton-high-school": {
+    "name": "Shelton High School",
+    "abbreviation": "SHS",
+    "domain": "sheltonpublicschools.org",
+    "url": "https://sheltonpublicschools.org",
+    "colors": {
+      "primary": "#dc762e",
+      "secondary": "#4e3324"
+    },
+    "logo": "/public/school-logos/shelton-high-school.png",
+    "backgroundImage": "/public/school-bg/shelton-high-school.jpg",
+    "backgroundImageSource": "https://patch.com/img/cdn20/users/22878689/20220930/023521/styles/patch_image/public/img-3755___30143154638.jpg",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090405000806",
+    "state": "CT",
+    "enrollment": 1308
+  },
+  "francis-t-maloney-high-school": {
+    "name": "Francis T. Maloney High School",
+    "abbreviation": "FTMHS",
+    "domain": "meridenk12.org",
+    "url": "https://meridenk12.org",
+    "colors": {
+      "primary": "#444444",
+      "secondary": null
+    },
+    "logo": "/public/school-logos/francis-t-maloney-high-school.png",
+    "backgroundImage": "/public/school-bg/francis-t-maloney-high-school.jpg",
+    "backgroundImageSource": "https://www.meridenbiz.com/Customer-Content/www/CMS/files/francis-t-maloney.webp",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090240000441",
+    "state": "CT",
+    "enrollment": 1291
+  },
+  "farmington-high-school": {
+    "name": "Farmington High School",
+    "abbreviation": "FHS",
+    "domain": "fpsct.org",
+    "url": "https://fpsct.org",
+    "colors": {
+      "primary": "#981c1e",
+      "secondary": "#9c2355"
+    },
+    "logo": "/public/school-logos/farmington-high-school.png",
+    "backgroundImage": "/public/school-bg/farmington-high-school.jpg",
+    "backgroundImageSource": "https://lockheedsolutions.com/wp-content/uploads/2025/01/Farmington-HS-CT-2.jpg",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090156000273",
+    "state": "CT",
+    "enrollment": 1261
+  },
+  "new-canaan-high-school": {
+    "name": "New Canaan High School",
+    "abbreviation": "NCHS",
+    "domain": null,
+    "colors": {
+      "primary": null,
+      "secondary": null
+    },
+    "logo": null,
+    "backgroundImage": "/public/school-bg/new-canaan-high-school.jpg",
+    "backgroundImageSource": "https://cmsv2-assets.apptegy.net/uploads/9105/file/2708980/px1600_caf8d1cc-772d-49fd-84d4-ee7e9a607eb4.png",
+    "showLogo": false,
+    "showColors": false,
+    "nces": "090270000531",
+    "state": "CT",
+    "enrollment": 1257
+  },
+  "newington-high-school": {
+    "name": "Newington High School",
+    "abbreviation": "NHS",
+    "domain": "npsct.org",
+    "url": "https://npsct.org",
+    "colors": {
+      "primary": "#012e61",
+      "secondary": "#bd2a23"
+    },
+    "logo": "/public/school-logos/newington-high-school.png",
+    "backgroundImage": "/public/school-bg/newington-high-school.jpg",
+    "backgroundImageSource": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Newington_High_School%2C_Newington_CT.jpg/1280px-Newington_High_School%2C_Newington_CT.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090288000610",
+    "state": "CT",
+    "enrollment": 1255
+  },
+  "newtown-high-school": {
+    "name": "Newtown High School",
+    "abbreviation": "NHS",
+    "domain": "newtown.k12.ct.us",
+    "url": "https://newtown.k12.ct.us",
+    "colors": {
+      "primary": "#0f4ab8",
+      "secondary": "#040474"
+    },
+    "logo": "/public/school-logos/newtown-high-school.png",
+    "backgroundImage": "/public/school-bg/newtown-high-school.jpg",
+    "backgroundImageSource": "https://levolux.com/wp-content/uploads/2025/06/Sandy-Hook-School-Blur_Saturation.png",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090291000615",
+    "state": "CT",
+    "enrollment": 1254
+  },
+  "cheshire-high-school": {
+    "name": "Cheshire High School",
+    "abbreviation": "CHS",
+    "domain": "cheshire.k12.ct.us",
+    "url": "https://cheshire.k12.ct.us",
+    "colors": {
+      "primary": "#883a3f",
+      "secondary": "#60191d"
+    },
+    "logo": "/public/school-logos/cheshire-high-school.png",
+    "backgroundImage": "/public/school-bg/cheshire-high-school.jpg",
+    "backgroundImageSource": "https://www.cheshire.k12.ct.us/wp-content/uploads/2021/07/CHS-scaled.jpg",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090075000123",
+    "state": "CT",
+    "enrollment": 1208
+  },
+  "naugatuck-high-school": {
+    "name": "Naugatuck High School",
+    "abbreviation": "NHS",
+    "domain": "naugatuck.k12.ct.us",
+    "url": "https://naugatuck.k12.ct.us",
+    "colors": {
+      "primary": "#741c1c",
+      "secondary": null
+    },
+    "logo": "/public/school-logos/naugatuck-high-school.png",
+    "backgroundImage": "/public/school-bg/naugatuck-high-school.jpg",
+    "backgroundImageSource": "https://s.hdnux.com/photos/01/26/25/16/22631334/4/rawImage.jpg",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090264000505",
+    "state": "CT",
+    "enrollment": 1202
+  },
+  "wilton-high-school": {
+    "name": "Wilton High School",
+    "abbreviation": "WHS",
+    "domain": null,
+    "colors": {
+      "primary": null,
+      "secondary": null
+    },
+    "logo": null,
+    "backgroundImage": "/public/school-bg/wilton-high-school.jpg",
+    "backgroundImageSource": "https://www.rdaep.com/wp-content/uploads/elementor/thumbs/Wilton-High-School-Wilton-CT-1-r0aiqxl4jjj5k0qfme8xnlnpa3uyizkqnh3hiv0sg0.jpg",
+    "showLogo": false,
+    "showColors": false,
+    "nces": "090513001076",
+    "state": "CT",
+    "enrollment": 1202
+  },
+  "wilby-high-school": {
+    "name": "Wilby High School",
+    "abbreviation": "WHS",
+    "domain": "waterbury.k12.ct.us",
+    "url": "https://waterbury.k12.ct.us",
+    "colors": {
+      "primary": "#a51c45",
+      "secondary": "#2b4e7e"
+    },
+    "logo": "/public/school-logos/wilby-high-school.png",
+    "backgroundImage": null,
+    "backgroundImageSource": "/public/school-bg/wilby-high-school.jpg",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090483000992",
+    "state": "CT",
+    "enrollment": 1196,
+    "reviewNote": "photo rejected: derelict archival shot, broken windows"
+  },
+  "middletown-high-school": {
+    "name": "Middletown High School",
+    "abbreviation": "MHS",
+    "domain": "middletownschools.org",
+    "url": "https://middletownschools.org",
+    "colors": {
+      "primary": "#3dace3",
+      "secondary": "#353d8a"
+    },
+    "logo": "/public/school-logos/middletown-high-school.png",
+    "backgroundImage": "/public/school-bg/middletown-high-school.jpg",
+    "backgroundImageSource": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Middletown%2C_CT_-_old_high_school_01.jpg/1280px-Middletown%2C_CT_-_old_high_school_01.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090249000465",
+    "state": "CT",
+    "enrollment": 1193
+  },
+  "orville-h-platt-high-school": {
+    "name": "Orville H. Platt High School",
+    "abbreviation": "OHPHS",
+    "domain": "meridenk12.org",
+    "url": "https://meridenk12.org",
+    "colors": {
+      "primary": "#444444",
+      "secondary": null
+    },
+    "logo": "/public/school-logos/orville-h-platt-high-school.png",
+    "backgroundImage": "/public/school-bg/orville-h-platt-high-school.jpg",
+    "backgroundImageSource": "https://ogind.com/wp-content/uploads/2022/11/Platt-High_Exterior-medium-e1667869261480.jpeg",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090240000449",
+    "state": "CT",
+    "enrollment": 1191
+  },
+  "simsbury-high-school": {
+    "name": "Simsbury High School",
+    "abbreviation": "SHS",
+    "domain": "simsbury.k12.ct.us",
+    "url": "https://simsbury.k12.ct.us",
+    "colors": {
+      "primary": "#f0bc21",
+      "secondary": "#203465"
+    },
+    "logo": "/public/school-logos/simsbury-high-school.png",
+    "backgroundImage": "/public/school-bg/simsbury-high-school.jpg",
+    "backgroundImageSource": "https://images.squarespace-cdn.com/content/v1/64cc936c0fb4c94c19542bc1/9b795233-70c6-4451-9105-15d638509c5f/dsc02731___21111316387.png",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090411000813",
+    "state": "CT",
+    "enrollment": 1187
+  },
+  "new-milford-high-school": {
+    "name": "New Milford High School",
+    "abbreviation": "NMHS",
+    "domain": "newmilfordps.org",
+    "url": "https://newmilfordps.org",
+    "colors": {
+      "primary": "#0d6efd",
+      "secondary": "#2c4c3c"
+    },
+    "logo": "/public/school-logos/new-milford-high-school.png",
+    "backgroundImage": "/public/school-bg/new-milford-high-school.jpg",
+    "backgroundImageSource": "https://s.hdnux.com/photos/01/20/63/07/21180869/25/1920x0.jpg",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090285000602",
+    "state": "CT",
+    "enrollment": 1150
+  },
+  "stratford-high-school": {
+    "name": "Stratford High School",
+    "abbreviation": "SHS",
+    "domain": "stratfordk12.org",
+    "url": "https://stratfordk12.org",
+    "colors": {
+      "primary": "#083169",
+      "secondary": "#4292a9"
+    },
+    "logo": "/public/school-logos/stratford-high-school.png",
+    "backgroundImage": "/public/school-bg/stratford-high-school.jpg",
+    "backgroundImageSource": "https://antinozzi.com/wp-content/uploads/2017/12/StratfordHS-Ph2-web_edit.jpg",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090444000897",
+    "state": "CT",
+    "enrollment": 1150
+  },
+  "bristol-central-high-school": {
+    "name": "Bristol Central High School",
+    "abbreviation": "BCHS",
+    "domain": "bristol.k12.ct.us",
+    "url": "https://bristol.k12.ct.us",
+    "colors": {
+      "primary": "#6494c2",
+      "secondary": "#28405f"
+    },
+    "logo": "/public/school-logos/bristol-central-high-school.png",
+    "backgroundImage": "/public/school-bg/bristol-central-high-school.jpg",
+    "backgroundImageSource": "https://files.smartsites.parentsquare.com/4770/_variants/contain-2048w/img_pd_161518_nwimyi.jpg",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090051000092",
+    "state": "CT",
+    "enrollment": 1148
+  },
+  "wethersfield-high-school": {
+    "name": "Wethersfield High School",
+    "abbreviation": "WHS",
+    "domain": "wps.wethersfield.me",
+    "url": "https://wps.wethersfield.me",
+    "colors": {
+      "primary": "#253d61",
+      "secondary": "#99a5b0"
+    },
+    "logo": "/public/school-logos/wethersfield-high-school.png",
+    "backgroundImage": "/public/school-bg/wethersfield-high-school.jpg",
+    "backgroundImageSource": "https://qamarch.com/wp-content/uploads/2022/12/QA-WHS-2473p-Z-scaled.jpg",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090507001068",
+    "state": "CT",
+    "enrollment": 1146
+  },
+  "james-hillhouse-high-school": {
+    "name": "James Hillhouse High School",
+    "abbreviation": "JHHS",
+    "domain": "nhps.net",
+    "url": "https://nhps.net",
+    "colors": {
+      "primary": "#0e7c3c",
+      "secondary": "#404da0"
+    },
+    "logo": "/public/school-logos/james-hillhouse-high-school.png",
+    "backgroundImage": "/public/school-bg/james-hillhouse-high-school.jpg",
+    "backgroundImageSource": "https://media.tegna-media.com/assets/WTIC/images/4042093f-1d56-41d4-9182-128aca6135a2/4042093f-1d56-41d4-9182-128aca6135a2_1140x641.jpg",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090279000563",
+    "state": "CT",
+    "enrollment": 1124
+  },
+  "bethel-high-school": {
+    "name": "Bethel High School",
+    "abbreviation": "BHS",
+    "domain": "bethel.k12.ct.us",
+    "url": "https://bethel.k12.ct.us",
+    "colors": {
+      "primary": "#c6d9f0",
+      "secondary": "#eebb58"
+    },
+    "logo": "/public/school-logos/bethel-high-school.png",
+    "backgroundImage": "/public/school-bg/bethel-high-school.jpg",
+    "backgroundImageSource": "https://www.wtnh.com/wp-content/uploads/sites/100/2026/05/Bethel-HS.jpg?w=1280",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090027000024",
+    "state": "CT",
+    "enrollment": 1097
+  },
+  "windsor-high-school": {
+    "name": "Windsor High School",
+    "abbreviation": "WHS",
+    "domain": "windsorct.org",
+    "url": "https://windsorct.org",
+    "colors": {
+      "primary": "#9c1c1c",
+      "secondary": "#bcbcbc"
+    },
+    "logo": "/public/school-logos/windsor-high-school.png",
+    "backgroundImage": "/public/school-bg/windsor-high-school.jpg",
+    "backgroundImageSource": "https://core-docs.s3.amazonaws.com/windsor_public_schools_ar/article/image/large_9e2de86e-c8ae-4d74-bd36-f11003dcedac.jpg",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090522001096",
+    "state": "CT",
+    "enrollment": 1095
+  },
+  "bassick-high-school": {
+    "name": "Bassick High School",
+    "abbreviation": "BHS",
+    "domain": "bridgeportedu.net",
+    "url": "https://bridgeportedu.net",
+    "colors": {
+      "primary": "#4971ae",
+      "secondary": "#58423f"
+    },
+    "logo": "/public/school-logos/bassick-high-school.png",
+    "backgroundImage": "/public/school-bg/bassick-high-school.jpg",
+    "backgroundImageSource": "https://s3-us-west-1.amazonaws.com/ehq-production-us-california/b7afebc0d02dc22ac3c429940b5e4d4be170b0ef/original/1745861523/8d728be06a48361c0c7cd71adc4087bf_Photo_1.jpg?1745861523",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090045000050",
+    "state": "CT",
+    "enrollment": 1075
+  },
+  "masuk-high-school": {
+    "name": "Masuk High School",
+    "abbreviation": "MHS",
+    "domain": "monroeps.org",
+    "url": "https://monroeps.org",
+    "colors": {
+      "primary": "#fcfcfc",
+      "secondary": null
+    },
+    "logo": "/public/school-logos/masuk-high-school.png",
+    "backgroundImage": "/public/school-bg/masuk-high-school.jpg",
+    "backgroundImageSource": "https://s.hdnux.com/photos/01/07/06/16/18637702/28/1920x0.jpg",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090255000489",
+    "state": "CT",
+    "enrollment": 1044
+  },
+  "torrington-high-school": {
+    "name": "Torrington High School",
+    "abbreviation": "THS",
+    "domain": "torrington.org",
+    "url": "https://torrington.org",
+    "colors": {
+      "primary": "#8b0f0f",
+      "secondary": "#631515"
+    },
+    "logo": "/public/school-logos/torrington-high-school.png",
+    "backgroundImage": "/public/school-bg/torrington-high-school.jpg",
+    "backgroundImageSource": "https://slamcoll.com/wp-content/uploads/2024/03/CaseStudy_TorringtonHeroLarge-New.jpg",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090459000924",
+    "state": "CT",
+    "enrollment": 1034
+  },
+  "the-woodstock-academy": {
+    "name": "The Woodstock Academy",
+    "abbreviation": "WA",
+    "domain": "woodstockacademy.org",
+    "url": "https://woodstockacademy.org",
+    "colors": {
+      "primary": "#002664",
+      "secondary": "#2e3861"
+    },
+    "logo": "/public/school-logos/the-woodstock-academy.png",
+    "backgroundImage": "/public/school-bg/the-woodstock-academy.jpg",
+    "backgroundImageSource": "https://tskp.com/uploads/1000010/153625562948/6_TSKP_WOODSTOCK_ACADEMY_MASTER_PLAN_EXPANSION_EXTERIOR_DETAIL_HISTORIC_ACADEMY_BUILDING-1400-xxx_q85.jpg",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090537311223",
+    "state": "CT",
+    "enrollment": 1011
+  },
+  "e-o-smith-high-school": {
+    "name": "E. O. Smith High School",
+    "abbreviation": "EOSHS",
+    "domain": "eosmith.org",
+    "url": "https://eosmith.org",
+    "colors": {
+      "primary": "#8e2223",
+      "secondary": "#c48c94"
+    },
+    "logo": "/public/school-logos/e-o-smith-high-school.png",
+    "backgroundImage": "/public/school-bg/e-o-smith-high-school.jpg",
+    "backgroundImageSource": "https://cdnsm5-ss18.sharpschool.com/UserFiles/Servers/Server_748125/Image/Homepage%20Image%20Carousel/Building.jpg",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090000501215",
+    "state": "CT",
+    "enrollment": 1010
+  },
+  "guilford-high-school": {
+    "name": "Guilford High School",
+    "abbreviation": "GHS",
+    "domain": "guilfordps.org",
+    "url": "https://guilfordps.org",
+    "colors": {
+      "primary": null,
+      "secondary": null
+    },
+    "logo": null,
+    "backgroundImage": "/public/school-bg/guilford-high-school.jpg",
+    "backgroundImageSource": "https://tskp.com/uploads/1800018/1586263525573/11_TSKP_GUILFORD_HIGH_SCHOOL_EXTERIOR_ENTRY_West-1400-xxx_q85.jpg",
+    "showLogo": false,
+    "showColors": false,
+    "nces": "090180000332",
+    "state": "CT",
+    "enrollment": 1008
+  },
+  "bristol-eastern-high-school": {
+    "name": "Bristol Eastern High School",
+    "abbreviation": "BEHS",
+    "domain": "bristol.k12.ct.us",
+    "url": "https://bristol.k12.ct.us",
+    "colors": {
+      "primary": "#6494c2",
+      "secondary": "#28405f"
+    },
+    "logo": "/public/school-logos/bristol-eastern-high-school.png",
+    "backgroundImage": "/public/school-bg/bristol-eastern-high-school.jpg",
+    "backgroundImageSource": "https://bloximages.chicago2.vip.townnews.com/bristolpress.com/content/tncms/assets/v3/editorial/a/c7/ac755362-dc01-11ee-9f9d-87521d814aa2/65e8e2569eed3.image.jpg?crop=1190%2C625%2C0%2C76",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090051000093",
+    "state": "CT",
+    "enrollment": 998
+  },
+  "rockville-high-school": {
+    "name": "Rockville High School",
+    "abbreviation": "RHS",
+    "domain": "vernonpublicschools.org",
+    "url": "https://vernonpublicschools.org",
+    "colors": {
+      "primary": "#662e80",
+      "secondary": "#ad9e2f"
+    },
+    "logo": "/public/school-logos/rockville-high-school.png",
+    "backgroundImage": "/public/school-bg/rockville-high-school.jpg",
+    "backgroundImageSource": "https://patch.com/img/cdn/users/75390/2012/05/raw/ab524148919d4ce5a54e81e2b9193383.jpg",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090468000943",
+    "state": "CT",
+    "enrollment": 995
+  },
+  "bunnell-high-school": {
+    "name": "Bunnell High School",
+    "abbreviation": "BHS",
+    "domain": "stratfordk12.org",
+    "url": "https://stratfordk12.org",
+    "colors": {
+      "primary": "#083169",
+      "secondary": "#4292a9"
+    },
+    "logo": "/public/school-logos/bunnell-high-school.png",
+    "backgroundImage": "/public/school-bg/bunnell-high-school.jpg",
+    "backgroundImageSource": "https://s.hdnux.com/photos/01/21/73/60/21478437/4/rawImage.jpg",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090444000885",
+    "state": "CT",
+    "enrollment": 982
+  },
+  "pomperaug-regional-high-school": {
+    "name": "Pomperaug Regional High School",
+    "abbreviation": "PRHS",
+    "domain": "region15.org",
+    "url": "https://region15.org",
+    "colors": {
+      "primary": "#980000",
+      "secondary": "#c8918f"
+    },
+    "logo": "/public/school-logos/pomperaug-regional-high-school.png",
+    "backgroundImage": "/public/school-bg/pomperaug-regional-high-school.jpg",
+    "backgroundImageSource": "https://media.tegna-media.com/assets/WTIC/images/932f5072-6cd0-4c40-b4e7-b9a902f2e4bc/932f5072-6cd0-4c40-b4e7-b9a902f2e4bc_1920x1080.jpg",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090353700749",
+    "state": "CT",
+    "enrollment": 970
+  },
+  "avon-high-school": {
+    "name": "Avon High School",
+    "abbreviation": "AHS",
+    "domain": "avon.k12.ct.us",
+    "url": "https://avon.k12.ct.us",
+    "colors": {
+      "primary": "#b6d8f9",
+      "secondary": "#9fa45b"
+    },
+    "logo": "/public/school-logos/avon-high-school.png",
+    "backgroundImage": "/public/school-bg/avon-high-school.jpg",
+    "backgroundImageSource": "https://www.kba-architects.com/site/assets/files/1552/kb_avonhigh_01.jpeg",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090012000011",
+    "state": "CT",
+    "enrollment": 946
+  },
+  "north-haven-high-school": {
+    "name": "North Haven High School",
+    "abbreviation": "NHHS",
+    "domain": "northhavenschools.org",
+    "url": "https://northhavenschools.org",
+    "colors": {
+      "primary": "#783739",
+      "secondary": "#bd9e9f"
+    },
+    "logo": "/public/school-logos/north-haven-high-school.png",
+    "backgroundImage": "/public/school-bg/north-haven-high-school.jpg",
+    "backgroundImageSource": "https://www.kba-architects.com/site/assets/files/1559/nhhs-ext-entry-h_dsc0103.1600x0.jpg",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090303000631",
+    "state": "CT",
+    "enrollment": 944
+  },
+  "robert-e-fitch-high-school": {
+    "name": "Robert E. Fitch High School",
+    "abbreviation": "REFHS",
+    "domain": "grotonschools.org",
+    "url": "https://grotonschools.org",
+    "colors": {
+      "primary": "#958688",
+      "secondary": "#252121"
+    },
+    "logo": "/public/school-logos/robert-e-fitch-high-school.png",
+    "backgroundImage": "/public/school-bg/robert-e-fitch-high-school.jpg",
+    "backgroundImageSource": "https://resources.finalsite.net/videos/v1692825092/grotonk12ctus/v28hgwnqewbaqhodyhbb/Untitleddesign1.jpg",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090177000318",
+    "state": "CT",
+    "enrollment": 942
+  },
+  "lyman-hall-high-school": {
+    "name": "Lyman Hall High School",
+    "abbreviation": "LHHS",
+    "domain": "wallingford.k12.ct.us",
+    "url": "https://wallingford.k12.ct.us",
+    "colors": {
+      "primary": "#1e5f7c",
+      "secondary": "#88acbc"
+    },
+    "logo": "/public/school-logos/lyman-hall-high-school.png",
+    "backgroundImage": "/public/school-bg/lyman-hall-high-school.jpg",
+    "backgroundImageSource": "https://s.hdnux.com/photos/01/40/16/66/25226627/5/rawImage.jpg",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090474000955",
+    "state": "CT",
+    "enrollment": 936
+  },
+  "hartford-magnet-trinity-college-academy": {
+    "name": "Hartford Magnet Trinity College Academy",
+    "abbreviation": "HMTCA",
+    "domain": null,
+    "colors": {
+      "primary": null,
+      "secondary": null
+    },
+    "logo": null,
+    "backgroundImage": "/public/school-bg/hartford-magnet-trinity-college-academy.jpg",
+    "backgroundImageSource": "https://tskp.com/uploads/1800018/1589893262142/3_TSKP_HARTFORD_MAGNET_TRINITY_COLLEGE_ACADEMY_EXTERIOR_NIGHT_ENTRANCE-1400-xxx_q85.jpg",
+    "showLogo": false,
+    "showColors": false,
+    "nces": "090192001295",
+    "state": "CT",
+    "enrollment": 925
+  },
+  "east-lyme-high-school": {
+    "name": "East Lyme High School",
+    "abbreviation": "ELHS",
+    "domain": null,
+    "colors": {
+      "primary": null,
+      "secondary": null
+    },
+    "logo": null,
+    "backgroundImage": "/public/school-bg/east-lyme-high-school.jpg",
+    "backgroundImageSource": "https://ncarchitects.com/wp-content/uploads/2023/07/Lyme-Old-Lyme-main-entrance-dusk-NO-firelane.jpg",
+    "showLogo": false,
+    "showColors": false,
+    "nces": "090132000223",
+    "state": "CT",
+    "enrollment": 890
+  },
+  "east-haven-high-school": {
+    "name": "East Haven High School",
+    "abbreviation": "EHHS",
+    "domain": "easthavenschools.org",
+    "url": "https://easthavenschools.org",
+    "colors": {
+      "primary": "#ffdd00",
+      "secondary": "#fbb82b"
+    },
+    "logo": "/public/school-logos/east-haven-high-school.png",
+    "backgroundImage": "/public/school-bg/east-haven-high-school.jpg",
+    "backgroundImageSource": "https://qtxasset.com/quartz/qcloud1/media/mfeahf/sites/6/2020/architectural-rendering-exterior.jpg?VersionId=JUQ_dUy6I.Y.qg_dqOBvXaBV5DLPGUDR",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090129000216",
+    "state": "CT",
+    "enrollment": 879
+  },
+  "brookfield-high-school": {
+    "name": "Brookfield High School",
+    "abbreviation": "BHS",
+    "domain": "brookfieldps.org",
+    "url": "https://brookfieldps.org",
+    "colors": {
+      "primary": "#4072b9",
+      "secondary": "#e4b030"
+    },
+    "logo": "/public/school-logos/brookfield-high-school.png",
+    "backgroundImage": "/public/school-bg/brookfield-high-school.jpg",
+    "backgroundImageSource": "https://media.nbcconnecticut.com/2023/08/Brookfield.jpeg?quality=85&strip=all&resize=1200%2C675",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090054000109",
+    "state": "CT",
+    "enrollment": 849
+  },
+  "berlin-high-school": {
+    "name": "Berlin High School",
+    "abbreviation": "BHS",
+    "domain": "berlinschools.org",
+    "url": "https://berlinschools.org",
+    "colors": {
+      "primary": "#38567d",
+      "secondary": "#e7c1c5"
+    },
+    "logo": "/public/school-logos/berlin-high-school.png",
+    "backgroundImage": "/public/school-bg/berlin-high-school.jpg",
+    "backgroundImageSource": "https://images.squarespace-cdn.com/content/v1/59074ef859cc68420fe266d6/1520276808660-4HGSZ1BK17BPEDIQXN4R/BHS%285%29.jpg?format=1000w",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090021000016",
+    "state": "CT",
+    "enrollment": 836
+  },
+  "w-f-kaynor-technical-high-school": {
+    "name": "W. F. Kaynor Technical High School",
+    "abbreviation": "WFKTH",
+    "domain": "cttech.org",
+    "url": "https://cttech.org",
+    "colors": {
+      "primary": "#c6c6c6",
+      "secondary": "#1f83c0"
+    },
+    "logo": "/public/school-logos/w-f-kaynor-technical-high-school.png",
+    "backgroundImage": null,
+    "backgroundImageSource": "/public/school-bg/w-f-kaynor-technical-high-school.jpg",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090000201151",
+    "state": "CT",
+    "enrollment": 831,
+    "reviewNote": "photo rejected: flood photo"
+  },
+  "waterbury-arts-magnet-school": {
+    "name": "Waterbury Arts Magnet School",
+    "abbreviation": "WAMS",
+    "domain": "waterbury.k12.ct.us",
+    "url": "https://waterbury.k12.ct.us",
+    "colors": {
+      "primary": "#a51c45",
+      "secondary": "#2b4e7e"
+    },
+    "logo": "/public/school-logos/waterbury-arts-magnet-school.png",
+    "backgroundImage": "/public/school-bg/waterbury-arts-magnet-school.jpg",
+    "backgroundImageSource": "https://www.kba-architects.com/site/assets/files/1560/kb_wpa_06.jpeg",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090483001396",
+    "state": "CT",
+    "enrollment": 820
+  },
+  "bullard-havens-technical-high-school": {
+    "name": "Bullard-Havens Technical High School",
+    "abbreviation": "BHTHS",
+    "domain": "cttech.org",
+    "url": "https://cttech.org",
+    "colors": {
+      "primary": "#c6c6c6",
+      "secondary": "#1f83c0"
+    },
+    "logo": "/public/school-logos/bullard-havens-technical-high-school.png",
+    "backgroundImage": "/public/school-bg/bullard-havens-technical-high-school.jpg",
+    "backgroundImageSource": "https://www.jcj.com/wp-content/uploads/2026/09/JCJ_BullardHavens_03.jpg.jpeg",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090000201137",
+    "state": "CT",
+    "enrollment": 819
+  },
+  "jonathan-law-high-school": {
+    "name": "Jonathan Law High School",
+    "abbreviation": "JLHS",
+    "domain": "milforded.org",
+    "url": "https://milforded.org",
+    "colors": {
+      "primary": "#670121",
+      "secondary": "#9d2b4e"
+    },
+    "logo": "/public/school-logos/jonathan-law-high-school.png",
+    "backgroundImage": "/public/school-bg/jonathan-law-high-school.jpg",
+    "backgroundImageSource": "https://s.hdnux.com/photos/01/41/45/52/25582265/3/1920x0.jpg",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090252000472",
+    "state": "CT",
+    "enrollment": 776
+  },
+  "academy-of-aerospace-and-engineering": {
+    "name": "Academy of Aerospace and Engineering",
+    "abbreviation": "AAE",
+    "domain": "crec.org",
+    "url": "https://crec.org",
+    "colors": {
+      "primary": "#006c64",
+      "secondary": null
+    },
+    "logo": "/public/school-logos/academy-of-aerospace-and-engineering.png",
+    "backgroundImage": "/public/school-bg/academy-of-aerospace-and-engineering.jpg",
+    "backgroundImageSource": "https://fundermax.us/wp-content/uploads/2020/08/2157-23.jpg",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090070001513",
+    "state": "CT",
+    "enrollment": 767
+  },
+  "academy-of-science-and-innovation": {
+    "name": "Academy of Science and Innovation",
+    "abbreviation": "ASI",
+    "domain": "crec.org",
+    "url": "https://crec.org",
+    "colors": {
+      "primary": "#006c64",
+      "secondary": null
+    },
+    "logo": "/public/school-logos/academy-of-science-and-innovation.png",
+    "backgroundImage": "/public/school-bg/academy-of-science-and-innovation.jpg",
+    "backgroundImageSource": "https://antinozzi.com/wp-content/uploads/2015/11/Antinozzi_Crec_01.jpg",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090070001592",
+    "state": "CT",
+    "enrollment": 767
+  },
+  "h-c-wilcox-technical-high-school": {
+    "name": "H. C. Wilcox Technical High School",
+    "abbreviation": "HCWTH",
+    "domain": "cttech.org",
+    "url": "https://cttech.org",
+    "colors": {
+      "primary": "#c6c6c6",
+      "secondary": "#1f83c0"
+    },
+    "logo": "/public/school-logos/h-c-wilcox-technical-high-school.png",
+    "backgroundImage": "/public/school-bg/h-c-wilcox-technical-high-school.jpg",
+    "backgroundImageSource": "https://tskp.com/uploads/1500015/1575559799143/WilcoxHS_Exteriors-7-1400-xxx_q85.jpg",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090000201142",
+    "state": "CT",
+    "enrollment": 753
+  },
+  "daniel-hand-high-school": {
+    "name": "Daniel Hand High School",
+    "abbreviation": "DHHS",
+    "domain": "madison.k12.ct.us",
+    "url": "https://madison.k12.ct.us",
+    "colors": {
+      "primary": "#ffc629",
+      "secondary": "#b9ac58"
+    },
+    "logo": "/public/school-logos/daniel-hand-high-school.png",
+    "backgroundImage": "/public/school-bg/daniel-hand-high-school.jpg",
+    "backgroundImageSource": "https://www.jcj.com/wp-content/uploads/2026/03/H00052_00_N104_1.jpg",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090228000411",
+    "state": "CT",
+    "enrollment": 751
+  },
+  "platt-technical-high-school": {
+    "name": "Platt Technical High School",
+    "abbreviation": "PTHS",
+    "domain": "cttech.org",
+    "url": "https://cttech.org",
+    "colors": {
+      "primary": "#c6c6c6",
+      "secondary": "#1f83c0"
+    },
+    "logo": "/public/school-logos/platt-technical-high-school.png",
+    "backgroundImage": "/public/school-bg/platt-technical-high-school.jpg",
+    "backgroundImageSource": "https://www.draws.com/wp-content/uploads/2022/01/PlattTech-5650-Edit.jpg",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090000201149",
+    "state": "CT",
+    "enrollment": 749
+  },
+  "killingly-high-school": {
+    "name": "Killingly High School",
+    "abbreviation": "KHS",
+    "domain": "killinglyschools.org",
+    "url": "https://killinglyschools.org",
+    "colors": {
+      "primary": "#3b5998",
+      "secondary": "#7d070f"
+    },
+    "logo": "/public/school-logos/killingly-high-school.png",
+    "backgroundImage": "/public/school-bg/killingly-high-school.jpg",
+    "backgroundImageSource": "https://i0.wp.com/buildingsofnewengland.com/wp-content/uploads/2024/07/5a409abb-0f1b-4ef8-8cda-65517bfd8dfb-1.jpg?ssl=1",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090207000392",
+    "state": "CT",
+    "enrollment": 744
+  },
+  "connecticut-river-academy-at-goodwin-university": {
+    "name": "Connecticut River Academy at Goodwin University",
+    "abbreviation": "CRAGU",
+    "domain": "goodwinmagnetsystem.org",
+    "url": "https://goodwinmagnetsystem.org",
+    "colors": {
+      "primary": "#3366cc",
+      "secondary": "#0494c4"
+    },
+    "logo": "/public/school-logos/connecticut-river-academy-at-goodwin-university.png",
+    "backgroundImage": "/public/school-bg/connecticut-river-academy-at-goodwin-university.jpg",
+    "backgroundImageSource": "https://www.jcj.com/wp-content/uploads/2026/03/H16050_00_N5_1.jpg",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090022601581",
+    "state": "CT",
+    "enrollment": 742
+  },
+  "branford-high-school": {
+    "name": "Branford High School",
+    "abbreviation": "BHS",
+    "domain": "branfordschools.org",
+    "url": "https://branfordschools.org",
+    "colors": {
+      "primary": "#eb1c24",
+      "secondary": null
+    },
+    "logo": "/public/school-logos/branford-high-school.png",
+    "backgroundImage": "/public/school-bg/branford-high-school.jpg",
+    "backgroundImageSource": "https://qamarch.com/wp-content/uploads/2024/10/01-scaled.jpg",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090042000039",
+    "state": "CT",
+    "enrollment": 738
+  },
+  "rocky-hill-high-school": {
+    "name": "Rocky Hill High School",
+    "abbreviation": "RHHS",
+    "domain": null,
+    "colors": {
+      "primary": null,
+      "secondary": null
+    },
+    "logo": null,
+    "backgroundImage": "/public/school-bg/rocky-hill-high-school.jpg",
+    "backgroundImageSource": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Rocky_Hill_High_School%2C_Rocky_Hill_CT.jpg/1280px-Rocky_Hill_High_School%2C_Rocky_Hill_CT.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail",
+    "showLogo": false,
+    "showColors": false,
+    "nces": "090384000785",
+    "state": "CT",
+    "enrollment": 738
+  },
+  "ledyard-high-school": {
+    "name": "Ledyard High School",
+    "abbreviation": "LHS",
+    "domain": "ledyard.net",
+    "url": "https://ledyard.net",
+    "colors": {
+      "primary": "#141346",
+      "secondary": "#e4c53f"
+    },
+    "logo": "/public/school-logos/ledyard-high-school.png",
+    "backgroundImage": "/public/school-bg/ledyard-high-school.jpg",
+    "backgroundImageSource": "https://patch.com/img/cdn/users/52713/2011/11/raw/fe8471e9e2b5b3670bcd40c2e170a7bd.jpg",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090216000401",
+    "state": "CT",
+    "enrollment": 731
+  },
+  "joseph-a-foran-high-school": {
+    "name": "Joseph A. Foran High School",
+    "abbreviation": "JFHS",
+    "domain": "milforded.org",
+    "url": "https://milforded.org",
+    "colors": {
+      "primary": "#670121",
+      "secondary": "#9d2b4e"
+    },
+    "logo": "/public/school-logos/joseph-a-foran-high-school.png",
+    "backgroundImage": "/public/school-bg/joseph-a-foran-high-school.jpg",
+    "backgroundImageSource": "https://s.hdnux.com/photos/62/75/31/13358674/4/rawImage.jpg",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090252000473",
+    "state": "CT",
+    "enrollment": 727
+  },
+  "a-i-prince-technical-high-school": {
+    "name": "A. I. Prince Technical High School",
+    "abbreviation": "IPTHS",
+    "domain": "cttech.org",
+    "url": "https://cttech.org",
+    "colors": {
+      "primary": "#c6c6c6",
+      "secondary": "#1f83c0"
+    },
+    "logo": "/public/school-logos/a-i-prince-technical-high-school.png",
+    "backgroundImage": "/public/school-bg/a-i-prince-technical-high-school.jpg",
+    "backgroundImageSource": "https://www.rdaep.com/wp-content/uploads/elementor/thumbs/A.I.-Prince-Tech-High-School-Architecture-Design-1-r0ajbtk0f04jk2e5nfah2bwgicwlkui06uzxg81u68.jpg",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090000201136",
+    "state": "CT",
+    "enrollment": 725
+  },
+  "henry-abbott-technical-high-school": {
+    "name": "Henry Abbott Technical High School",
+    "abbreviation": "HATHS",
+    "domain": "cttech.org",
+    "url": "https://cttech.org",
+    "colors": {
+      "primary": "#c6c6c6",
+      "secondary": "#1f83c0"
+    },
+    "logo": "/public/school-logos/henry-abbott-technical-high-school.png",
+    "backgroundImage": "/public/school-bg/henry-abbott-technical-high-school.jpg",
+    "backgroundImageSource": "https://tskp.com/uploads/1800018/1589896553954/1_TSKP_STUDIO_HENRY_ABBOTT_TECHNICAL_HIGH_SCHOOL_EXTERIOR_q85.jpg",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090000201144",
+    "state": "CT",
+    "enrollment": 721
+  },
+  "weaver-high-school": {
+    "name": "Weaver High School",
+    "abbreviation": "WHS",
+    "domain": null,
+    "colors": {
+      "primary": null,
+      "secondary": null
+    },
+    "logo": null,
+    "backgroundImage": "/public/school-bg/weaver-high-school.jpg",
+    "backgroundImageSource": "https://media.educationsnapshots.com/wp-content/uploads/sites/4/2022/02/weaver-high-school-4.jpg",
+    "showLogo": false,
+    "showColors": false,
+    "nces": "090192001939",
+    "state": "CT",
+    "enrollment": 721
+  },
+  "rham-high-school": {
+    "name": "RHAM High School",
+    "abbreviation": "RHS",
+    "domain": "reg8.ss19.sharpschool.com",
+    "url": "https://reg8.ss19.sharpschool.com",
+    "colors": {
+      "primary": "#000080",
+      "secondary": "#1717d7"
+    },
+    "logo": "/public/school-logos/rham-high-school.png",
+    "backgroundImage": "/public/school-bg/rham-high-school.jpg",
+    "backgroundImageSource": "https://www.kba-architects.com/site/assets/files/1659/outside3_300.png",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090375000772",
+    "state": "CT",
+    "enrollment": 714
+  },
+  "waterford-high-school": {
+    "name": "Waterford High School",
+    "abbreviation": "WHS",
+    "domain": null,
+    "colors": {
+      "primary": null,
+      "secondary": null
+    },
+    "logo": null,
+    "backgroundImage": "/public/school-bg/waterford-high-school.jpg",
+    "backgroundImageSource": "https://www.jcj.com/wp-content/uploads/2025/05/H07078_01_N151.jpg.jpeg",
+    "showLogo": false,
+    "showColors": false,
+    "nces": "090486001001",
+    "state": "CT",
+    "enrollment": 713
+  },
+  "waterbury-career-academy": {
+    "name": "Waterbury Career Academy",
+    "abbreviation": "WCA",
+    "domain": "waterbury.k12.ct.us",
+    "url": "https://waterbury.k12.ct.us",
+    "colors": {
+      "primary": "#a51c45",
+      "secondary": "#2b4e7e"
+    },
+    "logo": "/public/school-logos/waterbury-career-academy.png",
+    "backgroundImage": "/public/school-bg/waterbury-career-academy.jpg",
+    "backgroundImageSource": "http://www.slammedpanel.com/jpg/1570556141-casestudy-wca-hero-large.jpg",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090483001638",
+    "state": "CT",
+    "enrollment": 709
+  },
+  "ellington-high-school": {
+    "name": "Ellington High School",
+    "abbreviation": "EHS",
+    "domain": "ellingtonpublicschools.org",
+    "url": "https://ellingtonpublicschools.org",
+    "colors": {
+      "primary": "#532482",
+      "secondary": "#abada6"
+    },
+    "logo": "/public/school-logos/ellington-high-school.png",
+    "backgroundImage": "/public/school-bg/ellington-high-school.jpg",
+    "backgroundImageSource": "https://patch.com/img/cdn20/users/103650/20220428/073007/styles/raw/public/processed_images/ct-somers%20high%20school%2020210930_133005.jpg",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090144000237",
+    "state": "CT",
+    "enrollment": 701
+  },
+  "hartford-public-high-school": {
+    "name": "Hartford Public High School",
+    "abbreviation": "HPHS",
+    "domain": null,
+    "colors": {
+      "primary": null,
+      "secondary": null
+    },
+    "logo": null,
+    "backgroundImage": "/public/school-bg/hartford-public-high-school.jpg",
+    "backgroundImageSource": "https://nccnews.newhouse.syr.edu/wp-content/uploads/IMG_3340_1280x720_acf_cropped.jpg",
+    "showLogo": false,
+    "showColors": false,
+    "nces": "090192001925",
+    "state": "CT",
+    "enrollment": 698
+  },
+  "joel-barlow-high-school": {
+    "name": "Joel Barlow High School",
+    "abbreviation": "JBHS",
+    "domain": null,
+    "colors": {
+      "primary": null,
+      "secondary": null
+    },
+    "logo": null,
+    "backgroundImage": "/public/school-bg/joel-barlow-high-school.jpg",
+    "backgroundImageSource": "https://s.hdnux.com/photos/01/17/26/34/20801321/12/ratio3x2_1920.jpg",
+    "showLogo": false,
+    "showColors": false,
+    "nces": "090378000773",
+    "state": "CT",
+    "enrollment": 698
+  },
+  "academy-of-international-studies-6-12": {
+    "name": "Academy of International Studies 6-12",
+    "abbreviation": "AIS",
+    "domain": "crec.org",
+    "url": "https://crec.org",
+    "colors": {
+      "primary": "#006c64",
+      "secondary": null
+    },
+    "logo": "/public/school-logos/academy-of-international-studies-6-12.png",
+    "backgroundImage": "/public/school-bg/academy-of-international-studies-6-12.jpg",
+    "backgroundImageSource": "https://resources.finalsite.net/videos/v1790962025/crecschoolsorg/nzbrn56mjb7sykmpwsyr/international.jpg",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090070000880",
+    "state": "CT",
+    "enrollment": 697
+  },
+  "new-fairfield-high-school": {
+    "name": "New Fairfield High School",
+    "abbreviation": "NFHS",
+    "domain": "fairfieldschools.org",
+    "url": "https://fairfieldschools.org",
+    "colors": {
+      "primary": "#2998d6",
+      "secondary": "#09377d"
+    },
+    "logo": "/public/school-logos/new-fairfield-high-school.png",
+    "backgroundImage": "/public/school-bg/new-fairfield-high-school.jpg",
+    "backgroundImageSource": "https://ogind.com/wp-content/uploads/2023/10/NFHS-Exterior-2.jpg",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090273000537",
+    "state": "CT",
+    "enrollment": 693
+  },
+  "watertown-high-school": {
+    "name": "Watertown High School",
+    "abbreviation": "WHS",
+    "domain": null,
+    "colors": {
+      "primary": null,
+      "secondary": null
+    },
+    "logo": null,
+    "backgroundImage": "/public/school-bg/watertown-high-school.jpg",
+    "backgroundImageSource": "https://files.smartsites.parentsquare.com/13394/fgak7sbfa6jraolhppb.png",
+    "showLogo": false,
+    "showColors": false,
+    "nces": "090489001008",
+    "state": "CT",
+    "enrollment": 693
+  },
+  "weston-high-school": {
+    "name": "Weston High School",
+    "abbreviation": "WHS",
+    "domain": "westonps.org",
+    "url": "https://westonps.org",
+    "colors": {
+      "primary": "#edb84c",
+      "secondary": "#a4a4a9"
+    },
+    "logo": "/public/school-logos/weston-high-school.png",
+    "backgroundImage": "/public/school-bg/weston-high-school.jpg",
+    "backgroundImageSource": "https://westontoday.news/img_2024/whs_schools-210723_04-fr.jpg",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090501001046",
+    "state": "CT",
+    "enrollment": 691
+  },
+  "e-c-goodwin-technical-high-school": {
+    "name": "E. C. Goodwin Technical High School",
+    "abbreviation": "ECGTH",
+    "domain": "cttech.org",
+    "url": "https://cttech.org",
+    "colors": {
+      "primary": "#c6c6c6",
+      "secondary": "#1f83c0"
+    },
+    "logo": "/public/school-logos/e-c-goodwin-technical-high-school.png",
+    "backgroundImage": "/public/school-bg/e-c-goodwin-technical-high-school.jpg",
+    "backgroundImageSource": "https://www.kba-architects.com/site/assets/files/1647/dsc_4341.jpg",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090000201138",
+    "state": "CT",
+    "enrollment": 690
+  },
+  "ella-t-grasso-technical-high-school": {
+    "name": "Ella T. Grasso Technical High School",
+    "abbreviation": "ETGTH",
+    "domain": "cttech.org",
+    "url": "https://cttech.org",
+    "colors": {
+      "primary": "#c6c6c6",
+      "secondary": "#1f83c0"
+    },
+    "logo": "/public/school-logos/ella-t-grasso-technical-high-school.png",
+    "backgroundImage": "/public/school-bg/ella-t-grasso-technical-high-school.jpg",
+    "backgroundImageSource": "https://ogind.com/wp-content/uploads/2021/08/Ella-T-Grasso-Technical-High-School-OGIND.jpg",
+    "showLogo": true,
+    "showColors": true,
+    "nces": "090000201139",
+    "state": "CT",
+    "enrollment": 684
+  },
+  "plainville-high-school": {
+    "name": "Plainville High School",
+    "abbreviation": "PHS",
+    "domain": null,
+    "colors": {
+      "primary": null,
+      "secondary": null
+    },
+    "logo": null,
+    "backgroundImage": "/public/school-bg/plainville-high-school.jpg",
+    "backgroundImageSource": "https://s.hdnux.com/photos/01/66/03/61/30948433/5/1920x0.jpg",
+    "showLogo": false,
+    "showColors": false,
+    "nces": "090330000703",
+    "state": "CT",
+    "enrollment": 674
   }
 }
