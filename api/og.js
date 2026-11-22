@@ -135,14 +135,27 @@ function loadLocalArt() {
 }
 
 /**
- * A remote image as a data URI; null (never a throw) if it cannot be had.
+ * An image as a data URI; null (never a throw) if it cannot be had.
  *
- * Logos are already mirrored to our own storage, but backgroundImage still
- * points at whatever host the photo was found on, and several of those
- * (Wikimedia among them) throttle clients that send no User-Agent.
+ * A path beginning with "/" is one of our own mirrored files and is read
+ * straight off disk -- no network, no third-party host that can throttle us.
+ * Anything else is fetched, with a client string, since several of the hosts
+ * these photos came from refuse requests that send none.
  */
 async function remoteImage(url) {
   if (!url) return null;
+
+  if (url.startsWith('/')) {
+    try {
+      const rel = url.replace(/^\/+/, '');
+      const mime = /\.png$/i.test(rel) ? 'image/png' : 'image/jpeg';
+      return fileDataUri(rel, mime);
+    } catch (err) {
+      console.error('[og] mirrored image missing (' + url + '):', err.message);
+      return null;
+    }
+  }
+
   const ctl = new AbortController();
   const timer = setTimeout(() => ctl.abort(), FETCH_TIMEOUT_MS);
   try {
