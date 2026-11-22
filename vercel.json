@@ -29,7 +29,7 @@
       "includeFiles": "example/index.html"
     },
     "api/og.js": {
-      "includeFiles": "{assets/fonts/*.woff,public/logos/bart.png,public/school-bg/*.jpg,images/moov-logo.png}"
+      "includeFiles": "{assets/fonts/*.woff,public/logos/bart.png,public/school-bg/*.jpg,public/school-logos/*.png,images/moov-logo.png}"
     }
   }
 }
