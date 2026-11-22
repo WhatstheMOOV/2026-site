@@ -70,7 +70,7 @@
     "showColors": true
   },
   "commack": {
-    "name": "Commack High School High School",
+    "name": "Commack High School",
     "abbreviation": "CHSHS",
     "domain": "commack.k12.ny.us",
     "url": "https://chs.commack.k12.ny.us",
@@ -913,7 +913,7 @@
     "abbreviation": "RSAE",
     "domain": "jcsd.net",
     "url": "https://rhs.jcsd.net/",
-     "colors": {
+    "colors": {
       "primary": "#000000",
       "secondary": "#cc0000"
     },

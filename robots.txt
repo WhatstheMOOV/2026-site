@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Per-school outreach pages are personalized one-to-one, not search results.
+# They are near-duplicates by design and carry third-party names and marks.
+Disallow: /example
+Disallow: /example/
+Disallow: /api/

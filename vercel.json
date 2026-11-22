@@ -4,13 +4,32 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
-    { "source": "/about", "destination": "/#about", "permanent": true }
+    {
+      "source": "/about",
+      "destination": "/#about",
+      "permanent": true
+    }
   ],
   "rewrites": [
-    { "source": "/example/:slug", "destination": "/example" },
+    {
+      "source": "/example/:slug/og.png",
+      "destination": "/api/og?slug=:slug"
+    },
+    {
+      "source": "/example/:slug",
+      "destination": "/api/example?slug=:slug"
+    },
     {
       "source": "/print",
       "destination": "https://firebasestorage.googleapis.com/v0/b/whatsthemoov-app.appspot.com/o/public%2Fmoov-print%2FMOOV-Print-Quick-Start.pdf?alt=media"
     }
-  ]
+  ],
+  "functions": {
+    "api/example.js": {
+      "includeFiles": "example/index.html"
+    },
+    "api/og.js": {
+      "includeFiles": "{assets/fonts,public/logos,images}/**"
+    }
+  }
 }
