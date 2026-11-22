@@ -134,13 +134,22 @@ function loadLocalArt() {
   return localArt;
 }
 
-/** A remote image as a data URI; null (never a throw) if it cannot be had. */
+/**
+ * A remote image as a data URI; null (never a throw) if it cannot be had.
+ *
+ * Logos are already mirrored to our own storage, but backgroundImage still
+ * points at whatever host the photo was found on, and several of those
+ * (Wikimedia among them) throttle clients that send no User-Agent.
+ */
 async function remoteImage(url) {
   if (!url) return null;
   const ctl = new AbortController();
   const timer = setTimeout(() => ctl.abort(), FETCH_TIMEOUT_MS);
   try {
-    const res = await fetch(url, { signal: ctl.signal });
+    const res = await fetch(url, {
+      signal: ctl.signal,
+      headers: { 'User-Agent': 'CardRenderer/1.0 (automated image fetch)' },
+    });
     if (!res.ok) throw new Error('HTTP ' + res.status);
     const buf = Buffer.from(await res.arrayBuffer());
     if (!buf.length) throw new Error('empty body');
@@ -397,10 +406,20 @@ module.exports = async function handler(req, res) {
       now: new Date(),
     });
 
+    // A card is only complete if the art it expected actually arrived. One that
+    // lost its photo or logo to a throttled host gets a short cache, so it
+    // heals on the next request instead of sticking around for a day.
+    const wanted = Boolean(school) + Boolean(school && school.showLogo && school.logo);
+    const got = Boolean(background) + Boolean(logo);
+    const complete = got >= wanted;
+
     res.setHeader('Content-Type', 'image/png');
-    // Unfurl caches are aggressive anyway; let the CDN hold this for a day so a
-    // corrected logo or colour still works its way out.
-    res.setHeader('Cache-Control', 'public, s-maxage=86400, stale-while-revalidate=604800');
+    // Unfurl caches are aggressive anyway; let the CDN hold a good card for a
+    // day so a corrected logo or colour still works its way out.
+    res.setHeader('Cache-Control', complete
+      ? 'public, s-maxage=86400, stale-while-revalidate=604800'
+      : 'public, s-maxage=120');
+    res.setHeader('X-MOOV-Art', complete ? 'complete' : 'degraded');
     res.setHeader('X-Robots-Tag', 'noindex, nofollow');
     res.statusCode = 200;
     res.end(png);
