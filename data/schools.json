@@ -9,10 +9,10 @@
       "secondary": "#e0c2bf"
     },
     "logo": "https://firebasestorage.googleapis.com/v0/b/whatsthemoov-app.appspot.com/o/public%2Flogos%2Famityville.png?alt=media&token=f7150f52-3c80-4bc1-9e66-551b7409a7cd",
-    "backgroundImage": null,
+    "backgroundImage": "/public/school-bg/amityville.jpg",
     "showLogo": true,
     "showColors": true,
-    "backgroundImageSource": "https://imagescdn.homes.com/i2/kcI27EjUvuw1_a2ILwyLsX0OGJQc_9mqZ5YHSzRtpps/117/amityville-memorial-high-school-amityville-ny-3-schoolphoto.jpg?p=1"
+    "backgroundImageSource": "https://cdn.newsday.com/ace/c:MjQ5NTcyNzEtYTBiYS00:M2JlYjM2YTktNWM3Zi00/landscape/1280"
   },
   "bay-shore": {
     "name": "Bay Shore High School",
@@ -66,10 +66,10 @@
       "secondary": "#8cb6a4"
     },
     "logo": "https://firebasestorage.googleapis.com/v0/b/whatsthemoov-app.appspot.com/o/public%2Flogos%2Fcarle-place.png?alt=media&token=f7150f52-3c80-4bc1-9e66-551b7409a7cd",
-    "backgroundImage": null,
+    "backgroundImage": "/public/school-bg/carle-place.jpg",
     "showLogo": true,
     "showColors": true,
-    "backgroundImageSource": "https://imagescdn.homes.com/i2/Ro-swR6QhOjnp96JCJt9U8Iz_FuyKl30j4IQRu6N4XY/117/carle-place-high-school-carle-place-ny-2-schoolphoto.jpg?p=1"
+    "backgroundImageSource": "https://images.gofundme.com/2e9tN9Nh7QPCCSk7PZa6pgAI91o=/1200x800/https://d2g8igdw686xgo.cloudfront.net/99560353_1769984652933511_r.jpeg"
   },
   "commack": {
     "name": "Commack High School",
@@ -94,10 +94,10 @@
       "secondary": "#b7669d"
     },
     "logo": "https://firebasestorage.googleapis.com/v0/b/whatsthemoov-app.appspot.com/o/public%2Flogos%2Fcopiague.png?alt=media&token=f7150f52-3c80-4bc1-9e66-551b7409a7cd",
-    "backgroundImage": null,
+    "backgroundImage": "/public/school-bg/copiague.jpg",
     "showLogo": true,
     "showColors": true,
-    "backgroundImageSource": "https://images1.loopnet.com/i2/n7cIVtQ-G359dDY4KHfhkA7DEoff8_N664t-O814-Ro/110/1305-Strong-Avenue-Copiague-NY-Primary-Photo-1-Large.jpg"
+    "backgroundImageSource": "https://patch.com/img/cdn20/users/26844098/20240916/025623/styles/patch_image/public/e695f28c-4101-4595-8646-8bcfd82b51bc-1___16133904683.jpg"
   },
   "deer-park": {
     "name": "Deer Park High School",
@@ -151,10 +151,10 @@
       "secondary": "#6d3737"
     },
     "logo": "https://firebasestorage.googleapis.com/v0/b/whatsthemoov-app.appspot.com/o/public%2Flogos%2Feast-meadow.png?alt=media&token=f7150f52-3c80-4bc1-9e66-551b7409a7cd",
-    "backgroundImage": null,
+    "backgroundImage": "/public/school-bg/east-meadow.jpg",
     "showLogo": true,
     "showColors": true,
-    "backgroundImageSource": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/East_Meadow_High_School_New_York.jpg/1280px-East_Meadow_High_School_New_York.jpg"
+    "backgroundImageSource": "https://cmsv2-assets.apptegy.net/uploads/12519/file/1382198/a55b7055-1925-4d47-a784-f653a4a69e90.jpeg"
   },
   "east-quogue": {
     "name": "East Quogue Elementary School",
@@ -166,10 +166,10 @@
       "secondary": "#bfc0d3"
     },
     "logo": "https://firebasestorage.googleapis.com/v0/b/whatsthemoov-app.appspot.com/o/public%2Flogos%2Feast-quogue.png?alt=media&token=f7150f52-3c80-4bc1-9e66-551b7409a7cd",
-    "backgroundImage": null,
+    "backgroundImage": "/public/school-bg/east-quogue.jpg",
     "showLogo": true,
     "showColors": true,
-    "backgroundImageSource": "https://imagescdn.homes.com/i2/Cy-XHgaMsqHib4679WU2Gb2laNrjwIfv17w4bcKMzR4/117/east-quogue-elementary-school-east-quogue-ny-2-schoolphoto.jpg?p=1"
+    "backgroundImageSource": "https://files.smartsites.parentsquare.com/6803/_variants/contain-2560w/rfelb9ggtf332pjiabg.jpg"
   },
   "east-rockaway": {
     "name": "East Rockaway High School",
@@ -181,10 +181,10 @@
       "secondary": "#f18a46"
     },
     "logo": "https://firebasestorage.googleapis.com/v0/b/whatsthemoov-app.appspot.com/o/public%2Flogos%2Feast-rockaway.png?alt=media&token=f7150f52-3c80-4bc1-9e66-551b7409a7cd",
-    "backgroundImage": null,
+    "backgroundImage": "/public/school-bg/east-rockaway.jpg",
     "showLogo": true,
     "showColors": true,
-    "backgroundImageSource": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/East_Rockaway_High_School_New_York_148057394.jpg/330px-East_Rockaway_High_School_New_York_148057394.jpg"
+    "backgroundImageSource": "https://files.smartsites.parentsquare.com/5589/_variants/contain-2048w/ER-schools-9_1755002197.jpg"
   },
   "east-williston": {
     "name": "East Williston High School",
@@ -209,10 +209,10 @@
       "secondary": "#8494a4"
     },
     "logo": "https://firebasestorage.googleapis.com/v0/b/whatsthemoov-app.appspot.com/o/public%2Flogos%2Feastport-south-manor.png?alt=media&token=f7150f52-3c80-4bc1-9e66-551b7409a7cd",
-    "backgroundImage": null,
+    "backgroundImage": "/public/school-bg/eastport-south-manor.jpg",
     "showLogo": true,
     "showColors": true,
-    "backgroundImageSource": "https://lookaside.instagram.com/seo/google_widget/crawler/?media_id=3851301304145317167"
+    "backgroundImageSource": "https://www.newsday.com/_next/image?url=https%3A%2F%2Fcdn.newsday.com%2Fimage-service%2Fversion%2Fc%3AZGJkYTEzOGYtZmVjOS00%3AMDg2MzRiODUtNTk4YS00%2Fcopy-of-libooks250805_photos.%3Ff%3DLandscape%2B16%253A9%26w%3D1920%26q%3D1&w=3840&q=90"
   },
   "elwood": {
     "name": "Elwood High School",
@@ -238,10 +238,10 @@
       "secondary": "#1d211d"
     },
     "logo": "https://firebasestorage.googleapis.com/v0/b/whatsthemoov-app.appspot.com/o/public%2Flogos%2Ffarmingdale.png?alt=media&token=f7150f52-3c80-4bc1-9e66-551b7409a7cd",
-    "backgroundImage": null,
+    "backgroundImage": "/public/school-bg/farmingdale.jpg",
     "showLogo": true,
     "showColors": true,
-    "backgroundImageSource": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Farmingdale_High_School%2C_South_Farmingdale%2C_NY_July_5%2C_2025_XVI.jpg/330px-Farmingdale_High_School%2C_South_Farmingdale%2C_NY_July_5%2C_2025_XVI.jpg"
+    "backgroundImageSource": "https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2024/05/1200/675/Farmingdale_high-school_armed_guards_01.jpg?ve=1&tl=1"
   },
   "garden-city": {
     "name": "Garden City High School",
@@ -267,10 +267,10 @@
       "secondary": "#774f39"
     },
     "logo": "https://firebasestorage.googleapis.com/v0/b/whatsthemoov-app.appspot.com/o/public%2Flogos%2Fgreat-neck.png?alt=media&token=f7150f52-3c80-4bc1-9e66-551b7409a7cd",
-    "backgroundImage": null,
+    "backgroundImage": "/public/school-bg/great-neck.jpg",
     "showLogo": true,
     "showColors": true,
-    "backgroundImageSource": "https://lookaside.instagram.com/seo/google_widget/crawler/?media_id=3562404821751684886"
+    "backgroundImageSource": "https://www.newsday.com/_next/image?url=https%3A%2F%2Fcdn.newsday.com%2Fimage-service%2Fversion%2Fc%3ANzUxYmI5YjEtMmE2Yy00%3AYTI4MTkyMDctMzJjNS00%2Fcopy-of-_photos.%3Ff%3DLandscape%2B16%253A9%26w%3D1920%26q%3D1&w=3840&q=90"
   },
   "half-hollow-hills": {
     "name": "Half Hollow Hills High School",
@@ -296,10 +296,10 @@
       "secondary": "#be7f2a"
     },
     "logo": "https://firebasestorage.googleapis.com/v0/b/whatsthemoov-app.appspot.com/o/public%2Flogos%2Fhamptons-bays.png?alt=media&token=f7150f52-3c80-4bc1-9e66-551b7409a7cd",
-    "backgroundImage": null,
+    "backgroundImage": "/public/school-bg/hamptons-bays.jpg",
     "showLogo": true,
     "showColors": true,
-    "backgroundImageSource": "https://imagescdn.homes.com/i2/mne0AE0H34VjHwwe6_Ea3AvfEU_p2hiPgtDYZfWbthM/117/hampton-bays-secondary-school-hampton-bays-ny-3-schoolphoto.jpg?p=1"
+    "backgroundImageSource": "https://patch.com/img/cdn20/users/1296254/20240118/044350/styles/patch_image/public/hbhs___18164315268.jpg"
   },
   "harborfields-central": {
     "name": "Harborfields Central High School",
@@ -365,10 +365,10 @@
       "secondary": "#cf6b52"
     },
     "logo": "https://firebasestorage.googleapis.com/v0/b/whatsthemoov-app.appspot.com/o/public%2Flogos%2Fhicksville.png?alt=media&token=f7150f52-3c80-4bc1-9e66-551b7409a7cd",
-    "backgroundImage": null,
+    "backgroundImage": "/public/school-bg/hicksville.jpg",
     "showLogo": true,
     "showColors": true,
-    "backgroundImageSource": "https://upload.wikimedia.org/wikipedia/commons/8/82/Hicksville_High_School%2C_New_York_front_view.jpg"
+    "backgroundImageSource": "https://s3.amazonaws.com/scschoolfiles/13250/High%20School_02_1783794696.jpg"
   },
   "jericho": {
     "name": "Jericho Union Free School District",
@@ -392,10 +392,10 @@
       "secondary": "#b67284"
     },
     "logo": "https://firebasestorage.googleapis.com/v0/b/whatsthemoov-app.appspot.com/o/public%2Flogos%2Flevittown.png?alt=media&token=f7150f52-3c80-4bc1-9e66-551b7409a7cd",
-    "backgroundImage": null,
+    "backgroundImage": "/public/school-bg/levittown.jpg",
     "showLogo": true,
     "showColors": true,
-    "backgroundImageSource": "https://go.boarddocs.com/ny/levittown/Board.nsf/files/WELCOME_IMAGE/$file/Memorial%20with%20logo.jpg"
+    "backgroundImageSource": "https://www.midislandtimes.com/wp-content/uploads/2020/05/2-2.jpg"
   },
   "lindenhurst": {
     "name": "Lindenhurst High School",
@@ -435,10 +435,10 @@
       "secondary": "#648135"
     },
     "logo": "https://firebasestorage.googleapis.com/v0/b/whatsthemoov-app.appspot.com/o/public%2Flogos%2Flynbrook.png?alt=media&token=f7150f52-3c80-4bc1-9e66-551b7409a7cd",
-    "backgroundImage": null,
+    "backgroundImage": "/public/school-bg/lynbrook.jpg",
     "showLogo": true,
     "showColors": true,
-    "backgroundImageSource": "https://www.fuhsd.org/cf_cloudflare/01/data/media/display/1021.jpg?v=111521204545"
+    "backgroundImageSource": "https://www.qka.com/wp-content/uploads/2025/01/DSC_7400_exterior-frontquad_1920x1280.jpg"
   },
   "malverne": {
     "name": "Malverne High School",
@@ -450,10 +450,10 @@
       "secondary": "#346699"
     },
     "logo": "https://firebasestorage.googleapis.com/v0/b/whatsthemoov-app.appspot.com/o/public%2Flogos%2Fmalverne.png?alt=media&token=f7150f52-3c80-4bc1-9e66-551b7409a7cd",
-    "backgroundImage": null,
+    "backgroundImage": "/public/school-bg/malverne.jpg",
     "showLogo": true,
     "showColors": true,
-    "backgroundImageSource": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Malverne_High_School%2C_Malverne%2C_NY_August_8%2C_2022_A.jpg"
+    "backgroundImageSource": "https://files.smartsites.parentsquare.com/7706/Photo%201_Edited_1757361245.jpg"
   },
   "manhasset": {
     "name": "Manhasset",
@@ -464,10 +464,10 @@
       "secondary": "#cd9e8e"
     },
     "logo": "https://firebasestorage.googleapis.com/v0/b/whatsthemoov-app.appspot.com/o/public%2Flogos%2Fmanhasset.png?alt=media&token=f7150f52-3c80-4bc1-9e66-551b7409a7cd",
-    "backgroundImage": null,
+    "backgroundImage": "/public/school-bg/manhasset.jpg",
     "showLogo": true,
     "showColors": true,
-    "backgroundImageSource": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Manhasset_Apartments_301_W108_jeh.JPG"
+    "backgroundImageSource": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Manhasset_High_School%2C_August_11%2C_2022.jpg/1280px-Manhasset_High_School%2C_August_11%2C_2022.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail"
   },
   "massapequa": {
     "name": "Massapequa High School",
@@ -479,10 +479,10 @@
       "secondary": "#98a6c1"
     },
     "logo": "https://firebasestorage.googleapis.com/v0/b/whatsthemoov-app.appspot.com/o/public%2Flogos%2Fmassapequa.png?alt=media&token=f7150f52-3c80-4bc1-9e66-551b7409a7cd",
-    "backgroundImage": null,
+    "backgroundImage": "/public/school-bg/massapequa.jpg",
     "showLogo": true,
     "showColors": true,
-    "backgroundImageSource": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/MassapequaHighSchool.JPG/330px-MassapequaHighSchool.JPG"
+    "backgroundImageSource": "https://i.ytimg.com/vi/BP3I_cb7W1w/maxresdefault.jpg"
   },
   "mattituck": {
     "name": "Mattituck High School",
@@ -507,10 +507,10 @@
       "secondary": "#9d9dd5"
     },
     "logo": "https://firebasestorage.googleapis.com/v0/b/whatsthemoov-app.appspot.com/o/public%2Flogos%2Fmiller-place.png?alt=media&token=f7150f52-3c80-4bc1-9e66-551b7409a7cd",
-    "backgroundImage": null,
+    "backgroundImage": "/public/school-bg/miller-place.jpg",
     "showLogo": true,
     "showColors": true,
-    "backgroundImageSource": "https://upload.wikimedia.org/wikipedia/commons/9/9f/MPacademy2.jpg"
+    "backgroundImageSource": "https://resources.finalsite.net/videos/v1690472480/millerplacek12nyus/unjwvtm8oozpcnuys3qw/MPHS_1.jpg"
   },
   "mount-sinai": {
     "name": "Mount Sinai School District",
@@ -547,10 +547,10 @@
       "secondary": "#c06c6c"
     },
     "logo": "https://firebasestorage.googleapis.com/v0/b/whatsthemoov-app.appspot.com/o/public%2Flogos%2Fplainedge.png?alt=media&token=f7150f52-3c80-4bc1-9e66-551b7409a7cd",
-    "backgroundImage": null,
+    "backgroundImage": "/public/school-bg/plainedge.jpg",
     "showLogo": true,
     "showColors": true,
-    "backgroundImageSource": "https://82af5d90.delivery.rocketcdn.me/wp-content/uploads/2024/08/DJI_0705-Edit_FINAL-scaled.jpg"
+    "backgroundImageSource": "https://images.squarespace-cdn.com/content/v1/56bb7ded37013b74a515b17d/1740167468209-75RFOE4OXS99809A8W3F/14223.001.012.jpg"
   },
   "plainview-old-bethpage-central": {
     "name": "Plainview-Old Bethpage Central High School",
@@ -603,10 +603,10 @@
       "secondary": "#495675"
     },
     "logo": "https://firebasestorage.googleapis.com/v0/b/whatsthemoov-app.appspot.com/o/public%2Flogos%2Frocky-point.png?alt=media&token=f7150f52-3c80-4bc1-9e66-551b7409a7cd",
-    "backgroundImage": null,
+    "backgroundImage": "/public/school-bg/rocky-point.jpg",
     "showLogo": true,
     "showColors": true,
-    "backgroundImageSource": "https://imagescdn.homes.com/i2/CMokxajnb__xB9gtQN52lAGktuijpQTAN-bptwHFW8U/117/rocky-point-high-school-rocky-point-ny-primaryphoto.jpg?p=1"
+    "backgroundImageSource": "https://nypost.com/wp-content/uploads/sites/2/2015/08/080215_rocky_point_hs_va03.jpg?quality=75&strip=all&w=1024"
   },
   "roosevelt": {
     "name": "Roosevelt High School",
@@ -632,10 +632,10 @@
       "secondary": "#646464"
     },
     "logo": "https://firebasestorage.googleapis.com/v0/b/whatsthemoov-app.appspot.com/o/public%2Flogos%2Froslyn.png?alt=media&token=f7150f52-3c80-4bc1-9e66-551b7409a7cd",
-    "backgroundImage": null,
+    "backgroundImage": "/public/school-bg/roslyn.jpg",
     "showLogo": true,
     "showColors": true,
-    "backgroundImageSource": "https://upload.wikimedia.org/wikipedia/commons/0/01/RHSViewedFromRoslynAndLincoln.jpg"
+    "backgroundImageSource": "https://www.longislandpress.com/wp-content/uploads/2024/07/Rankings_040815A-1024x664-1.jpg"
   },
   "sachem-east": {
     "name": "Sachem East High School",
@@ -661,10 +661,10 @@
       "secondary": "#040404"
     },
     "logo": "https://firebasestorage.googleapis.com/v0/b/whatsthemoov-app.appspot.com/o/public%2Flogos%2Fsachem-north.png?alt=media&token=f7150f52-3c80-4bc1-9e66-551b7409a7cd",
-    "backgroundImage": null,
+    "backgroundImage": "/public/school-bg/sachem-north.jpg",
     "showLogo": true,
     "showColors": true,
-    "backgroundImageSource": "https://imagescdn.homes.com/i2/Z_U2xe6uUIZbnYqFIQSY4AxvUzF5PQSlBT8R3A5o8Fo/117/sachem-high-school-north-lake-ronkonkoma-ny-2-schoolphoto.jpg?p=1"
+    "backgroundImageSource": "https://www.newsday.com/_next/image?url=https%3A%2F%2Fcdn.newsday.com%2Fimage-service%2Fversion%2Fc%3AMTQ1OWE5ZDQtYmY3NS00%3AZDQtYmY3NS00YmNkZDRk%2Ftosuit220419_photos.jpg%3Ff%3DLandscape%2B16%253A9%26w%3D1920%26q%3D1&w=3840&q=90"
   },
   "sayville": {
     "name": "Sayville Union Free School District",
@@ -688,10 +688,10 @@
       "secondary": "#2c9013"
     },
     "logo": "https://firebasestorage.googleapis.com/v0/b/whatsthemoov-app.appspot.com/o/public%2Flogos%2Fsewanhaka-schools.png?alt=media&token=f7150f52-3c80-4bc1-9e66-551b7409a7cd",
-    "backgroundImage": null,
+    "backgroundImage": "/public/school-bg/sewanhaka-schools.jpg",
     "showLogo": true,
     "showColors": true,
-    "backgroundImageSource": "https://imagescdn.homes.com/i2/VB7kNn0Sz1OZCqiab3fEZqTLA90fGe28gGDAvYKzJko/117/sewanhaka-high-school-floral-park-ny-primaryphoto.jpg?p=1"
+    "backgroundImageSource": "https://cmsv2-assets.apptegy.net/uploads/6190/file/434975/07138c0c-dabe-4335-9684-3c093f6dafe2.jpeg"
   },
   "shoreham-wading-river-central": {
     "name": "Shoreham-Wading River Central High School",
@@ -731,10 +731,10 @@
       "secondary": "#748ca4"
     },
     "logo": "https://firebasestorage.googleapis.com/v0/b/whatsthemoov-app.appspot.com/o/public%2Flogos%2Fsouthampton.png?alt=media&token=f7150f52-3c80-4bc1-9e66-551b7409a7cd",
-    "backgroundImage": null,
+    "backgroundImage": "/public/school-bg/southampton.jpg",
     "showLogo": true,
     "showColors": true,
-    "backgroundImageSource": "https://imagescdn.homes.com/i2/3yU-0V0SImLRyPz6ZeQukiaPOStpcnyUbUh5f1NdyM4/117/southampton-high-school-southampton-ny-schoolphoto.jpg?p=1"
+    "backgroundImageSource": "https://bloximages.chicago2.vip.townnews.com/27east.com/content/tncms/assets/v3/editorial/c/19/c19a55ee-af09-4083-8246-a60d5d525644/6ab29dd5a5fbd.image.png?resize=1332%2C500"
   },
   "syosset-central": {
     "name": "Syosset Central High School",
@@ -760,10 +760,10 @@
       "secondary": "#756a25"
     },
     "logo": "https://firebasestorage.googleapis.com/v0/b/whatsthemoov-app.appspot.com/o/public%2Flogos%2Funiondale.png?alt=media&token=f7150f52-3c80-4bc1-9e66-551b7409a7cd",
-    "backgroundImage": null,
+    "backgroundImage": "/public/school-bg/uniondale.jpg",
     "showLogo": true,
     "showColors": true,
-    "backgroundImageSource": "https://imagescdn.homes.com/i2/sEhMdy37KJPoEWNAc7NMtIX49omx9I6tVFb-4jiEanY/117/uniondale-high-school-uniondale-ny-2-schoolphoto.jpg?p=1"
+    "backgroundImageSource": "https://gamma.creativecirclecdn.com/liherald/original/20260806-163211-6bb-UNI%20Auditorium%20grant%208_6%20A.JPG"
   },
   "valley-stream-central": {
     "name": "Valley Stream Central High School",
@@ -789,10 +789,10 @@
       "secondary": "#e9ce8d"
     },
     "logo": "https://firebasestorage.googleapis.com/v0/b/whatsthemoov-app.appspot.com/o/public%2Flogos%2Fwantagh.png?alt=media&token=f7150f52-3c80-4bc1-9e66-551b7409a7cd",
-    "backgroundImage": null,
+    "backgroundImage": "/public/school-bg/wantagh.jpg",
     "showLogo": true,
     "showColors": true,
-    "backgroundImageSource": "https://upload.wikimedia.org/wikipedia/commons/5/57/Wantagh_Senior_High_School.jpg"
+    "backgroundImageSource": "https://gamma.creativecirclecdn.com/liherald/original/20260219-182839-f7f-WARRIORS.jpg"
   },
   "west-babylon": {
     "name": "West Babylon Senior High School",
@@ -804,10 +804,10 @@
       "secondary": "#e8bc33"
     },
     "logo": "https://firebasestorage.googleapis.com/v0/b/whatsthemoov-app.appspot.com/o/public%2Flogos%2Fwest-babylon.png?alt=media&token=f7150f52-3c80-4bc1-9e66-551b7409a7cd",
-    "backgroundImage": null,
+    "backgroundImage": "/public/school-bg/west-babylon.jpg",
     "showLogo": true,
     "showColors": true,
-    "backgroundImageSource": "https://imagescdn.homes.com/i2/oxNsRBB0YI5hZCasrMsVM5UUMPyGvKE7TDbdr0jz71o/117/west-babylon-senior-high-school-west-babylon-ny-schoolphoto.jpg?p=1"
+    "backgroundImageSource": "https://cdn.newsday.com/ace/c:ZmYwZmRmYjItODg0Zi00:YjItODg0Zi00ZTgxNzg5/landscape/1280"
   },
   "west-hempstead": {
     "name": "West Hempstead",
@@ -832,10 +832,10 @@
       "secondary": "#8ea7bf"
     },
     "logo": "https://firebasestorage.googleapis.com/v0/b/whatsthemoov-app.appspot.com/o/public%2Flogos%2Fwest-islip.png?alt=media&token=f7150f52-3c80-4bc1-9e66-551b7409a7cd",
-    "backgroundImage": null,
+    "backgroundImage": "/public/school-bg/west-islip.jpg",
     "showLogo": true,
     "showColors": true,
-    "backgroundImageSource": "https://imagescdn.homes.com/i2/7ZgoOtkyfc_oMJw8-3-lQDBPExq27Gx85TfsXGWsnZM/117/west-islip-senior-high-school-west-islip-ny-primaryphoto.jpg?p=1"
+    "backgroundImageSource": "https://longislandmediagroup.com/wp-content/uploads/2023/08/West-Islip-School-of-Excellence-scaled.jpg"
   },
   "westbury": {
     "name": "Westbury High School",
@@ -861,10 +861,10 @@
       "secondary": "#84bca3"
     },
     "logo": "https://firebasestorage.googleapis.com/v0/b/whatsthemoov-app.appspot.com/o/public%2Flogos%2Fwesthampton-beach.png?alt=media&token=f7150f52-3c80-4bc1-9e66-551b7409a7cd",
-    "backgroundImage": null,
+    "backgroundImage": "/public/school-bg/westhampton-beach.jpg",
     "showLogo": true,
     "showColors": true,
-    "backgroundImageSource": "https://imagescdn.homes.com/i2/yGjxnM_kua7v2Q-ewJHXXdjCiOKlrJFMhWN5htC1QUU/117/westhampton-beach-senior-high-school-westhampton-beach-ny-primaryphoto.jpg?p=1"
+    "backgroundImageSource": "https://www.whbnews.com/wp-content/uploads/2023/04/7998654461_08c9028326_b-900x596.jpg"
   },
   "william-floyd": {
     "name": "William Floyd High School",
@@ -890,10 +890,10 @@
       "secondary": "#254593"
     },
     "logo": "https://firebasestorage.googleapis.com/v0/b/whatsthemoov-app.appspot.com/o/public%2Flogos%2Fbinghamton.png?alt=media&token=f7150f52-3c80-4bc1-9e66-551b7409a7cd",
-    "backgroundImage": null,
+    "backgroundImage": "/public/school-bg/binghamton.jpg",
     "showLogo": true,
     "showColors": true,
-    "backgroundImageSource": "https://imagescdn.homes.com/i2/VJ1pBJgEBMYACflwdFSkiTU604r8ocFBA1e4-GT61es/117/binghamton-high-school-binghamton-ny-primaryphoto.jpg?p=1"
+    "backgroundImageSource": "https://core-docs.s3.amazonaws.com/binghamton_city_school_district_ar/article/image/large_c6e95cb0-1960-470f-8f57-23d85895c96a.jpeg"
   },
   "port-jefferson": {
     "name": "Earl L. Vandermeulen High School",
@@ -919,10 +919,10 @@
       "secondary": "#cbaf11"
     },
     "logo": "https://firebasestorage.googleapis.com/v0/b/whatsthemoov-app.appspot.com/o/public%2Flogos%2Frush-henrietta.png?alt=media&token=f7150f52-3c80-4bc1-9e66-551b7409a7cd",
-    "backgroundImage": null,
+    "backgroundImage": "/public/school-bg/rush-henrietta.jpg",
     "showLogo": true,
     "showColors": true,
-    "backgroundImageSource": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Rushhenriettahigh.jpg"
+    "backgroundImageSource": "https://media.licdn.com/dms/image/v2/C4D1BAQEtvZl59iI5kQ/company-background_10000/company-background_10000/0/1625074903383/rush_henrietta_central_school_district_cover?e=2147483647&v=beta&t=2CjVq9oAy6JdY4v9KeN2-xes_SDv7IhJ3s_M4qlCgE0"
   },
   "hardeeville": {
     "name": "Hardeeville Junior & Senior High School",
@@ -1014,10 +1014,10 @@
       "secondary": "#d28e41"
     },
     "logo": "https://firebasestorage.googleapis.com/v0/b/whatsthemoov-app.appspot.com/o/public%2Flogos%2Fcanton.png?alt=media&token=f7150f52-3c80-4bc1-9e66-551b7409a7cd",
-    "backgroundImage": null,
+    "backgroundImage": "/public/school-bg/canton.jpg",
     "showLogo": true,
     "showColors": true,
-    "backgroundImageSource": "https://upload.wikimedia.org/wikipedia/commons/5/58/Canton_High_School%2C_Collinsville_CT.jpg"
+    "backgroundImageSource": "https://belindastewartarchitects.com/wpbsa/wp-content/uploads/041-1280x959-1-1024x767.jpg"
   },
   "port-st-lucie": {
     "name": "Port St. Lucie High School",
@@ -1029,10 +1029,10 @@
       "secondary": "#f5b731"
     },
     "logo": "https://firebasestorage.googleapis.com/v0/b/whatsthemoov-app.appspot.com/o/public%2Flogos%2Fport-st-lucie.png?alt=media&token=f7150f52-3c80-4bc1-9e66-551b7409a7cd",
-    "backgroundImage": null,
+    "backgroundImage": "/public/school-bg/port-st-lucie.jpg",
     "showLogo": true,
     "showColors": true,
-    "backgroundImageSource": "https://imagescdn.homes.com/i2/36WCEZiY6jZdKy5T3kG0g3gUKmoP5OvC0EroW9bsRII/117/port-st-lucie-high-school-port-saint-lucie-fl-3-schoolphoto.jpg?p=1"
+    "backgroundImageSource": "https://cbs12.com/resources/media2/16x9/full/1174/center/80/969e4f59-6709-4602-b09f-fba314004627-large16x9_alsstory.jpg"
   },
   "fairbanks-native": {
     "name": "Fairbanks Native Association Head Start",
